@@ -141,7 +141,7 @@ jQuery(document).ready(function($) {
     $(".gallery-carousel").owlCarousel({
         autoplay: true,
         dots: true,
-        loop: true,
+        loop: false,
         center: true,
         responsive: {
             0: {
