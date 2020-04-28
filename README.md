@@ -1,5 +1,6 @@
-# WISE UofT Conference 2020 Website: Lead Without Limits
+# WISE UofT Conference Website
 
 ## Past Links
-2020: https://wise-conference-2020.netlify.app/
-2019: https://wiseuoft.wixsite.com/conference
+2020 (Lead without Limits): https://wise-conference-2020.netlify.app/
+
+2019 (Catalysts for Change): https://wiseuoft.wixsite.com/conference
