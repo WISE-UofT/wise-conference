@@ -1197,7 +1197,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 @media (max-width: 991px) {
     #header {
-        background: #340C3E;
+        background: #4C2748;
         height: 70px;
         padding: 15px 0;
         transition: all 0.5s;
