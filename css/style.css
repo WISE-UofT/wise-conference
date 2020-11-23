@@ -654,6 +654,24 @@ body.mobile-nav-active #mobile-nav-toggle {
 #competitions .register {
     padding-bottom: 3vh;
 }
+
+#competitions .btn-current {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 0;
+    padding: 10px 24px;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    display: inline-block;
+    background: #694E64;
+    color: #fff;
+}
+
+#competitions .btn-current:hover {
+    background: #340C3E;
+}
+
 #speakers {
     padding: 40px 0 30px 0;
 }
@@ -730,12 +748,12 @@ body.mobile-nav-active #mobile-nav-toggle {
     border: none;
     border-radius: 50px;
     font-weight: 600;
-    background-color: #340C3E;
+    background-color: #694E64;
     color: #fff;
     padding: 10px 100px;
 }
 #schedule .nav-tabs a.active {
-    background-color: #694E64;
+    background-color: #340C3E;
     color: #fff;
 }
 #schedule .sub-heading {
