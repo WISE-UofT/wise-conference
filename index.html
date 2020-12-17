@@ -48,6 +48,34 @@
         gtag('config', 'UA-122092113-2');
     </script>
 
+    <!-- Global site tag (gtag.js) - Google Ads: 468648044 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-468648044"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-468648044');
+    </script>
+
+
+    <!-- Event snippet for Website Purchase Ticket conversion page
+    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+    function gtag_report_conversion(url) {
+    var callback = function () {
+        if (typeof(url) != 'undefined') {
+        window.location = url;
+        }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-468648044/Fjc0CKuA-OwBEOyAvN8B',
+        'transaction_id': '',
+        'event_callback': callback
+    });
+    return false;
+    }
+    </script>
+
 </head>
 
 <body>
@@ -68,7 +96,7 @@
                     <!-- <li><a href="#venue">Venue</a></li>  -->
                     <!-- <li><a href="#faq">FAQ</a></li> -->
                     <!-- <li><a href="#footer">Contact</a></li> -->
-                    <li class="buy-tickets"><a href="https://hopin.to/events/women-in-science-and-engineering-wise-national-conference-2021?ref=c37425045c53" target="_blank">Buy Tickets</a></li>
+                    <li class="buy-tickets"><a href="https://hopin.to/events/women-in-science-and-engineering-wise-national-conference-2021?ref=c37425045c53" onclick="return gtag_report_conversion('https://hopin.to/events/women-in-science-and-engineering-wise-national-conference-2021?ref=c37425045c53');" target="_blank">Buy Tickets</a></li>
                     <!-- <li class="buy-tickets"><a href="booklet/WISE-NC-20.pdf" target="_blank">Booklet</a></li> -->
                 </ul>
             </nav>
@@ -560,8 +588,28 @@
                             and guided discussions are designed to allow you to get exposure to new concepts, develop useful skills, and engage 
                             with fellow attendees. Our workshops this year fall under 7 streams: Consulting, Tech, Engineering, Academia, Professional 
                             Development, Personal Development, and EDI. With the focus being more on skill-building, we believe that everyone will be able 
-                            to find something useful and inspiring from attending these workshops, no matter where their interests lie.</p>
-                    </div>
+                            to find something useful and inspiring from attending these workshops, no matter where their interests lie.
+                        </p>
+
+                        <div class="row feature-item mt-5 pt-5">
+                            <div class="col-lg-5 wow fadeInUp order-1 order-lg-2">
+                                <img src="img/speakers/farah.jpg" class="img-fluid" alt="hso-2">
+                            </div>
+                    
+                            <div class="about-content col-lg-7 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
+                                <h4>Science Communication 101</h4>
+                                <p>Farah Qaiser is a genomics researcher and science communicator. She uses DNA sequencing to better understand complex neurological disorders. 
+                                    Outside the lab, Farah writes stories about science and scientists, organizes science communication training opportunities, and co-founded 
+                                    the Toronto Science Policy Network. At the WISE Conference, Farah will lead a Science Communication 101 workshop, where she will teach the 
+                                    basics of science communication, challenge attendees to apply these skills through mini-activities, and walk through Canada’s growing science 
+                                    communication landscape, including opportunities related to outreach, writing, public speaking and policy. Farah will also be one of the judges 
+                                    for the Three Minute Thesis competition.
+                                </p>
+                                <a href="https://www.linkedin.com/in/dahun-mamora-66239179/" target="_blank"><i class="fa fa-bookmark"></i></a>
+                                <a href="https://twitter.com/this_is_farah?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="fa fa-twitter"></i></a>                            </div>
+                        </div>
+                    
+                        </div>
                 </div>
             </div>
         </section>
