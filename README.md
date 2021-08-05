@@ -1,5 +1,7 @@
 # WISE UofT Conference Website
 
+This is a website template repo - do NOT edit
+
 ## Past Links
 2021 (Connections Together from Afar): https://wise-conference-2021.netlify.app/
 
