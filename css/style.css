@@ -4,13 +4,13 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 a {
-    color: #694E64;
+    color: #18133E;
     transition: 0.5s;
 }
 a:hover,
 a:active,
 a:focus {
-    color: #694E64;
+    color: #18133E;
     outline: none;
     text-decoration: none;
 }
@@ -85,16 +85,16 @@ h6 {
     line-height: 1;
     margin: 10px;
     margin-bottom: 3vh;
-    background: #694E64;
+    background: #18133E;
     -webkit-animation-delay: 0.8s;
     animation-delay: 0.8s;
-    border: 4px solid #694E64;
+    border: 4px solid #18133E;
 }
 .register-button:hover {
     background: #fff;
-    color: #694E64 !important;
+    color: #18133E !important;
     font-weight: 600;
-    border: 4px solid #694E64;
+    border: 4px solid #18133E;
 }
 .view-button {
     text-align: center;
@@ -166,7 +166,7 @@ h6 {
 .back-to-top {
     position: fixed;
     display: none;
-    background: #694E64;
+    background: #18133E;
     color: #fff;
     width: 40px;
     height: 40px;
@@ -221,7 +221,7 @@ h6 {
 }
 #header.header-scrolled,
 #header.header-fixed {
-    background: #4C2748;
+    background: #2A176C;
     height: 70px;
     padding: 15px 0;
     transition: all 0.5s;
@@ -237,7 +237,7 @@ h6 {
     text-transform: uppercase;
 }
 #header #logo h1 span {
-    color: #694E64;
+    color: #18133E;
 }
 #header #logo h1 a,
 #header #logo h1 a:hover {
@@ -331,11 +331,11 @@ h6 {
     width: 100%;
 }
 .nav-menu li.buy-tickets a {
-    color: #4C2748;
-    background: #EDE7C7;
+    color: #2A176C;
+    background: #FEA4B7;
     padding: 7px 22px;
     border-radius: 10px;
-    border: 2px solid #EDE7C7;
+    border: 2px solid #FEA4B7;
     transition: all ease-in-out 0.3s;
     font-weight: 600;
     margin-left: 8px;
@@ -344,9 +344,9 @@ h6 {
     font-size: 13px;
 }
 .nav-menu li.buy-tickets a:hover {
-    background: #4C2748;
+    background: #2A176C;
     border: 2px solid #fff;
-    color: #EDE7C7;
+    color: #FEA4B7;
 }
 .nav-menu li.buy-tickets:hover a:before,
 .nav-menu li.buy-tickets.menu-active a:before {
@@ -372,7 +372,7 @@ h6 {
     border-radius: 3px;
 }
 .nav-menu ul li:hover > a {
-    background: #694E64;
+    background: #18133E;
     color: #fff;
 }
 .nav-menu ul ul {
@@ -427,7 +427,7 @@ h6 {
     outline: none;
 }
 #mobile-nav ul li a:hover {
-    color: #694E64;
+    color: #18133E;
 }
 #mobile-nav ul li li {
     padding-left: 30px;
@@ -441,10 +441,10 @@ h6 {
     color: #fff;
 }
 #mobile-nav ul .menu-has-children i.fa-chevron-up {
-    color: #694E64;
+    color: #18133E;
 }
 #mobile-nav ul .menu-item-active {
-    color: #694E64;
+    color: #18133E;
 }
 #mobile-body-overly {
     width: 100%;
@@ -468,7 +468,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro {
     width: 100%;
     height: 100vh;
-    background: url("../img/intro-bg.jpeg") top center;
+    background: url("../img/intro-bg-new.png") top center;
     background-size: cover;
     overflow: hidden;
     position: relative;
@@ -511,7 +511,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     text-transform: uppercase;
 }
 #intro h1 span {
-    color: #694E64;
+    color: #18133E;
 }
 #intro p {
     color: #ebebeb;
@@ -530,13 +530,13 @@ body.mobile-nav-active #mobile-nav-toggle {
     line-height: 1;
     margin: 10px;
     color: #fff;
-    background: #694E64;
+    background: #18133E;
     -webkit-animation-delay: 0.8s;
     animation-delay: 0.8s;
 }
 #intro .about-btn:hover {
     background: #fff;
-    color: #694E64;
+    color: #18133E;
     font-weight: 600;
 }
 @-webkit-keyframes pulsate-btn {
@@ -597,6 +597,47 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: #340C3E;
     text-align: center;
 }
+
+#overview .btn-current {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 1;
+    padding: 10px 24px;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    display: inline-block;
+    background: #18133E;
+    color: #fff;
+}
+
+#overview .btn-current:hover {
+    background: #340C3E;
+}
+
+.countdown-box span{
+    display:inline-block;
+    padding:0.1rem 0;
+    min-width:60px
+}
+
+.countdown-box span>span{
+    display:block;
+    padding:0
+}
+
+.countdown-box .number{
+    font-size:2rem;
+    font-weight:400;
+    color:#141c25
+}
+
+.countdown-box .unit{
+    -webkit-opacity:.8;
+    -moz-opacity:.8;
+    opacity:.8
+}
+
 #competitions,
 #workshops {
     background-size: cover;
@@ -637,6 +678,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-size: 16px;
     padding-bottom: 1.5vh;
     color: #340C3E;
+    text-align: center;
 }
 #workshops .move-to-middle {
     text-align: center;
@@ -664,7 +706,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     letter-spacing: 1px;
     border-radius: 3px;
     display: inline-block;
-    background: #694E64;
+    background: #18133E;
     color: #fff;
 }
 
@@ -725,7 +767,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: #fff;
 }
 #speakers .speaker .details a:hover {
-    color: #694E64;
+    color: #18133E;
 }
 #speakers .speaker:hover .details {
     bottom: 0;
@@ -748,7 +790,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     border: none;
     border-radius: 50px;
     font-weight: 600;
-    background-color: #694E64;
+    background-color: #18133E;
     color: #fff;
     padding: 10px 100px;
 }
@@ -849,7 +891,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: #152b79;
 }
 #hotels a:hover {
-    color: #694E64;
+    color: #18133E;
 }
 #hotels .stars {
     padding: 0 20px;
@@ -865,6 +907,77 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-style: italic;
     font-size: 15px;
 }
+
+#testimonials {
+    padding: 40px 0 80px 0;
+    overflow: hidden;
+}
+.testimonials .testimonials-carousel, .testimonials .testimonials-slider {
+overflow: hidden;
+}
+.testimonials .testimonial-item {
+box-sizing: content-box;
+min-height: 320px;
+}
+.testimonials .testimonial-item .testimonial-img {
+width: 90px;
+border-radius: 50%;
+margin: -40px 0 0 40px;
+position: relative;
+z-index: 2;
+border: 6px solid rgba(255, 255, 255, 0.2);
+}
+.testimonials .testimonial-item h3 {
+font-size: 18px;
+font-weight: bold;
+margin: 10px 0 5px 45px;
+color: #18133E;
+}
+.testimonials .testimonial-item h4 {
+font-size: 14px;
+color: #18133E;
+margin: 0 0 0 45px;
+}
+.testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
+color: #FEA4B7;
+font-size: 26px;
+}
+.testimonials .testimonial-item .quote-icon-left {
+display: inline-block;
+left: -5px;
+position: relative;
+}
+.testimonials .testimonial-item .quote-icon-right {
+display: inline-block;
+right: -5px;
+position: relative;
+top: 10px;
+}
+.testimonials .testimonial-item p {
+font-style: italic;
+color: white;
+margin: 0 15px 0 15px;
+padding: 20px 20px 60px 20px;
+background: #18133E;
+position: relative;
+border-radius: 6px;
+position: relative;
+z-index: 1;
+}
+.testimonials .swiper-pagination {
+margin-top: 30px;
+position: relative;
+}
+.testimonials .swiper-pagination .swiper-pagination-bullet {
+width: 12px;
+height: 12px;
+background-color: rgba(0, 0, 0, 0.4);
+opacity: 1;
+}
+.testimonials .swiper-pagination .swiper-pagination-bullet-active {
+background-color: #FEA4B7;
+}
+
 #gallery {
     padding: 40px 0 80px 0;
     overflow: hidden;
@@ -900,7 +1013,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-color: #ddd;
 }
 #gallery .owl-dot.active {
-    background-color: #694E64;
+    background-color: #18133E;
 }
 #gallery .gallery-carousel .owl-stage-outer {
     overflow: visible;
@@ -916,16 +1029,43 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 #gallery .view-button {
     color: #fff !important;
-    background: #694E64;
-    border: 4px solid #694E64;
+    background: #18133E;
+    border: 4px solid #18133E;
     margin: 2vh 0;
 }
 #gallery .view-button:hover {
     background: #fff;
-    color: #694E64 !important;
+    color: #18133E !important;
     font-weight: 600;
-    border: 4px solid #694E64;
+    border: 4px solid #18133E;
 }
+
+.gallery-speakers-section .card{
+    border:none;
+    background:#f0f6fa;
+    margin-bottom:2rem;
+    height:100%
+}
+
+.gallery-speakers-section .card-title{
+    font-size:1.125rem
+}
+
+.gallery-speakers-section .card-img-top:hover{
+    -webkit-opacity:.9;
+    -moz-opacity:.9;
+    opacity:.9
+}
+
+.gallery-speakers-section .card-footer{
+    background:#e8f1f7;
+    border-top:none
+}
+
+.gallery-speakers-section .card{
+    height:inherit
+}
+
 #supporters {
     padding: 60px 0;
 }
@@ -1036,7 +1176,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 #faq #faq-list a.collapse,
 #faq #faq-common a.collapse {
-    color: #694E64;
+    color: #18133E;
 }
 #faq #faq-list a.collapsed,
 #faq #faq-common a.collapsed {
@@ -1086,7 +1226,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     border-radius: 50px;
     padding: 10px 40px;
     transition: all 0.2s;
-    background-color: #694E64;
+    background-color: #18133E;
     border: 0;
     color: #fff;
 }
@@ -1102,7 +1242,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     border-radius: 50px;
     padding: 10px 40px;
     transition: all 0.2s;
-    background-color: #694E64;
+    background-color: #18133E;
     border: 0;
     color: #fff;
 }
@@ -1110,7 +1250,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-color: #e0072f;
 }
 #footer {
-    background: #101522;
+    background: #18133E;
     padding: 0 0 25px 0;
     color: #eee;
     font-size: 14px;
@@ -1153,7 +1293,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     transition: 0.3s;
 }
 #footer .footer-top .social-links a:hover {
-    background: #694E64;
+    background: #18133E;
     color: #fff;
 }
 #footer .footer-top h4 {
@@ -1173,7 +1313,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 #footer .footer-top .footer-links ul i {
     padding-right: 5px;
-    color: #694E64;
+    color: #18133E;
     font-size: 18px;
 }
 #footer .footer-top .footer-links ul li {
@@ -1187,7 +1327,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: #eee;
 }
 #footer .footer-top .footer-links ul a:hover {
-    color: #694E64;
+    color: #18133E;
 }
 #footer .footer-top .footer-contact {
     margin-bottom: 30px;
@@ -1215,7 +1355,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 @media (max-width: 991px) {
     #header {
-        background: #4C2748;
+        background: #2A176C;
         height: 70px;
         padding: 15px 0;
         transition: all 0.5s;
