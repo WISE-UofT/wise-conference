@@ -2,7 +2,7 @@
 
 ## Current
 
-2022 (Above and Beyond): https://wise-conference-2022.netlify.app/
+2022 (Above and Beyond): https://conference.wiseuoft.org/
 
 ## Past Links
 2021 (Connections Together from Afar): https://wise-conference-2021.netlify.app/
