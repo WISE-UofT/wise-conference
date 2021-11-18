@@ -1,16 +1,16 @@
 body {
     background: #fff;
-    color: #340C3E;
+    color: #101F46;
     font-family: "Montserrat", sans-serif;
 }
 a {
-    color: #18133E;
+    color: #2A4673;
     transition: 0.5s;
 }
 a:hover,
 a:active,
 a:focus {
-    color: #18133E;
+    color: #2A4673;
     outline: none;
     text-decoration: none;
 }
@@ -28,7 +28,7 @@ h6 {
     font-weight: 400;
     margin: 0 0 20px 0;
     padding: 0;
-    color: #340C3E;
+    color: #101F46;
 }
 .modal-header {
     border-bottom: 0 none;
@@ -85,16 +85,16 @@ h6 {
     line-height: 1;
     margin: 10px;
     margin-bottom: 3vh;
-    background: #18133E;
+    background: #2A4673;
     -webkit-animation-delay: 0.8s;
     animation-delay: 0.8s;
-    border: 4px solid #18133E;
+    border: 4px solid #2A4673;
 }
 .register-button:hover {
     background: #fff;
-    color: #18133E !important;
+    color: #2A4673 !important;
     font-weight: 600;
-    border: 4px solid #18133E;
+    border: 4px solid #2A4673;
 }
 .view-button {
     text-align: center;
@@ -109,16 +109,16 @@ h6 {
     transition: 0.5s;
     line-height: 1;
     margin-top: 3vh;
-    background: #340C3E;
+    background: #101F46;
     -webkit-animation-delay: 0.8s;
     animation-delay: 0.8s;
-    border: 4px solid #340C3E;
+    border: 4px solid #101F46;
 }
 .view-button:hover {
     background: #fff;
-    color: #340C3E !important;
+    color: #101F46 !important;
     font-weight: 600;
-    border: 4px solid #340C3E;
+    border: 4px solid #101F46;
 }
 #preloader {
     position: fixed;
@@ -166,7 +166,7 @@ h6 {
 .back-to-top {
     position: fixed;
     display: none;
-    background: #18133E;
+    background: #2A4673;
     color: #fff;
     width: 40px;
     height: 40px;
@@ -221,7 +221,7 @@ h6 {
 }
 #header.header-scrolled,
 #header.header-fixed {
-    background: #2A176C;
+    background: #101F45;
     height: 70px;
     padding: 15px 0;
     transition: all 0.5s;
@@ -237,7 +237,7 @@ h6 {
     text-transform: uppercase;
 }
 #header #logo h1 span {
-    color: #18133E;
+    color: #2A4673;
 }
 #header #logo h1 a,
 #header #logo h1 a:hover {
@@ -331,11 +331,11 @@ h6 {
     width: 100%;
 }
 .nav-menu li.buy-tickets a {
-    color: #2A176C;
-    background: #FEA4B7;
+    color: #101F45;
+    background: #DDDBD2;
     padding: 7px 22px;
     border-radius: 10px;
-    border: 2px solid #FEA4B7;
+    border: 2px solid #DDDBD2;
     transition: all ease-in-out 0.3s;
     font-weight: 600;
     margin-left: 8px;
@@ -344,9 +344,9 @@ h6 {
     font-size: 13px;
 }
 .nav-menu li.buy-tickets a:hover {
-    background: #2A176C;
+    background: #101F45;
     border: 2px solid #fff;
-    color: #FEA4B7;
+    color: #DDDBD2;
 }
 .nav-menu li.buy-tickets:hover a:before,
 .nav-menu li.buy-tickets.menu-active a:before {
@@ -372,7 +372,7 @@ h6 {
     border-radius: 3px;
 }
 .nav-menu ul li:hover > a {
-    background: #18133E;
+    background: #2A4673;
     color: #fff;
 }
 .nav-menu ul ul {
@@ -427,7 +427,7 @@ h6 {
     outline: none;
 }
 #mobile-nav ul li a:hover {
-    color: #18133E;
+    color: #2A4673;
 }
 #mobile-nav ul li li {
     padding-left: 30px;
@@ -441,10 +441,10 @@ h6 {
     color: #fff;
 }
 #mobile-nav ul .menu-has-children i.fa-chevron-up {
-    color: #18133E;
+    color: #2A4673;
 }
 #mobile-nav ul .menu-item-active {
-    color: #18133E;
+    color: #2A4673;
 }
 #mobile-body-overly {
     width: 100%;
@@ -468,7 +468,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro {
     width: 100%;
     height: 100vh;
-    background: url("../img/intro-bg-new.png") top center;
+    background: url("../img/intro-bg.png") top center;
     background-size: cover;
     overflow: hidden;
     position: relative;
@@ -511,7 +511,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     text-transform: uppercase;
 }
 #intro h1 span {
-    color: #18133E;
+    color: #2A4673;
 }
 #intro p {
     color: #ebebeb;
@@ -530,13 +530,13 @@ body.mobile-nav-active #mobile-nav-toggle {
     line-height: 1;
     margin: 10px;
     color: #fff;
-    background: #18133E;
+    background: #2A4673;
     -webkit-animation-delay: 0.8s;
     animation-delay: 0.8s;
 }
 #intro .about-btn:hover {
     background: #fff;
-    color: #18133E;
+    color: #2A4673;
     font-weight: 600;
 }
 @-webkit-keyframes pulsate-btn {
@@ -567,7 +567,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-size: cover;
     overflow: hidden;
     position: relative;
-    color: #340C3E;
+    color: #101F46;
     padding: 40px 0 40px 0;
 }
 #overview:before {
@@ -582,19 +582,19 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #340C3E;
+    color: #101F46;
     text-align: center;
 }
 #overview h3 {
     font-size: 20px;
     margin-bottom: 10px;
-    color: #340C3E;
+    color: #101F46;
     text-align: center;
 }
 #overview p {
     font-size: 16px;
     margin-bottom: 10px;
-    color: #340C3E;
+    color: #101F46;
     text-align: center;
 }
 
@@ -607,12 +607,12 @@ body.mobile-nav-active #mobile-nav-toggle {
     letter-spacing: 1px;
     border-radius: 3px;
     display: inline-block;
-    background: #18133E;
+    background: #2A4673;
     color: #fff;
 }
 
 #overview .btn-current:hover {
-    background: #340C3E;
+    background: #101F46;
 }
 
 .countdown-box span{
@@ -643,7 +643,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-size: cover;
     overflow: hidden;
     position: relative;
-    color: #340C3E;
+    color: #101F46;
     padding: 40px 0 40px 0;
 }
 #competitions:before,
@@ -660,24 +660,24 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
-    color: #340C3E;
+    color: #101F46;
 }
 #workshops h3 {
     font-size: 28px;
     margin-bottom: 10px;
     text-align: center;
-    color: #340C3E;
+    color: #101F46;
 }
 #competitions p {
     font-size: 16px;
     margin-bottom: 3vh;
-    color: #340C3E;
+    color: #101F46;
     text-align: center;
 }
 #workshops p {
     font-size: 16px;
     padding-bottom: 1.5vh;
-    color: #340C3E;
+    color: #101F46;
     text-align: center;
 }
 #workshops .move-to-middle {
@@ -706,12 +706,12 @@ body.mobile-nav-active #mobile-nav-toggle {
     letter-spacing: 1px;
     border-radius: 3px;
     display: inline-block;
-    background: #18133E;
+    background: #2A4673;
     color: #fff;
 }
 
 #competitions .btn-current:hover {
-    background: #340C3E;
+    background: #101F46;
 }
 
 #speakers {
@@ -721,7 +721,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-size: 18px;
     margin-bottom: 10px;
     padding: 0px 5px 10px 5px;
-    color: #340C3E;
+    color: #101F46;
     text-align: center;
 }
 #speakers h2 {
@@ -767,7 +767,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: #fff;
 }
 #speakers .speaker .details a:hover {
-    color: #18133E;
+    color: #2A4673;
 }
 #speakers .speaker:hover .details {
     bottom: 0;
@@ -790,12 +790,12 @@ body.mobile-nav-active #mobile-nav-toggle {
     border: none;
     border-radius: 50px;
     font-weight: 600;
-    background-color: #18133E;
+    background-color: #2A4673;
     color: #fff;
     padding: 10px 100px;
 }
 #schedule .nav-tabs a.active {
-    background-color: #340C3E;
+    background-color: #101F46;
     color: #fff;
 }
 #schedule .sub-heading {
@@ -891,7 +891,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: #152b79;
 }
 #hotels a:hover {
-    color: #18133E;
+    color: #2A4673;
 }
 #hotels .stars {
     padding: 0 20px;
@@ -931,15 +931,15 @@ border: 6px solid rgba(255, 255, 255, 0.2);
 font-size: 18px;
 font-weight: bold;
 margin: 10px 0 5px 45px;
-color: #18133E;
+color: #2A4673;
 }
 .testimonials .testimonial-item h4 {
 font-size: 14px;
-color: #18133E;
+color: #2A4673;
 margin: 0 0 0 45px;
 }
 .testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
-color: #FEA4B7;
+color: #DDDBD2;
 font-size: 26px;
 }
 .testimonials .testimonial-item .quote-icon-left {
@@ -958,7 +958,7 @@ font-style: italic;
 color: white;
 margin: 0 15px 0 15px;
 padding: 20px 20px 60px 20px;
-background: #18133E;
+background: #101F45;
 position: relative;
 border-radius: 6px;
 position: relative;
@@ -975,7 +975,7 @@ background-color: rgba(0, 0, 0, 0.4);
 opacity: 1;
 }
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-background-color: #FEA4B7;
+background-color: #DDDBD2;
 }
 
 #gallery {
@@ -985,14 +985,14 @@ background-color: #FEA4B7;
 #gallery h3 {
     font-size: 20px;
     margin-bottom: 10px;
-    color: #340C3E;
+    color: #101F46;
     text-align: center;
 }
 #gallery h4 {
     font-size: 28px;
     margin-bottom: 10px;
     padding-bottom: 10px;
-    color: #340C3E;
+    color: #101F46;
     text-align: center;
 }
 #gallery .owl-nav,
@@ -1013,14 +1013,14 @@ background-color: #FEA4B7;
     background-color: #ddd;
 }
 #gallery .owl-dot.active {
-    background-color: #18133E;
+    background-color: #2A4673;
 }
 #gallery .gallery-carousel .owl-stage-outer {
     overflow: visible;
     padding-bottom: 2rem;
 }
 #gallery .gallery-carousel .center {
-    border: 6px solid #340C3E;
+    border: 6px solid #101F46;
     margin: -10px;
     box-sizing: content-box;
     padding: 4px;
@@ -1029,15 +1029,15 @@ background-color: #FEA4B7;
 }
 #gallery .view-button {
     color: #fff !important;
-    background: #18133E;
-    border: 4px solid #18133E;
+    background: #2A4673;
+    border: 4px solid #2A4673;
     margin: 2vh 0;
 }
 #gallery .view-button:hover {
     background: #fff;
-    color: #18133E !important;
+    color: #2A4673 !important;
     font-weight: 600;
-    border: 4px solid #18133E;
+    border: 4px solid #2A4673;
 }
 
 .gallery-speakers-section .card{
@@ -1176,7 +1176,7 @@ background-color: #FEA4B7;
 }
 #faq #faq-list a.collapse,
 #faq #faq-common a.collapse {
-    color: #18133E;
+    color: #2A4673;
 }
 #faq #faq-list a.collapsed,
 #faq #faq-common a.collapsed {
@@ -1226,7 +1226,7 @@ background-color: #FEA4B7;
     border-radius: 50px;
     padding: 10px 40px;
     transition: all 0.2s;
-    background-color: #18133E;
+    background-color: #2A4673;
     border: 0;
     color: #fff;
 }
@@ -1242,7 +1242,7 @@ background-color: #FEA4B7;
     border-radius: 50px;
     padding: 10px 40px;
     transition: all 0.2s;
-    background-color: #18133E;
+    background-color: #2A4673;
     border: 0;
     color: #fff;
 }
@@ -1250,7 +1250,7 @@ background-color: #FEA4B7;
     background-color: #e0072f;
 }
 #footer {
-    background: #18133E;
+    background: #2A4673;
     padding: 0 0 25px 0;
     color: #eee;
     font-size: 14px;
@@ -1293,7 +1293,7 @@ background-color: #FEA4B7;
     transition: 0.3s;
 }
 #footer .footer-top .social-links a:hover {
-    background: #18133E;
+    background: #2A4673;
     color: #fff;
 }
 #footer .footer-top h4 {
@@ -1313,7 +1313,7 @@ background-color: #FEA4B7;
 }
 #footer .footer-top .footer-links ul i {
     padding-right: 5px;
-    color: #18133E;
+    color: #2A4673;
     font-size: 18px;
 }
 #footer .footer-top .footer-links ul li {
@@ -1327,7 +1327,7 @@ background-color: #FEA4B7;
     color: #eee;
 }
 #footer .footer-top .footer-links ul a:hover {
-    color: #18133E;
+    color: #2A4673;
 }
 #footer .footer-top .footer-contact {
     margin-bottom: 30px;
@@ -1355,7 +1355,7 @@ background-color: #FEA4B7;
 }
 @media (max-width: 991px) {
     #header {
-        background: #2A176C;
+        background: #101F45;
         height: 70px;
         padding: 15px 0;
         transition: all 0.5s;
@@ -1383,7 +1383,7 @@ background-color: #FEA4B7;
     #intro {
         width: 100%;
         height: 100vh;
-        background: url("../img/intro-bg-mobile.jpg") top center;
+        background: url("../img/intro-bg.png") top center;
         background-size: cover;
         overflow: hidden;
         position: relative;
