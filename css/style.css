@@ -1389,7 +1389,7 @@ background-color: #DDDBD2;
     padding-top: 1rem;
     padding-bottom: 20px;
 }
-.profile .profile-image {
+.profile a .profile-image {
     width: 60px;
 }
 @media (min-width: 991px) {
