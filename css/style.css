@@ -40,6 +40,13 @@ h6 {
     margin-left: auto;
     margin-right: auto;
 }
+.modal-header a {
+    display: block;
+    height: 250px;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .modal-footer {
     border-top: 0 none;
 }
@@ -1381,6 +1388,9 @@ background-color: #DDDBD2;
     text-align: center;
     padding-top: 1rem;
     padding-bottom: 20px;
+}
+.profile .profile-image {
+    width: 60px;
 }
 @media (min-width: 991px) {
     #schedule .sub-heading {
