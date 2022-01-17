@@ -1,0 +1,1 @@
+git push -f origin WISE-NC-2022:master
