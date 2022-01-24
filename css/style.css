@@ -930,10 +930,10 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-size: 15px;
 }
 
-#testimonials {
+/* #testimonials {
     padding: 40px 0 80px 0;
     overflow: hidden;
-}
+} */
 .testimonials .testimonials-carousel, .testimonials .testimonials-slider {
 overflow: hidden;
 }
