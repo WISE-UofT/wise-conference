@@ -4,13 +4,13 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 a {
-    color: #2A4673;
+    color: #6A4F9E;
     transition: 0.5s;
 }
 a:hover,
 a:active,
 a:focus {
-    color: #2A4673;
+    color: #6A4F9E;
     outline: none;
     text-decoration: none;
 }
@@ -99,9 +99,9 @@ h6 {
 }
 .register-button:hover {
     background: #fff;
-    color: #2A4673 !important;
+    color: #6A4F9E !important;
     font-weight: 600;
-    border: 4px solid #2A4673;
+    border: 4px solid #6A4F9E;
 }
 .view-button {
     text-align: center;
@@ -173,7 +173,7 @@ h6 {
 .back-to-top {
     position: fixed;
     display: none;
-    background: #2A4673;
+    background: #6A4F9E;
     color: #fff;
     width: 40px;
     height: 40px;
@@ -211,7 +211,7 @@ h6 {
     margin: 0;
     font-size: 18px;
     font-weight: 500;
-    color: #9195a2;
+    color: #000000;
 }
 .section-with-bg {
     background-color: #f6f7fd;
@@ -228,7 +228,7 @@ h6 {
 }
 #header.header-scrolled,
 #header.header-fixed {
-    background: #101F45;
+    background: #563d83;
     height: 70px;
     padding: 15px 0;
     transition: all 0.5s;
@@ -244,7 +244,7 @@ h6 {
     text-transform: uppercase;
 }
 #header #logo h1 span {
-    color: #2A4673;
+    color: #563d83;
 }
 #header #logo h1 a,
 #header #logo h1 a:hover {
@@ -308,7 +308,7 @@ h6 {
     padding: 8px;
     text-decoration: none;
     display: inline-block;
-    color: rgba(225, 222, 230, 0.8);
+    color: #000;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 14px;
@@ -338,11 +338,11 @@ h6 {
     width: 100%;
 }
 .nav-menu li.buy-tickets a {
-    color: #101F45;
-    background: #DDDBD2;
+    color: #ede1ff;
+    background: #563D8E;
     padding: 7px 22px;
     border-radius: 10px;
-    border: 2px solid #DDDBD2;
+    border: 2px solid #ede1ff;
     transition: all ease-in-out 0.3s;
     font-weight: 600;
     margin-left: 8px;
@@ -351,9 +351,9 @@ h6 {
     font-size: 13px;
 }
 .nav-menu li.buy-tickets a:hover {
-    background: #101F45;
-    border: 2px solid #fff;
-    color: #DDDBD2;
+    background: #ede1ff;
+    border: 2px solid #563d83;
+    color: #563d83;
 }
 .nav-menu li.buy-tickets:hover a:before,
 .nav-menu li.buy-tickets.menu-active a:before {
@@ -362,7 +362,7 @@ h6 {
 .nav-menu ul {
     margin: 4px 0 0 0;
     padding: 10px;
-    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    box-shadow: 0px 0px 30px rgba(177, 175, 214, 0.25);
     background: #fff;
     border-radius: 3px;
 }
@@ -371,7 +371,7 @@ h6 {
 }
 .nav-menu ul li a {
     padding: 10px;
-    color: #060c22;
+    color: #000;
     transition: 0.3s;
     display: block;
     font-size: 13px;
@@ -379,7 +379,7 @@ h6 {
     border-radius: 3px;
 }
 .nav-menu ul li:hover > a {
-    background: #2A4673;
+    background: #563d83;
     color: #fff;
 }
 .nav-menu ul ul {
@@ -434,7 +434,7 @@ h6 {
     outline: none;
 }
 #mobile-nav ul li a:hover {
-    color: #2A4673;
+    color: #563d83;
 }
 #mobile-nav ul li li {
     padding-left: 30px;
@@ -448,10 +448,10 @@ h6 {
     color: #fff;
 }
 #mobile-nav ul .menu-has-children i.fa-chevron-up {
-    color: #2A4673;
+    color: #563d83;
 }
 #mobile-nav ul .menu-item-active {
-    color: #2A4673;
+    color: #563d83;
 }
 #mobile-body-overly {
     width: 100%;
@@ -518,7 +518,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     text-transform: uppercase;
 }
 #intro h1 span {
-    color: #2A4673;
+    color: #563d83;
 }
 #intro p {
     color: #ebebeb;
@@ -537,13 +537,13 @@ body.mobile-nav-active #mobile-nav-toggle {
     line-height: 1;
     margin: 10px;
     color: #fff;
-    background: #2A4673;
+    background: #563d83;
     -webkit-animation-delay: 0.8s;
     animation-delay: 0.8s;
 }
 #intro .about-btn:hover {
     background: #fff;
-    color: #2A4673;
+    color: #563d83;
     font-weight: 600;
 }
 @-webkit-keyframes pulsate-btn {
@@ -614,7 +614,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     letter-spacing: 1px;
     border-radius: 3px;
     display: inline-block;
-    background: #2A4673;
+    background: #563D8E;
     color: #fff;
 }
 
@@ -789,7 +789,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: #fff;
 }
 #speakers .speaker .details a:hover {
-    color: #2A4673;
+    color: #563d83;
 }
 #speakers .speaker:hover .details {
     bottom: 0;
@@ -812,7 +812,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     border: none;
     border-radius: 50px;
     font-weight: 600;
-    background-color: #2A4673;
+    background-color: #563d83;
     color: #fff;
     padding: 10px 100px;
 }
@@ -953,11 +953,11 @@ border: 6px solid rgba(255, 255, 255, 0.2);
 font-size: 18px;
 font-weight: bold;
 margin: 10px 0 5px 45px;
-color: #2A4673;
+color: #563d83;
 }
 .testimonials .testimonial-item h4 {
 font-size: 14px;
-color: #2A4673;
+color: #563d83;
 margin: 0 0 0 45px;
 }
 .testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
@@ -1421,7 +1421,7 @@ background-color: #DDDBD2;
 }
 @media (max-width: 991px) {
     #header {
-        background: #101F45;
+        background: #563d83;
         height: 70px;
         padding: 15px 0;
         transition: all 0.5s;
