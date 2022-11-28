@@ -861,13 +861,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 #schedule .schedule-item h4 span {
     font-style: italic;
-    color: #19328e;
+    color: #6A4F9E;
     font-weight: normal;
     font-size: 16px;
 }
 #schedule .schedule-item p {
     font-style: italic;
-    color: #152b79;
+    color: #6A4F9E;
     margin-bottom: 0;
 }
 #venue {
@@ -913,7 +913,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: #152b79;
 }
 #hotels a:hover {
-    color: #2A4673;
+    color: #6A4F9E;
 }
 #hotels .stars {
     padding: 0 20px;
@@ -1035,7 +1035,7 @@ background-color: #DDDBD2;
     background-color: #ddd;
 }
 #gallery .owl-dot.active {
-    background-color: #2A4673;
+    background-color: #6A4F9E;
 }
 #gallery .gallery-carousel .owl-stage-outer {
     overflow: visible;
@@ -1051,15 +1051,15 @@ background-color: #DDDBD2;
 }
 #gallery .view-button {
     color: #fff !important;
-    background: #2A4673;
-    border: 4px solid #2A4673;
+    background: #6A4F9E;
+    border: 4px solid #6A4F9E;
     margin: 2vh 0;
 }
 #gallery .view-button:hover {
     background: #fff;
-    color: #2A4673 !important;
+    color: #6A4F9E !important;
     font-weight: 600;
-    border: 4px solid #2A4673;
+    border: 4px solid #6A4F9E;
 }
 
 .gallery-speakers-section .card{
@@ -1289,7 +1289,7 @@ background-color: #DDDBD2;
     border-radius: 50px;
     padding: 10px 40px;
     transition: all 0.2s;
-    background-color: #2A4673;
+    background-color: #6A4F9E;
     border: 0;
     color: #fff;
 }
@@ -1305,7 +1305,7 @@ background-color: #DDDBD2;
     border-radius: 50px;
     padding: 10px 40px;
     transition: all 0.2s;
-    background-color: #2A4673;
+    background-color: #563d83;
     border: 0;
     color: #fff;
 }
@@ -1313,7 +1313,7 @@ background-color: #DDDBD2;
     background-color: #e0072f;
 }
 #footer {
-    background: #2A4673;
+    background: #563d83;
     padding: 0 0 25px 0;
     color: #eee;
     font-size: 14px;
@@ -1390,7 +1390,7 @@ background-color: #DDDBD2;
     color: #eee;
 }
 #footer .footer-top .footer-links ul a:hover {
-    color: #2A4673;
+    color: #6A4F9E;
 }
 #footer .footer-top .footer-contact {
     margin-bottom: 30px;
