@@ -479,7 +479,7 @@ mark,
 }
 
 .img-fluid {
-  max-width: 100%;
+  max-width: auto;
   height: auto;
 }
 
@@ -594,6 +594,7 @@ pre code {
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+  width: 100%;
 }
 
 .no-gutters {
