@@ -35,8 +35,8 @@ h6 {
 }
 .modal-header img {
     display: block;
-    height: 250px;
-    width: 250px;
+    max-height: 250px;
+    max-width: 250px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -761,7 +761,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #speakers {
-    padding: 40px 0 30px 0;
+    padding: 40px 0 30px 0
 }
 #speakers p {
     font-size: 18px;
@@ -778,6 +778,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     position: relative;
     overflow: hidden;
     margin-bottom: 30px;
+    height: 80%
 }
 #speakers .speaker .details {
     background: rgba(6, 12, 34, 0.76);
