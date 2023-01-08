@@ -132,8 +132,8 @@ h6 {
     text-align: center;
     color: #fff !important;
     font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 2vh;
+    font-weight: 300;
+    font-size: 1va;
     letter-spacing: 1px;
     display: inline-block;
     padding: 12px 15px;
@@ -151,6 +151,31 @@ h6 {
     font-weight: 600;
     border: 4px solid #54b033;
 }
+
+.case-button{
+    text-align: center;
+    color: #fff !important;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 1va;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 15px;
+    transition: 0.5s;
+    line-height: 1;
+    background: #563d83;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+    border: 4px solid #ffffff;
+}
+
+.case-button:hover {
+    background: #fff;
+    color: #563d83 !important;
+    font-weight: 600;
+    border: 4px solid #2040c1;
+}
+
 #preloader {
     position: fixed;
     top: 0;
@@ -778,7 +803,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     position: relative;
     overflow: hidden;
     margin-bottom: 30px;
-    height: 80%
+    height: 400px;
 }
 #speakers .speaker .details {
     background: rgba(6, 12, 34, 0.76);
