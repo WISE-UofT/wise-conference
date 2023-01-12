@@ -809,7 +809,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     background: rgba(6, 12, 34, 0.76);
     position: absolute;
     left: 0;
-    bottom: -30px;
+    bottom: -40px;
     right: 0;
     text-align: center;
     padding-top: 10px;
@@ -828,8 +828,9 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-style: italic;
 }
 #speakers .speaker .details .social {
-    height: 30px;
+    height: 40px;
     font-size: 20px;
+    margin-bottom: 0px;
 }
 #speakers .speaker .details .social i {
     padding-left: 5px;
