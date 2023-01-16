@@ -803,7 +803,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     position: relative;
     overflow: hidden;
     margin-bottom: 30px;
-    height: 400px;
+    height: 350px;
 }
 #speakers .speaker .details {
     background: rgba(6, 12, 34, 0.76);
