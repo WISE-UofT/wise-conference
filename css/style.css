@@ -116,16 +116,16 @@ h6 {
     transition: 0.5s;
     line-height: 1;
     margin-top: 3vh;
-    background: #101F46;
+    background: #6A4F9E;
     -webkit-animation-delay: 0.8s;
     animation-delay: 0.8s;
-    border: 4px solid #101F46;
+    border: 4px solid #6A4F9E;
 }
 .view-button:hover {
     background: #fff;
-    color: #101F46 !important;
+    color: #6A4F9E !important;
     font-weight: 600;
-    border: 4px solid #101F46;
+    border: 4px solid #6A4F9E;
 }
 
 .threeMT-button{
@@ -1111,6 +1111,59 @@ background-color: #DDDBD2;
     color: #6A4F9E !important;
     font-weight: 600;
     border: 4px solid #6A4F9E;
+}
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.carousel-slides {
+    width: 900px;
+    height: 600px;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel-slide {
+    display: none;
+    background-color: #FFF;
+}
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+}
+.carousel-arrow {
+    background-color: #6A4F9E;
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.carousel-arrow.prev::before {
+    content: "\2190"; /* Unicode character for left arrow */
+}
+.carousel-arrow.next::before {
+    content: "\2192"; /* Unicode character for right arrow */
+}
+.carousel-dots {
+    text-align: center;
+    margin-top: 10px;
+}
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #999; /* Inactive dot color */
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.carousel-dot.active {
+    background-color: #333; /* Active dot color */
 }
 
 .gallery-speakers-section .card{

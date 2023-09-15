@@ -1,5 +1,41 @@
 jQuery(document).ready(function($) {
 
+    // Add a dot for each slide
+    var numSlides = $('.carousel-slide').length;
+    for (var i = 0; i < numSlides; i++) {
+        $('.carousel-dots').append('<div class="carousel-dot"></div>');
+    }
+
+    // Set the first dot as active
+    $('.carousel-dot:first').addClass('active');
+
+    // Function to go to a specific slide
+    function goToSlide(index) {
+        $('.carousel-slide').hide();
+        $('.carousel-slide:eq(' + index + ')').show();
+        $('.carousel-dot').removeClass('active');
+        $('.carousel-dot:eq(' + index + ')').addClass('active');
+    }
+
+    // Handle dot click event using event delegation
+    $('.carousel-dots').on('click', '.carousel-dot', function () {
+        clearInterval(slideInterval); // Stop the timer
+        var index = $(this).index();
+        goToSlide(index);
+        // Restart the timer
+        slideInterval = setInterval(nextSlide, 3000); // Change 3000 to the desired interval in milliseconds
+    });
+
+    // Function to go to the next slide
+    function nextSlide() {
+        var currentIndex = $('.carousel-slide:visible').index();
+        var nextIndex = (currentIndex + 1) % numSlides;
+        goToSlide(nextIndex);
+    }
+
+    // Set a timer to automatically advance the carousel
+    var slideInterval = setInterval(nextSlide, 3000); // Change 3000 to the desired interval in milliseconds
+
     // Back to top button
     $(window).scroll(function() {
         if ($(this).scrollTop() > 100) {
