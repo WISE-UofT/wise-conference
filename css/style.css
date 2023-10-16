@@ -1569,6 +1569,17 @@ background-color: #DDDBD2;
 .profile a .profile-image {
     width: 60px;
 }
+@media (max-width: 860px) {
+    #intro {
+        height: 60vh !important;
+    }
+}
+@media (max-width: 520px) {
+    #intro {
+        height: 40vh !important;
+        margin-top: 14%;
+    }
+}
 @media (min-width: 991px) {
     #schedule .sub-heading {
         width: 75%;
