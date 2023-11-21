@@ -30,6 +30,10 @@ h6 {
     padding: 0;
     color: #101F46;
 }
+video {
+    object-fit: fill;
+    width: 100%;
+}
 .modal-header {
     border-bottom: 0 none;
 }
