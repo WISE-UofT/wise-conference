@@ -2,7 +2,7 @@
 
 ## Current
 
-2024 (Endless Exploration): https://conference.wiseuoft.org/
+2024 (Endless Exploration): https://conference.wise.skule.ca/
 
 ## Past Links
 
