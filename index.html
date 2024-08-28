@@ -40,6 +40,8 @@
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="lib/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <!-- Preload the banner with high fetchpriority so it starts loading with style.css -->
+    <link rel="preload" fetchpriority="high" as="image" href="img/intro-bg.webp" type="image/webp">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-393QB79YGG"></script>
@@ -1918,68 +1920,44 @@
                 <h3>Corporate Partners</h3>
                 <div class="row logos justify-content-center align-items-center">
                     <!-- Gold -->
-                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/magna.jpg" alt="Magna International"></div>
-                    <div class="logo-item col-5 col-md-5 col-lg-3"><img src="img/sponsors/qualcomm.jpg" alt="Qualcomm"></div>
+                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/magna.webp" alt="Magna International"></div>
+                    <div class="logo-item col-5 col-md-5 col-lg-3"><img src="img/sponsors/qualcomm.webp" alt="Qualcomm"></div>
                     <!-- Silver -->
-                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/amazon_robotics.png" alt="Amazon Robotics"></div>
-                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/cibc.png" alt="CIBC"></div>
+                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/amazon_robotics.webp" alt="Amazon Robotics"></div>
+                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/cibc.webp" alt="CIBC"></div>
                     <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/intuit.png" alt="Intuit"></div>
-                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/opg.jpg" alt="OPG"></div>
-                    <!-- <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/trojantechnologies.png" alt="Trojan Technologies"></div> -->
+                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/opg.webp" alt="OPG"></div>
                     <!-- Bronze -->
-                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/accenture.png" alt="Accenture"></div>
-                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/definity.png" alt="Definity Financial Corporation"></div>
-                    <div class="logo-item col-4 col-md-4 col-lg-1"><img src="img/sponsors/gm.png" alt="GM"></div>
+                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/accenture.webp" alt="Accenture"></div>
+                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/definity.webp" alt="Definity Financial Corporation"></div>
+                    <div class="logo-item col-4 col-md-4 col-lg-1"><img src="img/sponsors/gm.webp" alt="GM"></div>
                     <div class="logo-item col-4 col-md-4 col-lg-1"><img src="img/sponsors/mastercard.png" alt="Mastercard"></div>
                     <div class="logo-item col-4 col-md-4 col-lg-1"><img src="img/sponsors/mdpi.svg" alt="MDPI"></div>
                     <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/metrolinx.png" alt="Metrolinx"></div>
-                    <div class="logo-item col-4 col-md-4 col-lg-1"><img src="img/sponsors/p&g.png" alt="P&G"></div>
-                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/synopsys.jpg" alt="Synopsys"></div>
-                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/tetratech.jpg" alt="TetraTech"></div>
-                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/vector-institute.png" alt="Vector Institute"></div>
+                    <div class="logo-item col-4 col-md-4 col-lg-1"><img src="img/sponsors/p&g.webp" alt="P&G"></div>
+                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/synopsys.webp" alt="Synopsys"></div>
+                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/tetratech.webp" alt="TetraTech"></div>
+                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/vector-institute.webp" alt="Vector Institute"></div>
                     <!-- Contributor -->
-                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/PEO.png" alt="PEO"></div>
-                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/ssc.png" alt="Shared Services Canada"></div>
-                    <!-- <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/intel.png" alt="Intel"></div> -->
-                    <!-- <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/smile.png" alt="Smile Digital Health"></div> -->
-                    <!-- <div class="logo-item col-5 col-md-4 col-lg-2"><img src="img/sponsors/google.png" alt="Google"></div> -->
-                    <!-- <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/hydro.png" alt="Hydro One"></div> -->
-                    <!-- <div class="logo-item col-4 col-md-4 col-lg-3"><img src="img/sponsors/PEO.png" alt="PEO"></div> -->
-                    <!-- <div class="logo-item col-4 col-md-4 col-lg-1"><img src="img/sponsors/ubisoft.png" alt="Ubisoft"></div> -->
-                    <!-- <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/kinectrics.png" alt="Kinectrics"></div> -->
-                    <!-- <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/ontario_power.png" alt="Ontario Power Generation"></div> -->
-                    <!-- <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/waterloo_math.png" alt="UWaterloo Faculty of Math"></div> -->
-                    <!-- <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/EQBank.png" alt="EQ Bank"></div> -->
-                    <!-- <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/gm.png" alt="General Motors"></div> -->
-                    <!-- <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/pwc.png" alt="PWC"></div> -->
-                    <!-- <div class="logo-item col-4 col-md-4 col-lg-1"><img src="img/sponsors/maple.png" alt="Maple Leaf Foods"></div> -->
-                    <!-- <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/schneider.png" alt="Schneider"></div> -->
-                    <!-- <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/metrolinx.png" alt="Metrolinx"></div> -->
+                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/PEO.webp" alt="PEO"></div>
+                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/ssc.webp" alt="Shared Services Canada"></div>
                 </div>
             </div>
 
             <div class="container mt-5">
                 <h3>Academic Partners</h3>
-                <!-- <div class="row logos justify-content-center align-items-center"> -->
-                    <!-- Silver -->
-                    <!-- <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/waterloo.png" alt="University of Waterloo"></div>
-                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/york_mech_eng.png" alt="York University Lassonde Mechnical Engineering"></div> -->
-                    <!-- Bronze -->
-                    <!-- <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/uoft_eng.png" alt="University of Toronto Engineering"></div>
-                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/uoft_info.png" alt="University of Toronto Faculty of Information"></div>
-                </div> -->
                 <div class="row logos justify-content-center align-items-center">
-                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/humber.png" alt="Humber College"></div>
-                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/mcgill.png" alt="McGill University"></div>
-                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/mcmaster.png" alt="McMaster University"></div>
-                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/ontariotech.jpg" alt="Ontario Tech University"></div>
-                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/tmu.png" alt="Toronto Metropolitan University"></div>
+                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/humber.webp" alt="Humber College"></div>
+                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/mcgill.webp" alt="McGill University"></div>
+                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/mcmaster.webp" alt="McMaster University"></div>
+                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/ontariotech.webp" alt="Ontario Tech University"></div>
+                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/tmu.webp" alt="Toronto Metropolitan University"></div>
                     <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/uofg.png" alt="University of Guelph"></div>
-                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/uofm.png" alt="University of Manitoba"></div>
+                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/uofm.webp" alt="University of Manitoba"></div>
                     <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/uoft.png" alt="University of Toronto"></div>
-                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/waterloo.png" alt="University of Waterloo"></div>
+                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/waterloo.webp" alt="University of Waterloo"></div>
                     <div class="logo-item col-2 col-md-2 col-lg-1"><img src="img/sponsors/western.png" alt="Western University"></div>
-                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/york_mech_eng.png" alt="York University Lassonde Mechnical Engineering"></div>
+                    <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/york_mech_eng.webp" alt="York University Lassonde Mechnical Engineering"></div>
                 </div>
             </div>
         </section>
@@ -2664,7 +2642,7 @@
     <div id="preloader"></div>
     
     <!--=====Modal Information for Speakers======-->
-    <div class="modal fade" id="syeda-anjum" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="syeda-anjum" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-avatar modal-lg">
 
             <div class="modal-content">
@@ -3347,7 +3325,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!--=====KEYNOTE ABSTRACTS======-->
     <div class="modal fade" id="nicole-kaniki" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
