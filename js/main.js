@@ -205,7 +205,7 @@ jQuery(document).ready(function($) {
 
     /* ======= Countdown ========= */
 	// set the date we're counting down to
-    var target_date = new Date("Jan 20, 2024").getTime();
+    var target_date = new Date("Jan 25, 2025").getTime();
      
     // variables for time units
     var days, hours, minutes, seconds;
