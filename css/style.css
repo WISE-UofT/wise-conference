@@ -257,7 +257,7 @@ video {
 }
 #header.header-scrolled,
 #header.header-fixed {
-    background: #563d83;
+    background: #fff;
     height: 70px;
     padding: 15px 0;
     transition: all 0.5s;
@@ -337,7 +337,7 @@ video {
     padding: 8px;
     text-decoration: none;
     display: inline-block;
-    color: #fff;
+    color: #563d83;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 14px;
@@ -429,7 +429,7 @@ video {
     cursor: pointer;
 }
 #mobile-nav-toggle i {
-    color: #fff;
+    color: #563d83;
 }
 #mobile-nav {
     position: fixed;
@@ -1508,7 +1508,7 @@ background-color: #DDDBD2;
 }
 @media (max-width: 991px) {
     #header {
-        background: #563d83;
+        background: #fff;
         height: 70px;
         padding: 15px 0;
         transition: all 0.5s;
