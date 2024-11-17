@@ -2,9 +2,11 @@
 
 ## Current
 
-2024 (Endless Exploration): https://conference.wise.skule.ca/
+2025 (Reaching for the Stars): https://conference.wise.skule.ca/
 
 ## Past Links
+
+2024 (Endless Exploration)
 
 2023 (Leaders of Tomorrow)
 
