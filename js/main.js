@@ -276,4 +276,66 @@ jQuery(document).ready(function($) {
     }
     }
     });
+    
+    // Right Navigation Bar Functionality
+    const rightNavToggle = document.getElementById('right-nav-toggle');
+    const rightNav = document.getElementById('right-nav');
+    const rightNavClose = document.getElementById('right-nav-close');
+    const rightNavOverlay = document.getElementById('right-nav-overlay');
+    const rightNavLinks = document.querySelectorAll('.right-nav-link');
+    
+
+    
+    // Toggle navigation
+    function openRightNav() {
+        rightNav.style.right = '0';
+        rightNavOverlay.style.opacity = '1';
+        rightNavOverlay.style.visibility = 'visible';
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeRightNav() {
+        rightNav.style.right = '-350px';
+        rightNavOverlay.style.opacity = '0';
+        rightNavOverlay.style.visibility = 'hidden';
+        document.body.style.overflow = '';
+    }
+    
+    // Event listeners
+    rightNavToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        openRightNav();
+    });
+    
+    rightNavClose.addEventListener('click', (e) => {
+        e.preventDefault();
+        closeRightNav();
+    });
+    
+    rightNavOverlay.addEventListener('click', (e) => {
+        closeRightNav();
+    });
+    
+    // Close navigation when clicking on a link
+    rightNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            closeRightNav();
+        });
+    });
+    
+    // Close navigation on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && rightNav.style.right === '0px') {
+            closeRightNav();
+        }
+    });
+    
+    // Close navigation on window resize (mobile optimization)
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && rightNav.style.right === '0px') {
+            closeRightNav();
+        }
+    });
+    
+
 });
