@@ -339,3 +339,43 @@ jQuery(document).ready(function($) {
     
 
 });
+
+/* ===== Right Nav: single source of truth (class-based) ===== */
+(function(){
+  var rightNav = document.getElementById('right-nav');
+  var rightNavToggle = document.getElementById('right-nav-toggle');
+  var rightNavClose = document.getElementById('right-nav-close');
+  var rightNavOverlay = document.getElementById('right-nav-overlay');
+
+  if(!rightNav || !rightNavToggle || !rightNavOverlay){ return; }
+
+  function openRightNav(){
+    rightNav.classList.add('active');
+    rightNavOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeRightNav(){
+    rightNav.classList.remove('active');
+    rightNavOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  function toggleRightNav(){
+    if (rightNav.classList.contains('active')) closeRightNav();
+    else openRightNav();
+  }
+
+  rightNavToggle.addEventListener('click', function(e){ e.preventDefault(); toggleRightNav(); });
+  if (rightNavClose) rightNavClose.addEventListener('click', function(e){ e.preventDefault(); closeRightNav(); });
+  rightNavOverlay.addEventListener('click', function(){ closeRightNav(); });
+
+  // Close on ESC
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && rightNav.classList.contains('active')) closeRightNav();
+  });
+
+  // Close when a right-nav link is clicked
+  rightNav.addEventListener('click', function(e){
+    var a = e.target.closest('a.right-nav-link');
+    if (a) { closeRightNav(); }
+  });
+})();

@@ -47,47 +47,7 @@
     <link rel="preload" fetchpriority="high" as="image" href="img/intro-bg.webp" type="image/webp">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-393QB79YGG"></script>
-    <script async>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-393QB79YGG');
-    </script>
     
-    <!-- Right Navigation Functions -->
-    <script>
-        function toggleRightNav() {
-            const nav = document.getElementById('right-nav');
-            const overlay = document.getElementById('right-nav-overlay');
-            if (nav.style.right === '0px') {
-                closeRightNav();
-            } else {
-                openRightNav();
-            }
-        }
-        
-        function openRightNav() {
-            const nav = document.getElementById('right-nav');
-            const overlay = document.getElementById('right-nav-overlay');
-            nav.style.right = '0';
-            overlay.style.opacity = '1';
-            overlay.style.visibility = 'visible';
-            document.body.style.overflow = 'hidden';
-        }
-        
-        function closeRightNav() {
-            const nav = document.getElementById('right-nav');
-            const overlay = document.getElementById('right-nav-overlay');
-            nav.style.right = '-350px';
-            overlay.style.opacity = '0';
-            overlay.style.visibility = 'hidden';
-            document.body.style.overflow = '';
-        }
-        
-
-    </script>
 
 </head>
 
@@ -122,7 +82,7 @@
     <section id="intro"></section>
     
     <!--====Right Navigation Bar====-->
-    <div id="right-nav-toggle" class="right-nav-toggle" onclick="toggleRightNav()">
+    <div id="right-nav-toggle" class="right-nav-toggle" >
         <i class="fa fa-bars"></i>
     </div>
     
@@ -131,26 +91,26 @@
     <div id="right-nav" class="right-nav">
         <div class="right-nav-header">
             <h3>Navigation</h3>
-            <button id="right-nav-close" class="right-nav-close" onclick="closeRightNav()">
+            <button id="right-nav-close" class="right-nav-close" >
                 <i class="fa fa-times"></i>
             </button>
         </div>
         <nav class="right-nav-menu">
             <ul>
-                <li><a href="#subsidies" class="right-nav-link" onclick="closeRightNav()">Discounts</a></li>
-                <li><a href="#speakers" class="right-nav-link" onclick="closeRightNav()">Speakers</a></li>
-                <li><a href="#workshops" class="right-nav-link" onclick="closeRightNav()">Workshops</a></li>
-                <li><a href="#competitions" class="right-nav-link" onclick="closeRightNav()">Competitions</a></li>
-                <li><a href="#schedule" class="right-nav-link" onclick="closeRightNav()">Schedule</a></li>
-                <li><a href="#sponsors-section" class="right-nav-link" onclick="closeRightNav()">Sponsors</a></li>
-                <li><a href="#venue" class="right-nav-link" onclick="closeRightNav()">Venue</a></li>
-                <li><a href="#faq" class="right-nav-link" onclick="closeRightNav()">FAQ</a></li>
-                <li><a href="#gallery" class="right-nav-link" onclick="closeRightNav()">Recap</a></li>
+                <li><a href="#subsidies" class="right-nav-link" >Discounts</a></li>
+                <li><a href="#speakers" class="right-nav-link" >Speakers</a></li>
+                <li><a href="#workshops" class="right-nav-link" >Workshops</a></li>
+                <li><a href="#competitions" class="right-nav-link" >Competitions</a></li>
+                <li><a href="#schedule" class="right-nav-link" >Schedule</a></li>
+                <li><a href="#sponsors-section" class="right-nav-link" >Sponsors</a></li>
+                <li><a href="#venue" class="right-nav-link" >Venue</a></li>
+                <li><a href="#faq" class="right-nav-link" >FAQ</a></li>
+                <li><a href="#gallery" class="right-nav-link" >Recap</a></li>
             </ul>
         </nav>
     </div>
     
-    <div id="right-nav-overlay" class="right-nav-overlay" onclick="closeRightNav()"></div>
+    <div id="right-nav-overlay" class="right-nav-overlay" ></div>
     
     <main id="main">
 

@@ -1759,9 +1759,26 @@ background-color: #DDDBD2;
 }
 
 /* Hide toggle button when navigation is open */
-.right-nav.active + .right-nav-toggle {
+#right-nav.active ~ #right-nav-toggle {
     opacity: 0;
     pointer-events: none;
 }
 
-
+/* Right Navigation Bar */
+.right-nav {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 320px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  z-index: 10000;
+  transition: right 0.3s ease;
+}
+.right-nav.active { right: 0; }
+.right-nav-header { display:flex; align-items:center; justify-content:space-between; padding:16px; }
+.right-nav-close { background:none; border:0; font-size:20px; cursor:pointer; }
+.right-nav-menu ul{ list-style:none; margin:0; padding:0 16px 24px; }
+.right-nav-menu li{ margin:12px 0; }
+.right-nav-menu a{ color:#101F46; text-decoration:none; }
