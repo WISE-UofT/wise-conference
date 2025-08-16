@@ -373,9 +373,31 @@ jQuery(document).ready(function($) {
     if (e.key === 'Escape' && rightNav.classList.contains('active')) closeRightNav();
   });
 
-  // Close when a right-nav link is clicked
+  // Close when a right-nav link is clicked and add smooth scrolling
   rightNav.addEventListener('click', function(e){
     var a = e.target.closest('a.right-nav-link');
-    if (a) { closeRightNav(); }
+    if (a) { 
+      closeRightNav();
+      
+      // Add smooth scrolling behavior like the top navigation
+      if (location.pathname.replace(/^\//, '') == a.pathname.replace(/^\//, '') && location.hostname == a.hostname) {
+        var target = $(a.hash);
+        if (target.length) {
+          var top_space = 0;
+
+          if ($('#header').length) {
+            top_space = $('#header').outerHeight();
+
+            if (!$('#header').hasClass('header-fixed')) {
+              top_space = top_space - 20;
+            }
+          }
+
+          $('html, body').animate({
+            scrollTop: target.offset().top - top_space
+          }, 1500, 'easeInOutExpo');
+        }
+      }
+    }
   });
 })();
