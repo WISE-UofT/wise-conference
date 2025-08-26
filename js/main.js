@@ -211,7 +211,10 @@ jQuery(document).ready(function($) {
     var days, hours, minutes, seconds;
      
     // get tag element
-    var countdown =  document.getElementById("countdown-box");
+    // REPLACE IT WITH THIS
+var countdown = document.getElementById("countdown-box");
+// Only run the countdown code if the element exists on the page
+if (countdown) {
     var days_span = document.createElement("SPAN");
     days_span.className = 'days';
     countdown.appendChild(days_span);
@@ -224,6 +227,28 @@ jQuery(document).ready(function($) {
     var secs_span = document.createElement("SPAN");
     secs_span.className = 'secs';
     countdown.appendChild(secs_span);
+
+    // update the tag with id "countdown" every 1 second
+    setInterval(function () {
+        // ... (the rest of the countdown code stays the same inside this block)
+        var current_date = new Date().getTime();
+        var seconds_left = (target_date - current_date) / 1000;
+        
+        days = parseInt(seconds_left / 86400);
+        seconds_left = seconds_left % 86400;
+        
+        hours = parseInt(seconds_left / 3600);
+        seconds_left = seconds_left % 3600;
+        
+        minutes = parseInt(seconds_left / 60);
+        seconds = parseInt(seconds_left % 60);
+        
+        days_span.innerHTML = '<span class="number">' + days + '</span>' + '<span class="unit">Days</span>';
+        hours_span.innerHTML = '<span class="number">' + hours + '</span>' + '<span class="unit">Hrs</span>';
+        minutes_span.innerHTML = '<span class="number">' + minutes + '</span>' + '<span class="unit">Mins</span>';
+        secs_span.innerHTML = '<span class="number">' + seconds + '</span>' + '<span class="unit">Secs</span>';
+    }, 1000);
+}
      
     // update the tag with id "countdown" every 1 second
     setInterval(function () {
@@ -276,4 +301,218 @@ jQuery(document).ready(function($) {
     }
     }
     });
+        // --- Recap data -------------------------------------------------------------
+
+    // --- Recap photos by year (explicit list) ---
+const PHOTOS_BY_YEAR = {
+  "2023": [
+    "img/recap/2023/IMG_4461.JPG",
+    "img/recap/2023/IMG_4507.JPG",
+    "img/recap/2023/IMG_4798.JPG",
+    "img/recap/2023/IMG_4800.JPG",
+    "img/recap/2023/IMG_4880.JPG",
+    "img/recap/2023/IMG_4980.JPG",
+    "img/recap/2023/IMG_4994.JPG"
+  ],
+  "2024": [
+    "img/recap/2024/biotech-panel.webp",
+    "img/recap/2024/cochairs.webp",
+    "img/recap/2024/competition1.webp",
+    "img/recap/2024/competition2.webp",
+    "img/recap/2024/competition3.webp",
+    "img/recap/2024/fair1.webp",
+    "img/recap/2024/fair2.webp",
+    "img/recap/2024/fair3.webp",
+    "img/recap/2024/fireside.webp",
+    "img/recap/2024/olivieri.webp",
+    "img/recap/2024/space-panel.webp",
+    "img/recap/2024/workshop.webp"
+  ]
+};
+
+        const KEYNOTE_BY_YEAR = {
+    "2023": [
+        {
+        name: "Dr. Jane Doe",
+        title: "VP of Research, Example AI",
+        img: "img/recap/2023/IMG_4461.jpg",
+        bio: "ML researcher focused on multimodal systems and AI safety."
+        },
+        {
+        name: "Alex Nguyen",
+        title: "Founder, DataBeam",
+        img: "img/recap/2023/IMG_4461.jpg",
+        bio: "Entrepreneur building data platforms for climate analytics."
+        }
+    ],
+    "2024": [
+        {
+        name: "Priya Shah",
+        title: "Senior SWE, SpaceVision",
+        img: "img/recap/2023/IMG_4461.jpg",
+        bio: "Works on 3D perception and spatial computing."
+        },
+        {
+        name: "Miguel García",
+        title: "Head of Product, Quantis",
+        img: "img/recap/2023/IMG_4461.jpg",
+        bio: "Leads product for responsible AI and model governance."
+        }
+    ]
+    };
+
+
+    // --- Helpers ---------------------------------------------------------------
+
+    function buildPhotoSlides(swiperEl, urls) {
+    const wrap = swiperEl.querySelector('.swiper-wrapper');
+    wrap.innerHTML = '';
+    urls.forEach(src => {
+        const slide = document.createElement('div');
+        slide.className = 'swiper-slide';
+        slide.innerHTML = `<img src="${src}" alt="Recap photo" loading="lazy">`;
+        wrap.appendChild(slide);
+    });
+    }
+
+    function buildSpeakerSlides(swiperEl, speakers) {
+    const wrap = swiperEl.querySelector('.swiper-wrapper');
+    wrap.innerHTML = '';
+    speakers.forEach(s => {
+        const slide = document.createElement('div');
+        slide.className = 'swiper-slide';
+        slide.innerHTML = `
+        <div class="card h-100">
+            <img class="card-img-top" src="${s.img}" alt="${s.name}">
+            <div class="card-body">
+            <h5 class="card-title" style="text-align:center;">${s.name}</h5>
+            <p class="card-text" style="text-align:center;">${s.title || ''}</p>
+            ${s.bio ? '<p class="card-text" style="font-size: 0.95rem;">' + s.bio + '</p>' : ''}
+            </div>
+        </div>`;
+        wrap.appendChild(slide);
+    });
+    }
+
+// Minimal Swiper init
+function initSwiper(swiperEl) {
+  return new Swiper(swiperEl, {
+    slidesPerView: 1,
+    spaceBetween: 16,
+    loop: true,
+    pagination: { el: swiperEl.querySelector('.swiper-pagination'), clickable: true },
+    navigation: {
+      nextEl: swiperEl.querySelector('.swiper-button-next'),
+      prevEl: swiperEl.querySelector('.swiper-button-prev')
+    },
+    breakpoints: { 576: { slidesPerView: 2 }, 992: { slidesPerView: 3 } }
+  });
+}
+
+// Build slides
+function buildSpeakerSlides(swiperEl, speakers) {
+  const wrap = swiperEl.querySelector('.swiper-wrapper');
+  wrap.innerHTML = '';
+  speakers.forEach(s => {
+    const slide = document.createElement('div');
+    slide.className = 'swiper-slide';
+    slide.innerHTML = `
+      <div class="card h-100">
+        <img class="card-img-top" src="${s.img}" alt="${s.name}">
+        <div class="card-body">
+          <h5 class="card-title" style="text-align:center;">${s.name}</h5>
+          <p class="card-text" style="text-align:center;">${s.title || ''}</p>
+          ${s.bio ? '<p class="card-text" style="font-size:0.95rem;">' + s.bio + '</p>' : ''}
+        </div>
+      </div>`;
+    wrap.appendChild(slide);
+  });
+}
+
+function imgExists(url) {
+  return new Promise(resolve => {
+    const img = new Image();
+    img.onload = () => resolve(true);
+    img.onerror = () => resolve(false);
+    img.src = url;
+  });
+}
+
+async function listImagesFromFolder(folder) {
+  try {
+    const res = await fetch(`${folder}/index.json`, { cache: 'no-store' });
+    if (res.ok) {
+      const arr = await res.json();
+      return arr.map(name => `${folder}/${name}`);
+    }
+  } catch (_) {}
+  const candidates = PHOTO_FALLBACK.map(name => `${folder}/${name}`);
+  const exists = await Promise.all(candidates.map(imgExists));
+  return candidates.filter((_, i) => exists[i]);
+}
+
+function buildPhotoSlides(swiperEl, urls) {
+  const wrap = swiperEl.querySelector('.swiper-wrapper');
+  wrap.innerHTML = '';
+  urls.forEach(src => {
+    const slide = document.createElement('div');
+    slide.className = 'swiper-slide';
+    slide.innerHTML = `<img src="${src}" alt="Recap photo" loading="lazy">`;
+    wrap.appendChild(slide);
+  });
+}
+
+// Mount both carousels inside one panel (call on first open)
+async function mountRecap(panelEl) {
+  // Speakers
+  const speakersSwiper = panelEl.querySelector('.recap-speakers-swiper');
+  if (speakersSwiper && !speakersSwiper._swiper) {
+    const year = String(speakersSwiper.dataset.year);
+    buildSpeakerSlides(speakersSwiper, KEYNOTE_BY_YEAR[year] || []);
+    speakersSwiper._swiper = initSwiper(speakersSwiper);
+  }
+
+  // Photos
+  const photosSwiper = panelEl.querySelector('.recap-photos-swiper');
+  if (photosSwiper && !photosSwiper._swiper) {
+    const year = String(photosSwiper.closest('.recap-panel').dataset.year);
+    const urls = PHOTOS_BY_YEAR[year] || [];
+    buildPhotoSlides(photosSwiper, urls);
+    photosSwiper._swiper = initSwiper(photosSwiper);
+  }
+}
+
+// Robust expand/collapse (prevents double toggle)
+$(document).on('click', '.recap-toggle', function (e) {
+  e.preventDefault();
+  e.stopPropagation();
+
+  const $btn    = $(this);
+  const panelId = $btn.attr('aria-controls');
+  const $panel  = $('#' + panelId);
+
+  if ($panel.data('animating')) return;
+
+  const opening = $panel.is(':hidden') || $panel.is('[hidden]');
+
+  if (opening) {
+    $btn.attr('aria-expanded', 'true');
+    $panel.removeAttr('hidden').stop(true, true);
+    $panel.data('animating', true).slideDown(200, async function () {
+      if (!$panel.data('inited')) {
+        $panel.data('inited', true);
+        await mountRecap($panel[0]);
+      }
+      $panel.data('animating', false);
+    });
+  } else {
+    $btn.attr('aria-expanded', 'false');
+    $panel.stop(true, true);
+    $panel.data('animating', true).slideUp(200, function () {
+      $panel.attr('hidden', '');
+      $panel.data('animating', false);
+    });
+  }
+});
+
 });
