@@ -2,8 +2,6 @@ body {
     background: #fff;
     color: #101F46;
     font-family: "Montserrat", sans-serif;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch; /* Better scrolling on iOS */
 }
 
 /* Optimize scroll performance */
