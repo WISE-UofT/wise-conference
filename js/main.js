@@ -1,40 +1,58 @@
 jQuery(document).ready(function($) {
 
-    // Add a dot for each slide
-    var numSlides = $('.carousel-slide').length;
-    for (var i = 0; i < numSlides; i++) {
-        $('.carousel-dots').append('<div class="carousel-dot"></div>');
-    }
+    // --- Start of Carousel Logic ---
+    // Loop through each carousel container on the page
+    $('.carousel-container').each(function() {
+        var $carousel = $(this);
+        var $slides = $carousel.find('.carousel-slide');
+        var $dotsContainer = $carousel.next('.carousel-dots');
+        var numSlides = $slides.length;
+        var slideInterval;
 
-    // Set the first dot as active
-    $('.carousel-dot:first').addClass('active');
+        // If there are no slides in this carousel, skip it
+        if (numSlides === 0) {
+            $dotsContainer.hide(); // Hide the dots container if no slides
+            return;
+        }
 
-    // Function to go to a specific slide
-    function goToSlide(index) {
-        $('.carousel-slide').hide();
-        $('.carousel-slide:eq(' + index + ')').show();
-        $('.carousel-dot').removeClass('active');
-        $('.carousel-dot:eq(' + index + ')').addClass('active');
-    }
+        // Add a dot for each slide in this specific carousel
+        for (var i = 0; i < numSlides; i++) {
+            $dotsContainer.append('<div class="carousel-dot"></div>');
+        }
+        var $dots = $dotsContainer.find('.carousel-dot');
 
-    // Handle dot click event using event delegation
-    $('.carousel-dots').on('click', '.carousel-dot', function () {
-        clearInterval(slideInterval); // Stop the timer
-        var index = $(this).index();
-        goToSlide(index);
-        // Restart the timer
-        slideInterval = setInterval(nextSlide, 3000); // Change 3000 to the desired interval in milliseconds
+        // Function to go to a specific slide within this carousel
+        function goToSlide(index) {
+            $slides.hide();
+            $slides.eq(index).show();
+            $dots.removeClass('active');
+            $dots.eq(index).addClass('active');
+        }
+
+        // Show the first slide and set the first dot as active
+        goToSlide(0);
+
+        // Handle dot click event for this carousel
+        $dots.on('click', function () {
+            clearInterval(slideInterval); // Stop this carousel's timer
+            var index = $(this).index();
+            goToSlide(index);
+            // Restart this carousel's timer
+            slideInterval = setInterval(nextSlide, 3000);
+        });
+
+        // Function to go to the next slide in this carousel
+        function nextSlide() {
+            // Find the visible slide only within this carousel
+            var currentIndex = $slides.filter(':visible').index();
+            var nextIndex = (currentIndex + 1) % numSlides;
+            goToSlide(nextIndex);
+        }
+
+        // Set a timer to automatically advance this carousel
+        slideInterval = setInterval(nextSlide, 3000);
     });
-
-    // Function to go to the next slide
-    function nextSlide() {
-        var currentIndex = $('.carousel-slide:visible').index();
-        var nextIndex = (currentIndex + 1) % numSlides;
-        goToSlide(nextIndex);
-    }
-
-    // Set a timer to automatically advance the carousel
-    var slideInterval = setInterval(nextSlide, 3000); // Change 3000 to the desired interval in milliseconds
+    // --- End of Carousel Logic ---
 
     // Back to top button
     $(window).scroll(function() {
@@ -191,6 +209,24 @@ jQuery(document).ready(function($) {
             },
             600: {
                 items: 3
+            }
+        }
+    });
+
+    // Speakers carousel (uses the Owl Carousel library)
+    $(".speakers-carousel").owlCarousel({
+        autoplay: true,
+        dots: true,
+        loop: false, 
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            900: {
+                items: 4
             }
         }
     });
