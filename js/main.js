@@ -213,24 +213,6 @@ jQuery(document).ready(function($) {
         }
     });
 
-    // Speakers carousel (uses the Owl Carousel library)
-    $(".speakers-carousel").owlCarousel({
-        autoplay: true,
-        dots: true,
-        loop: false, 
-        responsive: {
-            0: {
-                items: 1
-            },
-            768: {
-                items: 2
-            },
-            900: {
-                items: 4
-            }
-        }
-    });
-
     // Buy tickets select the ticket type on click
     $('#buy-ticket-modal').on('show.bs.modal', function(event) {
         var button = $(event.relatedTarget);
