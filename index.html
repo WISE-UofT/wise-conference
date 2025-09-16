@@ -36,14 +36,97 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
     
     <!--=====CSS======-->
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/venobox/venobox.css" rel="stylesheet">
-    <!-- <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"> -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="lib/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <!-- Preload the banner with high fetchpriority so it starts loading with style.css -->
+    <style>
+        body {
+            background: #fff;
+            color: #101F46;
+            font-family: "Montserrat", sans-serif;
+        }
+        h1, h2, h3, h4, h5 {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            margin: 0 0 20px 0;
+            padding: 0;
+            color: #101F46;
+        }
+        .nav-menu a {
+            padding: 8px;
+            text-decoration: none;
+            display: inline-block;
+            color: #563d83;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            outline: none;
+        }
+        #header {
+            height: 90px;
+            padding: 25px 0;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            transition: all 0.5s;
+            z-index: 997;
+            background: #fff;
+        }
+        #header #logo img {
+            padding: 0;
+            margin: 0;
+            max-height: 40px;
+        }
+        #intro {
+            width: 100%;
+            height: 100vh;
+            background: url('https://conference.wise.skule.ca/img/intro-bg.webp') top center;
+            background-size: cover;
+            overflow: hidden;
+            position: relative;
+        }
+        .register-button {
+            text-align: center;
+            color: #fff !important;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+            font-size: 2.5vh;
+            letter-spacing: 1px;
+            display: inline-block;
+            padding: 16px 28px;
+            border-radius: 50px;
+            transition: 0.5s;
+            line-height: 1;
+            margin: 10px 0 3vh 0;
+            background: #2A4673;
+            border: 4px solid #2A4673;
+        }
+        .register-button:hover {
+            background: #fff;
+            color: #6A4F9E !important;
+            font-weight: 600;
+            border: 4px solid #6A4F9E;
+        }
+    </style>
+
+    <!-- Lazy load other CSS -->
+    <link rel="preload" href="lib/font-awesome/css/font-awesome.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet"></noscript>
+
+    <link rel="preload" href="lib/animate/animate.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link href="lib/animate/animate.min.css" rel="stylesheet"></noscript>
+
+    <link rel="preload" href="lib/venobox/venobox.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link href="lib/venobox/venobox.css" rel="stylesheet"></noscript>
+
+    <link rel="preload" href="lib/bootstrap/css/bootstrap.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"></noscript>
+
+    <link rel="preload" href="lib/swiper/swiper-bundle.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link href="lib/swiper/swiper-bundle.min.css" rel="stylesheet"></noscript>
+
+    <link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link href="css/style.css" rel="stylesheet"></noscript>
+
+    <!-- Preload the banner image -->
     <link rel="preload" fetchpriority="high" as="image" href="img/intro-bg.webp" type="image/webp">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -111,46 +194,46 @@
                                     <div class="carousel-container">
                                         <div class="carousel-slides">
                                             <div class="carousel-slide">
-                                                <img src="img/recap/cochairs.webp" alt="Conference Co-Chairs">
+                                                <img src="img/recap/cochairs.webp" loading="lazy" alt="Conference Co-Chairs">
                                             </div>
                                             <div class="carousel-slide">
-                                                <img src="img/recap/keynote1.webp" alt="Saturday Keynote">
+                                                <img src="img/recap/keynote1.webp" loading="lazy"alt="Saturday Keynote">
                                             </div>
                                             <div class="carousel-slide">
-                                                <img src="img/recap/audience.webp" alt="Full Panel">
+                                                <img src="img/recap/audience.webp" loading="lazy" alt="Full Panel">
                                             </div>
                                             <div class="carousel-slide">
-                                                <img src="img/recap/panel1.webp" alt="Biotechnology Panel">
+                                                <img src="img/recap/panel1.webp" loading="lazy" alt="Biotechnology Panel">
                                             </div>
                                             <div class="carousel-slide">
-                                                <img src="img/recap/workshop1.webp" alt="Financial Literacy Workshop">
+                                                <img src="img/recap/workshop1.webp" loading="lazy" alt="Financial Literacy Workshop">
                                             </div>
                                             <div class="carousel-slide">
-                                                <img src="img/recap/panel2.webp" alt="Space Panel Networking">
+                                                <img src="img/recap/panel2.webp" loading="lazy" alt="Space Panel Networking">
                                             </div>
                                             <div class="carousel-slide">
-                                                <img src="img/recap/fair1.webp" alt="Career and Grad Fair 1">
+                                                <img src="img/recap/fair1.webp" loading="lazy" alt="Career and Grad Fair 1">
                                             </div>
                                             <div class="carousel-slide">
-                                                <img src="img/recap/competition1.webp" alt="Case Competition">
+                                                <img src="img/recap/competition1.webp" loading="lazy" alt="Case Competition">
                                             </div>
                                             <div class="carousel-slide">
-                                                <img src="img/recap/fair2.webp" alt="Career and Grad Fair 2">
+                                                <img src="img/recap/fair2.webp" loading="lazy" alt="Career and Grad Fair 2">
                                             </div>
                                             <div class="carousel-slide">
-                                                <img src="img/recap/keynote2.webp" alt="Sunday Keynote">
+                                                <img src="img/recap/keynote2.webp" loading="lazy" alt="Sunday Keynote">
                                             </div>
                                             <div class="carousel-slide">
-                                                <img src="img/recap/workshop2.webp" alt="Collaborative Workshop">
+                                                <img src="img/recap/workshop2.webp" loading="lazy" alt="Collaborative Workshop">
                                             </div>
                                             <div class="carousel-slide">
-                                                <img src="img/recap/panel3.webp" alt="Pathways in Academia Panel">
+                                                <img src="img/recap/panel3.webp" loading="lazy" alt="Pathways in Academia Panel">
                                             </div>
                                             <div class="carousel-slide">
-                                                <img src="img/recap/competition2.webp" alt="Competition Awards">
+                                                <img src="img/recap/competition2.webp" loading="lazy" alt="Competition Awards">
                                             </div>
                                             <div class="carousel-slide">
-                                                <img src="img/recap/team.webp" alt="Organizers Team">
+                                                <img src="img/recap/team.webp" loading="lazy" alt="Organizers Team">
                                             </div>
                                         </div>
                                     </div>
