@@ -1,0 +1,28 @@
+{
+  "name": "WISE UofT National Conference 2025",
+  "short_name": "WISE Conference",
+  "description": "The 13th Annual WISE National Conference - January 25-26, 2025 in Toronto, Ontario",
+  "start_url": "/",
+  "display": "minimal-ui",
+  "background_color": "#101F46",
+  "theme_color": "#563d83",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "img/favicon.webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "img/logo.webp", 
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "conferences", "engineering"],
+  "lang": "en",
+  "scope": "/",
+  "prefer_related_applications": false
+}
