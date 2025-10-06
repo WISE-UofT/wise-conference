@@ -42,11 +42,11 @@
     <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     
-    <!--=====Non-critical CSS (deferred)======-->
-    <link href="lib/animate/animate.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <link href="lib/venobox/venobox.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <link href="lib/swiper/swiper-bundle.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <!--=====Non-critical CSS (deferred with modern preload pattern)======-->
+    <link rel="preload" as="style" href="lib/animate/animate.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="style" href="lib/venobox/venobox.css" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="style" href="lib/swiper/swiper-bundle.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="style" href="lib/owlcarousel/assets/owl.carousel.min.css" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link href="lib/animate/animate.min.css" rel="stylesheet">
         <link href="lib/venobox/venobox.css" rel="stylesheet">
