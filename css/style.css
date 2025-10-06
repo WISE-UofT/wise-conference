@@ -3,6 +3,62 @@ body {
     color: #101F46;
     font-family: "Montserrat", sans-serif;
 }
+
+/* Optimize scroll performance */
+html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Scroll controls styling */
+#scroll-controls {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    z-index: 1000;
+    background: rgba(106, 79, 158, 0.95);
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+#scroll-controls:hover {
+    background: rgba(106, 79, 158, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+#scroll-controls button {
+    margin: 3px;
+    padding: 6px 10px;
+    background: #2A4673;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+#scroll-controls button:hover {
+    background: #1a2f4a;
+    transform: scale(1.05);
+}
+
+#scroll-controls button:active {
+    transform: scale(0.95);
+}
+
+/* Hide scroll controls on mobile */
+@media (max-width: 768px) {
+    #scroll-controls {
+        display: none;
+    }
+}
 a {
     color: #6A4F9E;
     transition: 0.5s;
