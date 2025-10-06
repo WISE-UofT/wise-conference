@@ -11,7 +11,7 @@ jQuery(function ($) {
     $('.carousel-container').each(function() {
         var $carousel = $(this);
         var $slides = $carousel.find('.carousel-slide');
-        var $dotsContainer = $carousel.next('.carousel-dots');
+        var $dotsContainer = $carousel.find('.carousel-dots');
         var numSlides = $slides.length;
         var slideInterval;
 
