@@ -5,32 +5,60 @@ jQuery(function ($) {
       if ((t /= d / 2) < 1) return (c / 2) * t * t * t * t + b;
       return (-c / 2) * ((t -= 2) * t * t * t - 2) + b;
     };
-  
-    // ------- Carousel dots -------
-    const $slides = $(".carousel-slide");
-    const $dotsWrap = $(".carousel-dots");
-    const numSlides = $slides.length;
-  
-    for (let i = 0; i < numSlides; i++) $dotsWrap.append('<div class="carousel-dot"></div>');
-    $(".carousel-dot:first").addClass("active");
-  
-    function goToSlide(index) {
-      $slides.hide().eq(index).show();
-      $(".carousel-dot").removeClass("active").eq(index).addClass("active");
-    }
-  
-    function nextSlide() {
-      const currentIndex = $slides.filter(":visible").index();
-      const nextIndex = (currentIndex + 1) % numSlides;
-      goToSlide(nextIndex);
-    }
-  
-    let slideInterval = setInterval(nextSlide, 3000);
-    $dotsWrap.on("click", ".carousel-dot", function () {
-      clearInterval(slideInterval);
-      goToSlide($(this).index());
-      slideInterval = setInterval(nextSlide, 3000);
+
+    // --- Start of Carousel Logic ---
+    // Loop through each carousel container on the page
+    $('.carousel-container').each(function() {
+        var $carousel = $(this);
+        var $slides = $carousel.find('.carousel-slide');
+        var $dotsContainer = $carousel.next('.carousel-dots');
+        var numSlides = $slides.length;
+        var slideInterval;
+
+        // If there are no slides in this carousel, skip it
+        if (numSlides === 0) {
+            $dotsContainer.hide(); // Hide the dots container if no slides
+            return;
+        }
+
+        // Add a dot for each slide in this specific carousel
+        for (var i = 0; i < numSlides; i++) {
+            $dotsContainer.append('<div class="carousel-dot"></div>');
+        }
+        var $dots = $dotsContainer.find('.carousel-dot');
+
+        // Function to go to a specific slide within this carousel
+        function goToSlide(index) {
+            $slides.hide();
+            $slides.eq(index).show();
+            $dots.removeClass('active');
+            $dots.eq(index).addClass('active');
+        }
+
+        // Show the first slide and set the first dot as active
+        goToSlide(0);
+
+        // Handle dot click event for this carousel
+        $dots.on('click', function () {
+            clearInterval(slideInterval); // Stop this carousel's timer
+            var index = $(this).index();
+            goToSlide(index);
+            // Restart this carousel's timer
+            slideInterval = setInterval(nextSlide, 3000);
+        });
+
+        // Function to go to the next slide in this carousel
+        function nextSlide() {
+            // Find the visible slide only within this carousel
+            var currentIndex = $slides.filter(':visible').index();
+            var nextIndex = (currentIndex + 1) % numSlides;
+            goToSlide(nextIndex);
+        }
+
+        // Set a timer to automatically advance this carousel
+        slideInterval = setInterval(nextSlide, 3000);
     });
+    // --- End of Carousel Logic ---
   
     // ------- Back to top -------
     const $backToTop = $(".back-to-top");
