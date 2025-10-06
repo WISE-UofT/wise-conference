@@ -1136,32 +1136,6 @@ background-color: #DDDBD2;
     background-color: #333; /* Active dot color */
 }
 
-.gallery-speakers-section .card{
-    border:none;
-    background:#f0f6fa;
-    margin-bottom:2rem;
-    height:100%
-}
-
-.gallery-speakers-section .card-title{
-    font-size:1.125rem
-}
-
-.gallery-speakers-section .card-img-top:hover{
-    -webkit-opacity:.9;
-    -moz-opacity:.9;
-    opacity:.9
-}
-
-.gallery-speakers-section .card-footer{
-    background:#e8f1f7;
-    border-top:none
-}
-
-.gallery-speakers-section .card{
-    height:inherit
-}
-
 #supporters {
     padding: 60px 0;
 }
@@ -1285,6 +1259,48 @@ background-color: #DDDBD2;
 #faq #faq-common .no_space {
     padding: 0;
     display: inline;
+}
+
+#gallery #faq-common {
+  padding: 0;
+  list-style: none;
+}
+
+#gallery #faq-common li {
+  border-bottom: 1px solid #ddd;
+}
+
+#gallery #faq-common a {
+  padding: 18px 0;
+  display: block;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  padding-right: 20px;
+}
+#gallery .keynote-card a {
+    padding: 0 !important;
+}
+
+#gallery #faq-common i {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 16px;
+}
+
+#gallery #faq-common a.collapse {
+  color: #2A4673;
+}
+
+#gallery #faq-common a.collapsed {
+  color: #000;
+}
+
+#gallery #faq-common a.collapsed i::before {
+  content: "" !important;
 }
 .section {
     padding-top: 4rem;
@@ -1619,4 +1635,12 @@ background-color: #DDDBD2;
     #schedule .nav-tabs a {
         padding: 8px 30px;
     }
+}
+
+#gallery .card-body {
+  padding: 0.75rem;
+}
+
+#gallery .card-title {
+  padding: 0;
 }
