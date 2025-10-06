@@ -1284,10 +1284,6 @@ background-color: #DDDBD2;
     padding: 0 !important;
 }
 
-/* Keynote Speakers cards in Gallery section - remove padding */
-#gallery .keynote-card a {
-    padding: 0 !important;
-}
 #gallery #faq-common i {
   font-size: 24px;
   position: absolute;
