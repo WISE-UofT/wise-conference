@@ -33,16 +33,26 @@
     <link rel="preconnect" href="https://maps.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    <!-- Load Google Fonts asynchronously to prevent render blocking -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet"></noscript>
     
-    <!--=====CSS======-->
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/venobox/venobox.css" rel="stylesheet">
+    <!--=====Critical CSS (render-blocking but necessary)======-->
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="lib/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    
+    <!--=====Non-critical CSS (deferred with modern preload pattern)======-->
+    <link rel="preload" as="style" href="lib/animate/animate.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="style" href="lib/venobox/venobox.css" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="style" href="lib/swiper/swiper-bundle.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="style" href="lib/owlcarousel/assets/owl.carousel.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/venobox/venobox.css" rel="stylesheet">
+        <link href="lib/swiper/swiper-bundle.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    </noscript>
     <!-- Preload the banner with high fetchpriority so it starts loading with style.css -->
     <link rel="preload" fetchpriority="high" as="image" href="img/intro-bg.webp" type="image/webp">
 
