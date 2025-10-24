@@ -655,13 +655,14 @@ body.mobile-nav-active #mobile-nav-toggle {
 .countdown-box .number{
     font-size:2rem;
     font-weight:400;
-    color:#141c25
+    color: white;
 }
 
 .countdown-box .unit{
     -webkit-opacity:.8;
     -moz-opacity:.8;
-    opacity:.8
+    opacity:.8;
+    color: white;
 }
 
 #competitions,

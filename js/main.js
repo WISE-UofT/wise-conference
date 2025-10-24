@@ -182,7 +182,7 @@ jQuery(function ($) {
   
     // ------- Countdown -------
     (function initCountdown() {
-      const targetDate = new Date("Jan 25, 2025").getTime();
+      const targetDate = new Date("Jan 17, 2026 08:00:00").getTime();
       const box = document.getElementById("countdown-box");
       if (!box) return;
   
