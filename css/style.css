@@ -1638,6 +1638,12 @@ background-color: #DDDBD2;
     }
 }
 
+@media (max-width: 600px) {
+    .carousel-slides {
+        height: 300px;
+    }
+}
+
 #gallery .card-body {
   padding: 0.75rem;
 }
