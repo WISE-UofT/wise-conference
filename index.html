@@ -98,6 +98,17 @@
     <!--====Display BG====-->
     <section id="intro"></section>
     
+    <!--====Countdown Panel====-->
+    <section id="countdown-section" style="padding: 40px 0 0 0;">
+        <div class="container">
+            <div class="event-countdown text-center" style="background-image: url('img/gem-1.webp'); background-size: cover; background-position: center; padding: 20px; border-radius: 8px; position: relative;">
+                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.2); border-radius: 8px; z-index: 1;"></div>
+                <p style="color: white; font-weight: 650; position: relative; z-index: 2;" class="countdown-intro text-center">Conference Starts In:</p>
+                <div id="countdown-box" class="countdown-box" style="position: relative; z-index: 2;"></div>
+            </div>
+        </div>
+    </section>
+    
     <main id="main">
 
         <!--====Overview====-->
@@ -165,12 +176,6 @@
                                         </div>
                                     </div>
                                     <div class="carousel-dots"></div>
-                                    <br>
-                                    <div class="event-countdown text-center" style="background-image: url('img/gem-1.webp'); background-size: cover; background-position: center; padding: 20px; border-radius: 8px; position: relative;">
-                                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.2); border-radius: 8px; z-index: 1;"></div>
-                                        <p style="color: white; font-weight: 650; position: relative; z-index: 2;" class="countdown-intro text-center">Conference Starts In:</p>
-                                        <div id="countdown-box" class="countdown-box" style="position: relative; z-index: 2;"></div>
-                                    </div>
                                 </div>
                             </div>
                             <!-- <br>
@@ -426,6 +431,17 @@
                 <div class="row justify-content-center">
                     <div class="col-6 col-lg-3">
                         <div class="card border-0 rounded-0 bg-transparent">
+                            <a href="#diana-anderson" data-toggle="modal" data-target="#diana-anderson"><img src="img/speakers/diana-anderson.webp" alt="Diana Anderson" class="card-img-top rounded-0"></a>
+                            <div class="card-body">
+                                <h5 style="font-weight: 550;" class="card-title mb-2"><a href="#diana-anderson" data-toggle="modal" data-target="#diana-anderson">Diana Anderson</a></h5>
+                                <div class="card-text">
+                                    <div class="meta">MD, M.Arch, FACHA</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="col-6 col-lg-3">
+                        <div class="card border-0 rounded-0 bg-transparent">
                             <a href="#mic-liu" data-toggle="modal" data-target="#mic-liu"><img src="img/speakers/mic-liu.webp" alt="Michelle &quot;Mic&quot; Liu" class="card-img-top rounded-0"></a>
                             <div class="card-body">
                                 <h5 style="font-weight: 550;" class="card-title mb-2"><a href="#mic-liu" data-toggle="modal" data-target="#mic-liu">Michelle &quot;Mic&quot; Liu</a></h5>
@@ -433,17 +449,6 @@
                                     <div class="meta">Lawyer, Engineer @ Liu Chooti Law & Counselling Group</div>
                                     <br>
                                     <div class="meta">PhD Candidate @ University of Ottawa</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="col-6 col-lg-3">
-                        <div class="card border-0 rounded-0 bg-transparent">
-                            <a href="#jennifer-quaglietta" data-toggle="modal" data-target="#jennifer-quaglietta"><img src="img/speakers/jennifer-quaglietta.webp" alt="Jennifer Quaglietta" class="card-img-top rounded-0"></a>
-                            <div class="card-body">
-                                <h5 style="font-weight: 550;" class="card-title mb-2"><a href="#jennifer-quaglietta" data-toggle="modal" data-target="#jennifer-quaglietta">Jennifer Quaglietta</a></h5>
-                                <div class="card-text">
-                                    <div class="meta">CEO & Registrar @ Professional Engineers Ontario</div>
                                 </div>
                             </div>
                         </div>
@@ -1567,10 +1572,13 @@
             </div>
             <div class="container mt-5">
                 <h3>Corporate Partners</h3>
+                <!-- Gold Sponsors -->
+                <div class="row logos justify-content-center align-items-center mb-4">
+                    <div class="logo-item col-6 col-md-6 col-lg-4"><img src="img/sponsors/birchhill.webp" alt="Birch Hill"></div>
+                    <div class="logo-item col-6 col-md-6 col-lg-4"><img src="img/sponsors/cohere.webp" alt="Cohere"></div>
+                </div>
+                <!-- Other Sponsors -->
                 <div class="row logos justify-content-center align-items-center">
-                    <!-- Gold -->
-                    <div class="logo-item col-5 col-md-5 col-lg-3"><img src="img/sponsors/birchhill.webp" alt="Birch Hill"></div>
-                    
                     <!-- Silver -->
                     <div class="logo-item col-4 col-md-4 col-lg-2"><img src="img/sponsors/intuit.webp" alt="Intuit"></div>
                     
@@ -1722,6 +1730,46 @@
             <div class="container">
                 <div class="section-header">
                     <h2>WISE National Conference Recap</h2>
+                </div>
+
+                <!-- 2025 Conference Recap -->
+                <div class="row justify-content-center">
+                    <div class="col-lg-11">
+                        <ul id="faq-common">
+                            <li>
+                                <a data-toggle="collapse" class="collapsed wow fadeInUp" href="#recap-2025">2025 WISE Conference<i class="fa fa-minus-circle"></i></a>
+                                <div id="recap-2025" class="collapse" data-parent="#faq-common">
+                                    <br>
+                                    <!-- 2025 Keynote Speakers -->
+                                    <h5>2025 Keynote Speakers</h5>
+                                    <div class="row justify-content-center">
+                                        <div class="col-6 col-lg-3">
+                                            <div class="card border-0 rounded-0 bg-transparent keynote-card">
+                                                <a href="#jennifer-quaglietta" data-toggle="modal" data-target="#jennifer-quaglietta"><img src="img/speakers/jennifer-quaglietta.webp" loading="lazy" alt="Jennifer Quaglietta" class="card-img-top rounded-0"></a>
+                                                <div class="card-body">
+                                                    <h5 style="font-weight: 550;" class="card-title mb-2"><a href="#jennifer-quaglietta" data-toggle="modal" data-target="#jennifer-quaglietta">Jennifer Quaglietta</a></h5>
+                                                    <div class="card-text">
+                                                        <div class="meta">CEO & Registrar, Professional Engineers Ontario</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg-3">
+                                            <div class="card border-0 rounded-0 bg-transparent keynote-card">
+                                                <a href="#sara-mazrouei" data-toggle="modal" data-target="#sara-mazrouei"><img src="img/speakers/sara-mazrouei.webp" loading="lazy" alt="Dr. Sara Mazrouei" class="card-img-top rounded-0"></a>
+                                                <div class="card-body">
+                                                    <h5 style="font-weight: 550;" class="card-title mb-2"><a href="#sara-mazrouei" data-toggle="modal" data-target="#sara-mazrouei">Dr. Sara Mazrouei</a></h5>
+                                                    <div class="card-text">
+                                                        <div class="meta">Planetary Scientist, Communicator, Educator</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- 2023-2024 Recap Carousel -->
@@ -2874,6 +2922,37 @@
         </div>
     </div>
 
+    <div class="modal fade" id="diana-anderson" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-avatar modal-lg">
+    
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                    </button>
+                </div>
+    
+                <div class="modal-header">
+                    <a href="#diana-anderson" data-dismiss="modal" data-toggle="modal" data-target="#diana-anderson"><img src="img/speakers/diana-anderson.webp" alt="Dr. Diana Anderson" class="rounded-circle img-responsive"></a>
+                </div>
+    
+                <div class="modal-body text-center">
+                    <h3>Dr. Diana Anderson</h3>
+                    <br>
+                    <p>Dr. Diana Anderson is a triple boarded professional – healthcare architect (ACHA-American College of Healthcare Architects), internist, and a geriatrician. As a "dochitect," she pioneered a collaborative, evidence-based model for approaching healthcare from the medicine and architecture fields simultaneously.
+                        <br><br>
+                        She has worked on hospital design projects globally and is widely published in both architectural and medical journals, books and the popular press, including The New York Times, The Lancet, Metropolis, etc. She is a past fellow of the Harvard Medical School Center for Bioethics, which launched her current exploration of the ethics of built space.
+                        <br><br>
+                        She is currently an Assistant Professor of Neurology at Boston University and undertakes research in health design. She is a healthcare principal at Jacobs, contributing her thought leadership at the intersection of design and health, and was elevated to the Council of Fellows within the ACHA for her contributions to the profession.
+                    </p>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="modal fade" id="emily-marasco" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-avatar modal-lg">
     
@@ -3011,6 +3090,33 @@
                         Her achievements have been recognized provincially and nationally. She is a recipient of the 2023 Canada's Most Powerful Women Top 100, 2022 Robert Zed Young Health Leader Award, 2021 Not-for-Profit CIO of the Year Award among others.
                         <br><br>                        
                         Jennifer holds a Bachelor of Applied Science and Engineering, a Master of Business Administration and an Institute of Corporate Directors Designation from the University of Toronto and has a certificate in strategic partnerships in nonprofit management from Harvard Business School. She is the Vice Chair of the Holland Bloorview Rehabilitation Hospital Board of Directors, a member of the Ontario Medical Association Board of Directors, and serves on Advisory Boards including Engineers Canada Learning and Data Science Advisory Group among others. She lives in Toronto with her husband, two young boys and dog named Harry Potter.
+                    </p>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="sara-mazrouei" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-avatar modal-lg">
+    
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                    </button>
+                </div>
+    
+                <div class="modal-header">
+                    <a href="#sara-mazrouei" data-dismiss="modal" data-toggle="modal" data-target="#sara-mazrouei"><img src="img/speakers/sara-mazrouei.webp" alt="Dr. Sara Mazrouei" class="rounded-circle img-responsive"></a>
+                </div>
+    
+                <div class="modal-body text-center">
+                    <h3>Dr. Sara Mazrouei</h3>
+                    <br>
+                    <p>Dr. Sara Mazrouei is a planetary scientist, an educational developer, and a science communicator with a passion for sharing the wonders of the universe with the public. Her PhD research focused on the recent bombardment history of the Moon and links to future sample-return missions. Her work has been featured in many media such as the New York Times and National Geographic. Currently, Sara works as an Educational Developer Faculty at Humber Polytechnic's Innovative Learning. Sara is also passionate about increasing the status of women in STEM as well as equity, diversity and meaningful inclusion. Sara uses storytelling, examples including the Story Collider and TEDx Downsview Women, as a method for sharing her authentic experiences and making science more accessible.
                     </p>
                     <div class="text-center">
                         <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Close</button>
