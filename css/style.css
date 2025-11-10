@@ -398,10 +398,29 @@ video {
     font-weight: 500;
     font-size: 14px;
     outline: none;
+    transition: color 0.3s ease;
 }
-.nav-menu .menu-active a,
+
+#header.header-scrolled .nav-menu a {
+    color: #6a4f9e;
+}
+
+.nav-menu .menu-active a {
+    color: #ffffff;
+}
+
+#header.header-scrolled .nav-menu .menu-active a {
+    color: #6a4f9e;
+}
+
+/* Hover state */
 .nav-menu a:hover {
     color: #6a4f9e;
+}
+
+#header:not(.header-scrolled) .nav-menu a:hover {
+    color: #ffffff;
+    opacity: 0.8;
 }
 .nav-menu > li {
     margin-left: 8px;
@@ -435,6 +454,13 @@ video {
     line-height: 1;
     font-size: 13px;
 }
+
+/* Keep button styling consistent when scrolled */
+#header.header-scrolled .nav-menu li.buy-tickets a {
+    color: #ede1ff;
+    background: #563D8E;
+}
+
 .nav-menu li.buy-tickets a:hover {
     background: #ede1ff;
     border: 2px solid #563d83;
@@ -485,6 +511,11 @@ video {
     cursor: pointer;
 }
 #mobile-nav-toggle i {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+#header.header-scrolled #mobile-nav-toggle i {
     color: #563d83;
 }
 #mobile-nav {
