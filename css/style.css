@@ -393,7 +393,7 @@ video {
     padding: 8px;
     text-decoration: none;
     display: inline-block;
-    color: #563d83;
+    color: #ffffff;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 14px;
@@ -401,7 +401,7 @@ video {
 }
 .nav-menu .menu-active a,
 .nav-menu a:hover {
-    color: #000;
+    color: #6a4f9e;
 }
 .nav-menu > li {
     margin-left: 8px;
