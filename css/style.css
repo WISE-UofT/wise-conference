@@ -413,15 +413,19 @@ video {
     color: #6a4f9e;
 }
 
-/* Hover state */
 .nav-menu a:hover {
-    color: #CCCCCC;
+    opacity: 0.7;
 }
 
-#header:not(.header-scrolled) .nav-menu a:hover {
+#header:not(.header-scrolled) {
     color: #ffffff;
     opacity: 0.8;
 }
+
+#header.header-scrolled {
+    color: #4a3670;
+}
+
 .nav-menu > li {
     margin-left: 8px;
 }
