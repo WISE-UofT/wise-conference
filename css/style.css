@@ -398,11 +398,31 @@ video {
     font-weight: 500;
     font-size: 14px;
     outline: none;
+    transition: color 0.3s ease;
 }
-.nav-menu .menu-active a,
-.nav-menu a:hover {
+
+#header.header-scrolled .nav-menu a {
     color: #6a4f9e;
 }
+
+.nav-menu .menu-active a {
+    color: #ffffff;
+}
+
+#header.header-scrolled .nav-menu .menu-active a {
+    color: #6a4f9e;
+}
+
+.nav-menu a:hover {
+    color: #adabff;
+    opacity: 1;
+}
+
+
+#header.header-scrolled a:hover{
+    color: #333333;
+}
+
 .nav-menu > li {
     margin-left: 8px;
 }
@@ -415,12 +435,6 @@ video {
     left: 0;
     visibility: hidden;
     transition: all 0.3s ease-in-out 0s;
-}
-.nav-menu a:hover:before,
-.nav-menu li:hover > a:before,
-.nav-menu .menu-active > a:before {
-    visibility: visible;
-    width: 100%;
 }
 .nav-menu li.buy-tickets a {
     color: #ede1ff;
@@ -435,6 +449,8 @@ video {
     line-height: 1;
     font-size: 13px;
 }
+
+
 .nav-menu li.buy-tickets a:hover {
     background: #ede1ff;
     border: 2px solid #563d83;
@@ -485,6 +501,11 @@ video {
     cursor: pointer;
 }
 #mobile-nav-toggle i {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+#header.header-scrolled #mobile-nav-toggle i {
     color: #563d83;
 }
 #mobile-nav {
