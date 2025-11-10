@@ -415,7 +415,7 @@ video {
 
 /* Hover state */
 .nav-menu a:hover {
-    color: #6a4f9e;
+    color: #CCCCCC;
 }
 
 #header:not(.header-scrolled) .nav-menu a:hover {
@@ -455,11 +455,6 @@ video {
     font-size: 13px;
 }
 
-/* Keep button styling consistent when scrolled */
-#header.header-scrolled .nav-menu li.buy-tickets a {
-    color: #ede1ff;
-    background: #563D8E;
-}
 
 .nav-menu li.buy-tickets a:hover {
     background: #ede1ff;
