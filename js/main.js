@@ -78,8 +78,19 @@ jQuery(function ($) {
   
     // ------- Header on scroll -------
     const $header = $("#header");
+    const $logo = $("#logo img");
     function updateHeader() {
-      $(window).scrollTop() > 100 ? $header.addClass("header-scrolled") : $header.removeClass("header-scrolled");
+      if ($(window).scrollTop() > 100) {
+        $header.addClass("header-scrolled");
+        if ($logo.length && $logo.attr("src") !== "img/logo-dark-purple.webp") {
+          $logo.attr("src", "img/logo-dark-purple.webp");
+        }
+      } else {
+        $header.removeClass("header-scrolled");
+        if ($logo.length && $logo.attr("src") !== "img/logo.webp") {
+          $logo.attr("src", "img/logo.webp");
+        }
+      }
     }
     $(window).on("scroll", updateHeader);
     updateHeader();
