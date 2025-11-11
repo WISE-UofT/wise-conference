@@ -78,7 +78,7 @@ jQuery(function ($) {
   
     // ------- Header on scroll -------
     const $header = $("#header");
-    const $logo = $("#header #logo img");
+    const $logo = $("#logo img");
     function updateHeader() {
       if ($(window).scrollTop() > 100) {
         $header.addClass("header-scrolled");
