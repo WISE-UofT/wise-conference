@@ -78,8 +78,15 @@ jQuery(function ($) {
   
     // ------- Header on scroll -------
     const $header = $("#header");
+    const $logo = $("#header #logo img");
     function updateHeader() {
-      $(window).scrollTop() > 100 ? $header.addClass("header-scrolled") : $header.removeClass("header-scrolled");
+      if ($(window).scrollTop() > 100) {
+        $header.addClass("header-scrolled");
+        $logo.attr("src", "img/logo-dark-purple.webp");
+      } else {
+        $header.removeClass("header-scrolled");
+        $logo.attr("src", "img/logo.webp");
+      }
     }
     $(window).on("scroll", updateHeader);
     updateHeader();
