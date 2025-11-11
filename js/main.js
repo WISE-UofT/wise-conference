@@ -82,10 +82,14 @@ jQuery(function ($) {
     function updateHeader() {
       if ($(window).scrollTop() > 100) {
         $header.addClass("header-scrolled");
-        $logo.attr("src", "img/logo-dark-purple.webp");
+        if ($logo.length && $logo.attr("src") !== "img/logo-dark-purple.webp") {
+          $logo.attr("src", "img/logo-dark-purple.webp");
+        }
       } else {
         $header.removeClass("header-scrolled");
-        $logo.attr("src", "img/logo.webp");
+        if ($logo.length && $logo.attr("src") !== "img/logo.webp") {
+          $logo.attr("src", "img/logo.webp");
+        }
       }
     }
     $(window).on("scroll", updateHeader);

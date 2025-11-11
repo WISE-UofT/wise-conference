@@ -508,6 +508,7 @@ video {
 #header.header-scrolled #mobile-nav-toggle i {
     color: #563d83;
 }
+
 #mobile-nav {
     position: fixed;
     top: 0;
@@ -1602,7 +1603,7 @@ background-color: #DDDBD2;
 }
 @media (max-width: 991px) {
     #header {
-        background: #fff;
+        background: #0d072b;
         height: 70px;
         padding: 15px 0;
         transition: all 0.5s;
@@ -1613,6 +1614,13 @@ background-color: #DDDBD2;
     #mobile-nav-toggle {
         display: inline;
     }
+    
+    /* Keep mobile toggle icon white on mobile */
+    #mobile-nav-toggle i {
+        color: #ffffff !important;
+        text-shadow: none;
+    }
+    
     #intro .intro-container {
         top: 65vh;
     }
