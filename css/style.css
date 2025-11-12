@@ -505,7 +505,7 @@ video {
     transition: color 0.3s ease;
 }
 
-#header.header-scrolled #mobile-nav-toggle i {
+body.scrolled #mobile-nav-toggle i {
     color: #563d83;
 }
 
@@ -1615,9 +1615,8 @@ background-color: #DDDBD2;
         display: inline;
     }
     
-    /* Keep mobile toggle icon white on mobile */
     #mobile-nav-toggle i {
-        color: #ffffff !important;
+        color: #ffffff;
         text-shadow: none;
     }
     
