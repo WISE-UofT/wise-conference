@@ -2,9 +2,11 @@
 
 ## Current
 
-2025 (Reaching for the Stars): https://conference.wise.skule.ca/
+2026 (Hidden Depths): https://conference.wise.skule.ca/
 
 ## Past Links
+
+2025 (Reaching for the Stars)
 
 2024 (Endless Exploration)
 
