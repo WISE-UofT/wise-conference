@@ -790,6 +790,22 @@ body.mobile-nav-active #mobile-nav-toggle {
 #speakers h2 {
     padding-top: 10px;
     text-align: center;
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #101F46;
+}
+#speakers h3 {
+    font-size: 20px;
+    text-align: center;
+    font-style: italic;
+}
+#speakers .description {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 0px 5px 10px 5px;
+    color: #101F46;
+    text-align: left;
 }
 #speakers .speaker {
     position: relative;
