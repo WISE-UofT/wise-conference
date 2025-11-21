@@ -792,7 +792,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: #101F46;
     text-align: center;
 }
-#speakers h2 {
+#speakers h2:not(.section-header h2) {
     padding-top: 10px;
     text-align: center;
     font-size: 28px;
