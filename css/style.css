@@ -450,6 +450,11 @@ video {
     font-size: 13px;
 }
 
+/* Keep buy-tickets button text white when scrolled */
+#header.header-scrolled .nav-menu li.buy-tickets a {
+    color: #ede1ff;
+    background: #563D8E;
+}
 
 .nav-menu li.buy-tickets a:hover {
     background: #ede1ff;
