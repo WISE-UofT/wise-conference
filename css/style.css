@@ -859,6 +859,18 @@ body.mobile-nav-active #mobile-nav-toggle {
     bottom: 0;
     padding-bottom: 10px;
 }
+#speakers .card-body {
+    text-align: center;
+}
+#speakers .card-title {
+    text-align: center;
+}
+#speakers .card-text {
+    text-align: center;
+}
+#speakers .meta {
+    text-align: center;
+}
 #schedule {
     padding: 60px 0 60px 0;
 }
