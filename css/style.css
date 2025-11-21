@@ -859,6 +859,16 @@ body.mobile-nav-active #mobile-nav-toggle {
     bottom: 0;
     padding-bottom: 10px;
 }
+#speakers .card {
+    max-width: 100%;
+}
+#speakers .card-img-top {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
 #speakers .card-body {
     text-align: center;
 }
@@ -870,6 +880,21 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 #speakers .meta {
     text-align: center;
+}
+@media (max-width: 576px) {
+    #speakers .card-img-top {
+        max-height: 300px;
+    }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+    #speakers .card-img-top {
+        max-height: 400px;
+    }
+}
+@media (min-width: 769px) {
+    #speakers .card-img-top {
+        max-height: 500px;
+    }
 }
 #schedule {
     padding: 60px 0 60px 0;
