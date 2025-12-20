@@ -1737,3 +1737,12 @@ background-color: #DDDBD2;
 #gallery .card-title {
   padding: 0;
 }
+
+/* Custom CSS to fit 5 speakers per row on large screens */
+@media (min-width: 992px) {
+    #speakers .col-lg-3 {
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
