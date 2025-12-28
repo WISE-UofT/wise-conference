@@ -1746,3 +1746,6 @@ background-color: #DDDBD2;
         max-width: 20%;
     }
 }
+.card-body {
+    padding: 1.25rem 0;
+}
