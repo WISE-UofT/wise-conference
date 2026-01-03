@@ -691,7 +691,25 @@ body.mobile-nav-active #mobile-nav-toggle {
     opacity:.8;
     color: white;
 }
+#countdown-box {
+    min-height: 100px; /* Reserves space for the timer numbers */
+    display: flex;     /* Keeps alignment consistent */
+    justify-content: center;
+}
+/* Responsive adjustments for Countdown Box */
+@media (max-width: 768px) {
+    #countdown-box {
+        min-height: 60px; /* Reduced height for mobile */
+    }
 
+    .countdown-box .number {
+        font-size: 1.5rem; /* Smaller font for mobile */
+    }
+    
+    .countdown-box span {
+        min-width: 40px; /* Squeeze elements closer */
+    }
+}
 #competitions,
 #workshops {
     background-size: cover;
