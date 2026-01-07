@@ -290,6 +290,11 @@ video {
     text-align: center;
     font-weight: 700;
 }
+@media (max-width: 576px) {
+    .section-header h2 {
+        font-size: 26px;
+    }
+}
 .section-header p {
     text-align: center;
     padding: 0;
@@ -638,6 +643,11 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-bottom: 10px;
     color: #101F46;
     text-align: center;
+}
+@media (max-width: 576px) {
+    #overview h2 {
+        font-size: 26px;
+    }
 }
 #overview h3 {
     font-size: 20px;
@@ -1767,4 +1777,45 @@ background-color: #DDDBD2;
 }
 .card-body {
     padding: 1.25rem 0;
+}
+
+/* Smaller font for mobile screens */
+@media (max-width: 576px) {
+    body {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    h5,
+    h6 {
+        font-size: 16px;
+    }
+
+    p,
+    a,
+    .nav-menu a,
+    #mobile-nav ul li a,
+    #schedule .sub-heading,
+    #faq #faq-list a,
+    #faq #faq-common a,
+    #subsidies #faq-list a,
+    #buy-tickets .card .btn,
+    #buy-tickets #buy-ticket-modal .btn {
+        font-size: 15px;
+    }
 }
