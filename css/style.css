@@ -1664,17 +1664,6 @@ background-color: #DDDBD2;
 .profile a .profile-image {
     width: 60px;
 }
-@media (max-width: 860px) {
-    #intro {
-        height: 60vh !important;
-    }
-}
-@media (max-width: 520px) {
-    #intro {
-        height: 40vh !important;
-        margin-top: 14%;
-    }
-}
 @media (min-width: 991px) {
     #schedule .sub-heading {
         width: 75%;
@@ -1817,5 +1806,32 @@ background-color: #DDDBD2;
     #buy-tickets .card .btn,
     #buy-tickets #buy-ticket-modal .btn {
         font-size: 15px;
+    }
+
+    section:not(#intro):not(#countdown-section):not(#overview) .container {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    #countdown-section {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    /* Hero image fills entire screen on mobile */
+    #intro {
+        height: 90vh !important;
+        background-position: center center;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+    }
+
+    #workshops .row.feature-item {
+        padding-top: 0 !important;
+    }
+
+    #workshops .about-content {
+        padding-top: 0 !important;
     }
 }
