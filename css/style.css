@@ -1813,6 +1813,11 @@ background-color: #DDDBD2;
         padding-right: 5vw;
     }
 
+    #overview .container {
+        padding-left: 2vw; 
+        padding-right: 2vw; 
+    }
+
     #countdown-section {
         padding-top: 0 !important;
         padding-bottom: 0 !important;
