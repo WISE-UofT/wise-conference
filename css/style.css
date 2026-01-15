@@ -224,8 +224,8 @@ video {
     -webkit-animation-delay: 0.8s;
     animation-delay: 0.8s;
     border: 4px solid #ffffff;
+    white-space: nowrap
 }
-
 .comp-button:hover {
     background: #fff;
     color: #563d83 !important;
@@ -803,9 +803,21 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: #101F46;
 }
 @media (max-width: 576px) {
-    #workshops h4 {
+    #workshops h4,
+    #competitions h4 {
         font-size: 18px;
         text-align: center;
+    }
+    #competitions div {
+        text-align: center;
+        font-size: 14px;
+    }
+    #competitions h5 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    #competitions img {
+        max-width: 250px;
     }
 }
 #workshops h5 {
@@ -821,6 +833,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 #competitions li,
 #workshops li {
     padding-left: 10px;
+}
+@media (max-width: 576px) {
+    #competitions li {
+        font-size: 14px;
+        text-align: left;
+    }
 }
 #competitions .summary,
 #workshops .summary {
@@ -846,6 +864,25 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #competitions .btn-current:hover {
     background: #101F46;
+}
+
+/* Make competition buttons wrap to the next line and take full width on narrow screens */
+@media (max-width: 768px) {
+    /* Make the left content occupy the full row so the button wraps to a new line */
+    .d-flex.flex-row.flex-wrap.align-items-center.justify-content-between > div {
+        flex: 1 1 100%;
+        min-width: 0; /* prevent overflow from long content */
+    }
+
+    /* Keep the button on its own line but sized to its text and centered */
+    .d-flex.flex-row.flex-wrap.align-items-center.justify-content-between > a.comp-button,
+    .d-flex.flex-row.flex-wrap.align-items-center.justify-content-between > .comp-button {
+        flex: 0 0 auto !important;
+        width: auto !important;
+        max-width: none !important;
+        margin: 0.5rem auto 0 !important; /* centers the button on the new line */
+        text-align: center;
+    }
 }
 
 .image-center {
