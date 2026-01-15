@@ -224,7 +224,7 @@ video {
     -webkit-animation-delay: 0.8s;
     animation-delay: 0.8s;
     border: 4px solid #ffffff;
-    white-space: nowrap
+    white-space: nowrap;
 }
 .comp-button:hover {
     background: #fff;
