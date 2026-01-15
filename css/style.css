@@ -1819,6 +1819,19 @@ background-color: #DDDBD2;
     padding-top: 1rem;
     padding-bottom: 20px;
 }
+@media (max-width: 576px) {
+    #footer {
+        text-align: center;
+    }
+    #footer .footer-info a {
+        display: block;
+        margin-bottom: 10px;
+    }
+    /* When footer columns stack, add gap between Contact and Social sections */
+    #footer .footer-top .footer-contact {
+        margin-top: 2rem;
+    }
+}
 .profile a .profile-image {
     width: 60px;
 }
