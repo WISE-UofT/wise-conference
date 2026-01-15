@@ -672,7 +672,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 @media (max-width: 576px) {
     #overview h2 {
-        font-size: 26px;
+        font-size: 20px;
     }
 }
 #overview h3 {
@@ -686,6 +686,12 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-bottom: 10px;
     color: #101F46;
     text-align: center;
+}
+@media (max-width: 576px) {
+    #overview p,
+    #overview h5 {
+        font-size: 15px;
+    }
 }
 
 #overview .btn-current {
