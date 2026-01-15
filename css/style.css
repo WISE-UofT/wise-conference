@@ -100,12 +100,25 @@ video {
     margin-left: auto;
     margin-right: auto;
 }
+@media (max-width: 576px) {
+    .modal-header img {
+        max-height: 200px;
+        max-width: 200px;
+    }
+}
 .modal-header a {
     display: block;
     height: 250px;
     width: 250px;
     margin-left: auto;
     margin-right: auto;
+}
+/* Reduces size of gap below image */
+@media (max-width: 576px) {
+    .modal-header a {
+        height: 200px;
+        width: 200px;
+    }
 }
 .modal-footer {
     border-top: 0 none;
@@ -123,6 +136,14 @@ video {
 .modal-body i:hover {
     color: #ff6474;
     transition: 0.5s;
+}
+@media (max-width: 576px) {
+    .modal-body h3 {
+        font-size: 20px;
+    }
+    .modal-body p {
+        font-size: 14px;
+    }
 }
 .modal h2 {
     color: #2f3138;
@@ -292,7 +313,7 @@ video {
 }
 @media (max-width: 576px) {
     .section-header h2 {
-        font-size: 26px;
+        font-size: 20px;
     }
 }
 .section-header p {
@@ -302,6 +323,11 @@ video {
     font-size: 18px;
     font-weight: 500;
     color: #000000;
+}
+@media (max-width: 576px) {
+    .section-header p {
+        font-size: 15px;
+    }
 }
 .section-with-bg {
     background-color: #f6f7fd;
@@ -821,6 +847,11 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: #101F46;
     text-align: center;
 }
+@media (max-width: 576px) {
+    #speakers p {
+        font-size: 15px;
+    }
+}
 #speakers h2:not(.section-header h2) {
     padding-top: 10px;
     text-align: center;
@@ -829,10 +860,20 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-weight: bold;
     color: #101F46;
 }
+@media (max-width: 576px) {
+    #speakers h2:not(.section-header h2) {
+        font-size: 18px;
+    }
+}
 #speakers h3 {
     font-size: 20px;
     text-align: center;
     font-style: italic;
+}
+@media (max-width: 576px) {
+    #speakers h3 {
+        font-size: 15px;
+    }
 }
 #speakers .description {
     font-size: 16px;
@@ -840,6 +881,11 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding: 0px 5px 10px 5px;
     color: #101F46;
     text-align: left;
+}
+@media (max-width: 576px) {
+    #speakers .description {
+        font-size: 14px;
+    }
 }
 #speakers .speaker {
     position: relative;
@@ -906,6 +952,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 #speakers .card-text {
     text-align: center;
+}
+@media (max-width: 576px) {
+    #speakers .card-text {
+        font-size: 12px;
+    }
 }
 #speakers .meta {
     text-align: center;
