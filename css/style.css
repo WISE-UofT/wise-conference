@@ -294,12 +294,12 @@ video {
     padding-top: 6px;
 }
 .back-to-top:focus {
-    background: #e0072f;
+    background: #4a148c;
     color: #fff;
     outline: none;
 }
 .back-to-top:hover {
-    background: #e0072f;
+    background: #4a148c;
     color: #fff;
 }
 .section-header {
