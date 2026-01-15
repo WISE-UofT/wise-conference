@@ -1555,11 +1555,22 @@ background-color: #DDDBD2;
     text-align: center;
     color: #101F46;
 }
+@media (max-width: 576px) {
+    #sponsors-section h3 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
 #sponsors-section p {
     font-size: 16px;
     padding-bottom: 1.5vh;
     color: #101F46;
     text-align: center;
+}
+@media (max-width: 576px) {
+    #sponsors-section p {
+        font-size: 15px;
+    }
 }
 .grad-fair-section {
     background-size: cover;
