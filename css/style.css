@@ -100,12 +100,25 @@ video {
     margin-left: auto;
     margin-right: auto;
 }
+@media (max-width: 576px) {
+    .modal-header img {
+        max-height: 200px;
+        max-width: 200px;
+    }
+}
 .modal-header a {
     display: block;
     height: 250px;
     width: 250px;
     margin-left: auto;
     margin-right: auto;
+}
+/* Reduces size of gap below image */
+@media (max-width: 576px) {
+    .modal-header a {
+        height: 200px;
+        width: 200px;
+    }
 }
 .modal-footer {
     border-top: 0 none;
@@ -123,6 +136,14 @@ video {
 .modal-body i:hover {
     color: #ff6474;
     transition: 0.5s;
+}
+@media (max-width: 576px) {
+    .modal-body h3 {
+        font-size: 20px;
+    }
+    .modal-body p {
+        font-size: 14px;
+    }
 }
 .modal h2 {
     color: #2f3138;
@@ -203,8 +224,8 @@ video {
     -webkit-animation-delay: 0.8s;
     animation-delay: 0.8s;
     border: 4px solid #ffffff;
+    white-space: nowrap;
 }
-
 .comp-button:hover {
     background: #fff;
     color: #563d83 !important;
@@ -273,12 +294,12 @@ video {
     padding-top: 6px;
 }
 .back-to-top:focus {
-    background: #e0072f;
+    background: #4a148c;
     color: #fff;
     outline: none;
 }
 .back-to-top:hover {
-    background: #e0072f;
+    background: #4a148c;
     color: #fff;
 }
 .section-header {
@@ -290,6 +311,11 @@ video {
     text-align: center;
     font-weight: 700;
 }
+@media (max-width: 576px) {
+    .section-header h2 {
+        font-size: 20px;
+    }
+}
 .section-header p {
     text-align: center;
     padding: 0;
@@ -297,6 +323,11 @@ video {
     font-size: 18px;
     font-weight: 500;
     color: #000000;
+}
+@media (max-width: 576px) {
+    .section-header p {
+        font-size: 15px;
+    }
 }
 .section-with-bg {
     background-color: #f6f7fd;
@@ -521,7 +552,8 @@ body.scrolled #mobile-nav-toggle i {
     bottom: 0;
     z-index: 998;
     background: rgba(6, 12, 34, 0.9);
-    left: -260px;
+    left: auto;
+    right: -260px;
     width: 260px;
     overflow-y: auto;
     transition: 0.4s;
@@ -579,7 +611,7 @@ body.mobile-nav-active {
     overflow: hidden;
 }
 body.mobile-nav-active #mobile-nav {
-    left: 0;
+    right: 0;
 }
 body.mobile-nav-active #mobile-nav-toggle {
     color: #fff;
@@ -638,6 +670,11 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: #101F46;
     text-align: center;
 }
+@media (max-width: 576px) {
+    #overview h2 {
+        font-size: 20px;
+    }
+}
 #overview h3 {
     font-size: 20px;
     margin-bottom: 10px;
@@ -649,6 +686,12 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-bottom: 10px;
     color: #101F46;
     text-align: center;
+}
+@media (max-width: 576px) {
+    #overview p,
+    #overview h5 {
+        font-size: 15px;
+    }
 }
 
 #overview .btn-current {
@@ -750,11 +793,38 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-size: 16px;
     color: #101F46;
 }
+@media (max-width: 576px) {
+    #competitions p,
+    #workshops p {
+        font-size: 14px;
+    }
+    #workshops a {
+        font-size: 14px;
+    }
+}
 #workshops h4 {
     font-size: 28px;
     margin-bottom: 10px;
     font-weight: bold;
     color: #101F46;
+}
+@media (max-width: 576px) {
+    #workshops h4,
+    #competitions h4 {
+        font-size: 18px;
+        text-align: center;
+    }
+    #competitions div {
+        text-align: center;
+        font-size: 14px;
+    }
+    #competitions h5 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    #competitions img {
+        max-width: 250px;
+    }
 }
 #workshops h5 {
     font-size: 20px;
@@ -769,6 +839,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 #competitions li,
 #workshops li {
     padding-left: 10px;
+}
+@media (max-width: 576px) {
+    #competitions li {
+        font-size: 14px;
+        text-align: left;
+    }
 }
 #competitions .summary,
 #workshops .summary {
@@ -796,6 +872,30 @@ body.mobile-nav-active #mobile-nav-toggle {
     background: #101F46;
 }
 
+/* Hide competition dividers on desktop, show only on mobile/tablet */
+#competitions hr {
+    display: none;
+}
+
+/* Make competition buttons wrap to the next line and take full width on narrow screens */
+@media (max-width: 768px) {
+    /* Make the left content occupy the full row so the button wraps to a new line */
+    .d-flex.flex-row.flex-wrap.align-items-center.justify-content-between > div {
+        flex: 1 1 100%;
+        min-width: 0; /* prevent overflow from long content */
+    }
+
+    /* Keep the button on its own line but sized to its text and centered */
+    .d-flex.flex-row.flex-wrap.align-items-center.justify-content-between > a.comp-button,
+    .d-flex.flex-row.flex-wrap.align-items-center.justify-content-between > .comp-button {
+        flex: 0 0 auto !important;
+        width: auto !important;
+        max-width: none !important;
+        margin: 0.5rem auto 0 !important; /* centers the button on the new line */
+        text-align: center;
+    }
+}
+
 .image-center {
     text-align: center;
 }
@@ -810,6 +910,11 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: #101F46;
     text-align: center;
 }
+@media (max-width: 576px) {
+    #speakers p {
+        font-size: 15px;
+    }
+}
 #speakers h2:not(.section-header h2) {
     padding-top: 10px;
     text-align: center;
@@ -818,10 +923,20 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-weight: bold;
     color: #101F46;
 }
+@media (max-width: 576px) {
+    #speakers h2:not(.section-header h2) {
+        font-size: 18px;
+    }
+}
 #speakers h3 {
     font-size: 20px;
     text-align: center;
     font-style: italic;
+}
+@media (max-width: 576px) {
+    #speakers h3 {
+        font-size: 15px;
+    }
 }
 #speakers .description {
     font-size: 16px;
@@ -829,6 +944,11 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding: 0px 5px 10px 5px;
     color: #101F46;
     text-align: left;
+}
+@media (max-width: 576px) {
+    #speakers .description {
+        font-size: 14px;
+    }
 }
 #speakers .speaker {
     position: relative;
@@ -896,6 +1016,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 #speakers .card-text {
     text-align: center;
 }
+@media (max-width: 576px) {
+    #speakers .card-text {
+        font-size: 12px;
+    }
+}
 #speakers .meta {
     text-align: center;
 }
@@ -936,6 +1061,14 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: #fff;
     padding: 10px 100px;
 }
+@media (max-width: 576px) {
+    #schedule .nav-tabs a {
+        font-size: 15px;
+        padding: 10px 10px;
+        width: 230px;
+        margin-bottom: 10px;
+    }
+}
 #schedule .nav-tabs a.active {
     background-color: #101F46;
     color: #fff;
@@ -959,6 +1092,11 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding-bottom: 5px;
     display: inline-block;
 }
+@media (max-width: 576px) {
+    #schedule .schedule-item time {
+        font-size: 15px;
+    }
+}
 #schedule .schedule-item .speaker {
     width: 60px;
     height: 60px;
@@ -979,6 +1117,11 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-weight: 600;
     margin-bottom: 5px;
 }
+@media (max-width: 576px) {
+    #schedule .schedule-item h4 {
+        font-size: 15px;
+    }
+}
 #schedule .schedule-item h4 span {
     font-style: italic;
     color: #6A4F9E;
@@ -990,11 +1133,21 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: #6A4F9E;
     margin-bottom: 0;
 }
+@media (max-width: 576px) {
+    #schedule .schedule-item p {
+        font-size: 12px;
+    }
+}
 #venue {
     padding: 40px 0;
 }
 #venue p {
     font-size: 20px;
+}
+@media (max-width: 576px) {
+    #venue .section-header p {
+        font-size: 15px;
+    }
 }
 #venue .container-fluid {
     margin-bottom: 3px;
@@ -1136,6 +1289,11 @@ background-color: #DDDBD2;
     padding-bottom: 10px;
     color: #101F46;
     text-align: center;
+}
+#gallery h5 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
 }
 #gallery .owl-nav,
 #gallery .owl-dots {
@@ -1343,6 +1501,11 @@ background-color: #DDDBD2;
     font-size: 18px;
     text-align: center;
 }
+@media (max-width: 576px) {
+    #faq .more-questions {
+        font-size: 15px;
+    }
+}
 #faq #faq-list a.collapse,
 #faq #faq-common a.collapse {
     color: #2A4673;
@@ -1418,11 +1581,22 @@ background-color: #DDDBD2;
     text-align: center;
     color: #101F46;
 }
+@media (max-width: 576px) {
+    #sponsors-section h3 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
 #sponsors-section p {
     font-size: 16px;
     padding-bottom: 1.5vh;
     color: #101F46;
     text-align: center;
+}
+@media (max-width: 576px) {
+    #sponsors-section p {
+        font-size: 15px;
+    }
 }
 .grad-fair-section {
     background-size: cover;
@@ -1650,19 +1824,21 @@ background-color: #DDDBD2;
     padding-top: 1rem;
     padding-bottom: 20px;
 }
+@media (max-width: 576px) {
+    #footer {
+        text-align: center;
+    }
+    #footer .footer-info a {
+        display: block;
+        margin-bottom: 10px;
+    }
+    /* When footer columns stack, add gap between Contact and Social sections */
+    #footer .footer-top .footer-contact {
+        margin-top: 2rem;
+    }
+}
 .profile a .profile-image {
     width: 60px;
-}
-@media (max-width: 860px) {
-    #intro {
-        height: 60vh !important;
-    }
-}
-@media (max-width: 520px) {
-    #intro {
-        height: 40vh !important;
-        margin-top: 14%;
-    }
 }
 @media (min-width: 991px) {
     #schedule .sub-heading {
@@ -1707,6 +1883,11 @@ background-color: #DDDBD2;
     }
     #schedule .nav-tabs a {
         padding: 8px 60px;
+    }
+    #competitions hr {
+        display: block;
+        border-top: 1px solid #dee2e6;
+        margin: 2rem 0;
     }
 }
 @media (max-width: 1024px) {
@@ -1766,4 +1947,77 @@ background-color: #DDDBD2;
 }
 .card-body {
     padding: 1.25rem 0;
+}
+
+/* Smaller font for mobile screens */
+@media (max-width: 576px) {
+    body {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    h5,
+    h6 {
+        font-size: 16px;
+    }
+
+    p,
+    a,
+    .nav-menu a,
+    #mobile-nav ul li a,
+    #schedule .sub-heading,
+    #faq #faq-list a,
+    #faq #faq-common a,
+    #subsidies #faq-list a,
+    #buy-tickets .card .btn,
+    #buy-tickets #buy-ticket-modal .btn {
+        font-size: 15px;
+    }
+
+    section:not(#intro):not(#countdown-section):not(#overview) .container {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    #overview .container {
+        padding-left: 2vw; 
+        padding-right: 2vw; 
+    }
+
+    #countdown-section {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    /* Hero image fills entire screen on mobile */
+    #intro {
+        height: 90vh !important;
+        background-position: center center;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+    }
+
+    #workshops .row.feature-item {
+        padding-top: 0 !important;
+    }
+
+    #workshops .about-content {
+        padding-top: 0 !important;
+    }
 }
