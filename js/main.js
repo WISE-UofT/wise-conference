@@ -214,6 +214,11 @@ jQuery(function ($) {
         const now = Date.now();
         let secondsLeft = (targetDate - now) / 1000;
   
+        // Stop at 0 if event date has passed
+        if (secondsLeft < 0) {
+          secondsLeft = 0;
+        }
+  
         const days = parseInt(secondsLeft / 86400, 10); secondsLeft %= 86400;
         const hours = parseInt(secondsLeft / 3600, 10); secondsLeft %= 3600;
         const minutes = parseInt(secondsLeft / 60, 10);
