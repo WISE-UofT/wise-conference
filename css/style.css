@@ -808,6 +808,10 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-weight: bold;
     color: #101F46;
 }
+#competitions h5 {
+    text-align: center;
+    font-weight: bold;;
+}
 @media (max-width: 576px) {
     #workshops h4,
     #competitions h4 {
@@ -870,6 +874,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #competitions .btn-current:hover {
     background: #101F46;
+}
+
+#competitions .card-text {
+    text-align: center;
+}
+@media (max-width: 576px) {
+    #competitions .card-text {
+        font-size: 12px;
+    }
 }
 
 /* Hide competition dividers on desktop, show only on mobile/tablet */
