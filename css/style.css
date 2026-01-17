@@ -886,9 +886,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 /* Hide competition dividers on desktop, show only on mobile/tablet */
-#competitions hr {
+/* #competitions hr {
     display: none;
-}
+} */
 
 /* Make competition buttons wrap to the next line and take full width on narrow screens */
 @media (max-width: 768px) {
