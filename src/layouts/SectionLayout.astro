@@ -1,0 +1,10 @@
+---
+import "../styles/global.css";
+
+const { title } = Astro.props;
+---
+
+<section id={title.toLowerCase()}>
+  <h2>{title}</h2>
+  <slot />
+</section>
