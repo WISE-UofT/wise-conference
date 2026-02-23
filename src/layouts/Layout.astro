@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="utf-8">
+    <title>WISE Conference 2026</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <meta property="og:title" content="WISE UofT National Conference 2026">
+    <meta property="og:description" content="The 14th Annual WISE National Conference is happening January 17-18, 2026 in Toronto, Ontario!">
+    <meta property="og:image" content="https://conference.wise.skule.ca/img/intro-bg.webp">
+    <meta property="og:url" content="https://conference.wise.skule.ca/">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@wiseuoft">
+    <meta name="twitter:creator" content="@wiseuoft">
+    <meta name="twitter:title" content="WISE UofT National Conference 2026">
+    <meta name="twitter:description" content="The 14th Annual WISE National Conference is happening January 17-18, 2026 in Toronto, Ontario!">
+    <meta name="twitter:image" content="https://conference.wise.skule.ca/img/intro-bg.webp">
+
+    <meta name="author" content="WISE UofT Chapter">
+    <meta name="description" content="WISE UofT presents the National Conference 2026. Learn more and register here today!">
+    <meta name="keywords" content="University of Toronto, Women in Science and Engineering, wise uoft, uoft, wise, 
+        engineering, conference, national conference, WISE NC, WISE 2026" >
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Favicon -->
+    <link href="/favicon.webp" rel="icon" as="image" type="image/webp">
+    <link href="img/logo.webp" as="image">
+
+    <!-- Google Fonts and APIs -->
+    <link rel="preconnect" href="https://maps.googleapis.com">
+    <link rel="preconnect" href="https://maps.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Load Google Fonts asynchronously to prevent render blocking -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet"></noscript>
+    
+    <!--=====Critical CSS (render-blocking but necessary)======-->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!--=====Non-critical CSS (deferred with modern preload pattern)======-->
+    <link rel="preload" as="style" href="lib/animate/animate.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="style" href="lib/venobox/venobox.css" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="style" href="lib/swiper/swiper-bundle.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="style" href="lib/owlcarousel/assets/owl.carousel.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/venobox/venobox.css" rel="stylesheet">
+        <link href="lib/swiper/swiper-bundle.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    </noscript>
+    <!-- Preload the banner with high fetchpriority so it starts loading with style.css -->
+    <link rel="preload" fetchpriority="high" as="image" href="img/intro-bg.webp" type="image/webp">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-393QB79YGG"></script>
+    <script async>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-393QB79YGG');
+    </script>
+</head>
+<body>
+    <slot />
+</body>
