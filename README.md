@@ -21,15 +21,22 @@ npm install
 
 ### Start Dev Server
 
+Preferred command:
+
 ```bash
 npm run dev
 ```
 
-or
+Optional host/port customization (recommended pattern):
 
 ```bash
-npm run start -- --host 127.0.0.1 --port 4321
+npm run dev -- --host 127.0.0.1 --port 4321
 ```
+
+Notes:
+
+- `npm run start` is currently an alias to the same Astro dev server command and is kept for compatibility.
+- Use `npm run dev` for day-to-day local development to keep team usage consistent.
 
 ### Build
 
