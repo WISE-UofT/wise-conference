@@ -7,3 +7,33 @@
 
     --color-blue-navy: #101F46;
 }
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    body {
+        margin: 0;
+        background: #fff;
+        color: var(--color-blue-navy);
+        font-family: "Montserrat", sans-serif;
+    }
+
+    a {
+        color: var(--color-purple-primary);
+        text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: var(--color-blue-navy);
+        font-weight: 700;
+        margin: 0;
+    }
+}

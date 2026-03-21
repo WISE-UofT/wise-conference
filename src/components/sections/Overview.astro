@@ -1,9 +1,76 @@
 ---
-import "../../styles/global.css";
-
 import SectionLayout from "../../layouts/SectionLayout.astro";
 ---
 
 <SectionLayout title="Overview">
-  
+	<div class="grid gap-8 lg:grid-cols-[1.3fr_1fr]">
+		<div class="space-y-5">
+			<p class="text-lg leading-8 text-blue-navy/90">
+				The 14th annual WISE National Conference brings together students, professionals,
+				and leaders for two days of workshops, networking, and career-building opportunities.
+			</p>
+			<p class="text-base leading-7 text-blue-navy/80">
+				Join us in Toronto on January 17-18, 2026, and build your community across science,
+				technology, and engineering disciplines.
+			</p>
+			<div class="flex flex-wrap gap-3 pt-2">
+				<a
+					href="https://www.zeffy.com/en-CA/ticketing/wise-national-conference--2026-2"
+					target="_blank"
+					rel="noreferrer"
+					class="rounded-full bg-blue-navy px-6 py-3 text-sm font-semibold tracking-wide text-white transition hover:bg-purple-primary"
+				>
+					Buy Tickets
+				</a>
+			</div>
+		</div>
+
+		<aside class="rounded-2xl bg-blue-navy p-6 text-white shadow-xl">
+			<p class="text-sm font-semibold uppercase tracking-[0.2em] text-purple-light">Conference Starts In</p>
+			<div id="countdown-box" class="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
+				<div class="rounded-xl bg-white/10 p-3 text-center">
+					<p id="countdown-days" class="text-2xl font-bold">0</p>
+					<p class="text-xs uppercase tracking-wide text-purple-light">Days</p>
+				</div>
+				<div class="rounded-xl bg-white/10 p-3 text-center">
+					<p id="countdown-hours" class="text-2xl font-bold">0</p>
+					<p class="text-xs uppercase tracking-wide text-purple-light">Hours</p>
+				</div>
+				<div class="rounded-xl bg-white/10 p-3 text-center">
+					<p id="countdown-minutes" class="text-2xl font-bold">0</p>
+					<p class="text-xs uppercase tracking-wide text-purple-light">Minutes</p>
+				</div>
+				<div class="rounded-xl bg-white/10 p-3 text-center">
+					<p id="countdown-seconds" class="text-2xl font-bold">0</p>
+					<p class="text-xs uppercase tracking-wide text-purple-light">Seconds</p>
+				</div>
+			</div>
+		</aside>
+	</div>
+
+	<script>
+		const targetDate = new Date("2026-01-17T08:00:00-05:00").getTime();
+		const days = document.getElementById("countdown-days");
+		const hours = document.getElementById("countdown-hours");
+		const minutes = document.getElementById("countdown-minutes");
+		const seconds = document.getElementById("countdown-seconds");
+
+		function updateCountdown() {
+			const now = Date.now();
+			const diff = Math.max(targetDate - now, 0);
+
+			const dayValue = Math.floor(diff / (1000 * 60 * 60 * 24));
+			const hourValue = Math.floor((diff / (1000 * 60 * 60)) % 24);
+			const minuteValue = Math.floor((diff / (1000 * 60)) % 60);
+			const secondValue = Math.floor((diff / 1000) % 60);
+
+			if (days) days.textContent = String(dayValue);
+			if (hours) hours.textContent = String(hourValue);
+			if (minutes) minutes.textContent = String(minuteValue);
+			if (seconds) seconds.textContent = String(secondValue);
+		}
+
+		updateCountdown();
+		window.setInterval(updateCountdown, 1000);
+	</script>
 </SectionLayout>

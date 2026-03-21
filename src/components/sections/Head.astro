@@ -1,12 +1,10 @@
 ---
-import "../../styles/global.css";
-
 import NavBar from "../navigation/NavBar.astro";
 ---
 
-<div>
-    <img src="/intro-bg.webp" alt="WISE UofT National Conference 2026" class="w-full h-full object-contain" loading="eager" />
-    <div class="inset-0 absolute z-10">
+<header class="relative min-h-[55vh] overflow-hidden bg-blue-navy md:min-h-[70vh]">
+    <img src="/intro-bg.webp" alt="WISE UofT National Conference 2026" class="h-full w-full object-cover" loading="eager" />
+    <div class="absolute inset-0 z-10 bg-gradient-to-b from-blue-navy/50 via-transparent to-blue-navy/70">
         <NavBar />
     </div>
-</div>
+</header>

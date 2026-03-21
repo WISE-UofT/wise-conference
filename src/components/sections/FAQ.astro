@@ -1,9 +1,60 @@
 ---
-import "../../styles/global.css";
-
 import SectionLayout from "../../layouts/SectionLayout.astro";
+
+const faqs = [
+	{
+		question: "What is the dress code?",
+		answer: "The conference dress code is business casual.",
+	},
+	{
+		question: "What companies will be at the Career Fair?",
+		answer:
+			"Please refer to the Sponsors section. Corporate and academic sponsor representatives will be present during networking and career fair periods.",
+	},
+	{
+		question: "Will there be vegetarian, vegan, gluten-free, dairy-free, and halal food options?",
+		answer: "Yes. We do our best to accommodate all dietary restrictions.",
+	},
+	{
+		question: "Will there be a coat check available?",
+		answer: "Yes. Coat check services will run on both Saturday and Sunday.",
+	},
+	{
+		question: "When should I arrive at the conference?",
+		answer:
+			"Registration opens at 8:00 AM on Saturday with breakfast available. Main programming starts at 9:00 AM.",
+	},
+	{
+		question: "Will there be parking available?",
+		answer:
+			"WISE does not provide dedicated parking spots, but there are nearby lots and paid valet options at the Westin Harbour Castle.",
+	},
+	{
+		question: "Do I have to stay for the entire conference?",
+		answer:
+			"Attendance flexibility is up to you. Events run all day on both days, so you can choose sessions most relevant to your interests.",
+	},
+	{
+		question: "Do I need to check in every time I leave and return?",
+		answer:
+			"No. Once you complete registration, you do not need to check in again. Please keep your name tag visible throughout the conference.",
+	},
+	{
+		question: "Where is the conference taking place?",
+		answer: "The conference is hosted at The Westin Harbour Castle in Toronto.",
+	},
+];
 ---
 
 <SectionLayout title="FAQ">
-  
+	<div class="space-y-3">
+		{faqs.map((faq) => (
+			<details class="rounded-2xl border border-blue-navy/10 bg-white p-5 shadow-sm">
+				<summary class="cursor-pointer list-none pr-6 text-base font-semibold text-blue-navy">
+					{faq.question}
+				</summary>
+				<p class="pt-3 text-sm leading-7 text-blue-navy/80">{faq.answer}</p>
+			</details>
+		))}
+	</div>
 </SectionLayout>
