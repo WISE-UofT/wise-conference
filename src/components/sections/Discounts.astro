@@ -1,9 +1,30 @@
 ---
-import "../../styles/global.css";
-
+import { getCollection, render } from "astro:content";
 import SectionLayout from "../../layouts/SectionLayout.astro";
+
+const discounts = await getCollection("discounts");
+const discountsWithContent = await Promise.all(
+	discounts
+		.sort((a, b) => a.data.school.localeCompare(b.data.school))
+		.map(async (entry) => {
+			const { Content } = await render(entry);
+			return {
+				school: entry.data.school,
+				Content,
+			};
+		}),
+);
 ---
 
 <SectionLayout title="Discounts">
-  
+	<div class="grid gap-5">
+		{discountsWithContent.map(({ school, Content }) => (
+			<article class="rounded-2xl border border-blue-navy/10 bg-white p-6 shadow-sm">
+				<h3 class="mb-4 text-xl font-semibold text-blue-navy">{school}</h3>
+				<div class="space-y-3 text-base leading-7 text-blue-navy/85 [&_h1]:mt-4 [&_h1]:text-lg [&_h1]:font-semibold [&_h1]:text-blue-navy [&_p]:m-0 [&_strong]:text-purple-primary">
+					<Content />
+				</div>
+			</article>
+		))}
+	</div>
 </SectionLayout>

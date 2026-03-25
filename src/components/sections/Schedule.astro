@@ -1,9 +1,59 @@
 ---
-import "../../styles/global.css";
-
 import SectionLayout from "../../layouts/SectionLayout.astro";
+
+const schedule = [
+	{
+		day: "Day 1",
+		date: "Saturday, January 17, 2026",
+		events: [
+			{ time: "8:00 AM", title: "Registration and Breakfast", detail: "Badge pick-up, networking, and opening lounge." },
+			{ time: "9:00 AM", title: "Opening Ceremony", detail: "Conference kickoff and welcome from WISE UofT." },
+			{ time: "10:00 AM", title: "Keynote Session", detail: "Featured speaker panel on leadership in STEM." },
+			{ time: "11:30 AM", title: "Workshop Block A", detail: "Parallel interactive sessions across streams." },
+			{ time: "1:00 PM", title: "Lunch and Sponsor Expo", detail: "Connect with industry and academic partners." },
+			{ time: "2:30 PM", title: "Competition Kickoff", detail: "Challenge briefings and team collaboration period." },
+			{ time: "4:30 PM", title: "Career Conversations", detail: "Mentor circles and career-focused discussions." },
+		],
+	},
+	{
+		day: "Day 2",
+		date: "Sunday, January 18, 2026",
+		events: [
+			{ time: "8:30 AM", title: "Breakfast and Networking", detail: "Morning check-in and attendee meetups." },
+			{ time: "9:30 AM", title: "Workshop Block B", detail: "Hands-on technical and leadership sessions." },
+			{ time: "11:00 AM", title: "Speaker Spotlight", detail: "Short talks from researchers and practitioners." },
+			{ time: "12:30 PM", title: "Lunch", detail: "Community lunch and chapter networking." },
+			{ time: "1:30 PM", title: "Competition Finals", detail: "Team presentations and judging." },
+			{ time: "3:30 PM", title: "Closing Ceremony", detail: "Awards, reflections, and final announcements." },
+		],
+	},
+];
 ---
 
 <SectionLayout title="Schedule">
-  
+	<p class="mb-8 max-w-3xl text-base leading-7 text-blue-navy/85">
+		The schedule below is a planning view for conference flow. Final room assignments and session
+		facilitators will be posted closer to the event date.
+	</p>
+
+	<div class="grid gap-6 lg:grid-cols-2">
+		{schedule.map((day) => (
+			<article class="rounded-2xl border border-blue-navy/10 bg-white p-6 shadow-sm">
+				<p class="text-xs font-semibold uppercase tracking-[0.2em] text-purple-primary">{day.day}</p>
+				<h3 class="mt-2 text-2xl font-semibold text-blue-navy">{day.date}</h3>
+
+				<ol class="mt-6 space-y-4">
+					{day.events.map((event) => (
+						<li class="grid grid-cols-[5.5rem_1fr] gap-4 rounded-xl bg-slate-50 p-3">
+							<p class="text-sm font-semibold text-purple-primary">{event.time}</p>
+							<div>
+								<p class="text-sm font-semibold text-blue-navy">{event.title}</p>
+								<p class="text-sm text-blue-navy/75">{event.detail}</p>
+							</div>
+						</li>
+					))}
+				</ol>
+			</article>
+		))}
+	</div>
 </SectionLayout>

@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/DiscountLayout.astro
 school: Humber College
 ---
 

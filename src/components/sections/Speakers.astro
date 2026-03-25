@@ -1,9 +1,98 @@
 ---
-import "../../styles/global.css";
-
 import SectionLayout from "../../layouts/SectionLayout.astro";
+
+const speakers = [
+	{
+		name: "Alicia Battaglia",
+		image: "/img/speakers/alicia-battaglia.webp",
+		title: "WISE 2026 Speaker",
+	},
+	{
+		name: "Anna Fan",
+		image: "/img/speakers/anna-fan.webp",
+		title: "WISE 2026 Speaker",
+	},
+	{
+		name: "Diana Anderson",
+		image: "/img/speakers/diana-anderson.webp",
+		title: "WISE 2026 Speaker",
+	},
+	{
+		name: "Jane Heffernan",
+		image: "/img/speakers/jane-heffernan.webp",
+		title: "WISE 2026 Speaker",
+	},
+	{
+		name: "Kyoko Lin",
+		image: "/img/speakers/kyoko-lin.webp",
+		title: "WISE 2026 Speaker",
+	},
+	{
+		name: "Marisa Battistella",
+		image: "/img/speakers/marisa-battistella.webp",
+		title: "WISE 2026 Speaker",
+	},
+	{
+		name: "Patricia Watanabe",
+		image: "/img/speakers/patricia-watanabe.webp",
+		title: "WISE 2026 Speaker",
+	},
+	{
+		name: "Rachael Walker",
+		image: "/img/speakers/rachael-walker.webp",
+		title: "WISE 2026 Speaker",
+	},
+	{
+		name: "Sarah Haines",
+		image: "/img/speakers/sarah-haines.webp",
+		title: "WISE 2026 Speaker",
+	},
+	{
+		name: "Sherry Chen",
+		image: "/img/speakers/sherry-chen.webp",
+		title: "WISE 2026 Speaker",
+	},
+	{
+		name: "Sunny Baek",
+		image: "/img/speakers/sunny-baek.webp",
+		title: "WISE 2026 Speaker",
+	},
+	{
+		name: "Tatyana Mollayeva",
+		image: "/img/speakers/tatyana-mollayeva.webp",
+		title: "WISE 2026 Speaker",
+	},
+];
 ---
 
 <SectionLayout title="Speakers">
-  
+	<p class="mb-8 max-w-3xl text-base leading-7 text-blue-navy/85">
+		Meet a selection of speakers joining WISE 2026. Full role descriptions and extended biographies
+		will continue to be updated as the conference program is finalized.
+	</p>
+
+	<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+		{speakers.map((speaker) => (
+			<article class="overflow-hidden rounded-2xl border border-blue-navy/10 bg-white shadow-sm">
+				<img
+					src={speaker.image}
+					alt={speaker.name}
+					loading="lazy"
+					class="aspect-[4/5] w-full object-cover"
+				/>
+				<div class="space-y-2 p-4">
+					<h3 class="text-lg font-semibold text-blue-navy">{speaker.name}</h3>
+					<p class="text-sm font-medium text-purple-primary">{speaker.title}</p>
+					<details class="group pt-1 text-sm text-blue-navy/85">
+						<summary class="cursor-pointer list-none font-semibold text-blue-navy transition hover:text-purple-primary">
+							Read bio
+						</summary>
+						<p class="pt-2 leading-6">
+							Detailed biographies are being finalized and will be published soon.
+						</p>
+					</details>
+				</div>
+			</article>
+		))}
+	</div>
 </SectionLayout>

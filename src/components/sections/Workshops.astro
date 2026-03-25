@@ -1,9 +1,96 @@
 ---
-import "../../styles/global.css";
-
 import SectionLayout from "../../layouts/SectionLayout.astro";
+
+const workshops = [
+	{
+		title: "From Data to Decisions: A Hands-On Case Study",
+		image: "/img/workshops/data-decisions.jpg",
+		description:
+			"Practice translating raw data into strategic recommendations through a guided case study.",
+		stream: "Analytics",
+	},
+	{
+		title: "Inclusive Innovation",
+		image: "/img/workshops/inclusive-innovation.jpg",
+		description:
+			"Explore methods for building products, teams, and systems that center accessibility and equity.",
+		stream: "Design",
+	},
+	{
+		title: "Model Context Protocol: Building AI Agents",
+		image: "/img/workshops/ai-agents.jpg",
+		description:
+			"Learn practical workflows for creating context-aware AI tooling with modern agent patterns.",
+		stream: "AI",
+	},
+	{
+		title: "Discovering Your Leadership Depths",
+		image: "/img/workshops/leadership.jpg",
+		description:
+			"Build confidence in your leadership style through reflection, peer feedback, and facilitation drills.",
+		stream: "Leadership",
+	},
+	{
+		title: "From Lab to Launch",
+		image: "/img/workshops/entrepreneurship.jpg",
+		description:
+			"Map the path from technical research to startup execution with examples from founder journeys.",
+		stream: "Entrepreneurship",
+	},
+	{
+		title: "University of Toronto Aerospace Team",
+		image: "/img/workshops/aerospace.jpg",
+		description:
+			"Get an inside view of multidisciplinary student engineering projects and systems integration.",
+		stream: "Engineering",
+	},
+	{
+		title: "How fMRI Sees the Active Brain",
+		image: "/img/workshops/fmri.jpg",
+		description:
+			"Understand how neuroimaging is used to study cognition, behavior, and human performance.",
+		stream: "Research",
+	},
+	{
+		title: "What They Don't Tell You About Tech Interviews",
+		image: "/img/workshops/tech-interviews.jpg",
+		description:
+			"Prepare for technical hiring with realistic interview patterns, rubrics, and communication tactics.",
+		stream: "Career",
+	},
+	{
+		title: "Mapping Your Academic Journey",
+		image: "/img/workshops/academic-journey.jpg",
+		description:
+			"Design your next academic steps with concrete planning frameworks for research and grad studies.",
+		stream: "Academic",
+	},
+];
 ---
 
 <SectionLayout title="Workshops">
-  
+	<p class="mb-8 max-w-3xl text-base leading-7 text-blue-navy/85">
+		Workshops are designed to be practical, interactive, and immediately useful. Choose sessions
+		aligned with your interests across technology, leadership, research, and career development.
+	</p>
+
+	<div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+		{workshops.map((workshop) => (
+			<article class="group overflow-hidden rounded-2xl border border-blue-navy/10 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+				<img
+					src={workshop.image}
+					alt={workshop.title}
+					loading="lazy"
+					class="h-52 w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+				/>
+				<div class="space-y-3 p-5">
+					<p class="inline-block rounded-full bg-purple-light/40 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-blue-navy">
+						{workshop.stream}
+					</p>
+					<h3 class="text-xl font-semibold text-blue-navy">{workshop.title}</h3>
+					<p class="text-sm leading-6 text-blue-navy/80">{workshop.description}</p>
+				</div>
+			</article>
+		))}
+	</div>
 </SectionLayout>

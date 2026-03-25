@@ -1,9 +1,101 @@
 ---
-import "../../styles/global.css";
-
 import SectionLayout from "../../layouts/SectionLayout.astro";
+
+const corporateSponsors = [
+	"birchhill.webp",
+	"cohere.webp",
+	"qualcomm.webp",
+	"intuit.webp",
+	"amazon_robotics.webp",
+	"opg.webp",
+	"vale.webp",
+	"tetratech.webp",
+	"arcadis.webp",
+	"pg.webp",
+	"intact.webp",
+	"rakuten.webp",
+	"cascades.webp",
+	"cse.webp",
+	"PEO.webp",
+	"sanofi.webp",
+];
+
+const academicSponsors = [
+	"waterloo-engineering.webp",
+	"waterloo-math.webp",
+	"waterloo-science.webp",
+	"york-eng.webp",
+	"uoft-daniels-forestry.webp",
+	"uoft-information.webp",
+	"tmu-math.webp",
+	"guelph-eng.webp",
+	"uoft-eng.webp",
+	"stgeorges-med.webp",
+	"tmu-physics.webp",
+	"utm-ovpad.webp",
+	"tmu-arch-des-eng.webp",
+	"uoft-comp-sci.webp",
+	"uoft-physics.webp",
+	"uoft-chemistry.webp",
+	"uoft-art-sci.webp",
+	"uoft-mol-gen.webp",
+	"uoft-earth-sci.webp",
+	"uoft-pharm-tox.webp",
+	"mcgill.webp",
+	"mcmaster-wie.webp",
+	"utm-bio.webp",
+	"uoft-csb.webp",
+];
+
+function sponsorNameFromFile(fileName: string) {
+	return fileName
+		.replace(/\.(webp|png|svg)$/i, "")
+		.replace(/[_-]/g, " ")
+		.replace(/\b\w/g, (char) => char.toUpperCase());
+}
 ---
 
 <SectionLayout title="Sponsors">
-  
+	<p class="mb-3 max-w-3xl text-base leading-7 text-blue-navy/85">
+		Our sponsors power the WISE National Conference experience through programming support,
+		mentorship opportunities, and community investment.
+	</p>
+	<p class="mb-8 text-sm text-blue-navy/80">
+		Want to sponsor WISE NC? Reach out at
+		<a class="font-semibold text-purple-primary" href="mailto:vp.finance@wise.skule.ca">vp.finance@wise.skule.ca</a>.
+	</p>
+
+	<div class="space-y-10">
+		<div>
+			<h3 class="mb-4 text-2xl font-semibold text-blue-navy">Corporate Sponsors</h3>
+			<div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+				{corporateSponsors.map((logo) => (
+					<article class="flex h-24 items-center justify-center rounded-xl border border-blue-navy/10 bg-white p-3 shadow-sm">
+						<img
+							src={`/img/sponsors/corporate/${logo}`}
+							alt={sponsorNameFromFile(logo)}
+							loading="lazy"
+							class="max-h-14 w-auto object-contain"
+						/>
+					</article>
+				))}
+			</div>
+		</div>
+
+		<div>
+			<h3 class="mb-4 text-2xl font-semibold text-blue-navy">Academic Sponsors and Contributors</h3>
+			<div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+				{academicSponsors.map((logo) => (
+					<article class="flex h-24 items-center justify-center rounded-xl border border-blue-navy/10 bg-white p-3 shadow-sm">
+						<img
+							src={`/img/sponsors/academic/${logo}`}
+							alt={sponsorNameFromFile(logo)}
+							loading="lazy"
+							class="max-h-14 w-auto object-contain"
+						/>
+					</article>
+				))}
+			</div>
+		</div>
+	</div>
 </SectionLayout>

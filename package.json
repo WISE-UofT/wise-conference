@@ -2,10 +2,10 @@
   "name": "wise-conference",
   "version": "1.0.0",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
+    "dev": "node ./node_modules/astro/astro.js dev",
+    "start": "node ./node_modules/astro/astro.js dev",
+    "build": "node ./node_modules/astro/astro.js build",
+    "preview": "node ./node_modules/astro/astro.js preview"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.0",
