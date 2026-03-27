@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Natacha Altamirano",
+    "image": "/img/speakers/natacha-altamirano.webp",
+    "title": "Senior Director, Data Science @ Birch Hill Equity Partners"
+  },
+  {
+    "name": "Rue Sriharsha",
+    "image": "/img/speakers/rue-sriharsha.webp",
+    "title": "Senior Consultant @ KPMG"
+  },
+  {
+    "name": "Sunny Baek",
+    "image": "/img/speakers/sunny-baek.webp",
+    "title": "Director of Integrated Risk Management & Technology @ SE Health"
+  },
+  {
+    "name": "Cali Arantes",
+    "image": "/img/speakers/cali-arantes.webp",
+    "title": "Partner Development Specialist @ Intuit"
+  }
+]

@@ -1,0 +1,79 @@
+---
+import type { ImageMetadata } from "astro";
+import SpeakerCard from "./SpeakerCard.astro";
+
+interface Speaker {
+  name: string;
+  image: string;
+  title: string;
+}
+
+interface Props {
+  title: string;
+  subtitle: string;
+  description: string;
+  dataSource: string; // "academia-panel" or "academia-panel.json"
+}
+
+const { title, subtitle, description, dataSource } = Astro.props as Props;
+
+const files = import.meta.glob("../../content/speakers/*.json", {
+  eager: true,
+});
+
+const dataSourceFile = dataSource.split("/").pop() ?? dataSource;
+const normalized = dataSourceFile.endsWith(".json")
+  ? dataSourceFile
+  : `${dataSourceFile}.json`;
+
+const targetPath = `../../content/speakers/${normalized}`;
+
+const mod = files[targetPath] as { default: Speaker[] } | undefined;
+const data: Speaker[] = mod?.default ?? [];
+
+const speakerImages = import.meta.glob("../../assets/speakers/*", {
+  eager: true,
+}) as Record<string, { default: ImageMetadata }>;
+
+const speakerImageByFileName = Object.fromEntries(
+  Object.entries(speakerImages).map(([path, imageMod]) => [
+    path.split("/").pop() ?? "",
+    imageMod.default,
+  ]),
+);
+
+const resolvedData = data.map((speaker) => ({
+  ...speaker,
+  image:
+    speakerImageByFileName[speaker.image.split("/").pop() ?? ""] ??
+    speaker.image,
+}));
+---
+
+<div class="mb-12">
+  <h2 class="text-center mb-3 text-2xl font-bold text-blue-navy">
+    {title}
+  </h2>
+  <div class="text-center mb-6 text-xl italic leading-7 text-blue-navy/85">
+    {subtitle}
+  </div>
+  <div
+    class="mx-auto text-center mb-8 text-base max-w-4xl leading-7 text-blue-navy/85"
+  >
+    {description}
+  </div>
+
+  <div class="flex flex-wrap items-stretch justify-center gap-5">
+    {
+      resolvedData.map((speaker) => (
+        <div class="flex w-full max-w-sm sm:w-[calc((100%-1.25rem)/3)] lg:w-[calc((100%-6.25rem)/6)] lg:max-w-none">
+          <SpeakerCard
+            name={speaker.name}
+            image={speaker.image}
+            title={speaker.title}
+          />
+        </div>
+      ))
+    }
+  </div>
+</div>

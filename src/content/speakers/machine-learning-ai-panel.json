@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Oseremen Joy Idialu",
+    "image": "/img/speakers/oseremen-joy-idialu.webp",
+    "title": "AI Software Engineer @ Pivotnow Toronto, Canada"
+  },
+  {
+    "name": "Lana El Sanyoura",
+    "image": "/img/speakers/lana-el-sanyoura.webp",
+    "title": "Software Engineer (II) @ Amazon"
+  },
+  {
+    "name": "Sherry Chen",
+    "image": "/img/speakers/sherry-chen.webp",
+    "title": "Applied Scientist @ Amazon Robotics"
+  },
+  {
+    "name": "Sepideh Shaterian",
+    "image": "/img/speakers/sepideh-shaterian.webp",
+    "title": "Member of Technical Staff @ Cohere"
+  },
+  {
+    "name": "Soude Ghari",
+    "image": "/img/speakers/soude-ghari.webp",
+    "title": "Postdoctoral Researcher @ York University"
+  }
+]
