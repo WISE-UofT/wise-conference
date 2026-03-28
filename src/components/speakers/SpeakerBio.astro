@@ -1,0 +1,107 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  id: string;
+  name: string;
+  image: ImageMetadata | string;
+  title: string;
+  bio: string;
+  pronouns?: string;
+}
+
+const { id, name, image, title, bio, pronouns } = Astro.props as Props;
+
+// Split bio by newlines and render as paragraphs
+const bioParagraphs = bio.split("\n").filter((p) => p.trim().length > 0);
+---
+
+<div
+  id={`bio-modal-${id}`}
+  class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+  data-modal
+>
+  <div
+    class="relative w-full max-w-4xl rounded-2xl bg-white shadow-lg flex flex-col"
+  >
+    <!-- Header with close button -->
+    <div
+      class="flex items-center justify-between px-4 py-2 border-b border-blue-navy/10"
+    >
+      <div></div>
+      <button
+        class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-blue-navy/10 text-blue-navy hover:bg-blue-navy/20"
+        aria-label="Close"
+        onclick="this.closest('[data-modal]').classList.add('hidden')"
+      >
+        ✕
+      </button>
+    </div>
+
+    <!-- Modal content -->
+    <div
+      class="flex flex-col md:flex-row gap-6 p-6 md:p-8 overflow-y-auto max-h-96 mb-8"
+    >
+      <!-- Image -->
+      <div class="flex-shrink-0">
+        {
+          typeof image === "string" ? (
+            <img
+              src={image}
+              alt={name}
+              class="h-48 w-48 rounded-xl object-cover shadow-md"
+            />
+          ) : (
+            <Image
+              src={image}
+              alt={name}
+              class="h-48 w-48 rounded-xl object-cover shadow-md"
+            />
+          )
+        }
+      </div>
+
+      <!-- Text content -->
+      <div class="flex-1">
+        <div class="mb-2">
+          <h2 class="flex items-center gap-3 text-2xl font-bold text-blue-navy">
+            {name}
+            {
+              pronouns && (
+                <span class="text-sm text-blue-navy/60 font-normal">
+                  ({pronouns})
+                </span>
+              )
+            }
+          </h2>
+        </div>
+        <p class="mb-4 text-base font-medium text-blue-navy/75">{title}</p>
+        <div class="space-y-4 text-sm leading-7 text-blue-navy/85">
+          {bioParagraphs.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Close modal when clicking outside content
+  const modals = document.querySelectorAll("[data-modal]");
+  modals.forEach((modal) => {
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.add("hidden");
+      }
+    });
+  });
+
+  // Close modal with Escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      modals.forEach((modal) => {
+        modal.classList.add("hidden");
+      });
+    }
+  });
+</script>

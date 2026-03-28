@@ -1,11 +1,14 @@
 ---
 import type { ImageMetadata } from "astro";
 import SpeakerCard from "./SpeakerCard.astro";
+import SpeakerBio from "./SpeakerBio.astro";
 
 interface Speaker {
   name: string;
   image: string;
   title: string;
+  bio?: string;
+  pronouns?: string;
 }
 
 interface Props {
@@ -42,8 +45,9 @@ const speakerImageByFileName = Object.fromEntries(
   ]),
 );
 
-const resolvedData = data.map((speaker) => ({
+const resolvedData = data.map((speaker, index) => ({
   ...speaker,
+  id: `${dataSource}-${index}`,
   image:
     speakerImageByFileName[speaker.image.split("/").pop() ?? ""] ??
     speaker.image,
@@ -71,9 +75,29 @@ const resolvedData = data.map((speaker) => ({
             name={speaker.name}
             image={speaker.image}
             title={speaker.title}
+            bio={speaker.bio}
+            id={speaker.id}
+            pronouns={speaker.pronouns}
           />
         </div>
       ))
     }
   </div>
+
+  <!-- Bio Modals -->
+  {
+    resolvedData.map(
+      (speaker) =>
+        speaker.bio && (
+          <SpeakerBio
+            id={speaker.id}
+            name={speaker.name}
+            image={speaker.image}
+            title={speaker.title}
+            bio={speaker.bio}
+            pronouns={speaker.pronouns}
+          />
+        ),
+    )
+  }
 </div>

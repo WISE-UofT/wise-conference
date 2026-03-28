@@ -2,26 +2,34 @@
   {
     "name": "Marisa Battistella",
     "image": "/img/speakers/marisa-battistella.webp",
-    "title": "Pharmacy Clinician Scientist @ University Health Network; Associate Professor @ University of Toronto"
+    "title": "Pharmacy Clinician Scientist @ University Health Network; Associate Professor @ University of Toronto",
+    "bio": "Marisa graduated from the Faculty of Pharmacy at the University of Toronto in 1998 and completed her pharmacy residency at Sunnybrook Health Sciences Centre in 1999. She has worked at the University Health Network (UHN) since 1999 in various positions, including cardiology and internal medicine. In 2002, Marisa completed her Pharm D through Idaho State University. She has worked as a clinical pharmacist specialist in the hemodialysis unit at the University Health Network since 2002. As an Associate Professor at the Leslie Dan Faculty of Pharmacy – University of Toronto and Clinician Scientist in Pharmacy at University Health Network, Marisa has focused her research in the area of pharmaco-nephrology where she has published several papers and given many presentations on optimizing medications in patients with CKD."
   },
   {
     "name": "Mia Biondi",
     "image": "/img/speakers/mia-biondi.webp",
-    "title": "Assistant Professor @ York University"
+    "title": "Assistant Professor @ York University",
+    "pronouns": "she/her",
+    "bio": "Dr. Mia Biondi is PhD-prepared in Microbiology and Immunology, with post-doctoral fellowships at Toronto General and the National Microbiology Laboratory. As an RN and NP, Mia has practiced in diverse clinical environments including four models of primary care in Ontario; and in 2017 created focused practices in urban street outreach and rural and remote communities, in HIV prevention, hepatitis B & C across the province of Ontario. In 2022, Mia joined York University School of Nursing as a tenure-track Assistant Professor, and the coordinator of Primary Healthcare Nurse Practitioner Program.\nMia's research has always focused on virology, and broadly, her research has touched most aspects of clinical care including prevention (HBV, HCV); assay development (HIV, HBV, HCV, COVID-19); host characterization (Zika, CCHFV, Ebola virus, COVID-19); animal models (Ebola virus, COVID-19); treatments and drug resistance (HIV, HCV, Ebola virus, Zika, COVID-19); clinical models of care (HIV, HCV, Ebola virus); and cost-effectiveness (HBV, HCV). She currently has 66 publications, 2138 citations, and an h-index of 20."
   },
   {
     "name": "Tatyana Mollayeva",
     "image": "/img/speakers/tatyana-mollayeva.webp",
-    "title": "Scientist @ KITE Research Institute; Professor & Affiliated Scientist @ Dalla Lana School of Public Health, University of Toronto"
+    "title": "Scientist @ KITE Research Institute; Professor & Affiliated Scientist @ Dalla Lana School of Public Health, University of Toronto",
+    "pronouns": "she/her",
+    "bio": "Tatyana Mollayeva, PhD, MD is a Scientist at the KITE Research Institute, University Health Network, and a Professor and Affiliated Scientist in the Department of Epidemiology at the Dalla Lana School of Public Health, University of Toronto, with cross-appointments at the Rehabilitation Sciences Institute and the Department of Occupational Science & Occupational Therapy.\nDr. Mollayeva's career reflects a strong commitment to interdisciplinary training, global scholarship, and mentorship. She earned her MD from Sechenov University, completed residency training in Epidemiology at Turkmen State Medical University, and practiced preventive medicine before transitioning to academic research. She completed her PhD in 2015 at the University of Toronto through the Rehabilitation Sciences Institute and the Collaborative Program in Neuroscience, focusing on sleep and brain health in traumatic brain injury.\nHaving trained across countries and disciplines, Dr. Mollayeva is deeply committed to supporting trainees, particularly women and people from underrepresented communities during critical career transitions. In 2022, she was selected as an Atlantic Fellow for Equity in Brain Health at the Global Brain Health Institute following interdisciplinary residence training at Trinity College Dublin Ireland.\nDr. Mollayeva holds the Canada Research Chair (Tier 2) in Neurological Disorders and Brain Health and actively mentors the next generation of women leaders in science and engeneering."
   },
   {
     "name": "Bonnie Yuqing Wang",
     "image": "/img/speakers/bonnie-yuqing-wang.webp",
-    "title": "Freelance Medical Illustrator & Biomedical Designer"
+    "title": "Freelance Medical Illustrator & Biomedical Designer",
+    "pronouns": "she/her",
+    "bio": "Bonnie is a freelance medical illustrator working with science design agencies, hospitals, researchers, and physicians. Using her background in both design and science, she collaborates with health experts in different medical fields to help better visualize science. Recent projects have included creating online e-learning activities for clinicians, an interactive patient education website, and surgical illustrations for pelvic and wrist procedures. She obtained her Bachelors in Honours Physiology from the University of Alberta, holds a certificate in Biomedical Communication and Visualization from the University of British Columbia, and a Masters in Biomedical Communication from the University of Toronto. Her Master's Research Project titled NerveUs: Developing an Interactive Educational Resource for Patients with Peripheral Nerve Injury, won a research award at the annual Association of Medical Illustrators conference this year. Specializing in design strategy, interactive design, illustration, and animation, she leverages her skills to visualize biomedical concepts that educate and inform a wide variety of audiences."
   },
   {
     "name": "Brianne Helfrich",
     "image": "/img/speakers/brianne-helfrich.webp",
-    "title": "Bioethics PhD"
+    "title": "Bioethics PhD",
+    "bio": "Dr. Brianne Helfrich bioethicist specializing in pediatric care, decision-making, and end-of-life ethics. Her work focuses on how children and families experience moral uncertainty in clinical settings, particularly in contexts involving serious illness, palliative care, and complex treatment decisions. Additionally, she works to encourage pediatric voice in healthcare. Brianne's research has been presented at numerous international conferences such as the American Society for Bioethics and Humanities. At a young age, Brianne is pioneering the field of pediatric ethics and making a big shift for healthcare."
   }
 ]

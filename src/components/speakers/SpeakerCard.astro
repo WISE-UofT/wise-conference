@@ -6,13 +6,28 @@ interface Props {
   name: string;
   image: ImageMetadata | string;
   title: string;
+  bio?: string;
+  id?: string;
+  pronouns?: string;
 }
 
-const { name, image, title } = Astro.props as Props;
+const {
+  name,
+  image,
+  title,
+  bio = "",
+  id = "",
+  pronouns,
+} = Astro.props as Props;
 ---
 
 <div
-  class="flex h-full w-full flex-col overflow-hidden rounded-2xl border border-blue-navy/10 bg-white shadow-sm"
+  class="flex h-full w-full cursor-pointer flex-col overflow-hidden rounded-2xl border border-blue-navy/10 bg-white shadow-sm transition-all hover:shadow-lg hover:border-blue-navy/30"
+  onclick={bio
+    ? `document.getElementById('bio-modal-${id}')?.classList.remove('hidden')`
+    : undefined}
+  role={bio ? "button" : undefined}
+  tabindex={bio ? 0 : undefined}
 >
   <Image
     src={image}
