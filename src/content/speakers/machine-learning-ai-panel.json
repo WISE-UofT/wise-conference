@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Oseremen Joy Idialu",
+    "image": "/img/speakers/oseremen-joy-idialu.webp",
+    "title": "AI Software Engineer @ Pivotnow Toronto, Canada",
+    "pronouns": "she/her",
+    "bio": "I'm an AI Software Engineer at Pivotnow Toronto, where I build intelligent systems that connect large language models with enterprise data. My recent work includes developing PivotAssist, an AI-powered audio-visual troubleshooting assistant that integrates retrieval systems and LLM workflows to help users diagnose and resolve complex system issues through natural conversation. I also designed an LLM-powered resource gathering system that autonomously collects and synthesizes data to support enterprise operations.\nI hold a Master's degree in Computer Science from the University of Waterloo, where my research focused on detecting AI-generated code and earned an ACM Distinguished Paper Award at MSR 2024. My background spans software engineering and applied machine learning. I'm passionate about mentorship and ethical AI, having guided undergraduate students through their first research projects as part of Waterloo's EREP program."
+  },
+  {
+    "name": "Lana El Sanyoura",
+    "image": "/img/speakers/lana-el-sanyoura.webp",
+    "title": "Software Engineer (II) @ Amazon",
+    "pronouns": "she/her",
+    "bio": "Absorbed by the cross-disciplinary potential between cognitive science and computer science, Lana El Sanyoura has explored many facets of the machine learning domain. She is a published author (AAAI ICWSM, CogSci) and software engineer at Amazon where she works on supply chain optimization technologies. Her previous experiences include Deep Learning Inference at Intel and research in Neuro-science inspired AI at the MIT-IBM Watson AI Lab. Having been awarded the Google Deep Mind fellowship and Vector Scholarship in AI during her MSc and BSc at the University of Toronto, Lana has led several initiatives to better the experience of fellow women in computer science and taught programming workshops to students from various disciplines."
+  },
+  {
+    "name": "Sherry Chen",
+    "image": "/img/speakers/sherry-chen.webp",
+    "title": "Applied Scientist @ Amazon Robotics",
+    "bio": "Sherry Chen is an Applied Scientist at Amazon Robotics, where she works on computer vision research for next-generation robotic systems in Amazon's fulfillment centers. She develops real-time perception models that help robots understand and interact with complex warehouse environments, and she is passionate about bridging cutting-edge research with large-scale, real-world application.\nBefore joining Amazon, Sherry completed her Bachelor's degree in Engineering Science at the University of Toronto with a specialization in robotics engineering, followed by a Master's degree in robotics and AI. Since joining the company, she has led the development of several production computer vision models and successfully deployed them to hundreds of robotic workstations across multiple Amazon sites.\nSherry cares deeply about building technologies that have meaningful impact, especially in robotics and automation. Beyond her technical work, she helps organize Amazon's Women in Engineering conferences and events because she is committed to creating pathways, visibility, and community for women in STEM."
+  },
+  {
+    "name": "Sepideh Shaterian",
+    "image": "/img/speakers/sepideh-shaterian.webp",
+    "title": "Member of Technical Staff @ Cohere",
+    "pronouns": "she/her",
+    "bio": "Sepideh Shaterian is a Member of Technical Staff (MTS) Performance Engineer on the Pretraining team at Cohere, where she works on optimizing large-scale foundation models and LLM training. Her role focuses on improving training efficiency, scalability, and system-level performance across distributed environments, enabling faster and more reliable development of state-of-the-art language models.\nPreviously, Sepideh worked at AMD, gaining experience in performance-critical systems and AI compilers. She holds a Master's degree from the University of Waterloo, where her research focused on Image Compression for Computer Vision applications.\nSepideh's technical interests include LLM pretraining, performance optimization, efficient AI systems, and bridging research with production-scale infrastructure."
+  },
+  {
+    "name": "Soude Ghari",
+    "image": "/img/speakers/soude-ghari.webp",
+    "title": "Postdoctoral Researcher @ York University",
+    "pronouns": "she/her",
+    "bio": "I hold a Ph.D. in Computer Engineering from Polytechnique Montréal and am currently a Postdoctoral Researcher at York University. My research focuses on the intersection of artificial intelligence and healthcare, exploring how AI can be developed and applied responsibly to improve health outcomes while addressing equity, ethics, and real-world impact. I specialize in AI applications for healthcare decision-making, including clinical risk prediction and diagnostic support.\nI focus on developing AI models that are accurate, fair, and interpretable, specifically designed to support cardiovascular screening, with the goal of improving outcomes for underrepresented populations, particularly Black women. My work incorporates principles of equity, diversity, and inclusion throughout the AI lifecycle, bridging the gap between cutting-edge AI research and practical, socially responsible healthcare solutions."
+  }
+]

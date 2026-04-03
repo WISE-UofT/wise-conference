@@ -1,98 +1,57 @@
 ---
 import SectionLayout from "../../layouts/SectionLayout.astro";
-
-const speakers = [
-	{
-		name: "Alicia Battaglia",
-		image: "/img/speakers/alicia-battaglia.webp",
-		title: "WISE 2026 Speaker",
-	},
-	{
-		name: "Anna Fan",
-		image: "/img/speakers/anna-fan.webp",
-		title: "WISE 2026 Speaker",
-	},
-	{
-		name: "Diana Anderson",
-		image: "/img/speakers/diana-anderson.webp",
-		title: "WISE 2026 Speaker",
-	},
-	{
-		name: "Jane Heffernan",
-		image: "/img/speakers/jane-heffernan.webp",
-		title: "WISE 2026 Speaker",
-	},
-	{
-		name: "Kyoko Lin",
-		image: "/img/speakers/kyoko-lin.webp",
-		title: "WISE 2026 Speaker",
-	},
-	{
-		name: "Marisa Battistella",
-		image: "/img/speakers/marisa-battistella.webp",
-		title: "WISE 2026 Speaker",
-	},
-	{
-		name: "Patricia Watanabe",
-		image: "/img/speakers/patricia-watanabe.webp",
-		title: "WISE 2026 Speaker",
-	},
-	{
-		name: "Rachael Walker",
-		image: "/img/speakers/rachael-walker.webp",
-		title: "WISE 2026 Speaker",
-	},
-	{
-		name: "Sarah Haines",
-		image: "/img/speakers/sarah-haines.webp",
-		title: "WISE 2026 Speaker",
-	},
-	{
-		name: "Sherry Chen",
-		image: "/img/speakers/sherry-chen.webp",
-		title: "WISE 2026 Speaker",
-	},
-	{
-		name: "Sunny Baek",
-		image: "/img/speakers/sunny-baek.webp",
-		title: "WISE 2026 Speaker",
-	},
-	{
-		name: "Tatyana Mollayeva",
-		image: "/img/speakers/tatyana-mollayeva.webp",
-		title: "WISE 2026 Speaker",
-	},
-];
+import Panel from "../speakers/Panel.astro";
 ---
 
 <SectionLayout title="Speakers">
-	<p class="mb-8 max-w-3xl text-base leading-7 text-blue-navy/85">
-		Meet a selection of speakers joining WISE 2026. Full role descriptions and extended biographies
-		will continue to be updated as the conference program is finalized.
-	</p>
+    <div
+        class="text-center mb-8 text-base mx-auto max-w-4xl leading-7 text-blue-navy/85"
+    >
+        There will be 2 keynotes and 4-6 speakers at each panel. Stay tuned as
+        we announce more speaker details!
+    </div>
 
-	<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-		{speakers.map((speaker) => (
-			<article class="overflow-hidden rounded-2xl border border-blue-navy/10 bg-white shadow-sm">
-				<img
-					src={speaker.image}
-					alt={speaker.name}
-					loading="lazy"
-					class="aspect-[4/5] w-full object-cover"
-				/>
-				<div class="space-y-2 p-4">
-					<h3 class="text-lg font-semibold text-blue-navy">{speaker.name}</h3>
-					<p class="text-sm font-medium text-purple-primary">{speaker.title}</p>
-					<details class="group pt-1 text-sm text-blue-navy/85">
-						<summary class="cursor-pointer list-none font-semibold text-blue-navy transition hover:text-purple-primary">
-							Read bio
-						</summary>
-						<p class="pt-2 leading-6">
-							Detailed biographies are being finalized and will be published soon.
-						</p>
-					</details>
-				</div>
-			</article>
-		))}
-	</div>
+    <Panel title="Keynotes" subtitle="" description="" dataSource="keynotes" />
+    <Panel
+        title="Academia Panel"
+        subtitle="Exploring the Unseen Currents: Pathways in Academia"
+        description="Discover the diverse journeys women take in building meaningful academic careers in science and engineering. This panel brings together female professors from both teaching and research streams to share their experiences, challenges, and achievements. Learn how they’ve navigated career transitions, balanced responsibilities, and carved out their own paths—offering practical insight and inspiration for those considering or advancing in academic roles."
+        dataSource="academia-panel"
+    />
+    <Panel
+        title="Finance & Consulting Panel"
+        subtitle="Shifting Gears: Building Business Careers from STEM Foundations"
+        description="Many professionals find that skills they have gained in science and engineering can serve as a springboard into new and unexpected career paths. This panel brings together professionals who shifted gears from STEM into consulting, finance, and strategy, proving that technical expertise can open doors to unexpected opportunities. From actuarial analysts to engineering consultants and financial strategists, panelists will share their journeys, challenges, and insights into building dynamic careers beyond traditional STEM roles."
+        dataSource="finance-consulting-panel"
+    />
+    <Panel
+        title="Sustainability Panel"
+        subtitle="Mission Earth: Roles in STEM That Shape a Sustainable World"
+        description="This panel explores the diverse ways different careers approach sustainability—ranging from the lens of chemistry, all the way to policy. By bringing these perspectives together, we aim to bring an understanding of how to advocate for a healthier planet through different fields."
+        dataSource="sustainability-panel"
+    />
+    <Panel
+        title="Interdisciplinary Panel"
+        subtitle="Diving Deep: Influencing Society Through STEM"
+        description="With this panel, we zoom out and explore how roles in STEM can impact our society. Like the ability for sciences to influence law, how we use mathematics to handle national crises, and more. Our knowledge of each field will be removed from traditional views and we will see how they can all work together to bring change."
+        dataSource="interdisciplinary-panel"
+    />
+    <Panel
+        title="Machine Learning & AI Panel"
+        subtitle="From Data to Discovery: The Evolution of Machine Intelligence"
+        description="This panel explores the rapidly evolving world of machine learning, data science and AI, with a focus on large language models and generative AI as the next frontier. Featuring experts from industry and academia—including engineers, researchers, and leaders from leading companies in AI—we’ll dive into the innovations shaping smarter systems, faster processing, and the future of intelligent technologies."
+        dataSource="machine-learning-ai-panel"
+    />
+    <Panel
+        title="Career Pivot Panel"
+        subtitle="Change to Chance: Exploring Hidden Depths"
+        description="This panel brings together individuals who have taken bold leaps to reinvent their careers, uncovering the hidden depth of their skills and passions as they chart new directions. Their stories reveal how embracing change can surface possibilities that lead to surprising and unconventional paths."
+        dataSource="career-pivot-panel"
+    />
+    <Panel
+        title="Healthcare Panel"
+        subtitle="Beneath the White Coat: The Many Faces of Healthcare Careers"
+        description="From labs to legislatures, innovation to ethics, healthcare is built on many layers of expertise. Behind every patient outcome is a network of professionals — doctors, researchers, bioethicists, clinical coordinators, public health leaders, engineers, and innovators — working to advance medicine, equity, and access. This panel brings together experts from across these fields to dive into the hidden depths of healthcare: the unseen collaborations, discoveries, and systemic innovations that shape the future of care."
+        dataSource="healthcare-panel"
+    />
 </SectionLayout>
