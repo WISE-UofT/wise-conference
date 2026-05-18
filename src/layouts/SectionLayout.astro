@@ -2,7 +2,14 @@
 const { title } = Astro.props;
 ---
 
-<section id={title.toLowerCase()} class="mx-auto w-full max-w-7xl scroll-mt-24 px-4 py-16 md:px-8 md:py-20">
-  <h2 class="text-center mb-8 text-3xl font-bold tracking-tight text-blue-navy md:text-4xl">{title}</h2>
+<section
+  id={title.toLowerCase()}
+  class="mx-auto w-full max-w-7xl scroll-mt-24 px-4 py-5 md:px-8 md:py-10"
+>
+  <h2
+    class="text-center mb-8 text-3xl font-bold tracking-tight text-blue-navy md:text-4xl"
+  >
+    {title}
+  </h2>
   <slot />
 </section>
