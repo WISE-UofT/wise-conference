@@ -5,13 +5,14 @@ import { Image } from "astro:assets";
 interface Props {
   id: string;
   name: string;
-  image: ImageMetadata | string;
+  image?: ImageMetadata | string;
   title: string;
   bio: string;
   pronouns?: string;
 }
 
 const { id, name, image, title, bio, pronouns } = Astro.props as Props;
+const initial = name.trim().charAt(0).toUpperCase();
 
 // Split bio by newlines and render as paragraphs
 const bioParagraphs = bio.split("\n").filter((p) => p.trim().length > 0);
@@ -19,7 +20,7 @@ const bioParagraphs = bio.split("\n").filter((p) => p.trim().length > 0);
 
 <div
   id={`bio-modal-${id}`}
-  class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+  class="modal-overlay hidden fixed inset-0 z-50 bg-black/50 p-4"
   data-modal
 >
   <div
@@ -44,20 +45,26 @@ const bioParagraphs = bio.split("\n").filter((p) => p.trim().length > 0);
       class="flex flex-col md:flex-row gap-6 p-6 md:p-8 overflow-y-auto max-h-96 mb-8"
     >
       <!-- Image -->
-      <div class="flex-shrink-0">
+      <div class="shrink-0">
         {
-          typeof image === "string" ? (
-            <img
-              src={image}
-              alt={name}
-              class="h-48 w-48 rounded-xl object-cover shadow-md"
-            />
+          image ? (
+            typeof image === "string" ? (
+              <img
+                src={image}
+                alt={name}
+                class="h-48 w-48 rounded-xl object-cover shadow-md"
+              />
+            ) : (
+              <Image
+                src={image}
+                alt={name}
+                class="h-48 w-48 rounded-xl object-cover shadow-md"
+              />
+            )
           ) : (
-            <Image
-              src={image}
-              alt={name}
-              class="h-48 w-48 rounded-xl object-cover shadow-md"
-            />
+            <div class="flex h-48 w-48 items-center justify-center rounded-xl bg-blue-navy/10 text-6xl font-semibold text-blue-navy/50 shadow-md">
+              {initial}
+            </div>
           )
         }
       </div>
@@ -84,6 +91,14 @@ const bioParagraphs = bio.split("\n").filter((p) => p.trim().length > 0);
     </div>
   </div>
 </div>
+
+<style>
+  .modal-overlay:not(.hidden) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
 
 <script>
   // Close modal when clicking outside content

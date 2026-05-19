@@ -1,71 +1,107 @@
 ---
 import SectionLayout from "../../layouts/SectionLayout.astro";
 
-const recapByYear = [
+const recapThemes: Record<string, string> = {
+	"2026": "Building the Future",
+	"2025": "Reaching for the Stars",
+	"2024": "Endless Exploration",
+	"2023": "Leaders of Tomorrow",
+};
+
+const recapImageModules = import.meta.glob(
+	"/src/assets/recap/*/*.{jpg,JPG,jpeg,JPEG,png,PNG,webp,WEBP,avif,AVIF,gif,GIF}",
 	{
-		year: "2025",
-		theme: "Reaching for the Stars",
-		images: [
-			"/img/recap/2025/cochairs.webp",
-			"/img/recap/2025/keynote1.webp",
-			"/img/recap/2025/panel1.webp",
-			"/img/recap/2025/workshop1.webp",
-			"/img/recap/2025/fair1.webp",
-			"/img/recap/2025/competition1.webp",
-		],
+		eager: true,
 	},
-	{
-		year: "2024",
-		theme: "Endless Exploration",
-		images: [
-			"/img/recap/2024/cochairs.webp",
-			"/img/recap/2024/fireside.webp",
-			"/img/recap/2024/space-panel.webp",
-			"/img/recap/2024/workshop.webp",
-			"/img/recap/2024/fair1.webp",
-			"/img/recap/2024/competition1.webp",
-		],
+);
+
+type RecapImageItem = {
+	src: string;
+	sortKey: string;
+};
+
+const recapGroupedByYear = Object.entries(recapImageModules).reduce(
+	(acc, [path, importedModule]) => {
+		const pathParts = path.split("/");
+		const year = pathParts[pathParts.length - 2];
+		const fileName = pathParts[pathParts.length - 1] ?? path;
+
+		const maybeDefault =
+			typeof importedModule === "object" &&
+			importedModule !== null &&
+			"default" in importedModule
+				? (importedModule as { default: unknown }).default
+				: importedModule;
+
+		const imageSrc =
+			typeof maybeDefault === "string"
+				? maybeDefault
+				: typeof maybeDefault === "object" &&
+					  maybeDefault !== null &&
+					  "src" in maybeDefault &&
+					  typeof (maybeDefault as { src: unknown }).src === "string"
+					? (maybeDefault as { src: string }).src
+					: null;
+
+		if (!imageSrc) {
+			return acc;
+		}
+
+		if (!acc[year]) {
+			acc[year] = [];
+		}
+
+		acc[year].push({ src: imageSrc, sortKey: fileName.toLowerCase() });
+		return acc;
 	},
-	{
-		year: "2023",
-		theme: "Leaders of Tomorrow",
-		images: [
-			"/img/recap/2023/IMG_4461.JPG",
-			"/img/recap/2023/IMG_4507.JPG",
-			"/img/recap/2023/IMG_4798.JPG",
-			"/img/recap/2023/IMG_4880.JPG",
-		],
-	},
-];
+	{} as Record<string, RecapImageItem[]>,
+);
+
+const recapByYear = Object.entries(recapGroupedByYear)
+	.map(([year, images]) => ({
+		year,
+		theme: recapThemes[year] ?? "WISE Highlights",
+		images: images
+			.sort((a, b) => a.sortKey.localeCompare(b.sortKey))
+			.map((image) => image.src),
+	}))
+	.sort((a, b) => Number(b.year) - Number(a.year));
 ---
 
 <SectionLayout title="Recap">
 	<p class="mb-8 max-w-3xl text-base leading-7 text-blue-navy/85">
-		Take a look at moments from previous WISE National Conferences. From keynotes and panels to
-		competitions and networking, each year highlights a different way our community grows together.
+		Take a look at moments from previous WISE National Conferences. From
+		keynotes and panels to competitions and networking, each year highlights a
+		different way our community grows together.
 	</p>
 
 	<div class="space-y-10">
-		{recapByYear.map((recap) => (
-			<article class="rounded-2xl border border-blue-navy/10 bg-white p-5 shadow-sm md:p-6">
-				<div class="mb-4 flex flex-wrap items-end justify-between gap-2">
-					<div>
-						<p class="text-xs font-semibold uppercase tracking-[0.2em] text-purple-primary">{recap.year}</p>
-						<h3 class="text-2xl font-semibold text-blue-navy">{recap.theme}</h3>
+		{
+			recapByYear.map((recap) => (
+				<article class="rounded-2xl border border-blue-navy/10 bg-white p-5 shadow-sm md:p-6">
+					<div class="mb-4 flex flex-wrap items-end justify-between gap-2">
+						<div>
+							<p class="text-xs font-semibold uppercase tracking-[0.2em] text-purple-primary">
+								{recap.year}
+							</p>
+							<h3 class="text-2xl font-semibold text-blue-navy">
+								{recap.theme}
+							</h3>
+						</div>
 					</div>
-				</div>
 
-				<div class="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6">
-					{recap.images.map((imagePath, index) => (
-						<img
-							src={imagePath}
-							alt={`WISE recap ${recap.year} image ${index + 1}`}
-							loading="lazy"
-							class="h-32 w-full rounded-lg object-cover md:h-36"
-						/>
-					))}
-				</div>
-			</article>
-		))}
+					<div class="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6">
+						{recap.images.map((imagePath, index) => (
+							<img
+								src={imagePath}
+								alt={`WISE recap ${recap.year} image ${index + 1}`}
+								loading="lazy"
+								class="h-32 w-full rounded-lg object-cover md:h-36"
+							/>
+						))}
+					</div>
+				</article>
+			))
+		}
 	</div>
 </SectionLayout>

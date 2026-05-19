@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 
 interface Props {
   name: string;
-  image: ImageMetadata | string;
+  image?: ImageMetadata | string;
   title: string;
   bio?: string;
   id?: string;
@@ -19,6 +19,8 @@ const {
   id = "",
   pronouns,
 } = Astro.props as Props;
+
+const initial = name.trim().charAt(0).toUpperCase();
 ---
 
 <div
@@ -29,12 +31,29 @@ const {
   role={bio ? "button" : undefined}
   tabindex={bio ? 0 : undefined}
 >
-  <Image
-    src={image}
-    alt={name}
-    loading="lazy"
-    class="aspect-[1/1] w-full object-cover"
-  />
+  {
+    image ? (
+      typeof image === "string" ? (
+        <img
+          src={image}
+          alt={name}
+          loading="lazy"
+          class="aspect-square w-full object-cover"
+        />
+      ) : (
+        <Image
+          src={image}
+          alt={name}
+          loading="lazy"
+          class="aspect-square w-full object-cover"
+        />
+      )
+    ) : (
+      <div class="flex aspect-square w-full items-center justify-center bg-blue-navy/10 text-5xl font-semibold text-blue-navy/50">
+        {initial}
+      </div>
+    )
+  }
 
   <div class="flex-1 space-y-1 p-4">
     <h3 class="text-lg font-semibold text-blue-navy">{name}</h3>
