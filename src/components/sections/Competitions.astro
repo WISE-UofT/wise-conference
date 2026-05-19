@@ -1,109 +1,163 @@
 ---
 import SectionLayout from "../../layouts/SectionLayout.astro";
+import Competition from "../competitions/Competition.astro";
+import cubeLogo from "../../assets/sponsors/corporate/cube.webp";
+import cohereLogo from "../../assets/sponsors/corporate/cohere.webp";
+import type { ImageMetadata } from "astro";
 
-const competitions = [
+interface JudgeData {
+	name: string;
+	image: string;
+	title: string;
+	bio: string;
+	pronouns?: string;
+}
+
+interface CompetitionCardData {
+	fileName: string;
+	name: string;
+	datetime: string;
+	location: string;
+	deadline: string;
+	signup: string;
+	sponsorLogo: string;
+	prize: string;
+	description: string;
+}
+
+interface CompetitionData extends CompetitionCardData {
+	judges: JudgeData[];
+}
+
+const competitionFiles = import.meta.glob("../../content/competitions/*.json", {
+	eager: true,
+}) as Record<string, { default: JudgeData[] }>;
+
+const judgeImageFiles = import.meta.glob("../../assets/speakers/*", {
+	eager: true,
+}) as Record<string, { default: ImageMetadata }>;
+
+const resolveJudgeImage = (imagePath: string) => {
+	const imageFileName = imagePath.split("/").pop();
+
+	if (!imageFileName) {
+		return imagePath;
+	}
+
+	const imageAsset = Object.entries(judgeImageFiles).find(([assetPath]) =>
+		assetPath.endsWith(`/${imageFileName}`),
+	);
+
+	return imageAsset ? imageAsset[1].default.src : imagePath;
+};
+
+const competitionOrder = [
+	"cube-competition.json",
+	"5mt-competition.json",
+	"cohere-competition.json",
+	"poster-fair-competition.json",
+];
+
+const competitionData: CompetitionCardData[] = [
 	{
+		fileName: "cube-competition.json",
 		name: "CUBE Case Competition",
-		datetime: "Saturday, January 17, 2026 · 10:30 AM to 12:00 PM EST",
+		datetime: "Saturday, January 17, 2026 · 10:30 AM - 12:00 PM",
 		location: "Pier 9",
 		deadline: "January 13, 2026 · 11:59 PM",
 		signup:
 			"https://docs.google.com/forms/d/e/1FAIpQLSfBemdrhmk_RE9Dj-y6J0zwt3R4i2LEdHvjA1lJ9Ba2F2l3rA/viewform?usp=dialog",
-		sponsorLogo: "/img/sponsors/corporate/cube.webp",
+		sponsorLogo: cubeLogo.src,
 		prize: "First place team: $300",
 		description:
-			"Participants tackle a global health challenge focused on neglected tropical diseases and present an innovation-focused solution.",
+			"Participants will work in teams to tackle a real-world global health challenge focused on neglected tropical diseases. Contestants will leverage computational modeling and bioinformatic techniques to develop an innovative solution, which they will present to a judging panel. A detailed case brief outlining the problem and expectations will be released closer to the competition date. Students may register as a team or request to be placed into one.\n\nTeams must be of 3-4 will give a 7 minute presentation to a panel of judges followed by a 3 minute Q&A.\nThe presentation will be accompanied by a technical demonstration or concept prototype.\nStudents from any department, faculty, or institution are welcome to participate together.\nTeams will be judged on innovation, feasibility, public health impact and overall clarity of communication.",
 	},
 	{
+		fileName: "5mt-competition.json",
 		name: "5 Minute Thesis (5MT)",
-		datetime: "Saturday, January 17, 2026 · 1:00 PM to 3:00 PM EST",
+		datetime: "Saturday, January 17, 2026 · 1:00 PM to 3:00 PM",
 		location: "Pier 9",
 		deadline: "January 13, 2026 · 11:59 PM",
 		signup:
 			"https://docs.google.com/forms/d/e/1FAIpQLSf4wZJN59OdZvvQBUck4Vkv2c2jR_YgLyuB8lr1LzQMhRybjw/viewform?usp=sharing&ouid=113257861058742861745",
-		sponsorLogo: "/img/competitions/melanie-courtot.webp",
+		sponsorLogo: "",
 		prize: "$300 (1st), $200 (2nd), $100 (3rd)",
 		description:
-			"Present your research in five minutes with one static slide. Abstracts are eligible for publication in the WISE journal book.",
+			"We invite students from any STEM background to present their research to a panel of judges and have the opportunity to showcase their findings to a wider audience. Participants will be given five minutes to present their thesis research in an engaging manner using only one static slide. In partnership with URNCST, all abstracts will get published in our WISE journal book (as long as they follow our guidelines).\n\nOnly one static slide is permitted.\nNo additional electronic media or props are allowed.\nPresentations are limited to 5 minutes maximum and competitors exceeding 5 minutes will face a penalty.\nPresentations will be assessed on communication, comprehension, engagement and quality of work.",
 	},
 	{
+		fileName: "cohere-competition.json",
 		name: "Cohere Hackathon",
-		datetime: "Sunday, January 18, 2026 · 10:00 AM to 12:00 PM EST",
+		datetime: "Sunday, January 18, 2026 · 10:00 AM to 12:00 PM",
 		location: "Pier 9",
 		deadline: "January 13, 2026 · 11:59 PM",
 		signup: "https://forms.gle/6FdShSqhSqMyBwBC6",
-		sponsorLogo: "/img/sponsors/corporate/cohere.webp",
-		prize: "$500 (1st), $250 (2nd), $1000 in Cohere credits (3rd)",
+		sponsorLogo: cohereLogo.src,
+		prize:
+			"$500 (1st), $250 (2nd), $1000 in Cohere credits (3rd). Additionally, individuals from the top three teams may be considered for internship interviews with Cohere.",
 		description:
-			"Build MCP-powered AI tools in teams and present live to Cohere judges. Top teams may be considered for internship interviews.",
+			"We invite students to come work in teams to design and build MCP (Model Context Protocol) tools to power creative AI use cases! Building on the Cohere workshop on 17 Jan, this hackathon will challenge participants to go beyond standard generative AI and develop tools that can meaningfully augment everyday life, from intelligent schedulers to personalized assistants. Starter code and resources will be provided to all participants.\n\nParticipants are strongly encouraged to attend the Cohere workshop on 17 January, Saturday from 1PM - 2:30PM EST.\nThe hacking period will take place from Saturday afternoon to Sunday morning.\nTeams of 3–4 will present their final projects to a panel of Cohere judges in a live pitch format on 18 January, Sunday from 10AM - 12PM EST.\nThe winning designs will be evaluated on creativity, functionality, and innovation.",
+	},
+	{
+		fileName: "poster-fair-competition.json",
+		name: "Poster Fair",
+		datetime: "Sunday, January 18, 2026 · 3:00 PM to 4:00 PM",
+		location: "Harbour Foyer",
+		deadline: "December 19, 2025 · 11:59 PM",
+		signup:
+			"https://docs.google.com/forms/d/e/1FAIpQLSd43EVFPskc3-PEl2N4Boy8IpCIsg_iOPtsvtdesAe8maKs1w/viewform?usp=header",
+		sponsorLogo: "",
+		prize: "",
+		description:
+			"WISE is thrilled to invite students of all STEM backgrounds and years of study to share your research with the WISE community and practice your scientific communication. We invite submissions describing new research and innovations across STEM fields. These could include original research projects, literature reviews, case studies, program evaluations, or other initiatives showcasing advancements in science, technology, engineering, and mathematics. We are also partnering with URNCST to publish a WISENC 2026 Abstract Book, where you will have the opportunity to have your abstract published.\n\nThe event's structure will allow participants to walk freely around the room and present their poster to a judge.\n\nParticipants will be assigned a 3 minute judging slot during which they must be present at their posters.\nThose who wish to present work done alongside a PI or in any lab must get permission from their supervisors to present their research.\nPosters will be judged based on presentation skills, poster visuals, and research competence.",
 	},
 ];
 
-const judges = [
-	{ name: "Lindsey Fiddes", image: "/img/competitions/lindsey-fiddes.webp" },
-	{ name: "Lucy Ma", image: "/img/competitions/lucy-ma.webp" },
-	{ name: "Emily Somerset", image: "/img/competitions/emily-somerset.webp" },
-	{ name: "Ana-Maria Oproescu", image: "/img/competitions/ana-maria-oproescu.webp" },
-	{ name: "Mélanie Courtot", image: "/img/competitions/melanie-courtot.webp" },
-	{ name: "Ania Harlick", image: "/img/competitions/ania-harlick.webp" },
-	{ name: "Ivan Zhang", image: "/img/competitions/ivan-zhang.webp" },
-	{ name: "Eugene Cho", image: "/img/competitions/eugene-cho.webp" },
-];
+const competitions = competitionOrder
+	.map((fileName) => {
+		const baseCompetition = competitionData.find(
+			(competition) => competition.fileName === fileName,
+		);
+
+		if (!baseCompetition) {
+			return null;
+		}
+
+		const judges =
+			competitionFiles[`../../content/competitions/${fileName}`]?.default.map(
+				(judge) => ({
+					...judge,
+					image: resolveJudgeImage(judge.image),
+				}),
+			) ?? [];
+
+		return {
+			...baseCompetition,
+			judges,
+		};
+	})
+	.filter(
+		(competition): competition is CompetitionData => competition !== null,
+	);
 ---
 
 <SectionLayout title="Competitions">
-	<p class="mb-8 max-w-4xl text-base leading-7 text-blue-navy/85">
-		WISE competitions are open to all conference attendees and run on a first-come, first-served basis.
-		Register early to secure a spot and prepare with your team before conference weekend.
+	<p
+		class="mb-8 max-w-4xl mx-auto text-base text-center leading-7 text-blue-navy/85"
+	>
+		The WISE National Conference competitions provide an opportunity for
+		participants from various fields to apply knowledge learned in class and
+		solve real-world problems. All conference attendees are eligible to
+		participate! You must purchase a ticket for WISE NC 2026 before registering
+		for our competitions. Please be advised that competitions registrations are
+		accepted on a rolling, first-come-first-served basis for limited spaces.
 	</p>
 
-	<div class="grid gap-6 xl:grid-cols-3">
-		{competitions.map((competition) => (
-			<article class="rounded-2xl border border-blue-navy/10 bg-white p-6 shadow-sm">
-				<div class="mb-4 flex items-center gap-3">
-					<img src={competition.sponsorLogo} alt={competition.name} class="h-12 w-12 rounded-md object-cover" />
-					<h3 class="text-xl font-semibold text-blue-navy">{competition.name}</h3>
-				</div>
-				<p class="text-sm leading-6 text-blue-navy/80">{competition.description}</p>
-				<dl class="mt-4 space-y-2 text-sm text-blue-navy/85">
-					<div>
-						<dt class="font-semibold text-purple-primary">When</dt>
-						<dd>{competition.datetime}</dd>
-					</div>
-					<div>
-						<dt class="font-semibold text-purple-primary">Where</dt>
-						<dd>{competition.location}</dd>
-					</div>
-					<div>
-						<dt class="font-semibold text-purple-primary">Deadline</dt>
-						<dd>{competition.deadline}</dd>
-					</div>
-					<div>
-						<dt class="font-semibold text-purple-primary">Prize</dt>
-						<dd>{competition.prize}</dd>
-					</div>
-				</dl>
-				<a
-					href={competition.signup}
-					target="_blank"
-					rel="noreferrer"
-					class="mt-5 inline-block rounded-full bg-purple-primary px-5 py-2 text-sm font-semibold text-white transition hover:bg-blue-navy"
-				>
-					Sign Up
-				</a>
-			</article>
-		))}
-	</div>
-
-	<div class="mt-10">
-		<h3 class="mb-4 text-2xl font-semibold text-blue-navy">Featured Judges</h3>
-		<div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-			{judges.map((judge) => (
-				<article class="overflow-hidden rounded-xl border border-blue-navy/10 bg-white shadow-sm">
-					<img src={judge.image} alt={judge.name} loading="lazy" class="h-44 w-full object-cover" />
-					<p class="p-3 text-sm font-semibold text-blue-navy">{judge.name}</p>
-				</article>
-			))}
-		</div>
+	<div class="space-y-10">
+		{
+			competitions.map((competition) => (
+				<Competition competition={competition} />
+			))
+		}
 	</div>
 </SectionLayout>

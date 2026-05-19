@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Cynthia Wu",
+    "image": "/assets/speakers/cynthia-wu.webp",
+    "title": "Ph.D. Student, Department of Biochemistry @ University of Toronto",
+    "pronouns": "she/her",
+    "bio": "Cynthia Wu is a Ph.D. student in Biochemistry in the Department of Biochemistry at the University of Toronto, where she investigates synthetic lethality between two proteins across cancer contexts, with the long-term goal of informing precision oncology strategies. She earned her B.Sc. at the University of Toronto in Pharmacology & Toxicology and Psychology in 2025 and has co-authored five peer-reviewed publications, including work in iScience and expert-review journals. Beyond the lab, she leads scientific outreach as President of Synthetic Biology Public Education Canada (SynPEC) and has contributed to award-winning iGEM projects, including a Gold Medal.\n\nCynthia also focuses on mentorship and widening access to STEM research: through the Research Application Support Initiative (RASI) and the U of T Discovery Program, she mentors high school and undergraduate trainees and supports students from under-resourced and underrepresented backgrounds in finding, applying for, and thriving in research opportunities."
+  },
+  {
+    "name": "Dr. Tanushree Ghosh",
+    "image": "/assets/speakers/tanushree-ghosh.webp",
+    "title": "Postdoctoral Researcher @ University of Toronto, Department of MIE",
+    "pronouns": "she/her",
+    "bio": "Dr. Tanushree is a post doctoral researcher specializing in Direct Air Carbon Capture. With over 6 years of combined experience in research, she has worked with government organizations as well as leading funders as a sub team leader to deliver impactful results.\n\nDr. Ghosh holds a PhD in Physics from India Institute of Technology, Indore, India where she worked on optoelectronic devices and published over 40 papers.\n\nRecent achievements include serving as a team lead, working as a reviewer for top journals besides working on a pilot scale project. Outside of work, she enjoys dancing and adventure and is committed to her work in helping the environment deal with increasing carbon impact."
+  },
+  {
+    "name": "Kaiwen Liu",
+    "image": "/assets/speakers/kaiwen-liu.webp",
+    "title": "PhD Candidate, Biomedical Engineering @ University of Toronto",
+    "bio": "Kaiwen Liu is a PhD candidate in Biomedical Engineering at the University of Toronto, where their research focuses on the development and translation of advanced MRI technologies for cardiovascular disease. Their doctoral work centers on optimizing a novel molecular MRI contrast agent for the early detection and tracking of myocardial fibrosis, with the goal of improving diagnosis, risk stratification, and therapeutic monitoring in heart failure.\n\nKaiwen has extensive experience in biomedical imaging, image processing, and experimental design, spanning both preclinical models and translational research.\n\nBeyond their doctoral research, Kaiwen is actively involved in teaching and mentorship, supporting undergraduate and graduate students in developing technical skills, critical thinking, and an understanding of real-world healthcare challenges. They also engage in interdisciplinary collaboration and early-stage health innovation initiatives, contributing to projects that address unmet clinical needs through engineering-driven solutions.\n\nKaiwen is passionate about advancing equitable, impactful biomedical technologies and fostering inclusive scientific communities through education, mentorship, and service."
+  }
+]
