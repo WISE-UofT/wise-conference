@@ -1,7 +1,6 @@
 ---
 import SectionLayout from "../../layouts/SectionLayout.astro";
 
-// import Image from "../../assets/recap/2026/team.webp";
 import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
 
@@ -124,6 +123,7 @@ const recapImages = Object.entries(
 	</div>
 
 	<script>
+		/*
 		const targetDate = new Date("2026-01-17T08:00:00-05:00").getTime();
 		const days = document.getElementById("countdown-days");
 		const hours = document.getElementById("countdown-hours");
@@ -147,6 +147,7 @@ const recapImages = Object.entries(
 
 		updateCountdown();
 		window.setInterval(updateCountdown, 1000);
+		*/
 
 		const carousels = document.querySelectorAll<HTMLElement>("[data-carousel]");
 
