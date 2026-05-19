@@ -55,9 +55,18 @@ const speakerImageByFileName = Object.fromEntries(
   ]),
 );
 
+const toSafeIdPart = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
 const resolvedWorkshopSpeakers = workshopSpeakers.map((speaker, index) => ({
   ...speaker,
-  id: `${workshop.title}-${speakerDataSourceFile}-${index}`,
+  id: [workshop.title, speakerDataSourceFile || "workshop", String(index)]
+    .map(toSafeIdPart)
+    .filter(Boolean)
+    .join("-"),
   image:
     speakerImageByFileName[speaker.image.split("/").pop() ?? ""] ??
     speaker.image,
