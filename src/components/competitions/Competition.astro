@@ -19,6 +19,7 @@ interface CompetitionData {
   sponsorLogo: string;
   prize: string;
   description: string;
+  descriptionBullets: string[];
   judges: JudgeData[];
 }
 
@@ -28,14 +29,12 @@ interface Props {
 
 const { competition } = Astro.props as Props;
 
-const [descriptionIntro = "", ...descriptionRemainder] = competition.description
+const descriptionParagraphs = competition.description
   .split("\n\n")
   .map((part) => part.trim())
   .filter(Boolean);
 
-const descriptionBullets = descriptionRemainder
-  .join("\n")
-  .split("\n")
+const descriptionBullets = competition.descriptionBullets
   .map((line) => line.trim())
   .filter(Boolean);
 
@@ -65,7 +64,18 @@ const getJudgeId = (
     }
     <h3 class="text-2xl font-semibold text-blue-navy">{competition.name}</h3>
   </div>
-  <p class="text-base leading-6 text-blue-navy/80">{descriptionIntro}</p>
+  {
+    descriptionParagraphs.map((paragraph, index) => (
+      <p
+        class:list={[
+          "text-base leading-6 text-blue-navy/80",
+          index > 0 && "mt-3",
+        ]}
+      >
+        {paragraph}
+      </p>
+    ))
+  }
   {
     descriptionBullets.length > 0 && (
       <ul class="mt-3 list-disc space-y-1 pl-5 text-base leading-6 text-blue-navy/80">

@@ -23,6 +23,7 @@ interface CompetitionCardData {
 	sponsorLogo: string;
 	prize: string;
 	description: string;
+	descriptionBullets: string[];
 }
 
 interface CompetitionData extends CompetitionCardData {
@@ -70,7 +71,13 @@ const competitionData: CompetitionCardData[] = [
 		sponsorLogo: cubeLogo.src,
 		prize: "First place team: $300",
 		description:
-			"Participants will work in teams to tackle a real-world global health challenge focused on neglected tropical diseases. Contestants will leverage computational modeling and bioinformatic techniques to develop an innovative solution, which they will present to a judging panel. A detailed case brief outlining the problem and expectations will be released closer to the competition date. Students may register as a team or request to be placed into one.\n\nTeams must be of 3-4 will give a 7 minute presentation to a panel of judges followed by a 3 minute Q&A.\nThe presentation will be accompanied by a technical demonstration or concept prototype.\nStudents from any department, faculty, or institution are welcome to participate together.\nTeams will be judged on innovation, feasibility, public health impact and overall clarity of communication.",
+			"Participants will work in teams to tackle a real-world global health challenge focused on neglected tropical diseases. Contestants will leverage computational modeling and bioinformatic techniques to develop an innovative solution, which they will present to a judging panel. A detailed case brief outlining the problem and expectations will be released closer to the competition date. Students may register as a team or request to be placed into one.",
+		descriptionBullets: [
+			"Teams must be of 3-4 and will give a 7 minute presentation to a panel of judges followed by a 3 minute Q&A.",
+			"The presentation will be accompanied by a technical demonstration or concept prototype.",
+			"Students from any department, faculty, or institution are welcome to participate together.",
+			"Teams will be judged on innovation, feasibility, public health impact and overall clarity of communication.",
+		],
 	},
 	{
 		fileName: "5mt-competition.json",
@@ -83,7 +90,13 @@ const competitionData: CompetitionCardData[] = [
 		sponsorLogo: "",
 		prize: "$300 (1st), $200 (2nd), $100 (3rd)",
 		description:
-			"We invite students from any STEM background to present their research to a panel of judges and have the opportunity to showcase their findings to a wider audience. Participants will be given five minutes to present their thesis research in an engaging manner using only one static slide. In partnership with URNCST, all abstracts will get published in our WISE journal book (as long as they follow our guidelines).\n\nOnly one static slide is permitted.\nNo additional electronic media or props are allowed.\nPresentations are limited to 5 minutes maximum and competitors exceeding 5 minutes will face a penalty.\nPresentations will be assessed on communication, comprehension, engagement and quality of work.",
+			"We invite students from any STEM background to present their research to a panel of judges and have the opportunity to showcase their findings to a wider audience. Participants will be given five minutes to present their thesis research in an engaging manner using only one static slide. In partnership with URNCST, all abstracts will get published in our WISE journal book (as long as they follow our guidelines).",
+		descriptionBullets: [
+			"Only one static slide is permitted.",
+			"No additional electronic media or props are allowed.",
+			"Presentations are limited to 5 minutes maximum and competitors exceeding 5 minutes will face a penalty.",
+			"Presentations will be assessed on communication, comprehension, engagement and quality of work.",
+		],
 	},
 	{
 		fileName: "cohere-competition.json",
@@ -96,7 +109,13 @@ const competitionData: CompetitionCardData[] = [
 		prize:
 			"$500 (1st), $250 (2nd), $1000 in Cohere credits (3rd). Additionally, individuals from the top three teams may be considered for internship interviews with Cohere.",
 		description:
-			"We invite students to come work in teams to design and build MCP (Model Context Protocol) tools to power creative AI use cases! Building on the Cohere workshop on 17 Jan, this hackathon will challenge participants to go beyond standard generative AI and develop tools that can meaningfully augment everyday life, from intelligent schedulers to personalized assistants. Starter code and resources will be provided to all participants.\n\nParticipants are strongly encouraged to attend the Cohere workshop on 17 January, Saturday from 1PM - 2:30PM EST.\nThe hacking period will take place from Saturday afternoon to Sunday morning.\nTeams of 3–4 will present their final projects to a panel of Cohere judges in a live pitch format on 18 January, Sunday from 10AM - 12PM EST.\nThe winning designs will be evaluated on creativity, functionality, and innovation.",
+			"We invite students to come work in teams to design and build MCP (Model Context Protocol) tools to power creative AI use cases! Building on the Cohere workshop on 17 Jan, this hackathon will challenge participants to go beyond standard generative AI and develop tools that can meaningfully augment everyday life, from intelligent schedulers to personalized assistants. Starter code and resources will be provided to all participants.",
+		descriptionBullets: [
+			"Participants are strongly encouraged to attend the Cohere workshop on 17 January, Saturday from 1PM - 2:30PM EST.",
+			"The hacking period will take place from Saturday afternoon to Sunday morning.",
+			"Teams of 3-4 will present their final projects to a panel of Cohere judges in a live pitch format on 18 January, Sunday from 10AM - 12PM EST.",
+			"The winning designs will be evaluated on creativity, functionality, and innovation.",
+		],
 	},
 	{
 		fileName: "poster-fair-competition.json",
@@ -109,7 +128,12 @@ const competitionData: CompetitionCardData[] = [
 		sponsorLogo: "",
 		prize: "",
 		description:
-			"WISE is thrilled to invite students of all STEM backgrounds and years of study to share your research with the WISE community and practice your scientific communication. We invite submissions describing new research and innovations across STEM fields. These could include original research projects, literature reviews, case studies, program evaluations, or other initiatives showcasing advancements in science, technology, engineering, and mathematics. We are also partnering with URNCST to publish a WISENC 2026 Abstract Book, where you will have the opportunity to have your abstract published.\n\nThe event's structure will allow participants to walk freely around the room and present their poster to a judge.\n\nParticipants will be assigned a 3 minute judging slot during which they must be present at their posters.\nThose who wish to present work done alongside a PI or in any lab must get permission from their supervisors to present their research.\nPosters will be judged based on presentation skills, poster visuals, and research competence.",
+			"WISE is thrilled to invite students of all STEM backgrounds and years of study to share your research with the WISE community and practice your scientific communication.\n\nWe invite submissions describing new research and innovations across STEM fields. These could include original research projects, literature reviews, case studies, program evaluations, or other initiatives showcasing advancements in science, technology, engineering, and mathematics. We are also partnering with URNCST to publish a WISENC 2026 Abstract Book, where you will have the opportunity to have your abstract published.\n\nThe event's structure will allow participants to walk freely around the room and present their poster to a judge.",
+		descriptionBullets: [
+			"Participants will be assigned a 3 minute judging slot during which they must be present at their posters.",
+			"Those who wish to present work done alongside a PI or in any lab must get permission from their supervisors to present their research.",
+			"Posters will be judged based on presentation skills, poster visuals, and research competence.",
+		],
 	},
 ];
 
