@@ -17,14 +17,84 @@ const discountsWithContent = await Promise.all(
 ---
 
 <SectionLayout title="Discounts">
+	<p
+		class="mb-6 max-w-4xl text-base text-center font-medium mx-auto leading-7 text-blue-navy"
+	>
+		Thank you to the following schools for supporting the WISE National
+		Conference 2026! For questions about discounts, please contact <a
+			href="mailto:conference.academics@wise.skule.ca"
+			>conference.academics@wise.skule.ca</a
+		>.
+	</p>
+	<p
+		class="mb-6 max-w-4xl text-sm italic text-center mx-auto leading-7 text-blue-navy/80"
+	>
+		All emails and student numbers associated with any discounted purchase will
+		be sent to the respective school and faculty to confirm enrollment. Thus,
+		for any discounted tickets, please ensure your affiliated school email is
+		being used for the purchase.
+	</p>
 	<div class="grid gap-5">
-		{discountsWithContent.map(({ school, Content }) => (
-			<article class="rounded-2xl border border-blue-navy/10 bg-white p-6 shadow-sm">
-				<h3 class="mb-4 text-xl font-semibold text-blue-navy">{school}</h3>
-				<div class="space-y-3 text-base leading-7 text-blue-navy/85 [&_h1]:mt-4 [&_h1]:text-lg [&_h1]:font-semibold [&_h1]:text-blue-navy [&_p]:m-0 [&_strong]:text-purple-primary">
-					<Content />
-				</div>
-			</article>
-		))}
+		{
+			discountsWithContent.map(({ school, Content }) => (
+				<details class="discount-item group rounded-2xl border border-blue-navy/10 bg-white shadow-sm">
+					<summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-6 marker:content-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-primary/50">
+						<h3 class="text-xl font-semibold text-purple-dark">{school}</h3>
+						<span
+							aria-hidden="true"
+							class="ml-4 shrink-0 text-purple-primary transition-transform duration-200 group-open:rotate-180"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-5 w-5"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M19 9l-7 7-7-7"
+								/>
+							</svg>
+						</span>
+					</summary>
+					<div class="discount-panel">
+						<div class="discount-content px-6 pb-6">
+							<div class="space-y-3 text-base leading-7 text-blue-navy/85 [&_h1]:mt-4 [&_h1]:text-lg [&_h1]:font-semibold [&_h1]:text-blue-navy [&_p]:m-0 [&_strong]:text-purple-primary">
+								<Content />
+							</div>
+						</div>
+					</div>
+				</details>
+			))
+		}
 	</div>
 </SectionLayout>
+
+<style>
+	.discount-panel {
+		display: grid;
+		grid-template-rows: 0fr;
+		opacity: 0;
+		transition:
+			grid-template-rows 240ms ease,
+			opacity 200ms ease;
+	}
+
+	.discount-content {
+		overflow: hidden;
+	}
+
+	.discount-item[open] .discount-panel {
+		grid-template-rows: 1fr;
+		opacity: 1;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.discount-panel {
+			transition: none;
+		}
+	}
+</style>

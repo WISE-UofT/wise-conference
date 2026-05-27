@@ -9,10 +9,11 @@ const faqs = [
 	{
 		question: "What companies will be at the Career Fair?",
 		answer:
-			"Please refer to the Sponsors section. Corporate and academic sponsor representatives will be present during networking and career fair periods.",
+			"Please refer to the Sponsors section. Corporate and academic sponsor representatives will be present at networking and career fair periods.",
 	},
 	{
-		question: "Will there be vegetarian, vegan, gluten-free, dairy-free, and halal food options?",
+		question:
+			"Will there be vegetarian, vegan, gluten-free, dairy-free, and halal food options?",
 		answer: "Yes. We do our best to accommodate all dietary restrictions.",
 	},
 	{
@@ -22,7 +23,7 @@ const faqs = [
 	{
 		question: "When should I arrive at the conference?",
 		answer:
-			"Registration opens at 8:00 AM on Saturday with breakfast available. Main programming starts at 9:00 AM.",
+			"Registration opens at 8:00 AM on Saturday with breakfast available. Main programming starts at 9:00 AM on both days.",
 	},
 	{
 		question: "Will there be parking available?",
@@ -32,7 +33,7 @@ const faqs = [
 	{
 		question: "Do I have to stay for the entire conference?",
 		answer:
-			"Attendance flexibility is up to you. Events run all day on both days, so you can choose sessions most relevant to your interests.",
+			"Whether you stay or leave for parts of the Conference is up to your discretion. Events run all day on both days, so you can choose sessions most relevant to your interests.",
 	},
 	{
 		question: "Do I need to check in every time I leave and return?",
@@ -41,20 +42,43 @@ const faqs = [
 	},
 	{
 		question: "Where is the conference taking place?",
-		answer: "The conference is hosted at The Westin Harbour Castle in Toronto.",
+		answer:
+			"The conference is hosted at The Westin Harbour Castle in Toronto. Please refer to the Venue section for a map.",
+	},
+	{
+		question: "Will there be a prayer room available?",
+		answer: "Yes, there will be a prayer room available at the venue.",
 	},
 ];
 ---
 
 <SectionLayout title="FAQ">
 	<div class="space-y-3">
-		{faqs.map((faq) => (
-			<details class="rounded-2xl border border-blue-navy/10 bg-white p-5 shadow-sm">
-				<summary class="cursor-pointer list-none pr-6 text-base font-semibold text-blue-navy">
-					{faq.question}
-				</summary>
-				<p class="pt-3 text-sm leading-7 text-blue-navy/80">{faq.answer}</p>
-			</details>
-		))}
+		{
+			faqs.map((faq) => (
+				<details class="group rounded-2xl border border-blue-navy/10 bg-white p-5 shadow-sm">
+					<summary class="flex cursor-pointer list-none items-center justify-between text-base font-semibold text-blue-navy">
+						{faq.question}
+						<span class="ml-4 shrink-0 transition-transform duration-200 group-open:rotate-180">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-5 w-5"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M19 9l-7 7-7-7"
+								/>
+							</svg>
+						</span>
+					</summary>
+					<p class="pt-3 text-base leading-7 text-blue-navy/80">{faq.answer}</p>
+				</details>
+			))
+		}
 	</div>
 </SectionLayout>

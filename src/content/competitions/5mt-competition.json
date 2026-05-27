@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Dr. Mélanie Courtot",
+    "image": "/assets/speakers/melanie-courtot.webp",
+    "title": "Senior Director @ Genome Informatics, PI @ OICR, Assistant Professor @ University of Toronto",
+    "bio": "Dr. Mélanie Courtot is the Senior Director of Genome Informatics and a Principal Investigator at the Ontario Institute for Cancer Research in Toronto, and an Assistant Professor in the Departments of Medical Biophysics and Computer Science at University of Toronto. Dr. Courtot is passionate about translational informatics - building intelligent systems to gain new insights and impact human health. Her lab aims to build a globally shared knowledge ecosystem to advance science and improve health for all. This requires high-quality data, robust data integration processes at scale and discovery platforms providing data access across international borders. At OICR, her team of 25 develops the Overture software suite, which has helped managed ~3 million genomes (2.5 petabytes of data) accessed by over 300,000 researchers worldwide. Overture supports many active large-scale cancer genomics projects Dr. Courtot leads. These include ICGC and ICGC-ARGO (collecting molecular and clinical data for over 100k patients worldwide), VirusSeq (Canadian Covid portal with over 500k SARS-CoV-2 sequences), and the upcoming Pan-Canadian Genome Library. It also drives the African Pathogen Data Sharing and Archive Platform to upload and share pathogen sequences and associated metadata across continental Africa.\n\nDr. Courtot is a steering committee member for the Roche Wayfind-R project and the Global Alliance for Genomics and Health, an advisory board member for the eLwazi open data science platform and member of the Researcher Council for the Digital research Alliance of Canada. She holds a BSc in Biochemistry and MSc in Computer science (2002) from the Université Louis Pasteur, in Strasbourg, France, and a PhD in Bioinformatics (2014) from the University of British Columbia, Canada."
+  },
+  {
+    "name": "Dr. Salma Emara",
+    "image": "/assets/speakers/salma-emara.webp",
+    "title": "Assistant Professor, Teaching Stream @ University of Toronto",
+    "pronouns": "she/her",
+    "bio": "Salma Emara is an Assistant Professor, Teaching Stream in the Department of Electrical and Computer Engineering at the University of Toronto. She received her B.Sc. in Electronics and Communications Engineering from the American University in Cairo in 2018 and her Ph.D. in Computer Engineering from the University of Toronto under the supervision of Professor Baochun Li in 2022. Her Ph.D. research focused on improving reinforcement learning algorithms for computer networking. Currently, her research explores pedagogical strategies for enhancing debugging skills in beginner programmers and leveraging natural language processing in engineering education. She believes engineers learn best by doing and is committed to engaging students through in-class activities and problem-solving assignments. Her dedication to teaching has been recognized with multiple student-voted teaching awards."
+  },
+  {
+    "name": "Dr. Ania Harlick",
+    "image": "/assets/speakers/ania-harlick.webp",
+    "title": "Assistant Professor, Teaching Stream @ University of Toronto",
+    "bio": "Ania Harlick is currently an Associate Professor, Teaching Stream at the University of Toronto having previously been a Faculty Member at the University of Calgary. Originally from Poland, she earned her doctorate in Physics from Memorial University of Newfoundland and Labrador in 2010. Considers herself an accidental physicist with a passion for education. As her primary responsibilities are related to teaching university courses, most of her research focuses on implementing modern pedagogy into the design of course and laboratory components. As far as she is concerned, she has her dream job."
+  },
+  {
+    "name": "Ana-Maria Oproescu",
+    "image": "/assets/speakers/ana-maria-oproescu.webp",
+    "title": "PhD Candidate @ University of Toronto",
+    "pronouns": "she/her",
+    "bio": "Ana-Maria Oproescu is a 4th year Biomedical Engineering PhD candidate and NSERC CGS-D recipient at the University of Toronto whose research focuses on the development and characterization of next-generation lipid nanoparticles for improved therapeutic nucleic acid delivery. Outside of the lab, Ana-Maria is committed to breaking barriers in the medical field. Most recently, as an Acceleration Consortium EDI grant recipient, she produced a video series to promote diverse perspectives of women working in the growing field of self-driving labs. She has also supported fundraising and educational campaigns through her Youth Ambassador role at Hydrocephalus Canada. Further, she created the nonprofit STEM PASS to support students from diverse socioeconomic backgrounds to apply to medical school through bursaries and other resources."
+  }
+]

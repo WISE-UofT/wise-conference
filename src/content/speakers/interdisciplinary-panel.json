@@ -1,39 +1,39 @@
 [
   {
     "name": "Jane Heffernan",
-    "image": "/img/speakers/jane-heffernan.webp",
+    "image": "/assets/speakers/jane-heffernan.webp",
     "title": "Professor and Research Chair in Modelling Infection and Immunity @ Department of Mathematics & Statistics, York University",
     "bio": "Jane Heffernan is a Professor and York Research Chair in Modelling Infection & Immunity (MI2) in the Mathematics & Statistics Department and Canadian Centre for Disease Modelling (CCDM) at YorkU. Dr. Heffernan's MI2 lab studies mathematical models of infectious diseases, vaccination, and drug therapies. The primary goal of her work is to uncover key contributors to infectious disease pathogenesis in-host (immunology) and in populations (epidemiology), which provides a critical foundation for optimized health policy.\nDr. Heffernan completed her Honours BSc at Trent University in Math and Computer Science in 2000. She then completed her BEd (concurrent) at Queen's in 2001, MSc at Western in 2002, and PhD at Western in 2005, for which she was awarded the Governor General's Gold Medal. She joined YorkU after an NSERC Postdoctoral Fellowship at the University of Warwick (UK) from 2005-2007.\nDr. Heffernan is Past-President of the Society of Mathematical Biology (SMB). She is also Co-Lead of the Modelling and Economics Research Network (ModERN) within the Canadian Immunization Research Network (CIRN), and is co-Director of the Canadian Centre for Disease Modelling (CDM). Heffernan is an SMB Fellow and is a Member of the Royal Society of Canada (RSC) College of New Scholars, Artists, and Scientists."
   },
   {
     "name": "Hannah Hoag",
-    "image": "/img/speakers/hannah-hoag.webp",
+    "image": "/assets/speakers/hannah-hoag.webp",
     "title": "Senior Producer, Health, Science and Climate Unit @ CBC News",
     "pronouns": "she/her",
     "bio": "Hannah Hoag is a senior producer in the Health, Science and Climate Unit at CBC News where she leads a team of a dozen reporters and producers to create daily news and feature stories across all CBC News platforms from TikTok to live pages to radio and television. She earned an MSc in biology (human genetics) at McGill University and an MSc in science and medical journalism at Boston University. Prior to joining CBC, she was the deputy editor at The Conversation Canada and the founding managing editor at Arctic Deeply. She is also a long-time freelance journalist, whose stories have appeared in the New York Times, the Globe and Mail, The Atlantic, National Geographic, Nature, Science and many other outlets."
   },
   {
     "name": "Sivani Baskaran",
-    "image": "/img/speakers/sivani-baskaran.webp",
+    "image": "/assets/speakers/sivani-baskaran.webp",
     "title": "Environmental Researcher & Data Analyst",
     "pronouns": "she/her",
     "bio": "Sivani Baskaran is an interdisciplinary scientist with a PhD in Environmental Chemistry from the University of Toronto. Her doctoral research focused on measuring and predicting chemical properties to identify hazardous chemicals to air-breathing organisms, and her work has been used in guidance documents by the European Chemical Agency. Most recently, Sivani was an NSERC postdoctoral research fellow at the Norwegian Geotechnical Institute in Oslo, where her research used statistical methods and analysis to predict the hazard potential of chemicals on the global market.\nIn addition to her research, Sivani is passionate about science policy and evidence-informed decision-making. In 2018, she co-founded the Toronto Science Policy Network (TSPN) at U of T. She served as Vice-President and later President, where she co-led the non-partisan Vote Science national campaigns and co-wrote the report on The Early Impacts of COVID-19 on Graduate Students across Canada. She wrote a policy memo on improving the inclusivity and accessibility of federal research awards and participated in the Support Our Science Campaign.\nThrough her work, Sivani bridges scientific research and policy application, translating complex data into actionable insights that inform evidence-based decision-making."
   },
   {
     "name": "Jennifer Quaglietta",
-    "image": "/img/speakers/jennifer-quaglietta.webp",
+    "image": "/assets/speakers/jennifer-quaglietta.webp",
     "title": "P.Eng, MBA, ICD.D, CHE, PMP, LSSGB\nCEO & Registrar @ Professional Engineers Ontario",
     "bio": "Jennifer Quaglietta currently serves Professional Engineers Ontario as their CEO & Registrar, where she is leading the organization through a historic enterprise-wide transformation towards becoming a modern regulator that serves and protects the public interest. She has worked across several sectors including pharmaceutical, healthcare, banking, insurance and government.\nA transformational leader, Jennifer combines an empathic and authentic style with expertise in strategy development, governance, enterprise risk and change management to steer private and public sector organizations through complex change while enabling sustainable operations.\nJennifer's belief in the power of knowledge sharing and the importance of building future leaders has her partnering with academic institutions to advance research and support student placements. She is an Industry Affiliate with the Centre for Healthcare Engineering at the University of Toronto and a highly sought-after speaker and thought leader. Jennifer is a passionate advocate for women in STEM, gender equality, diversity, and mental health.\nHer achievements have been recognized provincially and nationally. She is a recipient of the 2023 Canada's Most Powerful Women Top 100, 2022 Robert Zed Young Health Leader Award, 2021 Not-for-Profit CIO of the Year Award among others.\nJennifer holds a Bachelor of Applied Science and Engineering, a Master of Business Administration and an Institute of Corporate Directors Designation from the University of Toronto and has a certificate in strategic partnerships in nonprofit management from Harvard Business School. She is the Vice Chair of the Holland Bloorview Rehabilitation Hospital Board of Directors, a member of the Ontario Medical Association Board of Directors, and serves on Advisory Boards including Engineers Canada Learning and Data Science Advisory Group among others. She lives in Toronto with her husband, two young boys and dog named Harry Potter."
   },
   {
     "name": "Rezwana Sharmin",
-    "image": "/img/speakers/rezwana-sharmin.webp",
+    "image": "/assets/speakers/rezwana-sharmin.webp",
     "title": "Senior Staff Design Verification Engineer, Display IP @ Qualcomm",
     "bio": "Rezwana graduated from the University of Toronto's Engineering Science program and completed her internship at Actel (now Microsemi), where she focused on radiation characterization of FPGAs for aerospace and defense applications. Her work involved close collaboration with cross-functional teams to bring up hardware boards, design and execute radiation experiments, perform performance analysis, and characterize devices before and after testing. This role also required travelling across the country to work with multiple universities operating specialized testing.\nAfter graduation, Rezwana joined Qualcomm, where she works on end-to-end verification of Snapdragon display systems spanning multiple product lines, including handsets, laptops, automotive platforms, and smart glasses. Her focus is on ensuring system-level reliability, performance, and integration across diverse use cases.\nOutside of work, she practices archery and kendo, occasionally plays softball (often to the detriment of her team), and travels whenever possible."
   },
   {
     "name": "Julia Lamassa",
-    "image": "/img/speakers/julia-lamassa.webp",
+    "image": "/assets/speakers/julia-lamassa.webp",
     "title": "Head of Operating Model @ Vale",
     "pronouns": "she/her",
     "bio": "As Head of Operating Model at Vale Base Metals, Julia oversees the architecture and continuous improvement of the company's Operating Model. It includes governance over processes, accountabilities and business planning, connecting strategy to execution through decision rights, streamlined processes, and a disciplined operating rhythm across global sites. Her background spans degrees in International Relations and Corporate Finance, and experience in management consulting and business administration. Across eight years in the mining industry, she has guided transformations that advanced operational excellence, simplified processes and improved efficiency."

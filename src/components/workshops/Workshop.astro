@@ -1,0 +1,131 @@
+---
+import type { ImageMetadata } from "astro";
+import SpeakerBio from "../speakers/SpeakerBio.astro";
+import SpeakerCard from "../speakers/SpeakerCard.astro";
+
+interface WorkshopData {
+  title: string;
+  description: string;
+  location: string;
+  time: string;
+}
+
+interface Speaker {
+  name: string;
+  image: string;
+  title: string;
+  bio?: string;
+  pronouns?: string;
+}
+
+interface Props {
+  workshop: WorkshopData;
+  speakerDataSource?: string;
+}
+
+const { workshop, speakerDataSource } = Astro.props as Props;
+
+const workshopSpeakerFiles = import.meta.glob("../../content/workshops/*", {
+  eager: true,
+});
+
+const speakerDataSourceFile = speakerDataSource?.split("/").pop() ?? "";
+const withJsonExtension = speakerDataSourceFile.endsWith(".json")
+  ? speakerDataSourceFile
+  : `${speakerDataSourceFile}.json`;
+
+const speakerTargetPath = `../../content/workshops/${speakerDataSourceFile}`;
+const speakerTargetPathWithJson = `../../content/workshops/${withJsonExtension}`;
+
+const workshopSpeakersMod = (workshopSpeakerFiles[speakerTargetPathWithJson] ??
+  workshopSpeakerFiles[speakerTargetPath]) as
+  | { default: Speaker[] }
+  | undefined;
+
+const workshopSpeakers: Speaker[] = workshopSpeakersMod?.default ?? [];
+
+const speakerImages = import.meta.glob("../../assets/speakers/*", {
+  eager: true,
+}) as Record<string, { default: ImageMetadata }>;
+
+const speakerImageByFileName = Object.fromEntries(
+  Object.entries(speakerImages).map(([path, imageMod]) => [
+    path.split("/").pop() ?? "",
+    imageMod.default,
+  ]),
+);
+
+const toSafeIdPart = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
+const resolvedWorkshopSpeakers = workshopSpeakers.map((speaker, index) => ({
+  ...speaker,
+  id: [workshop.title, speakerDataSourceFile || "workshop", String(index)]
+    .map(toSafeIdPart)
+    .filter(Boolean)
+    .join("-"),
+  image:
+    speakerImageByFileName[speaker.image.split("/").pop() ?? ""] ??
+    speaker.image,
+}));
+---
+
+<article class="rounded-xl border-blue-navy/70 bg-white px-5 py-5 shadow-sm">
+  <div class="space-y-4">
+    <h3 class="text-xl font-semibold leading-tight text-blue-navy">
+      {workshop.title}
+    </h3>
+    <p class="whitespace-pre-line text-base leading-6 text-blue-navy/80">
+      {workshop.description}
+    </p>
+    <p class="pt-1 text-sm text-blue-navy/85">
+      <span class="font-semibold text-blue-navy">Location:</span>
+      {workshop.location}
+    </p>
+    <p class="text-sm text-blue-navy/85">
+      <span class="font-semibold text-blue-navy">Time:</span>
+      {workshop.time}
+    </p>
+
+    {
+      resolvedWorkshopSpeakers.length > 0 && (
+        <div class="space-y-4 pt-3">
+          <h4 class="text-base font-semibold text-blue-navy">Hosts</h4>
+          <div class="flex flex-wrap items-stretch gap-5">
+            {resolvedWorkshopSpeakers.map((speaker) => (
+              <div class="flex w-full max-w-sm sm:w-[calc((100%-1.25rem)/3)] lg:w-[calc((100%-6.25rem)/6)] lg:max-w-none">
+                <SpeakerCard
+                  name={speaker.name}
+                  image={speaker.image}
+                  title={speaker.title}
+                  bio={speaker.bio}
+                  id={speaker.id}
+                  pronouns={speaker.pronouns}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      )
+    }
+  </div>
+
+  {
+    resolvedWorkshopSpeakers.map(
+      (speaker) =>
+        speaker.bio && (
+          <SpeakerBio
+            id={speaker.id}
+            name={speaker.name}
+            image={speaker.image}
+            title={speaker.title}
+            bio={speaker.bio}
+            pronouns={speaker.pronouns}
+          />
+        ),
+    )
+  }
+</article>
