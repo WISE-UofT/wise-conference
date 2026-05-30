@@ -1,19 +1,161 @@
 ---
+import { Image } from "astro:assets";
 import NavLink from "./NavLink.astro";
 ---
 
-<div class="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-5 md:px-8">
-    <nav class="w-full">
-        <ul class="flex flex-wrap items-center justify-center gap-3 rounded-full bg-white/80 px-4 py-3 text-sm font-semibold text-blue-navy shadow-lg backdrop-blur md:gap-5 md:text-base">
-            <NavLink title="Discounts" link="#discounts" />
-            <NavLink title="Speakers" link="#speakers" />
-            <NavLink title="Workshops" link="#workshops" />
-            <NavLink title="Competitions" link="#competitions" />
-            <NavLink title="Schedule" link="#schedule" />
-            <NavLink title="Sponsors" link="#sponsors" />
-            <NavLink title="Venue" link="#venue" />
-            <NavLink title="FAQ" link="#faq" />
-            <NavLink title="Recap" link="#recap" />
-        </ul>
+<header
+  id="navbar"
+  class="fixed top-0 left-0 z-50 w-full transition-colors duration-300"
+>
+  <div
+    class="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-5 md:px-8"
+  >
+    <a href="https://wise.skule.ca/" aria-label="WISE UofT" target="_blank">
+      <Image
+        src="/logo.webp"
+        alt="WISE UofT Logo"
+        width={48}
+        height={48}
+        class="h-10 w-auto"
+      />
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden md:block">
+      <ul
+        class="flex items-center gap-5 px-4 py-2 text-sm font-semibold text-white md:text-base"
+      >
+        <NavLink title="Discounts" link="#discounts" />
+        <NavLink title="Speakers" link="#speakers" />
+        <NavLink title="Workshops" link="#workshops" />
+        <NavLink title="Competitions" link="#competitions" />
+        <NavLink title="Schedule" link="#schedule" />
+        <NavLink title="Sponsors" link="#sponsors" />
+        <NavLink title="Venue" link="#venue" />
+        <NavLink title="FAQ" link="#faq" />
+        <NavLink title="Recap" link="#recap" />
+      </ul>
     </nav>
+
+    <!-- Mobile hamburger button -->
+    <button
+      id="mobile-menu-btn"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mobile-drawer"
+      class="flex flex-col items-center justify-center gap-1.5 p-2 cursor-pointer md:hidden"
+    >
+      <span
+        class="hamburger-line block h-0.5 w-6 bg-white transition-all duration-300"
+      ></span>
+      <span
+        class="hamburger-line block h-0.5 w-6 bg-white transition-all duration-300"
+      ></span>
+      <span
+        class="hamburger-line block h-0.5 w-6 bg-white transition-all duration-300"
+      ></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile drawer overlay -->
+<div
+  id="mobile-overlay"
+  class="fixed inset-0 z-40 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"
+>
 </div>
+
+<!-- Mobile drawer -->
+<nav
+  id="mobile-drawer"
+  aria-label="Mobile navigation"
+  class="fixed top-0 right-0 z-50 h-full w-72 translate-x-full bg-blue-navy-dark pt-20 shadow-2xl transition-transform duration-300 md:hidden"
+>
+  <button
+    id="mobile-close-btn"
+    aria-label="Close menu"
+    class="absolute top-5 right-5 text-white cursor-pointer"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-6 w-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      stroke-width="2"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M6 18L18 6M6 6l12 12"></path>
+    </svg>
+  </button>
+  <ul class="flex flex-col gap-1 px-6 text-base font-semibold text-white">
+    <NavLink title="Discounts" link="#discounts" />
+    <NavLink title="Speakers" link="#speakers" />
+    <NavLink title="Workshops" link="#workshops" />
+    <NavLink title="Competitions" link="#competitions" />
+    <NavLink title="Schedule" link="#schedule" />
+    <NavLink title="Sponsors" link="#sponsors" />
+    <NavLink title="Venue" link="#venue" />
+    <NavLink title="FAQ" link="#faq" />
+    <NavLink title="Recap" link="#recap" />
+  </ul>
+</nav>
+
+<script>
+  const navbar = document.getElementById("navbar");
+  const banner = document.querySelector(
+    "header.relative",
+  ) as HTMLElement | null;
+
+  function updateNavbar() {
+    if (!navbar) return;
+    const bannerHeight = banner
+      ? banner.offsetHeight
+      : window.innerHeight * 0.55;
+    if (window.scrollY > bannerHeight - 64) {
+      navbar.style.backgroundColor = "var(--color-indigo)";
+    } else {
+      navbar.style.backgroundColor = "transparent";
+    }
+  }
+
+  window.addEventListener("scroll", updateNavbar, { passive: true });
+  updateNavbar();
+
+  // Mobile drawer
+  const menuBtn = document.getElementById("mobile-menu-btn");
+  const closeBtn = document.getElementById("mobile-close-btn");
+  const drawer = document.getElementById("mobile-drawer");
+  const overlay = document.getElementById("mobile-overlay");
+
+  function openMenu() {
+    drawer?.classList.remove("translate-x-full");
+    overlay?.classList.remove("opacity-0", "pointer-events-none");
+    overlay?.classList.add("opacity-100");
+    navbar?.classList.remove("z-50");
+    navbar?.classList.add("z-30");
+    menuBtn?.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeMenu() {
+    drawer?.classList.add("translate-x-full");
+    overlay?.classList.remove("opacity-100");
+    overlay?.classList.add("opacity-0", "pointer-events-none");
+    navbar?.classList.remove("z-30");
+    navbar?.classList.add("z-50");
+    menuBtn?.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+  }
+
+  menuBtn?.addEventListener("click", openMenu);
+  closeBtn?.addEventListener("click", closeMenu);
+  overlay?.addEventListener("click", closeMenu);
+
+  // Close drawer when a nav link is clicked
+  drawer?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+</script>

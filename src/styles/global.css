@@ -5,7 +5,9 @@
     --color-purple-dark: #563D8E;
     --color-purple-light: #ADABFF;
 
+    --color-indigo: #352066;
     --color-blue-navy: #101F46;
+    --color-blue-navy-dark: #070d21;
 }
 
 @layer base {

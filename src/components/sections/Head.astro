@@ -2,9 +2,18 @@
 import NavBar from "../navigation/NavBar.astro";
 ---
 
-<header class="relative min-h-[55vh] overflow-hidden bg-blue-navy md:min-h-[70vh]">
-    <img src="/intro-bg.webp" alt="WISE UofT National Conference 2026" class="h-full w-full object-cover" loading="eager" />
-    <div class="absolute inset-0 z-10 bg-gradient-to-b from-blue-navy/50 via-transparent to-blue-navy/70">
-        <NavBar />
-    </div>
+<NavBar />
+<header
+  class="relative min-h-[55vh] overflow-hidden bg-blue-navy md:min-h-[70vh]"
+>
+  <img
+    src="/intro-bg.webp"
+    alt="WISE UofT National Conference 2026"
+    class="h-full w-full object-cover scale-140 md:scale-100"
+    loading="eager"
+  />
+  <div
+    class="absolute inset-0 z-10 bg-linear-to-b from-blue-navy/50 via-transparent to-blue-navy/70"
+  >
+  </div>
 </header>
