@@ -23,8 +23,9 @@ import NavLink from "./NavLink.astro";
     <!-- Desktop nav -->
     <nav class="hidden md:block">
       <ul
-        class="flex items-center gap-5 px-4 py-2 text-sm font-semibold text-white md:text-base"
+        class="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white md:text-base"
       >
+        <NavLink title="Overview" link="#overview" />
         <NavLink title="Discounts" link="#discounts" />
         <NavLink title="Speakers" link="#speakers" />
         <NavLink title="Workshops" link="#workshops" />
@@ -91,6 +92,7 @@ import NavLink from "./NavLink.astro";
     </svg>
   </button>
   <ul class="flex flex-col gap-1 px-6 text-base font-semibold text-white">
+    <NavLink title="Overview" link="#overview" />
     <NavLink title="Discounts" link="#discounts" />
     <NavLink title="Speakers" link="#speakers" />
     <NavLink title="Workshops" link="#workshops" />

@@ -1,107 +1,80 @@
 ---
 import SectionLayout from "../../layouts/SectionLayout.astro";
+import ImageCarousel from "../ui/ImageCarousel.astro";
+import Collapsible from "../ui/Collapsible.astro";
+import type { ImageMetadata } from "astro";
 
 const recapThemes: Record<string, string> = {
-	"2026": "Building the Future",
-	"2025": "Reaching for the Stars",
-	"2024": "Endless Exploration",
-	"2023": "Leaders of Tomorrow",
+  "2026": "Hidden Depths",
+  "2025": "Reaching for the Stars",
+  "2024": "Endless Exploration",
+  "2023": "Leaders of Tomorrow",
+  "2022": "Above and Beyond",
+  "2021": "Connections Together from Afar",
+  "2020": "Lead without Limits",
+  "2019": "Catalysts for Change",
 };
 
 const recapImageModules = import.meta.glob(
-	"/src/assets/recap/*/*.{jpg,JPG,jpeg,JPEG,png,PNG,webp,WEBP,avif,AVIF,gif,GIF}",
-	{
-		eager: true,
-	},
+  "../../assets/recap/*/*.{jpg,JPG,jpeg,JPEG,png,PNG,webp,WEBP,avif,AVIF,gif,GIF}",
+  {
+    eager: true,
+  },
 );
 
 type RecapImageItem = {
-	src: string;
-	sortKey: string;
+  image: ImageMetadata;
+  sortKey: string;
 };
 
 const recapGroupedByYear = Object.entries(recapImageModules).reduce(
-	(acc, [path, importedModule]) => {
-		const pathParts = path.split("/");
-		const year = pathParts[pathParts.length - 2];
-		const fileName = pathParts[pathParts.length - 1] ?? path;
+  (acc, [path, importedModule]) => {
+    const pathParts = path.split("/");
+    const year = pathParts[pathParts.length - 2];
+    const fileName = pathParts[pathParts.length - 1] ?? path;
 
-		const maybeDefault =
-			typeof importedModule === "object" &&
-			importedModule !== null &&
-			"default" in importedModule
-				? (importedModule as { default: unknown }).default
-				: importedModule;
+    const image = (importedModule as { default: ImageMetadata }).default;
 
-		const imageSrc =
-			typeof maybeDefault === "string"
-				? maybeDefault
-				: typeof maybeDefault === "object" &&
-					  maybeDefault !== null &&
-					  "src" in maybeDefault &&
-					  typeof (maybeDefault as { src: unknown }).src === "string"
-					? (maybeDefault as { src: string }).src
-					: null;
+    if (!image) {
+      return acc;
+    }
 
-		if (!imageSrc) {
-			return acc;
-		}
+    if (!acc[year]) {
+      acc[year] = [];
+    }
 
-		if (!acc[year]) {
-			acc[year] = [];
-		}
-
-		acc[year].push({ src: imageSrc, sortKey: fileName.toLowerCase() });
-		return acc;
-	},
-	{} as Record<string, RecapImageItem[]>,
+    acc[year].push({ image, sortKey: fileName.toLowerCase() });
+    return acc;
+  },
+  {} as Record<string, RecapImageItem[]>,
 );
 
 const recapByYear = Object.entries(recapGroupedByYear)
-	.map(([year, images]) => ({
-		year,
-		theme: recapThemes[year] ?? "WISE Highlights",
-		images: images
-			.sort((a, b) => a.sortKey.localeCompare(b.sortKey))
-			.map((image) => image.src),
-	}))
-	.sort((a, b) => Number(b.year) - Number(a.year));
+  .map(([year, images]) => ({
+    year,
+    theme: recapThemes[year] ?? "WISE Highlights",
+    images: images
+      .sort((a, b) => a.sortKey.localeCompare(b.sortKey))
+      .map((image) => image.image),
+  }))
+  .sort((a, b) => Number(b.year) - Number(a.year));
 ---
 
 <SectionLayout title="Recap">
-	<p class="mb-8 max-w-3xl text-base leading-7 text-blue-navy/85">
-		Take a look at moments from previous WISE National Conferences. From
-		keynotes and panels to competitions and networking, each year highlights a
-		different way our community grows together.
-	</p>
-
-	<div class="space-y-10">
-		{
-			recapByYear.map((recap) => (
-				<article class="rounded-2xl border border-blue-navy/10 bg-white p-5 shadow-sm md:p-6">
-					<div class="mb-4 flex flex-wrap items-end justify-between gap-2">
-						<div>
-							<p class="text-xs font-semibold uppercase tracking-[0.2em] text-purple-primary">
-								{recap.year}
-							</p>
-							<h3 class="text-2xl font-semibold text-blue-navy">
-								{recap.theme}
-							</h3>
-						</div>
-					</div>
-
-					<div class="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6">
-						{recap.images.map((imagePath, index) => (
-							<img
-								src={imagePath}
-								alt={`WISE recap ${recap.year} image ${index + 1}`}
-								loading="lazy"
-								class="h-32 w-full rounded-lg object-cover md:h-36"
-							/>
-						))}
-					</div>
-				</article>
-			))
-		}
-	</div>
+  <div class="space-y-4">
+    {
+      recapByYear.map((recap) => (
+        <Collapsible
+          title={`WISE Conference ${recap.year} — ${recap.theme}`}
+          titleClass="text-xl text-purple-dark"
+          contentClass="pt-5"
+        >
+          <ImageCarousel
+            images={recap.images}
+            labelPrefix={`WISE Conference ${recap.year} Recap Image`}
+          />
+        </Collapsible>
+      ))
+    }
+  </div>
 </SectionLayout>
