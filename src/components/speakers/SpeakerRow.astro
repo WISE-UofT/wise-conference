@@ -5,7 +5,7 @@ import SpeakerBio from "./SpeakerBio.astro";
 
 interface Speaker {
   name: string;
-  image: string;
+  image: ImageMetadata | string;
   title: string;
   bio?: string;
   pronouns?: string;
@@ -17,6 +17,7 @@ interface Props {
   description: string;
   dataSource: string; // "academia-panel" or "academia-panel.json"
   dataFolder?: "speakers" | "workshops" | "competitions";
+  speakers?: Speaker[];
   align?: "center" | "left";
   showHeader?: boolean;
   class?: string;
@@ -28,6 +29,7 @@ const {
   description,
   dataSource,
   dataFolder = "speakers",
+  speakers,
   align = "center",
   showHeader = true,
   class: className = "",
@@ -48,7 +50,7 @@ const normalized = dataSourceFile.endsWith(".json")
 const targetPath = `../../content/${dataFolder}/${normalized}`;
 
 const mod = files[targetPath] as { default: Speaker[] } | undefined;
-const data: Speaker[] = mod?.default ?? [];
+const data: Speaker[] = speakers ?? mod?.default ?? [];
 
 const speakerImages = import.meta.glob("../../assets/speakers/*", {
   eager: true,
@@ -61,12 +63,19 @@ const speakerImageByFileName = Object.fromEntries(
   ]),
 );
 
+const getSpeakerImageKey = (image: ImageMetadata | string) => {
+  if (typeof image === "string") {
+    return image.split("/").pop() ?? image;
+  }
+
+  return image.src.split("/").pop() ?? image.src;
+};
+
 const resolvedData = data.map((speaker, index) => ({
   ...speaker,
   id: `${dataFolder}-${dataSource}-${index}`,
   image:
-    speakerImageByFileName[speaker.image.split("/").pop() ?? ""] ??
-    speaker.image,
+    speakerImageByFileName[getSpeakerImageKey(speaker.image)] ?? speaker.image,
 }));
 ---
 

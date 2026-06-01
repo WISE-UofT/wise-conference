@@ -6,12 +6,14 @@ interface Props {
   images: ImageMetadata[];
   labelPrefix?: string;
   class?: string;
+  slideClass?: string;
 }
 
 const {
   images,
   labelPrefix = "WISE Conference image",
   class: className = "",
+  slideClass = "",
 } = Astro.props;
 ---
 
@@ -28,7 +30,9 @@ const {
     >
       {
         images.map((image, index) => (
-          <div class="h-[clamp(220px,48vw,420px)] w-full min-w-full">
+          <div
+            class={`h-[clamp(220px,48vw,420px)] w-full min-w-full ${slideClass}`.trim()}
+          >
             <Image
               src={image}
               alt={`${labelPrefix} ${index + 1}`}

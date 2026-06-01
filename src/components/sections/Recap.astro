@@ -2,6 +2,7 @@
 import SectionLayout from "../../layouts/SectionLayout.astro";
 import ImageCarousel from "../ui/ImageCarousel.astro";
 import Collapsible from "../ui/Collapsible.astro";
+import SpeakerRow from "../speakers/SpeakerRow.astro";
 import type { ImageMetadata } from "astro";
 
 const recapThemes: Record<string, string> = {
@@ -15,8 +16,31 @@ const recapThemes: Record<string, string> = {
   "2019": "Catalysts for Change",
 };
 
+type RecapSpeaker = {
+  name: string;
+  image: string;
+  title: string;
+  bio?: string;
+  pronouns?: string;
+};
+
+type RecapSpeakerResolved = Omit<RecapSpeaker, "image"> & {
+  image: ImageMetadata | string;
+};
+
 const recapImageModules = import.meta.glob(
   "../../assets/recap/*/*.{jpg,JPG,jpeg,JPEG,png,PNG,webp,WEBP,avif,AVIF,gif,GIF}",
+  {
+    eager: true,
+  },
+);
+
+const recapSpeakerModules = import.meta.glob("../../content/recap/*.json", {
+  eager: true,
+});
+
+const recapSpeakerImageModules = import.meta.glob(
+  "../../assets/previous-speakers/*.{jpg,JPG,jpeg,JPEG,png,PNG,webp,WEBP,avif,AVIF,gif,GIF}",
   {
     eager: true,
   },
@@ -49,30 +73,85 @@ const recapGroupedByYear = Object.entries(recapImageModules).reduce(
   {} as Record<string, RecapImageItem[]>,
 );
 
-const recapByYear = Object.entries(recapGroupedByYear)
-  .map(([year, images]) => ({
+const recapSpeakersByYear = Object.entries(recapSpeakerModules).reduce(
+  (acc, [path, importedModule]) => {
+    const pathParts = path.split("/");
+    const year = pathParts[pathParts.length - 1]?.replace(".json", "") ?? path;
+
+    const speakers = (importedModule as { default: RecapSpeaker[] }).default;
+
+    if (!acc[year]) {
+      acc[year] = [];
+    }
+
+    acc[year] = speakers ?? [];
+    return acc;
+  },
+  {} as Record<string, RecapSpeaker[]>,
+);
+
+const recapSpeakerImagesByFileName = Object.fromEntries(
+  Object.entries(recapSpeakerImageModules).map(([path, imageMod]) => [
+    path.split("/").pop() ?? "",
+    (imageMod as { default: ImageMetadata }).default,
+  ]),
+);
+
+const resolveRecapSpeakerImage = (image: string) => {
+  const fileName = image.split("/").pop() ?? image;
+  return recapSpeakerImagesByFileName[fileName] ?? image;
+};
+
+const recapYears = Object.keys(recapSpeakersByYear)
+  .sort((a, b) => Number(b) - Number(a))
+  .map((year) => ({
     year,
     theme: recapThemes[year] ?? "WISE Highlights",
-    images: images
+    speakers: (recapSpeakersByYear[year] ?? []).map(
+      (speaker) =>
+        ({
+          ...speaker,
+          image: resolveRecapSpeakerImage(speaker.image),
+        }) satisfies RecapSpeakerResolved,
+    ),
+    images: (recapGroupedByYear[year] ?? [])
       .sort((a, b) => a.sortKey.localeCompare(b.sortKey))
       .map((image) => image.image),
-  }))
-  .sort((a, b) => Number(b.year) - Number(a.year));
+  }));
 ---
 
 <SectionLayout title="Recap">
   <div class="space-y-4">
     {
-      recapByYear.map((recap) => (
+      recapYears.map((recap) => (
         <Collapsible
           title={`WISE Conference ${recap.year} — ${recap.theme}`}
           titleClass="text-xl text-purple-dark"
           contentClass="pt-5"
         >
-          <ImageCarousel
-            images={recap.images}
-            labelPrefix={`WISE Conference ${recap.year} Recap Image`}
-          />
+          <div class="space-y-8">
+            {recap.images.length > 0 && (
+              <ImageCarousel
+                images={recap.images}
+                labelPrefix={`WISE Conference ${recap.year} Recap Image`}
+                slideClass="h-[clamp(300px,58vw,560px)]"
+              />
+            )}
+
+            <div class="text-center text-2xl font-semibold">
+              {recap.year} Keynote Speakers
+            </div>
+
+            <SpeakerRow
+              title={`WISE Conference ${recap.year} Speakers`}
+              subtitle=""
+              description=""
+              dataSource={recap.year}
+              speakers={recap.speakers}
+              showHeader={false}
+              class="mb-0"
+            />
+          </div>
         </Collapsible>
       ))
     }
