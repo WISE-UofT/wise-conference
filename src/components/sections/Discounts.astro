@@ -22,7 +22,7 @@ const discountsWithContent = await Promise.all(
 
 <SectionLayout title="Discounts">
   <p
-    class="mb-6 max-w-4xl text-base text-center font-medium mx-auto leading-7 text-blue-navy"
+    class="mb-6 max-w-4xl text-base text-center font-medium mx-auto md:leading-7 text-blue-navy"
   >
     Thank you to the following schools for supporting the WISE National
     Conference 2026! For questions about discounts, please contact <a
@@ -31,7 +31,7 @@ const discountsWithContent = await Promise.all(
     >.
   </p>
   <p
-    class="mb-6 max-w-4xl text-sm italic text-center mx-auto leading-7 text-blue-navy/80"
+    class="mb-6 max-w-4xl text-sm italic text-center mx-auto md:leading-7 text-blue-navy/80"
   >
     All emails and student numbers associated with any discounted purchase will
     be sent to the respective school and faculty to confirm enrollment. Thus,
@@ -44,8 +44,8 @@ const discountsWithContent = await Promise.all(
         <Collapsible
           title={school}
           class="p-0"
-          titleClass="gap-4 px-4 py-2 text-xl font-semibold text-purple-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-primary/50"
-          contentClass="px-4 pt-0 space-y-3 text-base leading-7 text-blue-navy/85 [&_h1]:mt-4 [&_h1]:text-lg [&_h1]:font-semibold [&_h1]:text-blue-navy [&_p]:m-0 [&_strong]:text-purple-primary"
+          titleClass="gap-4 p-0 md:px-4 md:py-2 md:text-xl font-semibold text-purple-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-primary/50"
+          contentClass="p-0 md:px-4 pt-0 space-y-3 text-sm md:text-base md:leading-7 text-blue-navy/85 [&_h1]:mt-4 md:[&_h1]:text-lg [&_h1]:font-semibold [&_h1]:text-blue-navy [&_p]:m-0 [&_strong]:text-purple-primary"
         >
           <Content />
         </Collapsible>

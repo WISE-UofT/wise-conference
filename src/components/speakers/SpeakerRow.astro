@@ -121,7 +121,7 @@ const resolvedData = data.map((speaker, index) => ({
   >
     {
       resolvedData.map((speaker) => (
-        <div class="flex w-full max-w-sm sm:w-[calc((100%-1.25rem)/3)] lg:w-[calc((100%-6.25rem)/6)] lg:max-w-none">
+        <div class="flex max-w-sm w-[calc((100%-1.25rem)/2)] sm:w-[calc((100%-1.25rem)/3)] lg:w-[calc((100%-6.25rem)/6)] lg:max-w-none">
           <SpeakerCard
             name={speaker.name}
             image={speaker.image}
