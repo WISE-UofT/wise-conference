@@ -80,11 +80,7 @@ const recapSpeakersByYear = Object.entries(recapSpeakerModules).reduce(
 
     const speakers = (importedModule as { default: RecapSpeaker[] }).default;
 
-    if (!acc[year]) {
-      acc[year] = [];
-    }
-
-    acc[year] = speakers ?? [];
+    acc[year] = [...(acc[year] ?? []), ...(speakers ?? [])];
     return acc;
   },
   {} as Record<string, RecapSpeaker[]>,
