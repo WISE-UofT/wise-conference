@@ -1,0 +1,12 @@
+---
+const { title, link } = Astro.props;
+---
+
+<li>
+  <a
+    href={link}
+    class="rounded-full px-3 py-1 text-white transition hover:text-white/80"
+  >
+    {title}
+  </a>
+</li>

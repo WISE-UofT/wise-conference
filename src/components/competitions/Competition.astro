@@ -1,16 +1,8 @@
 ---
-import SpeakerBio from "../speakers/SpeakerBio.astro";
-import SpeakerCard from "../speakers/SpeakerCard.astro";
-
-interface JudgeData {
-  name: string;
-  image: string;
-  title: string;
-  bio: string;
-  pronouns?: string;
-}
+import SpeakerRow from "../speakers/SpeakerRow.astro";
 
 interface CompetitionData {
+  fileName: string;
   name: string;
   datetime: string;
   location: string;
@@ -20,7 +12,6 @@ interface CompetitionData {
   prize: string;
   description: string;
   descriptionBullets: string[];
-  judges: JudgeData[];
 }
 
 interface Props {
@@ -40,15 +31,18 @@ const descriptionBullets = competition.descriptionBullets
 
 const hasPrize = competition.prize.trim().length > 0;
 
-const getJudgeId = (
-  competitionName: string,
-  judgeName: string,
-  index: number,
-) =>
-  `${competitionName}-${judgeName}-${index}`
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
+const competitionJudgeFiles = import.meta.glob(
+  "../../content/competitions/*.json",
+  {
+    eager: true,
+  },
+);
+
+const judgesModule = competitionJudgeFiles[
+  `../../content/competitions/${competition.fileName}`
+] as { default?: unknown[] } | undefined;
+
+const hasJudges = (judgesModule?.default?.length ?? 0) > 0;
 ---
 
 <article class="rounded-2xl border border-blue-navy/10 bg-white p-6 shadow-sm">
@@ -117,35 +111,19 @@ const getJudgeId = (
   </a>
 
   {
-    competition.judges.length > 0 && (
+    hasJudges && (
       <div class="mt-8 border-t border-blue-navy/10 pt-6">
         <h4 class="mb-4 text-xl font-semibold text-blue-navy">Judges</h4>
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {competition.judges.map((judge, index) => {
-            const judgeId = getJudgeId(competition.name, judge.name, index);
-
-            return (
-              <>
-                <SpeakerCard
-                  id={judgeId}
-                  name={judge.name}
-                  image={judge.image}
-                  title={judge.title}
-                  bio={judge.bio}
-                  pronouns={judge.pronouns}
-                />
-                <SpeakerBio
-                  id={judgeId}
-                  name={judge.name}
-                  image={judge.image}
-                  title={judge.title}
-                  bio={judge.bio}
-                  pronouns={judge.pronouns}
-                />
-              </>
-            );
-          })}
-        </div>
+        <SpeakerRow
+          title="Judges"
+          subtitle=""
+          description=""
+          dataSource={competition.fileName}
+          dataFolder="competitions"
+          align="left"
+          showHeader={false}
+          class="mb-0"
+        />
       </div>
     )
   }

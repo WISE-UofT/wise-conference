@@ -1,5 +1,6 @@
 ---
 import SectionLayout from "../../layouts/SectionLayout.astro";
+import ImageCarousel from "../ui/ImageCarousel.astro";
 
 import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
@@ -7,87 +8,35 @@ import type { ImageMetadata } from "astro";
 import team from "../../assets/recap/2026/team.webp";
 
 const recapImages = Object.entries(
-	import.meta.glob("../../assets/recap/2026/*.{png,jpg,jpeg,webp,avif}", {
-		eager: true,
-	}),
+  import.meta.glob("../../assets/recap/2026/*.{png,jpg,jpeg,webp,avif}", {
+    eager: true,
+  }),
 )
-	.map(([path, module]) => ({
-		path,
-		src: (module as { default: ImageMetadata }).default,
-	}))
-	.sort((a, b) => a.path.localeCompare(b.path));
+  .map(([path, module]) => ({
+    path,
+    src: (module as { default: ImageMetadata }).default,
+  }))
+  .sort((a, b) => a.path.localeCompare(b.path));
 ---
 
 <SectionLayout title="Overview">
-	<div class="space-y-8">
-		<Image class="rounded-2xl" src={team} alt="WISE 2026 team" />
-		<p
-			class="text-lg text-center max-w-4xl mx-auto leading-8 text-blue-navy/90"
-		>
-			Women in Science and Engineering proudly presented our <span
-				class="font-semibold">14th Annual WISE National Conference</span
-			>
-			on January 17-18, 2026. Thank you to everyone who helped make the event a huge
-			success. Check out some snapshots from the conference and we look forward to
-			seeing you in 2027!
-		</p>
-		<div class="mx-auto grid w-full max-w-4xl gap-3" data-carousel>
-			<div
-				class="overflow-hidden rounded-2xl border border-blue-navy/12 shadow-[0_10px_25px_rgb(16_31_70/0.08)]"
-			>
-				<div
-					class="flex transition-transform duration-420 ease-out will-change-transform"
-					data-carousel-track
-				>
-					{
-						recapImages.map((image, index) => (
-							<div class="h-[clamp(220px,48vw,420px)] w-full min-w-full">
-								<Image
-									src={image.src}
-									alt={`WISE conference recap image ${index + 1}`}
-									class="h-full w-full object-cover"
-									loading="lazy"
-								/>
-							</div>
-						))
-					}
-				</div>
-			</div>
-			<div
-				class="flex items-center justify-between gap-3 max-sm:justify-center"
-			>
-				<button
-					type="button"
-					class="rounded-full border border-blue-navy/25 bg-white px-3.5 py-1.5 text-[0.8rem] font-bold tracking-[0.02em] text-blue-navy transition hover:border-blue-navy/45 hover:bg-blue-navy/6 max-sm:hidden"
-					data-carousel-prev
-					aria-label="Previous recap image"
-				>
-					Prev
-				</button>
-				<div class="flex flex-wrap justify-center gap-2" data-carousel-dots>
-					{
-						recapImages.map((_, index) => (
-							<button
-								type="button"
-								class="h-2.5 w-2.5 rounded-full bg-blue-navy/20 p-0"
-								data-carousel-dot
-								data-index={index}
-								aria-label={`Go to recap image ${index + 1}`}
-							/>
-						))
-					}
-				</div>
-				<button
-					type="button"
-					class="rounded-full border border-blue-navy/25 bg-white px-3.5 py-1.5 text-[0.8rem] font-bold tracking-[0.02em] text-blue-navy transition hover:border-blue-navy/45 hover:bg-blue-navy/6 max-sm:hidden"
-					data-carousel-next
-					aria-label="Next recap image"
-				>
-					Next
-				</button>
-			</div>
-		</div>
-		<!-- <div class="flex flex-wrap gap-3 pt-2">
+  <div class="space-y-8">
+    <Image class="rounded-2xl" src={team} alt="WISE 2026 team" />
+    <p
+      class="text-base md:text-lg text-center max-w-4xl mx-auto md:leading-8 text-blue-navy/90"
+    >
+      Women in Science and Engineering proudly presented our <span
+        class="font-semibold">14th Annual WISE National Conference</span
+      >
+      on January 17-18, 2026. Thank you to everyone who helped make the event a huge
+      success. Check out some snapshots from the conference and we look forward to
+      seeing you in 2027!
+    </p>
+    <ImageCarousel
+      images={recapImages.map((image) => image.src)}
+      labelPrefix="WISE Conference 2026 Recap Image"
+    />
+    <!-- <div class="flex flex-wrap gap-3 pt-2">
 				<a
 					href="https://www.zeffy.com/en-CA/ticketing/wise-national-conference--2026-2"
 					target="_blank"
@@ -98,8 +47,8 @@ const recapImages = Object.entries(
 				</a>
 			</div> -->
 
-		<!-- Countdown -->
-		<!-- <aside class="rounded-2xl bg-blue-navy p-6 text-white shadow-xl">
+    <!-- Countdown -->
+    <!-- <aside class="rounded-2xl bg-blue-navy p-6 text-white shadow-xl">
 			<p class="text-sm font-semibold uppercase tracking-[0.2em] text-purple-light">Conference Starts In</p>
 			<div id="countdown-box" class="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
 				<div class="rounded-xl bg-white/10 p-3 text-center">
@@ -120,10 +69,10 @@ const recapImages = Object.entries(
 				</div>
 			</div>
 		</aside> -->
-	</div>
+  </div>
 
-	<script>
-		/*
+  <script>
+    /*
 		const targetDate = new Date("2026-01-17T08:00:00-05:00").getTime();
 		const days = document.getElementById("countdown-days");
 		const hours = document.getElementById("countdown-hours");
@@ -148,85 +97,5 @@ const recapImages = Object.entries(
 		updateCountdown();
 		window.setInterval(updateCountdown, 1000);
 		*/
-
-		const carousels = document.querySelectorAll<HTMLElement>("[data-carousel]");
-
-		carousels.forEach((carousel) => {
-			const track = carousel.querySelector<HTMLElement>(
-				"[data-carousel-track]",
-			);
-			const prevButton = carousel.querySelector<HTMLButtonElement>(
-				"[data-carousel-prev]",
-			);
-			const nextButton = carousel.querySelector<HTMLButtonElement>(
-				"[data-carousel-next]",
-			);
-			const dots = Array.from(
-				carousel.querySelectorAll<HTMLButtonElement>("[data-carousel-dot]"),
-			);
-
-			if (!track || !prevButton || !nextButton || dots.length === 0) {
-				return;
-			}
-
-			const slideCount = dots.length;
-			let currentIndex = 0;
-			let autoplayId: number | undefined;
-
-			const updateCarousel = () => {
-				track.style.transform = `translateX(-${currentIndex * 100}%)`;
-				dots.forEach((dot, index) => {
-					dot.setAttribute(
-						"aria-current",
-						index === currentIndex ? "true" : "false",
-					);
-					dot.classList.toggle("bg-purple-primary", index === currentIndex);
-					dot.classList.toggle("bg-blue-navy/20", index !== currentIndex);
-				});
-			};
-
-			const goTo = (nextIndex: number) => {
-				currentIndex = (nextIndex + slideCount) % slideCount;
-				updateCarousel();
-			};
-
-			const startAutoplay = () => {
-				if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-					return;
-				}
-				autoplayId = window.setInterval(() => goTo(currentIndex + 1), 5000);
-			};
-
-			const stopAutoplay = () => {
-				if (autoplayId) {
-					window.clearInterval(autoplayId);
-					autoplayId = undefined;
-				}
-			};
-
-			prevButton.addEventListener("click", () => {
-				stopAutoplay();
-				goTo(currentIndex - 1);
-				startAutoplay();
-			});
-
-			nextButton.addEventListener("click", () => {
-				stopAutoplay();
-				goTo(currentIndex + 1);
-				startAutoplay();
-			});
-
-			dots.forEach((dot) => {
-				dot.addEventListener("click", () => {
-					const index = Number(dot.dataset.index ?? "0");
-					stopAutoplay();
-					goTo(index);
-					startAutoplay();
-				});
-			});
-
-			updateCarousel();
-			startAutoplay();
-		});
-	</script>
+  </script>
 </SectionLayout>

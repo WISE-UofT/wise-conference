@@ -1,57 +1,62 @@
 ---
 import SectionLayout from "../../layouts/SectionLayout.astro";
-import Panel from "../speakers/Panel.astro";
+import SpeakerRow from "../speakers/SpeakerRow.astro";
 ---
 
 <SectionLayout title="Speakers">
-    <div
-        class="text-center mb-8 text-base mx-auto max-w-4xl leading-7 text-blue-navy/85"
-    >
-        There will be 2 keynotes and 4-6 speakers at each panel. Stay tuned as
-        we announce more speaker details!
-    </div>
+  <div
+    class="text-center mb-8 text-base mx-auto max-w-4xl leading-7 text-blue-navy/85"
+  >
+    There will be 2 keynotes and 4-6 speakers at each panel. Stay tuned as we
+    announce more speaker details!
+  </div>
 
-    <Panel title="Keynotes" subtitle="" description="" dataSource="keynotes" />
-    <Panel
-        title="Academia Panel"
-        subtitle="Exploring the Unseen Currents: Pathways in Academia"
-        description="Discover the diverse journeys women take in building meaningful academic careers in science and engineering. This panel brings together female professors from both teaching and research streams to share their experiences, challenges, and achievements. Learn how they’ve navigated career transitions, balanced responsibilities, and carved out their own paths—offering practical insight and inspiration for those considering or advancing in academic roles."
-        dataSource="academia-panel"
-    />
-    <Panel
-        title="Finance & Consulting Panel"
-        subtitle="Shifting Gears: Building Business Careers from STEM Foundations"
-        description="Many professionals find that skills they have gained in science and engineering can serve as a springboard into new and unexpected career paths. This panel brings together professionals who shifted gears from STEM into consulting, finance, and strategy, proving that technical expertise can open doors to unexpected opportunities. From actuarial analysts to engineering consultants and financial strategists, panelists will share their journeys, challenges, and insights into building dynamic careers beyond traditional STEM roles."
-        dataSource="finance-consulting-panel"
-    />
-    <Panel
-        title="Sustainability Panel"
-        subtitle="Mission Earth: Roles in STEM That Shape a Sustainable World"
-        description="This panel explores the diverse ways different careers approach sustainability—ranging from the lens of chemistry, all the way to policy. By bringing these perspectives together, we aim to bring an understanding of how to advocate for a healthier planet through different fields."
-        dataSource="sustainability-panel"
-    />
-    <Panel
-        title="Interdisciplinary Panel"
-        subtitle="Diving Deep: Influencing Society Through STEM"
-        description="With this panel, we zoom out and explore how roles in STEM can impact our society. Like the ability for sciences to influence law, how we use mathematics to handle national crises, and more. Our knowledge of each field will be removed from traditional views and we will see how they can all work together to bring change."
-        dataSource="interdisciplinary-panel"
-    />
-    <Panel
-        title="Machine Learning & AI Panel"
-        subtitle="From Data to Discovery: The Evolution of Machine Intelligence"
-        description="This panel explores the rapidly evolving world of machine learning, data science and AI, with a focus on large language models and generative AI as the next frontier. Featuring experts from industry and academia—including engineers, researchers, and leaders from leading companies in AI—we’ll dive into the innovations shaping smarter systems, faster processing, and the future of intelligent technologies."
-        dataSource="machine-learning-ai-panel"
-    />
-    <Panel
-        title="Career Pivot Panel"
-        subtitle="Change to Chance: Exploring Hidden Depths"
-        description="This panel brings together individuals who have taken bold leaps to reinvent their careers, uncovering the hidden depth of their skills and passions as they chart new directions. Their stories reveal how embracing change can surface possibilities that lead to surprising and unconventional paths."
-        dataSource="career-pivot-panel"
-    />
-    <Panel
-        title="Healthcare Panel"
-        subtitle="Beneath the White Coat: The Many Faces of Healthcare Careers"
-        description="From labs to legislatures, innovation to ethics, healthcare is built on many layers of expertise. Behind every patient outcome is a network of professionals — doctors, researchers, bioethicists, clinical coordinators, public health leaders, engineers, and innovators — working to advance medicine, equity, and access. This panel brings together experts from across these fields to dive into the hidden depths of healthcare: the unseen collaborations, discoveries, and systemic innovations that shape the future of care."
-        dataSource="healthcare-panel"
-    />
+  <SpeakerRow
+    title="Keynotes"
+    subtitle=""
+    description=""
+    dataSource="keynotes"
+  />
+  <SpeakerRow
+    title="Academia Panel"
+    subtitle=""
+    description="Discover the diverse journeys women take in building meaningful academic careers in science and engineering. This panel brings together female professors from both teaching and research streams to share their experiences, challenges, and achievements. Learn how they’ve navigated career transitions, balanced responsibilities, and carved out their own paths—offering practical insight and inspiration for those considering or advancing in academic roles."
+    dataSource="academia-panel"
+  />
+  <SpeakerRow
+    title="Finance & Consulting Panel"
+    subtitle=""
+    description="Many professionals find that skills they have gained in science and engineering can serve as a springboard into new and unexpected career paths. This panel brings together professionals who shifted gears from STEM into consulting, finance, and strategy, proving that technical expertise can open doors to unexpected opportunities. From actuarial analysts to engineering consultants and financial strategists, panelists will share their journeys, challenges, and insights into building dynamic careers beyond traditional STEM roles."
+    dataSource="finance-consulting-panel"
+  />
+  <SpeakerRow
+    title="Sustainability Panel"
+    subtitle="Mission Earth: Roles in STEM That Shape a Sustainable World"
+    description="This panel explores the diverse ways different careers approach sustainability—ranging from the lens of chemistry, all the way to policy. By bringing these perspectives together, we aim to bring an understanding of how to advocate for a healthier planet through different fields."
+    dataSource="sustainability-panel"
+  />
+  <SpeakerRow
+    title="Interdisciplinary Panel"
+    subtitle="Diving Deep: Influencing Society Through STEM"
+    description="With this panel, we zoom out and explore how roles in STEM can impact our society. Like the ability for sciences to influence law, how we use mathematics to handle national crises, and more. Our knowledge of each field will be removed from traditional views and we will see how they can all work together to bring change."
+    dataSource="interdisciplinary-panel"
+  />
+  <SpeakerRow
+    title="Machine Learning & AI Panel"
+    subtitle="From Data to Discovery: The Evolution of Machine Intelligence"
+    description="This panel explores the rapidly evolving world of machine learning, data science and AI, with a focus on large language models and generative AI as the next frontier. Featuring experts from industry and academia—including engineers, researchers, and leaders from leading companies in AI—we’ll dive into the innovations shaping smarter systems, faster processing, and the future of intelligent technologies."
+    dataSource="machine-learning-ai-panel"
+  />
+  <SpeakerRow
+    title="Career Pivot Panel"
+    subtitle="Change to Chance: Exploring Hidden Depths"
+    description="This panel brings together individuals who have taken bold leaps to reinvent their careers, uncovering the hidden depth of their skills and passions as they chart new directions. Their stories reveal how embracing change can surface possibilities that lead to surprising and unconventional paths."
+    dataSource="career-pivot-panel"
+  />
+  <SpeakerRow
+    title="Healthcare Panel"
+    subtitle="Beneath the White Coat: The Many Faces of Healthcare Careers"
+    description="From labs to legislatures, innovation to ethics, healthcare is built on many layers of expertise. Behind every patient outcome is a network of professionals — doctors, researchers, bioethicists, clinical coordinators, public health leaders, engineers, and innovators — working to advance medicine, equity, and access. This panel brings together experts from across these fields to dive into the hidden depths of healthcare: the unseen collaborations, discoveries, and systemic innovations that shape the future of care."
+    dataSource="healthcare-panel"
+  />
 </SectionLayout>

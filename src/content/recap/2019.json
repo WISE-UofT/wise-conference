@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Dr. Shawna Pandya",
+    "image": "/assets/previous-speakers/shawna-pandya.webp",
+    "title": "Citizen-Scientist; Astronaut & Aquanaut",
+    "bio": "Dr. Shawna Pandya is a citizen-scientist astronaut candidate with Project PoSSUM & Untethered Exploration, physician-surgeon, speaker, martial artist, advanced diver, skydiver, and pilot-in-training. She holds degrees in neuroscience, space, entrepreneurship, and medicine, and is currently completing concurrent fellowships in Wilderness Medicine and Enhanced Surgical Skills.\n\nIn her spare time, Dr. Pandya practices Taekwondo (as a second-degree black belt) and Muay Thai. She is currently working towards her private pilot's license and holds her accelerated free fall solo skydiving and numerous SCUBA diving certifications. Dr. Pandya also sings and plays the piano."
+  },
+  {
+    "name": "Dr. Kitty Yeung",
+    "image": "/assets/previous-speakers/kitty-yeung.jpg",
+    "title": "Creative Technologist and Manager at The Garage, Microsoft",
+    "bio": "Dr. Kitty Yeung is a physicist, artist, maker, fashion designer and musician based in Silicon Valley, California. She currently works as a creative technologist and manager at The Garage, Microsoft.\n\nDr. Yeung's earlier career had been focused on hardcore scientific research and academic training while pursuing artistic endeavors through painting, music and graphic novel creations. After finishing her PhD in Applied Physics from Harvard University and conducting research at Intel, Dr. Yeung found the perfect way to integrate art/ design with science/technology via tech-fashion design. Her work focuses on applying cutting-edge technologies to both garments and manufacturing processes."
+  },
+  {
+    "name": "Aheri Stanford-Asiyo",
+    "image": "/assets/previous-speakers/aheri-stanford.webp",
+    "title": "Software Engineer at Microsoft",
+    "bio": "Aheri is a Software Engineer at Microsoft working to create next-generation holographic computing solutions for the workplace. Prior to joining Microsoft's Mixed Reality team, she served as a Senior JavaScript Engineer at the Accenture Liquid Studio, a rapid-prototyping facility in Silicon Valley.\n\nAheri previously served as the Chief of Mission Control Security at the National Reconnaissance Office where she oversaw protection of sensitive global satellite operations. She is passionate about empowerment through technology and technology education and served as Lead JavaScript Instructor at Telegraph Prep which prepares students of color for entry into highly competitive software engineering bootcamps."
+  }
+]
