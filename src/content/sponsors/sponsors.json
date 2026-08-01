@@ -1,0 +1,48 @@
+{
+  "corporateSponsors": [
+    { "fileName": "birchhill.webp", "size": "large" },
+    { "fileName": "cohere.webp", "size": "large" },
+    { "fileName": "qualcomm.webp", "size": "large", "breakAfter": true },
+    { "fileName": "intuit.webp", "size": "small" },
+    { "fileName": "amazon_robotics.webp", "size": "small" },
+    { "fileName": "opg.webp", "size": "small" },
+    { "fileName": "vale.webp", "size": "small" },
+    { "fileName": "tetratech.webp", "size": "small" },
+    { "fileName": "arcadis.webp", "size": "small" },
+    { "fileName": "pg.webp", "size": "small" },
+    { "fileName": "intact.webp", "size": "small" },
+    { "fileName": "rakuten.webp", "size": "small" },
+    { "fileName": "cascades.webp", "size": "small" },
+    { "fileName": "cse.webp", "size": "small", "breakAfter": true },
+    { "fileName": "PEO.webp", "size": "medium" },
+    { "fileName": "sanofi.webp", "size": "small" }
+  ],
+  "academicSponsors": [
+    { "fileName": "waterloo-engineering.webp", "size": "medium" },
+    { "fileName": "waterloo-math.webp", "size": "medium" },
+    { "fileName": "waterloo-science.webp", "size": "medium" },
+    { "fileName": "york-eng.webp", "size": "large", "breakAfter": true },
+    { "fileName": "uoft-daniels-forestry.webp", "size": "small" },
+    { "fileName": "uoft-information.webp", "size": "medium" },
+    { "fileName": "tmu-math.webp", "size": "medium" },
+    { "fileName": "guelph-eng.webp", "size": "medium" },
+    { "fileName": "uoft-eng.webp", "size": "large" },
+    { "fileName": "stgeorges-med.webp", "size": "medium" },
+    { "fileName": "tmu-physics.webp", "size": "medium" }
+  ],
+  "academicContributors": [
+    { "fileName": "utm-ovpad.webp", "size": "medium" },
+    { "fileName": "tmu-arch-des-eng.webp", "size": "medium" },
+    { "fileName": "uoft-comp-sci.webp", "size": "medium" },
+    { "fileName": "uoft-physics.webp", "size": "medium" },
+    { "fileName": "uoft-chemistry.webp", "size": "medium" },
+    { "fileName": "uoft-art-sci.webp", "size": "medium" },
+    { "fileName": "uoft-mol-gen.webp", "size": "medium" },
+    { "fileName": "uoft-earth-sci.webp", "size": "medium" },
+    { "fileName": "uoft-pharm-tox.webp", "size": "medium" },
+    { "fileName": "mcgill.webp", "size": "small" },
+    { "fileName": "mcmaster-wie.webp", "size": "small" },
+    { "fileName": "utm-bio.webp", "size": "medium" },
+    { "fileName": "uoft-csb.webp", "size": "small" }
+  ]
+}

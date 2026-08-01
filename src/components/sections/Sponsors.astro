@@ -2,114 +2,71 @@
 import type { ImageMetadata } from "astro";
 import SectionLayout from "../../layouts/SectionLayout.astro";
 import SponsorSection from "../sponsors/SponsorSection.astro";
-
-type SponsorLogo = {
-	fileName: string;
-	sizeClass?: string;
-	breakAfter?: boolean;
-};
+import sponsorsData from "../../content/sponsors/sponsors.json";
 
 const sizeLarge = "max-w-80 sm:max-w-80";
 const sizeMedium = "max-w-50 sm:max-w-50";
 const sizeSmall = "max-w-40 sm:max-w-40";
 
-function sponsor(
-	fileName: string,
-	sizeClass = sizeMedium,
-	breakAfter = false,
-): SponsorLogo {
-	return { fileName, sizeClass, breakAfter };
-}
+const sizeMap: Record<string, string> = {
+  large: sizeLarge,
+  medium: sizeMedium,
+  small: sizeSmall,
+};
 
-const corporateSponsors = [
-	sponsor("birchhill.webp", sizeLarge),
-	sponsor("cohere.webp", sizeLarge),
-	sponsor("qualcomm.webp", sizeLarge, true),
-	sponsor("intuit.webp", sizeSmall),
-	sponsor("amazon_robotics.webp", sizeSmall),
-	sponsor("opg.webp", sizeSmall),
-	sponsor("vale.webp", sizeSmall),
-	sponsor("tetratech.webp", sizeSmall),
-	sponsor("arcadis.webp", sizeSmall),
-	sponsor("pg.webp", sizeSmall),
-	sponsor("intact.webp", sizeSmall),
-	sponsor("rakuten.webp", sizeSmall),
-	sponsor("cascades.webp", sizeSmall),
-	sponsor("cse.webp", sizeSmall, true),
-	sponsor("PEO.webp", sizeMedium),
-	sponsor("sanofi.webp", sizeSmall),
-];
+const toLogoList = (
+  entries: { fileName: string; size: string; breakAfter?: boolean }[],
+) =>
+  entries.map(({ fileName, size, breakAfter = false }) => ({
+    fileName,
+    sizeClass: sizeMap[size] ?? sizeMedium,
+    breakAfter,
+  }));
 
-const academicSponsors = [
-	sponsor("waterloo-engineering.webp", sizeMedium),
-	sponsor("waterloo-math.webp", sizeMedium),
-	sponsor("waterloo-science.webp", sizeMedium),
-	sponsor("york-eng.webp", sizeLarge, true),
-	sponsor("uoft-daniels-forestry.webp", sizeSmall),
-	sponsor("uoft-information.webp", sizeMedium),
-	sponsor("tmu-math.webp", sizeMedium),
-	sponsor("guelph-eng.webp", sizeMedium),
-	sponsor("uoft-eng.webp", sizeLarge),
-	sponsor("stgeorges-med.webp", sizeMedium),
-	sponsor("tmu-physics.webp", sizeMedium),
-];
-
-const academicContributors = [
-	sponsor("utm-ovpad.webp", sizeMedium),
-	sponsor("tmu-arch-des-eng.webp", sizeMedium),
-	sponsor("uoft-comp-sci.webp", sizeMedium),
-	sponsor("uoft-physics.webp", sizeMedium),
-	sponsor("uoft-chemistry.webp", sizeMedium),
-	sponsor("uoft-art-sci.webp", sizeMedium),
-	sponsor("uoft-mol-gen.webp", sizeMedium),
-	sponsor("uoft-earth-sci.webp", sizeMedium),
-	sponsor("uoft-pharm-tox.webp", sizeMedium),
-	sponsor("mcgill.webp", sizeSmall),
-	sponsor("mcmaster-wie.webp", sizeSmall),
-	sponsor("utm-bio.webp", sizeMedium),
-	sponsor("uoft-csb.webp", sizeSmall),
-];
+const corporateSponsors = toLogoList(sponsorsData.corporateSponsors);
+const academicSponsors = toLogoList(sponsorsData.academicSponsors);
+const academicContributors = toLogoList(sponsorsData.academicContributors);
 
 const corporateSponsorImages = import.meta.glob<{ default: ImageMetadata }>(
-	"../../assets/sponsors/corporate/*.{webp,png,svg}",
-	{ eager: true },
+  "../../assets/sponsors/corporate/*.{webp,png,svg}",
+  { eager: true },
 );
 
 const academicSponsorImages = import.meta.glob<{ default: ImageMetadata }>(
-	"../../assets/sponsors/academic/*.{webp,png,svg}",
-	{ eager: true },
+  "../../assets/sponsors/academic/*.{webp,png,svg}",
+  { eager: true },
 );
 ---
 
 <SectionLayout title="Sponsors">
-	<p class="mb-8 text-base text-center text-blue-navy/80">
-		Want to sponsor the WISE National Conference? Reach out at
-		<a
-			class="font-semibold text-purple-primary"
-			href="mailto:vp.finance@wise.skule.ca">vp.finance@wise.skule.ca</a
-		>.
-	</p>
+  <p class="mb-8 text-base text-center text-blue-navy/80">
+    Want to sponsor the WISE National Conference? Reach out at
+    <a
+      class="font-semibold text-purple-primary"
+      href="mailto:vp.finance@wise.skule.ca">vp.finance@wise.skule.ca</a
+    >.
+  </p>
 
-	<div class="space-y-10">
-		<SponsorSection
-			title="Corporate Partners"
-			logos={corporateSponsors}
-			basePath="../../assets/sponsors/corporate"
-			images={corporateSponsorImages}
-		/>
+  <div class="space-y-10">
+    <SponsorSection
+      title="Corporate Partners"
+      logos={corporateSponsors}
+      basePath="../../assets/sponsors/corporate"
+      images={corporateSponsorImages}
+    />
 
-		<SponsorSection
-			title="Academic Sponsors"
-			logos={academicSponsors}
-			basePath="../../assets/sponsors/academic"
-			images={academicSponsorImages}
-		/>
+    <SponsorSection
+      title="Academic Sponsors"
+      logos={academicSponsors}
+      basePath="../../assets/sponsors/academic"
+      images={academicSponsorImages}
+    />
 
-		<SponsorSection
-			title="Academic Contributors"
-			logos={academicContributors}
-			basePath="../../assets/sponsors/academic"
-			images={academicSponsorImages}
-		/>
-	</div>
+    <SponsorSection
+      title="Academic Contributors"
+      logos={academicContributors}
+      basePath="../../assets/sponsors/academic"
+      images={academicSponsorImages}
+    />
+  </div>
 </SectionLayout>

@@ -1,124 +1,30 @@
----
+﻿---
 import SectionLayout from "../../layouts/SectionLayout.astro";
 import Workshop from "../workshops/Workshop.astro";
-
-interface WorkshopData {
-	title: string;
-	description: string;
-	location: string;
-	time: string;
-	speakerDataSource?: string;
-}
-
-const workshops: WorkshopData[] = [
-	{
-		title:
-			"Inclusive Innovation: Integrating Equity-Based Design Thinking in Science and Engineering",
-		description:
-			"Innovative teams need diverse perspectives to design meaningful solutions. Without them, blind spots and bias can limit creativity and impact.\nUp4 The Challenge is hosting a hands-on design sprint that applies equity-based principles to explore how identity, values, and social context shape design outcomes. Participants will gain practical tools to apply co-design approaches directly to their current projects, generating more inclusive and impactful solutions.",
-		location: "Pier 4",
-		time: "Saturday, 10:30 AM - 12 PM EST",
-		speakerDataSource: "equity-workshop",
-	},
-	{
-		title: "From Data to Decisions: A Hands-On Case Study",
-		description:
-			"Join Birch Hill Data Science & Strategy for a hands-on workshop where you'll use data to solve a company's real-world market expansion challenge. Working in teams, you'll analyze external market insights and internal financial metrics to answer to recommend whether and where a company should open a new location. Learn how our team turns data into strategy using market research, competitive mapping, and key performance metrics. This workshop is perfect for students interested in data-driven decision making, business strategy, and real-world problem solving.",
-		location: "Pier 5",
-		time: "Saturday, 10:30 AM - 12 PM EST",
-		speakerDataSource: "birch-hill-workshop",
-	},
-	{
-		title:
-			"Model Context Protocol: Building AI Agents That Interact with The Real World",
-		description:
-			"While artificial intelligence has been gradually providing more and more value across society, most of us still have little control in how exactly these systems integrate into our lives; we're constrained by whatever products happen to exist. In this workshop, you’ll learn about Model Context Protocol (MCP) and learn to build your own MCP tool so AI can interact with your world and power the use cases you care about.",
-		location: "Pier 4",
-		time: "Saturday, 1 PM - 2:30 PM EST",
-		speakerDataSource: "cohere-workshop",
-	},
-	{
-		title: "Discovering Your Leadership Depths: Turning Values into Action",
-		description:
-			"What does leadership mean to you? In this reflective and interactive professional development workshop, you will learn strategies to strengthen your leadership identity, reflect on your core values and strengths, and set meaningful SMART & PACE goals to guide your leadership development in your personal and professional journey.",
-		location: "Pier 5",
-		time: "Saturday, 1 PM - 2:30 PM EST",
-		speakerDataSource: "leadership-workshop",
-	},
-	{
-		title: "Qualcomm Workshop: Intro to Edge AI",
-		description:
-			"Enter into the world of Edge AI in this beginner-friendly, hands-on workshop! Learn how low-power, on-device AI can solve real-world problems without relying on the cloud. Collect data, train and test a machine learning model, and see how the same model can run on a tiny device. No coding experience required. All you need is curiosity, a willingness to experiment, and a laptop to follow along!",
-		location: "Harbour Ballroom",
-		time: "Sunday, 10 AM - 11:30 AM EST",
-		speakerDataSource: "qualcomm-workshop",
-	},
-	{
-		title:
-			"From Lab to Launch: A Practical Guide on Entrepreneurship and How to Turn Ideas into Impact",
-		description:
-			"Have a promising idea, but not sure if it could become a sustainable business? Interested in entrepreneurship, but not sure where to get started? This interactive workshop will serve as a practical guide, bridging the gap between technical innovation and commercial success. Participants will learn how to apply the Business Model Canvas, a powerful framework for evaluating if a technical concept has a viable path to market. Attendees will have an opportunity to map out a business idea and explore key elements such as value propositions, customer segments, and revenue streams. The activity will be followed by a discussion with Serena Mandla, CSO and Co-Founder of Noa Therapeutics, a preclinical biotech company harnessing the power of the innate immune system, where she'll share her company's journey and the unique challenges of launching a company in a capital-intensive field and strategies for overcoming early hurdles.",
-		location: "Pier 4",
-		time: "Sunday, 10 AM - 11:30 AM EST",
-		speakerDataSource: "entrepreneurship-workshop",
-	},
-	{
-		title:
-			"Designing Your Own Satellite: An Interactive Workshop in Satellite Operations",
-		description:
-			"Join UTAT Space Systems for an inside look at how real satellites are designed, built, and operated. We'll walk through our current Earth-observation mission, FINCH, which monitors crop residue for agricultural sustainability, and share how our team successfully launched Canada's first fully student-funded satellite, and the highest-orbiting satellite ever built by an undergraduate design team in the country.\nParticipants will learn how systems engineering guides every stage of a mission, from NASA's design phases to operational concepts, mode planning, and onboard logic using finite state machines. In the second half of the workshop, you'll work hands-on to design your own satellite modes of operation by arranging internal command flows and creating a functioning mission logic structure. No prior experience required, just curiosity and creativity.",
-		location: "Pier 5",
-		time: "Sunday, 10 AM - 11:30 AM EST",
-		speakerDataSource: "utat-workshop",
-	},
-	{
-		title: "How fMRI Sees the Active Brain: An Introduction to fMRI",
-		description:
-			"This workshop introduces participants to how fMRI detects changes in blood oxygenation to infer neural activity. After learning how fMRI captures delayed hemodynamic responses, participants will use guided code to model voxel-level brain activity using a simple model (no prior coding experience is required). Clinical applications and future directions of fMRI technology will also be highlighted.",
-		location: "Pier 4",
-		time: "Sunday, 11:30 AM - 1 PM EST",
-		speakerDataSource: "fmri-workshop",
-	},
-	{
-		title: "Winning in a Tough Tech Market",
-		description:
-			"The technical interview process is more competitive than ever. Having navigated it myself this year, I've seen firsthand just how intense the market has become—and how success often hinges on more than just solving coding problems. At the same time, as someone who has interviewed and coached countless candidates, I know exactly what differentiates those who walk away with offers from those who don't.\nThis session is the most holistic, end-to-end guide to technical interviews you'll ever attend. We'll cover the entire journey: from building your network and preparing before the first recruiter call, to standing out during behavioral, coding, and system design rounds, to handling rejections, multiple offers, and negotiations with confidence. Along the way, I'll share concrete strategies, templates, and stories—drawn from both sides of the table—that reveal the little things strong candidates do differently to stand out.\nYou'll leave not just with a roadmap for interview prep, but with the practical tools and confidence to navigate every stage of the process—and maximize your chances of landing the offer.",
-		location: "Pier 5",
-		time: "Sunday, 11:30 AM - 1 PM EST",
-		speakerDataSource: "interview-workshop",
-	},
-	{
-		title: "Mapping Your Academic Journey",
-		description:
-			"In this interactive workshop, Professor Morgan Hooper and Professor Sarah Haines from the University of Toronto will share their own journeys through STEM, from early interests to becoming professors, along with insights from colleagues across diverse academic paths. Participants will build their own \"academic roadmap,\" exploring degree options, timelines, and the many directions a STEM education can lead. Through guided reflection and activities, you'll have the opportunity to identify your values, interests, and long-term goals, and translate them into a concrete, personalized plan for your academic future. By the end of the session, you'll walk away with clarity on potential pathways, key questions for next steps, and the tools to navigate the graduate school landscape with confidence.",
-		location: "Pier 4",
-		time: "Sunday, 2 PM - 3:30 PM EST",
-		speakerDataSource: "academia-workshop",
-	},
-];
+import workshops from "../../content/workshops/workshops-content.json";
 ---
 
 <SectionLayout title="Workshops">
-	<p
-		class="mb-8 max-w-4xl mx-auto text-base text-center leading-7 text-blue-navy/85"
-	>
-		Workshops are a wonderful way for you to more actively take part in the
-		Conference! Our demos, activities, and guided discussions are designed to
-		allow you to get exposure to new concepts, develop useful skills, and engage
-		with fellow attendees. With the focus being more on skill-building, we
-		believe that everyone will be able to find something useful and inspiring
-		from attending these workshops, no matter where their interests lie. Unless
-		indicated otherwise, no materials are required for the workshops.
-	</p>
+  <p
+    class="mb-8 max-w-4xl mx-auto text-base text-center leading-7 text-blue-navy/85"
+  >
+    Workshops are a wonderful way for you to more actively take part in the
+    Conference! Our demos, activities, and guided discussions are designed to
+    allow you to get exposure to new concepts, develop useful skills, and engage
+    with fellow attendees. With the focus being more on skill-building, we
+    believe that everyone will be able to find something useful and inspiring
+    from attending these workshops, no matter where their interests lie. Unless
+    indicated otherwise, no materials are required for the workshops.
+  </p>
 
-	<div class="space-y-6">
-		{
-			workshops.map((workshop) => (
-				<Workshop
-					workshop={workshop}
-					speakerDataSource={workshop.speakerDataSource}
-				/>
-			))
-		}
-	</div>
+  <div class="space-y-6">
+    {
+      workshops.map((workshop) => (
+        <Workshop
+          workshop={workshop}
+          speakerDataSource={workshop.speakerDataSource}
+        />
+      ))
+    }
+  </div>
 </SectionLayout>

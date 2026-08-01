@@ -1,346 +1,83 @@
 ---
 import SectionLayout from "../../layouts/SectionLayout.astro";
+import scheduleData from "../../content/schedule/schedule-content.json";
 
 type EventType =
-	| "general"
-	| "keynote"
-	| "panel"
-	| "workshop"
-	| "competition"
-	| "special";
+  "general" | "keynote" | "panel" | "workshop" | "competition" | "special";
 
 const typeStyles: Record<EventType, string> = {
-	general: "bg-gray-200 text-blue-navy",
-	keynote: "bg-blue-navy/80 text-white",
-	panel: "bg-purple-primary/20 text-purple-dark",
-	workshop: "bg-purple-primary/35 text-purple-dark",
-	competition: "bg-purple-primary/50 text-purple-dark",
-	special: "bg-blue-navy/80 text-white",
+  general: "bg-gray-200 text-blue-navy",
+  keynote: "bg-blue-navy/80 text-white",
+  panel: "bg-purple-primary/20 text-purple-dark",
+  workshop: "bg-purple-primary/35 text-purple-dark",
+  competition: "bg-purple-primary/50 text-purple-dark",
+  special: "bg-blue-navy/80 text-white",
 };
 
 const typeLabels: Record<EventType, string> = {
-	general: "General",
-	keynote: "Keynote",
-	panel: "Panel",
-	workshop: "Workshop",
-	competition: "Competition",
-	special: "Special",
+  general: "General",
+  keynote: "Keynote",
+  panel: "Panel",
+  workshop: "Workshop",
+  competition: "Competition",
+  special: "Special",
 };
 
-const schedule = [
-	{
-		day: "Day 1",
-		date: "Saturday, January 17",
-		blocks: [
-			{
-				time: "8:00 – 9:30 AM",
-				events: [
-					{
-						title: "Registration & Breakfast",
-						location: "Harbour Foyer",
-						type: "general" as EventType,
-					},
-				],
-			},
-			{
-				time: "9:00 – 9:30 AM",
-				events: [
-					{
-						title: "Opening Ceremony",
-						location: "Harbour Ballroom",
-						type: "general" as EventType,
-					},
-				],
-			},
-			{
-				time: "9:30 – 10:30 AM",
-				events: [
-					{
-						title: "Diana Anderson",
-						location: "Harbour Ballroom",
-						type: "keynote" as EventType,
-					},
-				],
-			},
-			{
-				time: "10:30 AM – 12:00 PM",
-				events: [
-					{
-						title: "Exploring the Unseen Currents: Pathways in Academia",
-						location: "Pier 2 & 3",
-						type: "panel" as EventType,
-					},
-					{
-						title:
-							"Inclusive Innovation: Integrating Equity-Based Design Thinking in Science and Engineering",
-						location: "Pier 4",
-						type: "workshop" as EventType,
-					},
-					{
-						title: "Birch Hill: From Data to Decisions: A Hands-On Case Study",
-						location: "Pier 5",
-						type: "workshop" as EventType,
-					},
-					{
-						title: "CUBE Case Competition",
-						location: "Pier 9",
-						type: "competition" as EventType,
-					},
-				],
-			},
-			{
-				time: "12:00 – 1:00 PM",
-				events: [
-					{
-						title: "Lunch",
-						location: "Harbour Foyer",
-						type: "general" as EventType,
-					},
-				],
-			},
-			{
-				time: "1:00 – 2:30 PM",
-				events: [
-					{
-						title:
-							"Shifting Gears: Building Business Careers from STEM Foundations",
-						location: "Harbour Ballroom",
-						type: "panel" as EventType,
-					},
-					{
-						title:
-							"Cohere – Model Context Protocol: Building AI Agents That Interact with The Real World",
-						location: "Pier 4",
-						type: "workshop" as EventType,
-					},
-					{
-						title:
-							"Discovering Your Leadership Depths: Turning Values into Action",
-						location: "Pier 5",
-						type: "workshop" as EventType,
-					},
-					{
-						title: "5 Minute Thesis (until 3:00 PM)",
-						location: "Pier 9",
-						type: "competition" as EventType,
-					},
-				],
-			},
-			{
-				time: "2:30 – 4:30 PM",
-				events: [
-					{
-						title: "Career & Grad Fair",
-						location: "Harbour Foyer, Pier 2 & 3",
-						type: "special" as EventType,
-					},
-				],
-			},
-			{
-				time: "4:30 – 5:00 PM",
-				events: [
-					{
-						title: "Closing Remarks",
-						location: "Harbour Ballroom",
-						type: "general" as EventType,
-					},
-				],
-			},
-		],
-	},
-	{
-		day: "Day 2",
-		date: "Sunday, January 18",
-		blocks: [
-			{
-				time: "8:00 – 9:00 AM",
-				events: [
-					{
-						title: "Registration & Breakfast",
-						location: "Harbour Foyer",
-						type: "general" as EventType,
-					},
-				],
-			},
-			{
-				time: "9:00 – 10:00 AM",
-				events: [
-					{
-						title: "Mic Liu",
-						location: "Harbour Ballroom",
-						type: "keynote" as EventType,
-					},
-				],
-			},
-			{
-				time: "10:00 – 11:30 AM",
-				events: [
-					{
-						title: "Qualcomm – Intro to Edge AI",
-						location: "Harbour Ballroom",
-						type: "workshop" as EventType,
-					},
-					{
-						title:
-							"Mission Earth: Roles in STEM That Shape a Sustainable World",
-						location: "Pier 2 & 3",
-						type: "panel" as EventType,
-					},
-					{
-						title:
-							"From Lab to Launch: A Practical Guide on Entrepreneurship and How to Turn Ideas into Impact",
-						location: "Pier 4",
-						type: "workshop" as EventType,
-					},
-					{
-						title:
-							"UTAT – Designing Your Own Satellite: An Interactive Workshop in Satellite Operations",
-						location: "Pier 5",
-						type: "workshop" as EventType,
-					},
-					{
-						title: "Cohere Hackathon Judging (until 12:00 PM)",
-						location: "Pier 9",
-						type: "competition" as EventType,
-					},
-				],
-			},
-			{
-				time: "11:30 AM – 1:00 PM",
-				events: [
-					{
-						title: "Diving Deep: Influencing Society Through STEM",
-						location: "Pier 2 & 3",
-						type: "panel" as EventType,
-					},
-					{
-						title: "How fMRI Sees the Active Brain: An Introduction to fMRI",
-						location: "Pier 4",
-						type: "workshop" as EventType,
-					},
-					{
-						title: "Winning in a Tough Tech Market",
-						location: "Pier 5",
-						type: "workshop" as EventType,
-					},
-				],
-			},
-			{
-				time: "1:00 – 2:00 PM",
-				events: [
-					{
-						title: "Lunch",
-						location: "Harbour Foyer",
-						type: "general" as EventType,
-					},
-				],
-			},
-			{
-				time: "2:00 – 3:30 PM",
-				events: [
-					{
-						title:
-							"From Data to Discovery: The Evolution of Machine Intelligence",
-						location: "Pier 2 & 3",
-						type: "panel" as EventType,
-					},
-					{
-						title: "Mapping Your Academic Journey",
-						location: "Pier 4",
-						type: "workshop" as EventType,
-					},
-					{
-						title: "From Change to Chance: Exploring Hidden Depths",
-						location: "Pier 5",
-						type: "panel" as EventType,
-					},
-				],
-			},
-			{
-				time: "3:00 – 4:00 PM",
-				events: [
-					{
-						title: "Poster Fair",
-						location: "Harbour Foyer",
-						type: "competition" as EventType,
-					},
-				],
-			},
-			{
-				time: "3:30 – 5:00 PM",
-				events: [
-					{
-						title: "Coffee Chats",
-						location: "Harbour Foyer",
-						type: "special" as EventType,
-					},
-					{
-						title: "Beneath the White Coat: The Many Faces of Healthcare",
-						location: "Pier 2 & 3",
-						type: "panel" as EventType,
-					},
-				],
-			},
-			{
-				time: "5:00 – 5:30 PM",
-				events: [
-					{
-						title: "Closing Ceremony",
-						location: "Harbour Ballroom",
-						type: "general" as EventType,
-					},
-				],
-			},
-		],
-	},
-];
+const schedule = scheduleData as {
+  day: string;
+  date: string;
+  blocks: {
+    time: string;
+    events: { title: string; location: string; type: EventType }[];
+  }[];
+}[];
 ---
 
 <SectionLayout title="Schedule">
-	<p
-		class="mb-8 text-sm text-center font-semibold uppercase tracking-[0.2em] text-blue-navy/50"
-	>
-		All times are in Eastern Standard Time (EST)
-	</p>
+  <p
+    class="mb-8 text-sm text-center font-semibold uppercase tracking-[0.2em] text-blue-navy/50"
+  >
+    All times are in Eastern Standard Time (EST)
+  </p>
 
-	<div class="grid gap-6 lg:grid-cols-2">
-		{
-			schedule.map((day) => (
-				<article class="rounded-2xl border border-blue-navy/10 bg-white p-6 shadow-sm">
-					<p class="text-sm font-semibold uppercase tracking-[0.2em] text-purple-primary">
-						{day.day}
-					</p>
-					<h3 class="mt-1 text-2xl font-semibold text-blue-navy">{day.date}</h3>
+  <div class="grid gap-6 lg:grid-cols-2">
+    {
+      schedule.map((day) => (
+        <article class="rounded-2xl border border-blue-navy/10 bg-white p-6 shadow-sm">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-purple-primary">
+            {day.day}
+          </p>
+          <h3 class="mt-1 text-2xl font-semibold text-blue-navy">{day.date}</h3>
 
-					<ol class="mt-5 space-y-3">
-						{day.blocks.map((block) => (
-							<li>
-								<p class="mt-5 mb-2 text-base font-semibold text-blue-navy/70">
-									{block.time}
-								</p>
-								<ul class="space-y-3">
-									{block.events.map((event) => (
-										<li
-											class={`flex items-start gap-3 rounded-xl px-4 py-3 ${typeStyles[event.type]}`}
-										>
-											<div>
-												<p class="text-base font-semibold leading-snug">
-													{event.title}
-												</p>
-												<p class="mt-1 text-sm font-medium opacity-90">
-													{event.type === "general"
-														? event.location
-														: `${typeLabels[event.type]} • ${event.location}`}
-												</p>
-											</div>
-										</li>
-									))}
-								</ul>
-							</li>
-						))}
-					</ol>
-				</article>
-			))
-		}
-	</div>
+          <ol class="mt-5 space-y-3">
+            {day.blocks.map((block) => (
+              <li>
+                <p class="mt-5 mb-2 text-base font-semibold text-blue-navy/70">
+                  {block.time}
+                </p>
+                <ul class="space-y-3">
+                  {block.events.map((event) => (
+                    <li
+                      class={`flex items-start gap-3 rounded-xl px-4 py-3 ${typeStyles[event.type]}`}
+                    >
+                      <div>
+                        <p class="text-base font-semibold leading-snug">
+                          {event.title}
+                        </p>
+                        <p class="mt-1 text-sm font-medium opacity-90">
+                          {event.type === "general"
+                            ? event.location
+                            : `${typeLabels[event.type]} • ${event.location}`}
+                        </p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ol>
+        </article>
+      ))
+    }
+  </div>
 </SectionLayout>
