@@ -1,22 +1,17 @@
 ---
-import { getCollection, render, type CollectionEntry } from "astro:content";
+import discountsContent from "../../content/discounts/discounts-content.json";
+import discountsData from "../../content/discounts/discounts-data.json";
 import SectionLayout from "../../layouts/SectionLayout.astro";
 import Collapsible from "../ui/Collapsible.astro";
+import Discount from "../discounts/Discount.astro";
 
-const discounts: CollectionEntry<"discounts">[] =
-  await getCollection("discounts");
-const discountsWithContent = await Promise.all(
-  discounts
-    .sort((a: CollectionEntry<"discounts">, b: CollectionEntry<"discounts">) =>
-      a.data.school.localeCompare(b.data.school),
-    )
-    .map(async (entry: CollectionEntry<"discounts">) => {
-      const { Content } = await render(entry);
-      return {
-        school: entry.data.school,
-        Content,
-      };
-    }),
+const data = discountsData as Record<
+  string,
+  { used: number; limit: number; available: number }
+>;
+
+const schools = Object.entries(discountsContent).sort(([a], [b]) =>
+  a.localeCompare(b),
 );
 ---
 
@@ -40,14 +35,31 @@ const discountsWithContent = await Promise.all(
   </p>
   <div class="grid gap-5">
     {
-      discountsWithContent.map(({ school, Content }) => (
+      schools.map(([school, departments]) => (
         <Collapsible
           title={school}
           class="p-0"
           titleClass="gap-4 p-0 md:px-4 md:py-2 md:text-xl font-semibold text-purple-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-primary/50"
           contentClass="p-0 md:px-4 pt-0 space-y-3 text-sm md:text-base md:leading-7 text-blue-navy/85 [&_h1]:mt-4 md:[&_h1]:text-lg [&_h1]:font-semibold [&_h1]:text-blue-navy [&_p]:m-0 [&_strong]:text-purple-primary"
         >
-          <Content />
+          {Object.entries(departments).map(
+            ([dept, { content, code, displayCode }]) => {
+              const { available, limit } = data[code ?? ""] ?? {
+                available: 0,
+                limit: 0,
+              };
+              return (
+                <Discount
+                  department={dept !== "General" ? dept : undefined}
+                  content={content}
+                  code={code}
+                  displayCode={displayCode}
+                  available={available}
+                  limit={limit}
+                />
+              );
+            },
+          )}
         </Collapsible>
       ))
     }

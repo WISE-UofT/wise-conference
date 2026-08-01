@@ -1,0 +1,99 @@
+{
+  "University of Guelph": {
+    "Engineering": {
+      "content": "The Doody Family Chair for Women in Engineering at Guelph and University of Guelph College of Engineering have generously offered to provide 83% off tickets for 19 interested members of the Guelph WiSE Executive.",
+      "code": "GUELPH_ENG26",
+      "displayCode": true
+    }
+  },
+  "Humber College": {
+    "General": {
+      "content": "Humber College has generously offered to provide free tickets for 20 interested students.",
+      "code": "HUMBER26",
+      "displayCode": true
+    }
+  },
+  "McMaster University": {
+    "Women in Engineering": {
+      "content": "McMaster University Women in Engineering has generously offered to provide 50% off tickets for 10 interested engineering students.",
+      "code": "MAC_WIE26",
+      "displayCode": true
+    }
+  },
+  "Toronto Metropolitan University": {
+    "Faculty of Engineering and Architectural Science - Graduate": {
+      "content": "The Toronto Metropolitan University Faculty of Engineering and Architectural Science has generously offered to provide 70% off tickets for 15 interested graduate engineering and architecture students.",
+      "code": "TMUGRAD_ARCH_DESENG26",
+      "displayCode": true
+    },
+    "Faculty of Engineering and Architectural Science - Undergraduate": {
+      "content": "The Toronto Metropolitan University Faculty of Engineering and Architectural Science has generously offered to provide 70% off tickets for 25 interested undergraduate engineering and architecture students.",
+      "code": "TMU_ARCH_DESENG26",
+      "displayCode": true
+    },
+    "Department of Mathematics": {
+      "content": "The Toronto Metropolitan University Department of Mathematics has generously offered to provide free tickets for 2 interested mathematics students.",
+      "code": "TMU_MATH26",
+      "displayCode": true
+    }
+  },
+  "University of Toronto": {
+    "Faculty of Applied Science and Engineering": {
+      "content": "The University of Toronto Faculty of Applied Science and Engineering has generously offered to provide 80% off tickets for 170 interested engineering students.",
+      "code": "UOFT_ENG26",
+      "displayCode": true
+    },
+    "Faculty of Arts and Science": {
+      "content": "The University of Toronto Faculty of Arts and Science has generously offered to provide 83% off tickets for 10 interested arts & science students.",
+      "code": "UOFT_AS26",
+      "displayCode": true
+    },
+    "Department of Cell and Systems Biology": {
+      "content": "The University of Toronto Department of Cell and Systems Biology has generously offered to provide 50% off tickets for 6 interested cell and systems biology students.",
+      "code": "UOFT_CSB26",
+      "displayCode": true
+    },
+    "Department of Chemistry": {
+      "content": "The University of Toronto Department of Chemistry has generously offered to provide free tickets for 10 interested chemistry students.",
+      "code": "UOFT_CHEM26",
+      "displayCode": true
+    },
+    "Department of Computer Science": {
+      "content": "The University of Toronto Department of Computer Science has generously offered to provide free tickets for 12 interested computer science students. In order to receive this benefit, please fill out [this form](https://forms.office.com/r/gKaax8dvKG) by **December 18th, 2025** to apply for this subsidy.",
+      "code": "UOFT_CS26",
+      "displayCode": false
+    },
+    "Department of Earth Sciences": {
+      "content": "The University of Toronto Department of Earth Sciences has generously offered to provide free tickets for 6 interested earth sciences students.",
+      "code": "UOFT_EARTHSCI26",
+      "displayCode": true
+    },
+    "Department of Molecular Genetics": {
+      "content": "The University of Toronto Department of Molecular Genetics has generously offered to provide free tickets for 8 interested molecular genetics students.",
+      "code": "UOFT_MG26",
+      "displayCode": true
+    },
+    "Department of Pharmacology and Toxicology": {
+      "content": "The University of Toronto Department of Pharmacology and Toxicology has generously offered to provide free tickets for 5 interested pharmacology and toxicology students.",
+      "code": "UOFT_PT26",
+      "displayCode": true
+    },
+    "Department of Physics": {
+      "content": "The University of Toronto Department of Physics has generously offered to provide free tickets for 10 interested physics students.",
+      "code": "UOFT_PHY26",
+      "displayCode": true
+    }
+  },
+  "University of Toronto Mississauga": {
+    "Department of Biology": {
+      "content": "The University of Toronto Mississauga Department of Biology has generously offered to provide at least 50% off tickets for up to 10 interested biology students. Students will first pay the full ticket price, and after confirmation of attendance, at least 50% of the ticket cost will be reimbursed. Please fill out [this form](https://forms.office.com/Pages/ResponsePage.aspx?id=JsKqeAMvTUuQN7RtVsVSEAhj28E80LdOu8TZLHVtuiZUMDBLNlZKVkZTOU1DREtWNE9FUkM5TDBXVy4u) to request reimbursement from the Department of Biology.",
+      "code": "UTM_BIO26",
+      "displayCode": false
+    },
+    "Office of the Vice-Principal, Academic & Dean (OVPAD)": {
+      "content": "The University of Toronto Mississauga Office of the Vice-Principal, Academic & Dean (OVPAD) has generously offered to provide free tickets for 20 interested students.",
+      "code": "UTM_GENERAL26",
+      "displayCode": true
+    }
+  }
+}

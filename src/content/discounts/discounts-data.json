@@ -1,0 +1,117 @@
+{
+  "EARLYBIRD2026": {
+    "used": 28,
+    "limit": 50,
+    "available": 22
+  },
+  "GUELPH_ENG26": {
+    "used": 19,
+    "limit": 19,
+    "available": 0
+  },
+  "HUMBER26": {
+    "used": 0,
+    "limit": 20,
+    "available": 20
+  },
+  "LASTCALL": {
+    "used": 2,
+    "limit": 2,
+    "available": 0
+  },
+  "MAC_ARTSCI26": {
+    "used": 3,
+    "limit": 3,
+    "available": 0
+  },
+  "MAC_WIE26": {
+    "used": 10,
+    "limit": 10,
+    "available": 0
+  },
+  "MCGILL_SCIGRAD26": {
+    "used": 2,
+    "limit": 10,
+    "available": 8
+  },
+  "QUEENS26": {
+    "used": 0,
+    "limit": 12,
+    "available": 12
+  },
+  "TMUGRAD_ARCH_DESENG26": {
+    "used": 3,
+    "limit": 15,
+    "available": 12
+  },
+  "TMU_ARCH_DESENG26": {
+    "used": 21,
+    "limit": 25,
+    "available": 4
+  },
+  "TMU_MATH26": {
+    "used": 0,
+    "limit": 2,
+    "available": 2
+  },
+  "UOFT_AS26": {
+    "used": 10,
+    "limit": 10,
+    "available": 0
+  },
+  "UOFT_CHEM26": {
+    "used": 0,
+    "limit": 10,
+    "available": 10
+  },
+  "UOFT_CS26": {
+    "used": 0,
+    "limit": 12,
+    "available": 12
+  },
+  "UOFT_CSB26": {
+    "used": 6,
+    "limit": 6,
+    "available": 0
+  },
+  "UOFT_EARTHSCI26": {
+    "used": 0,
+    "limit": 6,
+    "available": 6
+  },
+  "UOFT_ENG26": {
+    "used": 168,
+    "limit": 170,
+    "available": 2
+  },
+  "UOFT_MG26": {
+    "used": 0,
+    "limit": 8,
+    "available": 8
+  },
+  "UOFT_PHY26": {
+    "used": 0,
+    "limit": 10,
+    "available": 10
+  },
+  "UOFT_PT26": {
+    "used": 0,
+    "limit": 5,
+    "available": 5
+  },
+  "UTM_BIO26": {
+    "used": 0,
+    "limit": 10,
+    "available": 10
+  },
+  "UTM_GENERAL26": {
+    "used": 0,
+    "limit": 20,
+    "available": 20
+  },
+  "WATERLOO_WIE26": {
+    "used": 9,
+    "limit": 10,
+    "available": 1
+  }
+}

@@ -1,0 +1,34 @@
+---
+interface Props {
+  department?: string;
+  content: string;
+  code?: string;
+  displayCode?: boolean;
+  available: number;
+  limit: number;
+}
+
+const {
+  department,
+  content,
+  code,
+  displayCode = true,
+  available,
+  limit,
+} = Astro.props;
+
+const boldContent = content.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+const linkedContent = boldContent.replace(
+  /\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g,
+  '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-purple-primary font-semibold">$1</a>',
+);
+const promoSuffix =
+  code && displayCode
+    ? ` In order to receive this benefit, please purchase the ticket with promo code <strong>"${code}"</strong>.`
+    : "";
+const fullContent = linkedContent + promoSuffix;
+---
+
+{department && <h1>{department}</h1>}
+<p set:html={fullContent} />
+<p class="italic">{available}/{limit} spots left</p>
