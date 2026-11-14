@@ -1,117 +1,163 @@
-{
-  "EARLYBIRD2026": {
+[
+  {
+    "id": "EARLYBIRD2026",
+    "code": "EARLYBIRD2026",
     "used": 28,
     "limit": 50,
     "available": 22
   },
-  "GUELPH_ENG26": {
+  {
+    "id": "GUELPH_ENG26",
+    "code": "GUELPH_ENG26",
     "used": 19,
     "limit": 19,
     "available": 0
   },
-  "HUMBER26": {
+  {
+    "id": "HUMBER26",
+    "code": "HUMBER26",
     "used": 0,
     "limit": 20,
     "available": 20
   },
-  "LASTCALL": {
+  {
+    "id": "LASTCALL",
+    "code": "LASTCALL",
     "used": 2,
     "limit": 2,
     "available": 0
   },
-  "MAC_ARTSCI26": {
+  {
+    "id": "MAC_ARTSCI26",
+    "code": "MAC_ARTSCI26",
     "used": 3,
     "limit": 3,
     "available": 0
   },
-  "MAC_WIE26": {
+  {
+    "id": "MAC_WIE26",
+    "code": "MAC_WIE26",
     "used": 10,
     "limit": 10,
     "available": 0
   },
-  "MCGILL_SCIGRAD26": {
+  {
+    "id": "MCGILL_SCIGRAD26",
+    "code": "MCGILL_SCIGRAD26",
     "used": 2,
     "limit": 10,
     "available": 8
   },
-  "QUEENS26": {
+  {
+    "id": "QUEENS26",
+    "code": "QUEENS26",
     "used": 0,
     "limit": 12,
     "available": 12
   },
-  "TMUGRAD_ARCH_DESENG26": {
+  {
+    "id": "TMUGRAD_ARCH_DESENG26",
+    "code": "TMUGRAD_ARCH_DESENG26",
     "used": 3,
     "limit": 15,
     "available": 12
   },
-  "TMU_ARCH_DESENG26": {
+  {
+    "id": "TMU_ARCH_DESENG26",
+    "code": "TMU_ARCH_DESENG26",
     "used": 21,
     "limit": 25,
     "available": 4
   },
-  "TMU_MATH26": {
+  {
+    "id": "TMU_MATH26",
+    "code": "TMU_MATH26",
     "used": 0,
     "limit": 2,
     "available": 2
   },
-  "UOFT_AS26": {
+  {
+    "id": "UOFT_AS26",
+    "code": "UOFT_AS26",
     "used": 10,
     "limit": 10,
     "available": 0
   },
-  "UOFT_CHEM26": {
+  {
+    "id": "UOFT_CHEM26",
+    "code": "UOFT_CHEM26",
     "used": 0,
     "limit": 10,
     "available": 10
   },
-  "UOFT_CS26": {
+  {
+    "id": "UOFT_CS26",
+    "code": "UOFT_CS26",
     "used": 0,
     "limit": 12,
     "available": 12
   },
-  "UOFT_CSB26": {
+  {
+    "id": "UOFT_CSB26",
+    "code": "UOFT_CSB26",
     "used": 6,
     "limit": 6,
     "available": 0
   },
-  "UOFT_EARTHSCI26": {
+  {
+    "id": "UOFT_EARTHSCI26",
+    "code": "UOFT_EARTHSCI26",
     "used": 0,
     "limit": 6,
     "available": 6
   },
-  "UOFT_ENG26": {
+  {
+    "id": "UOFT_ENG26",
+    "code": "UOFT_ENG26",
     "used": 168,
     "limit": 170,
     "available": 2
   },
-  "UOFT_MG26": {
+  {
+    "id": "UOFT_MG26",
+    "code": "UOFT_MG26",
     "used": 0,
     "limit": 8,
     "available": 8
   },
-  "UOFT_PHY26": {
+  {
+    "id": "UOFT_PHY26",
+    "code": "UOFT_PHY26",
     "used": 0,
     "limit": 10,
     "available": 10
   },
-  "UOFT_PT26": {
+  {
+    "id": "UOFT_PT26",
+    "code": "UOFT_PT26",
     "used": 0,
     "limit": 5,
     "available": 5
   },
-  "UTM_BIO26": {
+  {
+    "id": "UTM_BIO26",
+    "code": "UTM_BIO26",
     "used": 0,
     "limit": 10,
     "available": 10
   },
-  "UTM_GENERAL26": {
+  {
+    "id": "UTM_GENERAL26",
+    "code": "UTM_GENERAL26",
     "used": 0,
     "limit": 20,
     "available": 20
   },
-  "WATERLOO_WIE26": {
+  {
+    "id": "WATERLOO_WIE26",
+    "code": "WATERLOO_WIE26",
     "used": 9,
     "limit": 10,
     "available": 1
   }
-}
+]

@@ -1,0 +1,15 @@
+{
+  "order": 5,
+  "title": "Qualcomm Workshop: Intro to Edge AI",
+  "description": "Enter into the world of Edge AI in this beginner-friendly, hands-on workshop! Learn how low-power, on-device AI can solve real-world problems without relying on the cloud. Collect data, train and test a machine learning model, and see how the same model can run on a tiny device. No coding experience required. All you need is curiosity, a willingness to experiment, and a laptop to follow along!",
+  "location": "Harbour Ballroom",
+  "time": "Sunday, 10 AM - 11:30 AM EST",
+  "participants": [
+    {
+      "person": "ashley-nicole-leal",
+      "role": "host",
+      "title": "Computer Engineering Student @ University of Toronto; Software Engineer Intern @ Qualcomm",
+      "order": 1
+    }
+  ]
+}

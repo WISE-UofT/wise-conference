@@ -1,7 +1,13 @@
 ﻿---
 import SectionLayout from "../../layouts/SectionLayout.astro";
 import SpeakerRow from "../speakers/SpeakerRow.astro";
-import panels from "../../content/speakers/panels-content.json";
+import { getCollection } from "astro:content";
+import { createPeopleResolver } from "../../lib/people";
+
+const panels = (await getCollection("panels")).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+const resolvePeople = await createPeopleResolver();
 ---
 
 <SectionLayout title="Speakers">
@@ -13,12 +19,12 @@ import panels from "../../content/speakers/panels-content.json";
   </div>
 
   {
-    panels.map((panel) => (
+    panels.map(({ data: panel }) => (
       <SpeakerRow
         title={panel.title}
         subtitle={panel.subtitle}
         description={panel.description}
-        dataSource={panel.dataSource}
+        speakers={resolvePeople(panel.participants)}
       />
     ))
   }

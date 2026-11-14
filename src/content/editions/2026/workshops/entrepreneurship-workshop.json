@@ -1,0 +1,21 @@
+{
+  "order": 6,
+  "title": "From Lab to Launch: A Practical Guide on Entrepreneurship and How to Turn Ideas into Impact",
+  "description": "Have a promising idea, but not sure if it could become a sustainable business? Interested in entrepreneurship, but not sure where to get started? This interactive workshop will serve as a practical guide, bridging the gap between technical innovation and commercial success. Participants will learn how to apply the Business Model Canvas, a powerful framework for evaluating if a technical concept has a viable path to market. Attendees will have an opportunity to map out a business idea and explore key elements such as value propositions, customer segments, and revenue streams. The activity will be followed by a discussion with Serena Mandla, CSO and Co-Founder of Noa Therapeutics, a preclinical biotech company harnessing the power of the innate immune system, where she'll share her company's journey and the unique challenges of launching a company in a capital-intensive field and strategies for overcoming early hurdles.",
+  "location": "Pier 4",
+  "time": "Sunday, 10 AM - 11:30 AM EST",
+  "participants": [
+    {
+      "person": "serena-mandla",
+      "role": "host",
+      "title": "CSO & Co-Founder @ Noa Therapeutics",
+      "order": 1
+    },
+    {
+      "person": "feyisayo-feyi-enuiyin",
+      "role": "host",
+      "title": "Founder @ Deus Nobiscum Inc.",
+      "order": 2
+    }
+  ]
+}

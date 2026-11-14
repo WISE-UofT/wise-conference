@@ -1,18 +1,30 @@
 ---
-import discountsContent from "../../content/discounts/discounts-content.json";
-import discountsData from "../../content/discounts/discounts-data.json";
+import { getCollection } from "astro:content";
 import SectionLayout from "../../layouts/SectionLayout.astro";
 import Collapsible from "../ui/Collapsible.astro";
 import Discount from "../discounts/Discount.astro";
 
-const data = discountsData as Record<
-  string,
-  { used: number; limit: number; available: number }
->;
-
-const schools = Object.entries(discountsContent).sort(([a], [b]) =>
-  a.localeCompare(b),
+const availability = Object.fromEntries(
+  (await getCollection("discountAvailability")).map(({ data }) => [data.code, data]),
 );
+const discountEntries = (await getCollection("discounts")).sort(
+  (a, b) =>
+    a.data.schoolOrder - b.data.schoolOrder ||
+    a.data.departmentOrder - b.data.departmentOrder,
+);
+const schools = Object.values(
+  discountEntries.reduce(
+    (groups, { data }) => {
+      (groups[data.school] ??= { name: data.school, order: data.schoolOrder, departments: [] })
+        .departments.push(data);
+      return groups;
+    },
+    {} as Record<
+      string,
+      { name: string; order: number; departments: (typeof discountEntries)[number]["data"][] }
+    >,
+  ),
+).sort((a, b) => a.order - b.order);
 ---
 
 <SectionLayout title="Discounts">
@@ -35,22 +47,22 @@ const schools = Object.entries(discountsContent).sort(([a], [b]) =>
   </p>
   <div class="grid gap-5">
     {
-      schools.map(([school, departments]) => (
+      schools.map((school) => (
         <Collapsible
-          title={school}
+          title={school.name}
           class="p-0"
           titleClass="gap-4 p-0 md:px-4 md:py-2 md:text-xl font-semibold text-purple-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-primary/50"
           contentClass="p-0 md:px-4 pt-0 space-y-3 text-sm md:text-base md:leading-7 text-blue-navy/85 [&_h1]:mt-4 md:[&_h1]:text-lg [&_h1]:font-semibold [&_h1]:text-blue-navy [&_p]:m-0 [&_strong]:text-purple-primary"
         >
-          {Object.entries(departments).map(
-            ([dept, { content, code, displayCode }]) => {
-              const { available, limit } = data[code ?? ""] ?? {
+          {school.departments.map(
+            ({ department, content, code, displayCode }) => {
+              const { available, limit } = availability[code ?? ""] ?? {
                 available: 0,
                 limit: 0,
               };
               return (
                 <Discount
-                  department={dept !== "General" ? dept : undefined}
+                  department={department !== "General" ? department : undefined}
                   content={content}
                   code={code}
                   displayCode={displayCode}

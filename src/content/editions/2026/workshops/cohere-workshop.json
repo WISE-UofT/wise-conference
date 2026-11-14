@@ -1,0 +1,15 @@
+{
+  "order": 3,
+  "title": "Model Context Protocol: Building AI Agents That Interact with The Real World",
+  "description": "While artificial intelligence has been gradually providing more and more value across society, most of us still have little control in how exactly these systems integrate into our lives; we're constrained by whatever products happen to exist. In this workshop, you'll learn about Model Context Protocol (MCP) and learn to build your own MCP tool so AI can interact with your world and power the use cases you care about.",
+  "location": "Pier 4",
+  "time": "Saturday, 1 PM - 2:30 PM EST",
+  "participants": [
+    {
+      "person": "olivia-markham",
+      "role": "host",
+      "title": "Member of Technical Staff, Reasoning @ Cohere",
+      "order": 1
+    }
+  ]
+}

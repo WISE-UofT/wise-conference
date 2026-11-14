@@ -1,0 +1,38 @@
+{
+  "order": 6,
+  "title": "Machine Learning & AI Panel",
+  "subtitle": "From Data to Discovery: The Evolution of Machine Intelligence",
+  "description": "This panel explores the rapidly evolving world of machine learning, data science and AI, with a focus on large language models and generative AI as the next frontier. Featuring experts from industry and academia—including engineers, researchers, and leaders from leading companies in AI—we'll dive into the innovations shaping smarter systems, faster processing, and the future of intelligent technologies.",
+  "participants": [
+    {
+      "person": "oseremen-joy-idialu",
+      "role": "panelist",
+      "title": "AI Software Engineer @ Pivotnow Toronto, Canada",
+      "order": 1
+    },
+    {
+      "person": "lana-el-sanyoura",
+      "role": "panelist",
+      "title": "Software Engineer (II) @ Amazon",
+      "order": 2
+    },
+    {
+      "person": "sherry-chen",
+      "role": "panelist",
+      "title": "Applied Scientist @ Amazon Robotics",
+      "order": 3
+    },
+    {
+      "person": "sepideh-shaterian",
+      "role": "panelist",
+      "title": "Member of Technical Staff @ Cohere",
+      "order": 4
+    },
+    {
+      "person": "soude-ghari",
+      "role": "panelist",
+      "title": "Postdoctoral Researcher @ York University",
+      "order": 5
+    }
+  ]
+}

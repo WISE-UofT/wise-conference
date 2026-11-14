@@ -1,6 +1,6 @@
 ---
 import SectionLayout from "../../layouts/SectionLayout.astro";
-import scheduleData from "../../content/schedule/schedule-content.json";
+import { getCollection } from "astro:content";
 
 type EventType =
   "general" | "keynote" | "panel" | "workshop" | "competition" | "special";
@@ -23,14 +23,18 @@ const typeLabels: Record<EventType, string> = {
   special: "Special",
 };
 
-const schedule = scheduleData as {
-  day: string;
-  date: string;
-  blocks: {
-    time: string;
-    events: { title: string; location: string; type: EventType }[];
-  }[];
-}[];
+const scheduleEntry = (await getCollection("schedule"))[0];
+const schedule = (scheduleEntry?.data.days ?? [])
+  .sort((a, b) => a.order - b.order)
+  .map((data) => ({
+    ...data,
+    blocks: data.blocks
+      .sort((a, b) => a.order - b.order)
+      .map((block) => ({
+        ...block,
+        events: block.events.sort((a, b) => a.order - b.order),
+      })),
+  }));
 ---
 
 <SectionLayout title="Schedule">

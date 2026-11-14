@@ -1,0 +1,38 @@
+{
+  "order": 8,
+  "title": "Healthcare Panel",
+  "subtitle": "Beneath the White Coat: The Many Faces of Healthcare Careers",
+  "description": "From labs to legislatures, innovation to ethics, healthcare is built on many layers of expertise. Behind every patient outcome is a network of professionals — doctors, researchers, bioethicists, clinical coordinators, public health leaders, engineers, and innovators — working to advance medicine, equity, and access. This panel brings together experts from across these fields to dive into the hidden depths of healthcare: the unseen collaborations, discoveries, and systemic innovations that shape the future of care.",
+  "participants": [
+    {
+      "person": "marisa-battistella",
+      "role": "panelist",
+      "title": "Pharmacy Clinician Scientist @ University Health Network; Associate Professor @ University of Toronto",
+      "order": 1
+    },
+    {
+      "person": "mia-biondi",
+      "role": "panelist",
+      "title": "Assistant Professor @ York University",
+      "order": 2
+    },
+    {
+      "person": "tatyana-mollayeva",
+      "role": "panelist",
+      "title": "Scientist @ KITE Research Institute; Professor & Affiliated Scientist @ Dalla Lana School of Public Health, University of Toronto",
+      "order": 3
+    },
+    {
+      "person": "bonnie-yuqing-wang",
+      "role": "panelist",
+      "title": "Freelance Medical Illustrator & Biomedical Designer",
+      "order": 4
+    },
+    {
+      "person": "brianne-helfrich",
+      "role": "panelist",
+      "title": "Bioethics PhD",
+      "order": 5
+    }
+  ]
+}

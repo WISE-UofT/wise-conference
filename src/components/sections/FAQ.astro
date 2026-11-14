@@ -1,13 +1,17 @@
 ---
 import SectionLayout from "../../layouts/SectionLayout.astro";
 import Collapsible from "../ui/Collapsible.astro";
-import faqs from "../../content/faqs/faqs-content.json";
+import { getCollection } from "astro:content";
+
+const faqs = (await getCollection("faqs")).sort(
+  (a, b) => a.data.order - b.data.order,
+);
 ---
 
 <SectionLayout title="FAQ">
   <div class="space-y-3">
     {
-      faqs.map((faq) => (
+      faqs.map(({ data: faq }) => (
         <Collapsible title={faq.question} content={faq.answer} />
       ))
     }

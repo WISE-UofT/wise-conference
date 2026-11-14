@@ -3,17 +3,18 @@ import SectionLayout from "../../layouts/SectionLayout.astro";
 import Competition from "../competitions/Competition.astro";
 import cubeLogo from "../../assets/sponsors/corporate/cube.webp";
 import cohereLogo from "../../assets/sponsors/corporate/cohere.webp";
-import competitionData from "../../content/competitions/competitions-content.json";
+import { getCollection } from "astro:content";
+import { createPeopleResolver } from "../../lib/people";
 
 const logoMap: Record<string, string> = {
   cube: cubeLogo.src,
   cohere: cohereLogo.src,
 };
 
-const competitions = competitionData.map((c) => ({
-  ...c,
-  sponsorLogo: logoMap[c.sponsorLogo] ?? "",
-}));
+const competitionData = (await getCollection("competitions")).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+const resolvePeople = await createPeopleResolver();
 ---
 
 <SectionLayout title="Competitions">
@@ -30,8 +31,14 @@ const competitions = competitionData.map((c) => ({
 
   <div class="space-y-10">
     {
-      competitions.map((competition) => (
-        <Competition competition={competition} />
+      competitionData.map(({ data: competition }) => (
+        <Competition
+          competition={{
+            ...competition,
+            sponsorLogo: logoMap[competition.sponsorLogo] ?? "",
+          }}
+          judges={resolvePeople(competition.participants)}
+        />
       ))
     }
   </div>

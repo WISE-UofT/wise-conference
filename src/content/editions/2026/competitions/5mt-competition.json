@@ -1,0 +1,37 @@
+{
+  "order": 2,
+  "name": "5 Minute Thesis (5MT)",
+  "datetime": "Saturday, January 17, 2026 · 1:00 PM to 3:00 PM",
+  "location": "Pier 9",
+  "deadline": "January 13, 2026 · 11:59 PM",
+  "signup": "https://docs.google.com/forms/d/e/1FAIpQLSf4wZJN59OdZvvQBUck4Vkv2c2jR_YgLyuB8lr1LzQMhRybjw/viewform?usp=sharing&ouid=113257861058742861745",
+  "sponsorLogo": "",
+  "prize": "$300 (1st), $200 (2nd), $100 (3rd)",
+  "description": "We invite students from any STEM background to present their research to a panel of judges and have the opportunity to showcase their findings to a wider audience. Participants will be given five minutes to present their thesis research in an engaging manner using only one static slide. In partnership with URNCST, all abstracts will get published in our WISE journal book (as long as they follow our guidelines).",
+  "descriptionBullets": [
+    "Only one static slide is permitted.",
+    "No additional electronic media or props are allowed.",
+    "Presentations are limited to 5 minutes maximum and competitors exceeding 5 minutes will face a penalty.",
+    "Presentations will be assessed on communication, comprehension, engagement and quality of work."
+  ],
+  "participants": [
+    {
+      "person": "dr-melanie-courtot",
+      "role": "judge",
+      "title": "Senior Director @ Genome Informatics, PI @ OICR, Assistant Professor @ University of Toronto",
+      "order": 1
+    },
+    {
+      "person": "dr-salma-emara",
+      "role": "judge",
+      "title": "Assistant Professor, Teaching Stream @ University of Toronto",
+      "order": 2
+    },
+    {
+      "person": "dr-ania-harlick",
+      "role": "judge",
+      "title": "Assistant Professor, Teaching Stream @ University of Toronto",
+      "order": 3
+    }
+  ]
+}

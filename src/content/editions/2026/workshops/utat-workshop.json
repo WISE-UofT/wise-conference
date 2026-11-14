@@ -1,0 +1,21 @@
+{
+  "order": 7,
+  "title": "Designing Your Own Satellite: An Interactive Workshop in Satellite Operations",
+  "description": "Join UTAT Space Systems for an inside look at how real satellites are designed, built, and operated. We'll walk through our current Earth-observation mission, FINCH, which monitors crop residue for agricultural sustainability, and share how our team successfully launched Canada's first fully student-funded satellite, and the highest-orbiting satellite ever built by an undergraduate design team in the country.\nParticipants will learn how systems engineering guides every stage of a mission, from NASA's design phases to operational concepts, mode planning, and onboard logic using finite state machines. In the second half of the workshop, you'll work hands-on to design your own satellite modes of operation by arranging internal command flows and creating a functioning mission logic structure. No prior experience required, just curiosity and creativity.",
+  "location": "Pier 5",
+  "time": "Sunday, 10 AM - 11:30 AM EST",
+  "participants": [
+    {
+      "person": "hannah-nicole-chua",
+      "role": "host",
+      "title": "Outreach Lead @ University of Toronto Aerospace Team (UTAT) Space Systems Division",
+      "order": 1
+    },
+    {
+      "person": "riaab-zahid",
+      "role": "host",
+      "title": "Mission Operations Lead & Media Lead @ University of Toronto Aerospace Team (UTAT) Space Systems Division",
+      "order": 2
+    }
+  ]
+}

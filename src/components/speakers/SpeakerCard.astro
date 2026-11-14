@@ -8,7 +8,6 @@ interface Props {
   title: string;
   bio?: string;
   id?: string;
-  pronouns?: string;
 }
 
 const {
@@ -17,7 +16,6 @@ const {
   title,
   bio = "",
   id = "",
-  pronouns,
 } = Astro.props as Props;
 
 const initial = name.trim().charAt(0).toUpperCase();
@@ -26,10 +24,15 @@ const initial = name.trim().charAt(0).toUpperCase();
 <div
   class="flex h-full w-full cursor-pointer flex-col overflow-hidden rounded-2xl border border-blue-navy/10 bg-white shadow-sm transition-all hover:shadow-lg hover:border-blue-navy/30"
   onclick={bio
-    ? `document.getElementById('bio-modal-${id}')?.classList.remove('hidden')`
+    ? `const modal=document.getElementById('bio-modal-${id}');modal?.classList.remove('hidden');modal?.querySelector('button')?.focus()`
+    : undefined}
+  onkeydown={bio
+    ? `if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}`
     : undefined}
   role={bio ? "button" : undefined}
   tabindex={bio ? 0 : undefined}
+  aria-haspopup={bio ? "dialog" : undefined}
+  aria-controls={bio ? `bio-modal-${id}` : undefined}
 >
   {
     image ? (

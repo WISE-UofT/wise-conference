@@ -1,19 +1,16 @@
 ---
 import SpeakerRow from "../speakers/SpeakerRow.astro";
+import type { CollectionEntry } from "astro:content";
+import type { DisplayPerson } from "../../lib/people";
 
-interface WorkshopData {
-  title: string;
-  description: string;
-  location: string;
-  time: string;
-}
+type WorkshopData = CollectionEntry<"workshops">["data"];
 
 interface Props {
   workshop: WorkshopData;
-  speakerDataSource?: string;
+  hosts: DisplayPerson[];
 }
 
-const { workshop, speakerDataSource } = Astro.props as Props;
+const { workshop, hosts } = Astro.props as Props;
 ---
 
 <article
@@ -36,15 +33,14 @@ const { workshop, speakerDataSource } = Astro.props as Props;
     </p>
 
     {
-      speakerDataSource && (
+      hosts.length > 0 && (
         <div class="space-y-4 pt-3">
           <h4 class="text-base font-semibold text-blue-navy">Hosts</h4>
           <SpeakerRow
             title="Hosts"
             subtitle=""
             description=""
-            dataSource={speakerDataSource}
-            dataFolder="workshops"
+            speakers={hosts}
             align="left"
             showHeader={false}
             class="mb-0"

@@ -1,0 +1,36 @@
+{
+  "order": 4,
+  "name": "Poster Fair",
+  "datetime": "Sunday, January 18, 2026 · 3:00 PM to 4:00 PM",
+  "location": "Harbour Foyer",
+  "deadline": "December 19, 2025 · 11:59 PM",
+  "signup": "https://docs.google.com/forms/d/e/1FAIpQLSd43EVFPskc3-PEl2N4Boy8IpCIsg_iOPtsvtdesAe8maKs1w/viewform?usp=header",
+  "sponsorLogo": "",
+  "prize": "",
+  "description": "WISE is thrilled to invite students of all STEM backgrounds and years of study to share your research with the WISE community and practice your scientific communication.\n\nWe invite submissions describing new research and innovations across STEM fields. These could include original research projects, literature reviews, case studies, program evaluations, or other initiatives showcasing advancements in science, technology, engineering, and mathematics. We are also partnering with URNCST to publish a WISENC 2026 Abstract Book, where you will have the opportunity to have your abstract published.\n\nThe event's structure will allow participants to walk freely around the room and present their poster to a judge.",
+  "descriptionBullets": [
+    "Participants will be assigned a 3 minute judging slot during which they must be present at their posters.",
+    "Those who wish to present work done alongside a PI or in any lab must get permission from their supervisors to present their research.",
+    "Posters will be judged based on presentation skills, poster visuals, and research competence."
+  ],
+  "participants": [
+    {
+      "person": "cynthia-wu",
+      "role": "judge",
+      "title": "Ph.D. Student, Department of Biochemistry @ University of Toronto",
+      "order": 1
+    },
+    {
+      "person": "dr-tanushree-ghosh",
+      "role": "judge",
+      "title": "Postdoctoral Researcher @ University of Toronto, Department of MIE",
+      "order": 2
+    },
+    {
+      "person": "kaiwen-liu",
+      "role": "judge",
+      "title": "PhD Candidate, Biomedical Engineering @ University of Toronto",
+      "order": 3
+    }
+  ]
+}
