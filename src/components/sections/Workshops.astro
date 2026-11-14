@@ -1,7 +1,13 @@
 ﻿---
 import SectionLayout from "../../layouts/SectionLayout.astro";
 import Workshop from "../workshops/Workshop.astro";
-import workshops from "../../content/workshops/workshops-content.json";
+import { getCollection } from "astro:content";
+import { createPeopleResolver } from "../../lib/people";
+
+const workshops = (await getCollection("workshops")).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+const resolvePeople = await createPeopleResolver();
 ---
 
 <SectionLayout title="Workshops">
@@ -19,10 +25,10 @@ import workshops from "../../content/workshops/workshops-content.json";
 
   <div class="space-y-6">
     {
-      workshops.map((workshop) => (
+      workshops.map(({ data: workshop }) => (
         <Workshop
           workshop={workshop}
-          speakerDataSource={workshop.speakerDataSource}
+          hosts={resolvePeople(workshop.participants)}
         />
       ))
     }

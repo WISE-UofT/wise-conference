@@ -22,6 +22,9 @@ const bioParagraphs = bio.split("\n").filter((p) => p.trim().length > 0);
   id={`bio-modal-${id}`}
   class="modal-overlay hidden fixed inset-0 z-50 bg-black/50 p-4"
   data-modal
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby={`bio-modal-title-${id}`}
 >
   <div
     class="relative w-full max-w-4xl rounded-2xl bg-white shadow-lg flex flex-col"
@@ -75,6 +78,7 @@ const bioParagraphs = bio.split("\n").filter((p) => p.trim().length > 0);
       >
         <div class="mb-2">
           <h2
+            id={`bio-modal-title-${id}`}
             class="flex items-center gap-3 justify-center md:justify-start text-2xl font-bold text-blue-navy"
           >
             {name}

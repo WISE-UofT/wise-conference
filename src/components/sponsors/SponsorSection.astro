@@ -5,7 +5,7 @@ import type { ImageMetadata } from "astro";
 type SponsorLogo = {
   fileName: string;
   sizeClass?: string;
-  breakAfter?: boolean;
+  row: number;
 };
 
 interface Props {
@@ -31,7 +31,7 @@ function sponsorNameFromFile(fileName: string) {
   </h3>
   <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-8">
     {
-      logos.map((logo) => {
+      logos.map((logo, index) => {
         const src = images[`${basePath}/${logo.fileName}`]?.default;
 
         if (!src) return null;
@@ -46,7 +46,7 @@ function sponsorNameFromFile(fileName: string) {
                 class={`h-auto w-auto object-contain ${logo.sizeClass ?? "max-w-44"}`}
               />
             </article>
-            {logo.breakAfter ? (
+            {logos[index + 1] && logos[index + 1].row !== logo.row ? (
               <div class="basis-full" aria-hidden="true" />
             ) : null}
           </>

@@ -1,8 +1,8 @@
 ---
 import type { ImageMetadata } from "astro";
+import { getCollection } from "astro:content";
 import SectionLayout from "../../layouts/SectionLayout.astro";
 import SponsorSection from "../sponsors/SponsorSection.astro";
-import sponsorsData from "../../content/sponsors/sponsors.json";
 
 const sizeLarge = "max-w-80 sm:max-w-80";
 const sizeMedium = "max-w-50 sm:max-w-50";
@@ -14,18 +14,21 @@ const sizeMap: Record<string, string> = {
   small: sizeSmall,
 };
 
-const toLogoList = (
-  entries: { fileName: string; size: string; breakAfter?: boolean }[],
-) =>
-  entries.map(({ fileName, size, breakAfter = false }) => ({
+const toLogoList = (entries: { fileName: string; size: string; row: number }[]) =>
+  entries.map(({ fileName, size, row }) => ({
     fileName,
     sizeClass: sizeMap[size] ?? sizeMedium,
-    breakAfter,
+    row,
   }));
 
-const corporateSponsors = toLogoList(sponsorsData.corporateSponsors);
-const academicSponsors = toLogoList(sponsorsData.academicSponsors);
-const academicContributors = toLogoList(sponsorsData.academicContributors);
+const sponsors = (await getCollection("sponsors")).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+const inCategory = (category: (typeof sponsors)[number]["data"]["category"]) =>
+  sponsors.filter(({ data }) => data.category === category).map(({ data }) => data);
+const corporateSponsors = toLogoList(inCategory("corporate"));
+const academicSponsors = toLogoList(inCategory("academic-sponsor"));
+const academicContributors = toLogoList(inCategory("academic-contributor"));
 
 const corporateSponsorImages = import.meta.glob<{ default: ImageMetadata }>(
   "../../assets/sponsors/corporate/*.{webp,png,svg}",
