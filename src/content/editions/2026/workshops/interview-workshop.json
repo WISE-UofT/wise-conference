@@ -1,0 +1,15 @@
+{
+  "order": 9,
+  "title": "Winning in a Tough Tech Market",
+  "description": "The technical interview process is more competitive than ever. Having navigated it myself this year, I've seen firsthand just how intense the market has become—and how success often hinges on more than just solving coding problems. At the same time, as someone who has interviewed and coached countless candidates, I know exactly what differentiates those who walk away with offers from those who don't.\nThis session is the most holistic, end-to-end guide to technical interviews you'll ever attend. We'll cover the entire journey: from building your network and preparing before the first recruiter call, to standing out during behavioral, coding, and system design rounds, to handling rejections, multiple offers, and negotiations with confidence. Along the way, I'll share concrete strategies, templates, and stories—drawn from both sides of the table—that reveal the little things strong candidates do differently to stand out.\nYou'll leave not just with a roadmap for interview prep, but with the practical tools and confidence to navigate every stage of the process—and maximize your chances of landing the offer.",
+  "location": "Pier 5",
+  "time": "Sunday, 11:30 AM - 1 PM EST",
+  "participants": [
+    {
+      "person": "fatima-taj",
+      "role": "host",
+      "title": "Senior Software Engineer @ Yelp; LinkedIn Learning Instructor",
+      "order": 1
+    }
+  ]
+}

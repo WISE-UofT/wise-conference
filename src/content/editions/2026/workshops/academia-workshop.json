@@ -1,0 +1,27 @@
+{
+  "order": 10,
+  "title": "Mapping Your Academic Journey",
+  "description": "In this interactive workshop, Professor Morgan Hooper and Professor Sarah Haines from the University of Toronto will share their own journeys through STEM, from early interests to becoming professors, along with insights from colleagues across diverse academic paths. Participants will build their own \"academic roadmap,\" exploring degree options, timelines, and the many directions a STEM education can lead. Through guided reflection and activities, you'll have the opportunity to identify your values, interests, and long-term goals, and translate them into a concrete, personalized plan for your academic future. By the end of the session, you'll walk away with clarity on potential pathways, key questions for next steps, and the tools to navigate the graduate school landscape with confidence.",
+  "location": "Pier 4",
+  "time": "Sunday, 2 PM - 3:30 PM EST",
+  "participants": [
+    {
+      "person": "dr-sarah-haines",
+      "role": "host",
+      "title": "Assistant Professor @ University of Toronto",
+      "order": 1
+    },
+    {
+      "person": "dr-morgan-hooper",
+      "role": "host",
+      "title": "Assistant Professor @ University of Toronto",
+      "order": 2
+    },
+    {
+      "person": "patricia-watanabe",
+      "role": "host",
+      "title": "PhD Student @ University of Toronto",
+      "order": 3
+    }
+  ]
+}

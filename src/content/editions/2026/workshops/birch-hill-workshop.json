@@ -1,0 +1,45 @@
+{
+  "order": 2,
+  "title": "From Data to Decisions: A Hands-On Case Study",
+  "description": "Join Birch Hill Data Science & Strategy for a hands-on workshop where you'll use data to solve a company's real-world market expansion challenge. Working in teams, you'll analyze external market insights and internal financial metrics to answer to recommend whether and where a company should open a new location. Learn how our team turns data into strategy using market research, competitive mapping, and key performance metrics. This workshop is perfect for students interested in data-driven decision making, business strategy, and real-world problem solving.",
+  "location": "Pier 5",
+  "time": "Saturday, 10:30 AM - 12 PM EST",
+  "participants": [
+    {
+      "person": "anna-larkin",
+      "role": "host",
+      "title": "Senior Analyst @ Birch Hill Equity Partners",
+      "order": 1
+    },
+    {
+      "person": "rachael-walker",
+      "role": "host",
+      "title": "Senior Analyst @ Birch Hill Equity Partners",
+      "order": 2
+    },
+    {
+      "person": "olivia-tracey",
+      "role": "host",
+      "title": "Senior Analyst @ Birch Hill Equity Partners",
+      "order": 3
+    },
+    {
+      "person": "kelly-chang",
+      "role": "host",
+      "title": "Analyst @ Birch Hill Equity Partners",
+      "order": 4
+    },
+    {
+      "person": "lilia-kautz",
+      "role": "host",
+      "title": "PEY Co-op @ Birch Hill Equity Partners",
+      "order": 5
+    },
+    {
+      "person": "sarvnaz-ale-mohammad",
+      "role": "host",
+      "title": "PEY Co-op @ Birch Hill Equity Partners",
+      "order": 6
+    }
+  ]
+}

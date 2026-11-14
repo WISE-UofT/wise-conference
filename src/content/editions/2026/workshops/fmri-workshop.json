@@ -1,0 +1,21 @@
+{
+  "order": 8,
+  "title": "How fMRI Sees the Active Brain: An Introduction to fMRI",
+  "description": "This workshop introduces participants to how fMRI detects changes in blood oxygenation to infer neural activity. After learning how fMRI captures delayed hemodynamic responses, participants will use guided code to model voxel-level brain activity using a simple model (no prior coding experience is required). Clinical applications and future directions of fMRI technology will also be highlighted.",
+  "location": "Pier 4",
+  "time": "Sunday, 11:30 AM - 1 PM EST",
+  "participants": [
+    {
+      "person": "anna-fan",
+      "role": "host",
+      "title": "Life Sciences Student @ University of Toronto",
+      "order": 1
+    },
+    {
+      "person": "kyoko-lin",
+      "role": "host",
+      "title": "Life Sciences Student @ University of Toronto",
+      "order": 2
+    }
+  ]
+}

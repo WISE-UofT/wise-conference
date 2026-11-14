@@ -1,0 +1,38 @@
+{
+  "order": 7,
+  "title": "Career Pivot Panel",
+  "subtitle": "Change to Chance: Exploring Hidden Depths",
+  "description": "This panel brings together individuals who have taken bold leaps to reinvent their careers, uncovering the hidden depth of their skills and passions as they chart new directions. Their stories reveal how embracing change can surface possibilities that lead to surprising and unconventional paths.",
+  "participants": [
+    {
+      "person": "jacqueline-jacquie-fleisig",
+      "role": "panelist",
+      "title": "4th Year Medical Student @ University of Toronto",
+      "order": 1
+    },
+    {
+      "person": "carmela-de-luca",
+      "role": "panelist",
+      "title": "Principal @ Smart & Biggar LP",
+      "order": 2
+    },
+    {
+      "person": "michela-trozzo",
+      "role": "panelist",
+      "title": "High School Physics Teacher @ Toronto Catholic District School Board",
+      "order": 3
+    },
+    {
+      "person": "rachel-geddam",
+      "role": "panelist",
+      "title": "Environmental Engineer @ Thurber Engineering Ltd.",
+      "order": 4
+    },
+    {
+      "person": "suzanne-appleton",
+      "role": "panelist",
+      "title": "Director Personal Conduct Data Systems & Chief of Professional Conduct and Culture @ Royal Canadian Navy",
+      "order": 5
+    }
+  ]
+}

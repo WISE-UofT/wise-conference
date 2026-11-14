@@ -1,0 +1,20 @@
+{
+  "order": 1,
+  "title": "Keynotes",
+  "subtitle": "",
+  "description": "",
+  "participants": [
+    {
+      "person": "diana-anderson",
+      "role": "keynote",
+      "title": "MD, M.Arch, FACHA",
+      "order": 1
+    },
+    {
+      "person": "michelle-mic-liu",
+      "role": "keynote",
+      "title": "Lawyer, Engineer @ Liu Chooti Law & Counselling Group PhD Candidate @ University of Ottawa",
+      "order": 2
+    }
+  ]
+}

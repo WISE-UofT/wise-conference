@@ -1,0 +1,95 @@
+{
+  "year": 2026,
+  "members": [
+    {
+      "person": "tina-do",
+      "role": "Co-Chair",
+      "order": 1
+    },
+    {
+      "person": "annie-paulette-vega-legarda",
+      "role": "Co-Chair",
+      "order": 2
+    },
+    {
+      "person": "nadira-barnes",
+      "role": "Operations Director",
+      "order": 3
+    },
+    {
+      "person": "elena-ding",
+      "role": "Operations Director",
+      "order": 4
+    },
+    {
+      "person": "jenny-yang",
+      "role": "Operations Director",
+      "order": 5
+    },
+    {
+      "person": "melek-cobanoglu",
+      "role": "Panels Director",
+      "order": 6
+    },
+    {
+      "person": "sunethma-munasinghe",
+      "role": "Panels Director",
+      "order": 7
+    },
+    {
+      "person": "prarthona-paul",
+      "role": "Panels Director",
+      "order": 8
+    },
+    {
+      "person": "avani-yadav",
+      "role": "Workshops Director",
+      "order": 9
+    },
+    {
+      "person": "jacqueline-zhu",
+      "role": "Workshops Director",
+      "order": 10
+    },
+    {
+      "person": "zia-owens",
+      "role": "Competitions Director",
+      "order": 11
+    },
+    {
+      "person": "radia-salam",
+      "role": "Competitions Director",
+      "order": 12
+    },
+    {
+      "person": "caitlin-evran",
+      "role": "Academic Partnerships Director",
+      "order": 13
+    },
+    {
+      "person": "caitlin-croskery",
+      "role": "Marketing Director",
+      "order": 14
+    },
+    {
+      "person": "kate-zhou",
+      "role": "Marketing Director",
+      "order": 15
+    },
+    {
+      "person": "percy-phan",
+      "role": "Webmaster",
+      "order": 16
+    },
+    {
+      "person": "eloise-lukmito",
+      "role": "First-Year Representative",
+      "order": 17
+    },
+    {
+      "person": "angela-zheng",
+      "role": "First-Year Representative",
+      "order": 18
+    }
+  ]
+}

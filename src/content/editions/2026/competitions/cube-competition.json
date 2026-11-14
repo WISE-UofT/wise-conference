@@ -1,0 +1,43 @@
+{
+  "order": 1,
+  "name": "CUBE Case Competition",
+  "datetime": "Saturday, January 17, 2026 · 10:30 AM - 12:00 PM",
+  "location": "Pier 9",
+  "deadline": "January 13, 2026 · 11:59 PM",
+  "signup": "https://docs.google.com/forms/d/e/1FAIpQLSfBemdrhmk_RE9Dj-y6J0zwt3R4i2LEdHvjA1lJ9Ba2F2l3rA/viewform?usp=dialog",
+  "sponsorLogo": "cube",
+  "prize": "First place team: $300",
+  "description": "Participants will work in teams to tackle a real-world global health challenge focused on neglected tropical diseases. Contestants will leverage computational modeling and bioinformatic techniques to develop an innovative solution, which they will present to a judging panel. A detailed case brief outlining the problem and expectations will be released closer to the competition date. Students may register as a team or request to be placed into one.",
+  "descriptionBullets": [
+    "Teams must be of 3-4 and will give a 7 minute presentation to a panel of judges followed by a 3 minute Q&A.",
+    "The presentation will be accompanied by a technical demonstration or concept prototype.",
+    "Students from any department, faculty, or institution are welcome to participate together.",
+    "Teams will be judged on innovation, feasibility, public health impact and overall clarity of communication."
+  ],
+  "participants": [
+    {
+      "person": "dr-lindsey-fiddes",
+      "role": "judge",
+      "title": "Assistant Professor, Teaching Stream @ University of Toronto Institute of Biomedical Engineering",
+      "order": 1
+    },
+    {
+      "person": "lucy-ma",
+      "role": "judge",
+      "title": "3rd Year PhD Student @ University of Toronto",
+      "order": 2
+    },
+    {
+      "person": "emily-somerset",
+      "role": "judge",
+      "title": "Assistant Professor, Teaching Stream @ University of Toronto, Department of Statistical Sciences",
+      "order": 3
+    },
+    {
+      "person": "ana-maria-oproescu",
+      "role": "judge",
+      "title": "PhD Candidate @ University of Toronto",
+      "order": 4
+    }
+  ]
+}

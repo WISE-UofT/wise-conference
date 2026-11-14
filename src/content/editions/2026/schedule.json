@@ -1,0 +1,364 @@
+{
+  "year": 2026,
+  "days": [
+    {
+      "id": "day-1",
+      "order": 1,
+      "day": "Day 1",
+      "date": "Saturday, January 17",
+      "blocks": [
+        {
+          "id": "day-1-block-1",
+          "order": 1,
+          "time": "8:00 – 9:30 AM",
+          "events": [
+            {
+              "id": "day-1-registration-breakfast",
+              "order": 1,
+              "title": "Registration & Breakfast",
+              "location": "Harbour Foyer",
+              "type": "general"
+            }
+          ]
+        },
+        {
+          "id": "day-1-block-2",
+          "order": 2,
+          "time": "9:00 – 9:30 AM",
+          "events": [
+            {
+              "id": "day-1-opening-ceremony",
+              "order": 1,
+              "title": "Opening Ceremony",
+              "location": "Harbour Ballroom",
+              "type": "general"
+            }
+          ]
+        },
+        {
+          "id": "day-1-block-3",
+          "order": 3,
+          "time": "9:30 – 10:30 AM",
+          "events": [
+            {
+              "id": "day-1-diana-anderson",
+              "order": 1,
+              "title": "Diana Anderson",
+              "location": "Harbour Ballroom",
+              "type": "keynote"
+            }
+          ]
+        },
+        {
+          "id": "day-1-block-4",
+          "order": 4,
+          "time": "10:30 AM – 12:00 PM",
+          "events": [
+            {
+              "id": "day-1-exploring-the-unseen-currents-pathways-in-academia",
+              "order": 1,
+              "title": "Exploring the Unseen Currents: Pathways in Academia",
+              "location": "Pier 2 & 3",
+              "type": "panel"
+            },
+            {
+              "id": "day-1-inclusive-innovation-integrating-equity-based-design-thinking-in-science-and-engineering",
+              "order": 2,
+              "title": "Inclusive Innovation: Integrating Equity-Based Design Thinking in Science and Engineering",
+              "location": "Pier 4",
+              "type": "workshop"
+            },
+            {
+              "id": "day-1-birch-hill-from-data-to-decisions-a-hands-on-case-study",
+              "order": 3,
+              "title": "Birch Hill: From Data to Decisions: A Hands-On Case Study",
+              "location": "Pier 5",
+              "type": "workshop"
+            },
+            {
+              "id": "day-1-cube-case-competition",
+              "order": 4,
+              "title": "CUBE Case Competition",
+              "location": "Pier 9",
+              "type": "competition"
+            }
+          ]
+        },
+        {
+          "id": "day-1-block-5",
+          "order": 5,
+          "time": "12:00 – 1:00 PM",
+          "events": [
+            {
+              "id": "day-1-lunch",
+              "order": 1,
+              "title": "Lunch",
+              "location": "Harbour Foyer",
+              "type": "general"
+            }
+          ]
+        },
+        {
+          "id": "day-1-block-6",
+          "order": 6,
+          "time": "1:00 – 2:30 PM",
+          "events": [
+            {
+              "id": "day-1-shifting-gears-building-business-careers-from-stem-foundations",
+              "order": 1,
+              "title": "Shifting Gears: Building Business Careers from STEM Foundations",
+              "location": "Harbour Ballroom",
+              "type": "panel"
+            },
+            {
+              "id": "day-1-cohere-model-context-protocol-building-ai-agents-that-interact-with-the-real-world",
+              "order": 2,
+              "title": "Cohere – Model Context Protocol: Building AI Agents That Interact with The Real World",
+              "location": "Pier 4",
+              "type": "workshop"
+            },
+            {
+              "id": "day-1-discovering-your-leadership-depths-turning-values-into-action",
+              "order": 3,
+              "title": "Discovering Your Leadership Depths: Turning Values into Action",
+              "location": "Pier 5",
+              "type": "workshop"
+            },
+            {
+              "id": "day-1-5-minute-thesis-until-3-00-pm",
+              "order": 4,
+              "title": "5 Minute Thesis (until 3:00 PM)",
+              "location": "Pier 9",
+              "type": "competition"
+            }
+          ]
+        },
+        {
+          "id": "day-1-block-7",
+          "order": 7,
+          "time": "2:30 – 4:30 PM",
+          "events": [
+            {
+              "id": "day-1-career-grad-fair",
+              "order": 1,
+              "title": "Career & Grad Fair",
+              "location": "Harbour Foyer, Pier 2 & 3",
+              "type": "special"
+            }
+          ]
+        },
+        {
+          "id": "day-1-block-8",
+          "order": 8,
+          "time": "4:30 – 5:00 PM",
+          "events": [
+            {
+              "id": "day-1-closing-remarks",
+              "order": 1,
+              "title": "Closing Remarks",
+              "location": "Harbour Ballroom",
+              "type": "general"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day-2",
+      "order": 2,
+      "day": "Day 2",
+      "date": "Sunday, January 18",
+      "blocks": [
+        {
+          "id": "day-2-block-1",
+          "order": 1,
+          "time": "8:00 – 9:00 AM",
+          "events": [
+            {
+              "id": "day-2-registration-breakfast",
+              "order": 1,
+              "title": "Registration & Breakfast",
+              "location": "Harbour Foyer",
+              "type": "general"
+            }
+          ]
+        },
+        {
+          "id": "day-2-block-2",
+          "order": 2,
+          "time": "9:00 – 10:00 AM",
+          "events": [
+            {
+              "id": "day-2-mic-liu",
+              "order": 1,
+              "title": "Mic Liu",
+              "location": "Harbour Ballroom",
+              "type": "keynote"
+            }
+          ]
+        },
+        {
+          "id": "day-2-block-3",
+          "order": 3,
+          "time": "10:00 – 11:30 AM",
+          "events": [
+            {
+              "id": "day-2-qualcomm-intro-to-edge-ai",
+              "order": 1,
+              "title": "Qualcomm – Intro to Edge AI",
+              "location": "Harbour Ballroom",
+              "type": "workshop"
+            },
+            {
+              "id": "day-2-mission-earth-roles-in-stem-that-shape-a-sustainable-world",
+              "order": 2,
+              "title": "Mission Earth: Roles in STEM That Shape a Sustainable World",
+              "location": "Pier 2 & 3",
+              "type": "panel"
+            },
+            {
+              "id": "day-2-from-lab-to-launch-a-practical-guide-on-entrepreneurship-and-how-to-turn-ideas-into-impact",
+              "order": 3,
+              "title": "From Lab to Launch: A Practical Guide on Entrepreneurship and How to Turn Ideas into Impact",
+              "location": "Pier 4",
+              "type": "workshop"
+            },
+            {
+              "id": "day-2-utat-designing-your-own-satellite-an-interactive-workshop-in-satellite-operations",
+              "order": 4,
+              "title": "UTAT – Designing Your Own Satellite: An Interactive Workshop in Satellite Operations",
+              "location": "Pier 5",
+              "type": "workshop"
+            },
+            {
+              "id": "day-2-cohere-hackathon-judging-until-12-00-pm",
+              "order": 5,
+              "title": "Cohere Hackathon Judging (until 12:00 PM)",
+              "location": "Pier 9",
+              "type": "competition"
+            }
+          ]
+        },
+        {
+          "id": "day-2-block-4",
+          "order": 4,
+          "time": "11:30 AM – 1:00 PM",
+          "events": [
+            {
+              "id": "day-2-diving-deep-influencing-society-through-stem",
+              "order": 1,
+              "title": "Diving Deep: Influencing Society Through STEM",
+              "location": "Pier 2 & 3",
+              "type": "panel"
+            },
+            {
+              "id": "day-2-how-fmri-sees-the-active-brain-an-introduction-to-fmri",
+              "order": 2,
+              "title": "How fMRI Sees the Active Brain: An Introduction to fMRI",
+              "location": "Pier 4",
+              "type": "workshop"
+            },
+            {
+              "id": "day-2-winning-in-a-tough-tech-market",
+              "order": 3,
+              "title": "Winning in a Tough Tech Market",
+              "location": "Pier 5",
+              "type": "workshop"
+            }
+          ]
+        },
+        {
+          "id": "day-2-block-5",
+          "order": 5,
+          "time": "1:00 – 2:00 PM",
+          "events": [
+            {
+              "id": "day-2-lunch",
+              "order": 1,
+              "title": "Lunch",
+              "location": "Harbour Foyer",
+              "type": "general"
+            }
+          ]
+        },
+        {
+          "id": "day-2-block-6",
+          "order": 6,
+          "time": "2:00 – 3:30 PM",
+          "events": [
+            {
+              "id": "day-2-from-data-to-discovery-the-evolution-of-machine-intelligence",
+              "order": 1,
+              "title": "From Data to Discovery: The Evolution of Machine Intelligence",
+              "location": "Pier 2 & 3",
+              "type": "panel"
+            },
+            {
+              "id": "day-2-mapping-your-academic-journey",
+              "order": 2,
+              "title": "Mapping Your Academic Journey",
+              "location": "Pier 4",
+              "type": "workshop"
+            },
+            {
+              "id": "day-2-from-change-to-chance-exploring-hidden-depths",
+              "order": 3,
+              "title": "From Change to Chance: Exploring Hidden Depths",
+              "location": "Pier 5",
+              "type": "panel"
+            }
+          ]
+        },
+        {
+          "id": "day-2-block-7",
+          "order": 7,
+          "time": "3:00 – 4:00 PM",
+          "events": [
+            {
+              "id": "day-2-poster-fair",
+              "order": 1,
+              "title": "Poster Fair",
+              "location": "Harbour Foyer",
+              "type": "competition"
+            }
+          ]
+        },
+        {
+          "id": "day-2-block-8",
+          "order": 8,
+          "time": "3:30 – 5:00 PM",
+          "events": [
+            {
+              "id": "day-2-coffee-chats",
+              "order": 1,
+              "title": "Coffee Chats",
+              "location": "Harbour Foyer",
+              "type": "special"
+            },
+            {
+              "id": "day-2-beneath-the-white-coat-the-many-faces-of-healthcare",
+              "order": 2,
+              "title": "Beneath the White Coat: The Many Faces of Healthcare",
+              "location": "Pier 2 & 3",
+              "type": "panel"
+            }
+          ]
+        },
+        {
+          "id": "day-2-block-9",
+          "order": 9,
+          "time": "5:00 – 5:30 PM",
+          "events": [
+            {
+              "id": "day-2-closing-ceremony",
+              "order": 1,
+              "title": "Closing Ceremony",
+              "location": "Harbour Ballroom",
+              "type": "general"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

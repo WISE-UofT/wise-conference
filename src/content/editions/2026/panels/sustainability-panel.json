@@ -1,0 +1,38 @@
+{
+  "order": 4,
+  "title": "Sustainability Panel",
+  "subtitle": "Mission Earth: Roles in STEM That Shape a Sustainable World",
+  "description": "This panel explores the diverse ways different careers approach sustainability—ranging from the lens of chemistry, all the way to policy. By bringing these perspectives together, we aim to bring an understanding of how to advocate for a healthier planet through different fields.",
+  "participants": [
+    {
+      "person": "kim-st-cyr",
+      "role": "panelist",
+      "title": "Program Officer, Climate Engagement Canada @ Shareholder Association of Research and Education (SHARE)",
+      "order": 1
+    },
+    {
+      "person": "sanjida-moury",
+      "role": "panelist",
+      "title": "Senior Engineer @ Toronto Transit Commission",
+      "order": 2
+    },
+    {
+      "person": "alicia-battaglia",
+      "role": "panelist",
+      "title": "Postdoctoral Research Fellow, Bazylak Group @ University of Toronto",
+      "order": 3
+    },
+    {
+      "person": "eman-abdelsabour",
+      "role": "panelist",
+      "title": "Senior Architect, Sustainability Lead @ BDP Quadrangle",
+      "order": 4
+    },
+    {
+      "person": "sarah-syed",
+      "role": "panelist",
+      "title": "Climate Justice Advocate @ United Nations Habitat Youth Advisory Board",
+      "order": 5
+    }
+  ]
+}

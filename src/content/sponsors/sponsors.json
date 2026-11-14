@@ -1,48 +1,322 @@
-{
-  "corporateSponsors": [
-    { "fileName": "birchhill.webp", "size": "large" },
-    { "fileName": "cohere.webp", "size": "large" },
-    { "fileName": "qualcomm.webp", "size": "large", "breakAfter": true },
-    { "fileName": "intuit.webp", "size": "small" },
-    { "fileName": "amazon_robotics.webp", "size": "small" },
-    { "fileName": "opg.webp", "size": "small" },
-    { "fileName": "vale.webp", "size": "small" },
-    { "fileName": "tetratech.webp", "size": "small" },
-    { "fileName": "arcadis.webp", "size": "small" },
-    { "fileName": "pg.webp", "size": "small" },
-    { "fileName": "intact.webp", "size": "small" },
-    { "fileName": "rakuten.webp", "size": "small" },
-    { "fileName": "cascades.webp", "size": "small" },
-    { "fileName": "cse.webp", "size": "small", "breakAfter": true },
-    { "fileName": "PEO.webp", "size": "medium" },
-    { "fileName": "sanofi.webp", "size": "small" }
-  ],
-  "academicSponsors": [
-    { "fileName": "waterloo-engineering.webp", "size": "medium" },
-    { "fileName": "waterloo-math.webp", "size": "medium" },
-    { "fileName": "waterloo-science.webp", "size": "medium" },
-    { "fileName": "york-eng.webp", "size": "large", "breakAfter": true },
-    { "fileName": "uoft-daniels-forestry.webp", "size": "small" },
-    { "fileName": "uoft-information.webp", "size": "medium" },
-    { "fileName": "tmu-math.webp", "size": "medium" },
-    { "fileName": "guelph-eng.webp", "size": "medium" },
-    { "fileName": "uoft-eng.webp", "size": "large" },
-    { "fileName": "stgeorges-med.webp", "size": "medium" },
-    { "fileName": "tmu-physics.webp", "size": "medium" }
-  ],
-  "academicContributors": [
-    { "fileName": "utm-ovpad.webp", "size": "medium" },
-    { "fileName": "tmu-arch-des-eng.webp", "size": "medium" },
-    { "fileName": "uoft-comp-sci.webp", "size": "medium" },
-    { "fileName": "uoft-physics.webp", "size": "medium" },
-    { "fileName": "uoft-chemistry.webp", "size": "medium" },
-    { "fileName": "uoft-art-sci.webp", "size": "medium" },
-    { "fileName": "uoft-mol-gen.webp", "size": "medium" },
-    { "fileName": "uoft-earth-sci.webp", "size": "medium" },
-    { "fileName": "uoft-pharm-tox.webp", "size": "medium" },
-    { "fileName": "mcgill.webp", "size": "small" },
-    { "fileName": "mcmaster-wie.webp", "size": "small" },
-    { "fileName": "utm-bio.webp", "size": "medium" },
-    { "fileName": "uoft-csb.webp", "size": "small" }
-  ]
-}
+[
+  {
+    "id": "corporate-birchhill",
+    "category": "corporate",
+    "order": 1,
+    "row": 1,
+    "fileName": "birchhill.webp",
+    "size": "large"
+  },
+  {
+    "id": "corporate-cohere",
+    "category": "corporate",
+    "order": 2,
+    "row": 1,
+    "fileName": "cohere.webp",
+    "size": "large"
+  },
+  {
+    "id": "corporate-qualcomm",
+    "category": "corporate",
+    "order": 3,
+    "row": 1,
+    "fileName": "qualcomm.webp",
+    "size": "large"
+  },
+  {
+    "id": "corporate-intuit",
+    "category": "corporate",
+    "order": 4,
+    "row": 2,
+    "fileName": "intuit.webp",
+    "size": "small"
+  },
+  {
+    "id": "corporate-amazon-robotics",
+    "category": "corporate",
+    "order": 5,
+    "row": 2,
+    "fileName": "amazon_robotics.webp",
+    "size": "small"
+  },
+  {
+    "id": "corporate-opg",
+    "category": "corporate",
+    "order": 6,
+    "row": 2,
+    "fileName": "opg.webp",
+    "size": "small"
+  },
+  {
+    "id": "corporate-vale",
+    "category": "corporate",
+    "order": 7,
+    "row": 2,
+    "fileName": "vale.webp",
+    "size": "small"
+  },
+  {
+    "id": "corporate-tetratech",
+    "category": "corporate",
+    "order": 8,
+    "row": 2,
+    "fileName": "tetratech.webp",
+    "size": "small"
+  },
+  {
+    "id": "corporate-arcadis",
+    "category": "corporate",
+    "order": 9,
+    "row": 2,
+    "fileName": "arcadis.webp",
+    "size": "small"
+  },
+  {
+    "id": "corporate-pg",
+    "category": "corporate",
+    "order": 10,
+    "row": 2,
+    "fileName": "pg.webp",
+    "size": "small"
+  },
+  {
+    "id": "corporate-intact",
+    "category": "corporate",
+    "order": 11,
+    "row": 2,
+    "fileName": "intact.webp",
+    "size": "small"
+  },
+  {
+    "id": "corporate-rakuten",
+    "category": "corporate",
+    "order": 12,
+    "row": 2,
+    "fileName": "rakuten.webp",
+    "size": "small"
+  },
+  {
+    "id": "corporate-cascades",
+    "category": "corporate",
+    "order": 13,
+    "row": 2,
+    "fileName": "cascades.webp",
+    "size": "small"
+  },
+  {
+    "id": "corporate-cse",
+    "category": "corporate",
+    "order": 14,
+    "row": 2,
+    "fileName": "cse.webp",
+    "size": "small"
+  },
+  {
+    "id": "corporate-peo",
+    "category": "corporate",
+    "order": 15,
+    "row": 3,
+    "fileName": "PEO.webp",
+    "size": "medium"
+  },
+  {
+    "id": "corporate-sanofi",
+    "category": "corporate",
+    "order": 16,
+    "row": 3,
+    "fileName": "sanofi.webp",
+    "size": "small"
+  },
+  {
+    "id": "academic-sponsor-waterloo-engineering",
+    "category": "academic-sponsor",
+    "order": 1,
+    "row": 1,
+    "fileName": "waterloo-engineering.webp",
+    "size": "medium"
+  },
+  {
+    "id": "academic-sponsor-waterloo-math",
+    "category": "academic-sponsor",
+    "order": 2,
+    "row": 1,
+    "fileName": "waterloo-math.webp",
+    "size": "medium"
+  },
+  {
+    "id": "academic-sponsor-waterloo-science",
+    "category": "academic-sponsor",
+    "order": 3,
+    "row": 1,
+    "fileName": "waterloo-science.webp",
+    "size": "medium"
+  },
+  {
+    "id": "academic-sponsor-york-eng",
+    "category": "academic-sponsor",
+    "order": 4,
+    "row": 1,
+    "fileName": "york-eng.webp",
+    "size": "large"
+  },
+  {
+    "id": "academic-sponsor-uoft-daniels-forestry",
+    "category": "academic-sponsor",
+    "order": 5,
+    "row": 2,
+    "fileName": "uoft-daniels-forestry.webp",
+    "size": "small"
+  },
+  {
+    "id": "academic-sponsor-uoft-information",
+    "category": "academic-sponsor",
+    "order": 6,
+    "row": 2,
+    "fileName": "uoft-information.webp",
+    "size": "medium"
+  },
+  {
+    "id": "academic-sponsor-tmu-math",
+    "category": "academic-sponsor",
+    "order": 7,
+    "row": 2,
+    "fileName": "tmu-math.webp",
+    "size": "medium"
+  },
+  {
+    "id": "academic-sponsor-guelph-eng",
+    "category": "academic-sponsor",
+    "order": 8,
+    "row": 2,
+    "fileName": "guelph-eng.webp",
+    "size": "medium"
+  },
+  {
+    "id": "academic-sponsor-uoft-eng",
+    "category": "academic-sponsor",
+    "order": 9,
+    "row": 2,
+    "fileName": "uoft-eng.webp",
+    "size": "large"
+  },
+  {
+    "id": "academic-sponsor-stgeorges-med",
+    "category": "academic-sponsor",
+    "order": 10,
+    "row": 2,
+    "fileName": "stgeorges-med.webp",
+    "size": "medium"
+  },
+  {
+    "id": "academic-sponsor-tmu-physics",
+    "category": "academic-sponsor",
+    "order": 11,
+    "row": 2,
+    "fileName": "tmu-physics.webp",
+    "size": "medium"
+  },
+  {
+    "id": "academic-contributor-utm-ovpad",
+    "category": "academic-contributor",
+    "order": 1,
+    "row": 1,
+    "fileName": "utm-ovpad.webp",
+    "size": "medium"
+  },
+  {
+    "id": "academic-contributor-tmu-arch-des-eng",
+    "category": "academic-contributor",
+    "order": 2,
+    "row": 1,
+    "fileName": "tmu-arch-des-eng.webp",
+    "size": "medium"
+  },
+  {
+    "id": "academic-contributor-uoft-comp-sci",
+    "category": "academic-contributor",
+    "order": 3,
+    "row": 1,
+    "fileName": "uoft-comp-sci.webp",
+    "size": "medium"
+  },
+  {
+    "id": "academic-contributor-uoft-physics",
+    "category": "academic-contributor",
+    "order": 4,
+    "row": 1,
+    "fileName": "uoft-physics.webp",
+    "size": "medium"
+  },
+  {
+    "id": "academic-contributor-uoft-chemistry",
+    "category": "academic-contributor",
+    "order": 5,
+    "row": 1,
+    "fileName": "uoft-chemistry.webp",
+    "size": "medium"
+  },
+  {
+    "id": "academic-contributor-uoft-art-sci",
+    "category": "academic-contributor",
+    "order": 6,
+    "row": 1,
+    "fileName": "uoft-art-sci.webp",
+    "size": "medium"
+  },
+  {
+    "id": "academic-contributor-uoft-mol-gen",
+    "category": "academic-contributor",
+    "order": 7,
+    "row": 1,
+    "fileName": "uoft-mol-gen.webp",
+    "size": "medium"
+  },
+  {
+    "id": "academic-contributor-uoft-earth-sci",
+    "category": "academic-contributor",
+    "order": 8,
+    "row": 1,
+    "fileName": "uoft-earth-sci.webp",
+    "size": "medium"
+  },
+  {
+    "id": "academic-contributor-uoft-pharm-tox",
+    "category": "academic-contributor",
+    "order": 9,
+    "row": 1,
+    "fileName": "uoft-pharm-tox.webp",
+    "size": "medium"
+  },
+  {
+    "id": "academic-contributor-mcgill",
+    "category": "academic-contributor",
+    "order": 10,
+    "row": 1,
+    "fileName": "mcgill.webp",
+    "size": "small"
+  },
+  {
+    "id": "academic-contributor-mcmaster-wie",
+    "category": "academic-contributor",
+    "order": 11,
+    "row": 1,
+    "fileName": "mcmaster-wie.webp",
+    "size": "small"
+  },
+  {
+    "id": "academic-contributor-utm-bio",
+    "category": "academic-contributor",
+    "order": 12,
+    "row": 1,
+    "fileName": "utm-bio.webp",
+    "size": "medium"
+  },
+  {
+    "id": "academic-contributor-uoft-csb",
+    "category": "academic-contributor",
+    "order": 13,
+    "row": 1,
+    "fileName": "uoft-csb.webp",
+    "size": "small"
+  }
+]

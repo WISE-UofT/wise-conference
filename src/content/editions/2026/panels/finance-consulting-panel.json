@@ -1,0 +1,32 @@
+{
+  "order": 3,
+  "title": "Finance & Consulting Panel",
+  "subtitle": "",
+  "description": "Many professionals find that skills they have gained in science and engineering can serve as a springboard into new and unexpected career paths. This panel brings together professionals who shifted gears from STEM into consulting, finance, and strategy, proving that technical expertise can open doors to unexpected opportunities. From actuarial analysts to engineering consultants and financial strategists, panelists will share their journeys, challenges, and insights into building dynamic careers beyond traditional STEM roles.",
+  "participants": [
+    {
+      "person": "natacha-altamirano",
+      "role": "panelist",
+      "title": "Senior Director, Data Science @ Birch Hill Equity Partners",
+      "order": 1
+    },
+    {
+      "person": "rue-sriharsha",
+      "role": "panelist",
+      "title": "Senior Consultant @ KPMG",
+      "order": 2
+    },
+    {
+      "person": "sunny-baek",
+      "role": "panelist",
+      "title": "Director of Integrated Risk Management & Technology @ SE Health",
+      "order": 3
+    },
+    {
+      "person": "cali-arantes",
+      "role": "panelist",
+      "title": "Partner Development Specialist @ Intuit",
+      "order": 4
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "order": 5,
+  "title": "Interdisciplinary Panel",
+  "subtitle": "Diving Deep: Influencing Society Through STEM",
+  "description": "With this panel, we zoom out and explore how roles in STEM can impact our society. Like the ability for sciences to influence law, how we use mathematics to handle national crises, and more. Our knowledge of each field will be removed from traditional views and we will see how they can all work together to bring change.",
+  "participants": [
+    {
+      "person": "jane-heffernan",
+      "role": "panelist",
+      "title": "Professor and Research Chair in Modelling Infection and Immunity @ Department of Mathematics & Statistics, York University",
+      "order": 1
+    },
+    {
+      "person": "hannah-hoag",
+      "role": "panelist",
+      "title": "Senior Producer, Health, Science and Climate Unit @ CBC News",
+      "order": 2
+    },
+    {
+      "person": "sivani-baskaran",
+      "role": "panelist",
+      "title": "Environmental Researcher & Data Analyst",
+      "order": 3
+    },
+    {
+      "person": "jennifer-quaglietta",
+      "role": "panelist",
+      "title": "P.Eng, MBA, ICD.D, CHE, PMP, LSSGB\nCEO & Registrar @ Professional Engineers Ontario",
+      "order": 4
+    },
+    {
+      "person": "rezwana-sharmin",
+      "role": "panelist",
+      "title": "Senior Staff Design Verification Engineer, Display IP @ Qualcomm",
+      "order": 5
+    },
+    {
+      "person": "julia-lamassa",
+      "role": "panelist",
+      "title": "Head of Operating Model @ Vale",
+      "order": 6
+    }
+  ]
+}

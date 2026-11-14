@@ -1,0 +1,543 @@
+[
+  {
+    "id": "satinder-kaur-brar",
+    "name": "Satinder Kaur Brar",
+    "image": "../../../assets/speakers/satinder-kaur-brar.webp",
+    "bio": "Dr. Brar, the James and Joanne Love Chair in Environmental Engineering and Director of the One WATER Institute at York University, is an internationally acclaimed researcher with an H-index of 90. Her groundbreaking work bridges waste valorization and the removal of emerging contaminants, with applications of her biopesticide and biofertilizer technologies now implemented across several countries, including Vietnam, Morocco, and India. Ranked among the world's top 2% scientists by Stanford University (2021-2025), she has attracted over $25 million in research funding and leads the Inzymes Group at York.\nHer career includes over 450 publications, 9 patents, and 18 books. She is a Fellow of the Canadian Academy of Engineering, the European Academy of Science and Arts, and the Royal Society of Canada. Recipient of numerous national and international awards, Dr. Brar's research has informed global policy and advanced sustainable solutions for water and environmental management."
+  },
+  {
+    "id": "sandra-juutilainen",
+    "name": "Sandra Juutilainen",
+    "image": "../../../assets/speakers/sandra-juutilainen.webp",
+    "bio": "Dr. Juutilainen is Haudenosaunee (Oneida of the Thames) and Finnish-Canadian. She completed an undergraduate degree in Food and Nutrition at Toronto Metropolitan University (formerly Ryerson Polytechnic University), and the Yukon First Nations Dietetic Internship program. After working for 10 years as a registered dietitian in First Nations communities throughout Ontario and Yukon she moved to Finland to complete a Master of Health Science in Circumpolar Health and PhD in Health Sciences at the University of Oulu. She is currently a faculty member at Toronto Metropolitan University where she teaches in the School of Nutrition's undergraduate program. Sandra also holds an adjunct assistant professor appointment at the University of Waterloo in the School of Public Health Sciences. She is a member of the College of Dietitians of Ontario and Dietitians of Canada. Her research interests include: Indigenous health and wellness, human rights, critical dietetics, nutrition, food security, Indigenous food sovereignty, qualitative and mixed-methods research; and, community-driven research informed by Indigenous methodologies. In 2024, she was awarded The Dean's Scholarly, Research and Creative Activity Award from the Faculty of Community Services, Toronto Metropolitan University for her research projects which aim to centre Haudenosaunee worldviews and decolonize the profession of dietetics.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "salma-emara",
+    "name": "Salma Emara",
+    "image": "../../../assets/speakers/salma-emara.webp",
+    "bio": "Salma Emara is an Assistant Professor, Teaching Stream in the Department of Electrical and Computer Engineering at the University of Toronto. She received her B.Sc. in Electronics and Communications Engineering from the American University in Cairo in 2018 and her Ph.D. in Computer Engineering from the University of Toronto under the supervision of Professor Baochun Li in 2022. Her Ph.D. research focused on improving reinforcement learning algorithms for computer networking. Currently, her research explores pedagogical strategies for enhancing debugging skills in beginner programmers and leveraging natural language processing in engineering education. She believes engineers learn best by doing and is committed to engaging students through in-class activities and problem-solving assignments. Her dedication to teaching has been recognized with multiple student-voted teaching awards.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "katharine-andrea-scott",
+    "name": "Katharine Andrea Scott",
+    "image": "../../../assets/speakers/katharine-andrea-scott.webp",
+    "bio": "K. Andrea Scott specialized in fluid dynamics for her MASc and PhD degrees, studying acoustics and turbulence. Always passionate about the environment, she started working in a new area for postdoctoral research, on sea ice. Starting as a Postdoctoral Researcher with the Data Assimilation and Satellite Meteorology Research Section, Environment and Climate Change Canada, she was part of a team involved in the development of the Canadian sea ice data assimilation system. In 2012, she joined the Department of Systems Design Engineering, University of Waterloo, and began working on sea ice remote sensing using passive and active satellite-based microwave data. Given the complexity of sea ice signatures in these data, her team was one of the first to apply deep learning to this problem. Recently moving to the Department of Mechanical and Mechatronics Engineering, she now focuses on lake ice, sea ice and river ice, as well as a blend of physics-based and data-driven problems.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "jacqueline-jacquie-fleisig",
+    "name": "Jacqueline (Jacquie) Fleisig",
+    "image": "../../../assets/speakers/jacqueline-fleisig.webp",
+    "bio": "Jacquie Fleisig is a fourth-year medical student at the University of Toronto. Prior to medical school, she completed her Bachelor's of Applied Science in Engineering Science (Biomedical Systems Option) at the University of Toronto. During her undergrad, she was never certain about where her career would end up but did know she loved any type of problem-solving. She discovered she enjoyed leading teams through her involvement in the Skule community, serving as president of Engineers Without Borders UofT and president of the Engineering Society at different times.\nHer Professional Experience Year was a mix of jobs: four months working on a novel fluorescence-guided surgery system, four months in neuronal network simulation research, and eight months in operations consulting. After that, she applied to medical school at UofT where she is now.\nIn medical school, she has realized her passion for working with patients of all different backgrounds and developed an interest in health services research, which she hopes to continue building on throughout her career. She is excited to speak to WISE attendees about her path, what she has learned, and what is next!",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "carmela-de-luca",
+    "name": "Carmela De Luca",
+    "image": "../../../assets/speakers/carmela-de-luca.webp",
+    "bio": "Carmela is a lawyer and registered patent agent in Canada and the United States and practices in all areas of intellectual property, focusing on patent matters, particularly for life science companies. She advises clients on strategic global aspects of obtaining and managing patent portfolios, as well as in the preparation and procurement of patents and industrial designs. She works closely with clients including start-ups, universities as well as multinationals in preparing and prosecuting patent applications relating to biotechnology, pharmaceuticals, biologics, diagnostics, green technologies and other areas in the life sciences. Carmela is also active in the analysis of patent issues such as validity, infringement and freedom to operate.\nWhile obtaining her Ph.D. from McGill University, Carmela conducted research in the areas of inflammation, signal transduction and virology. Prior to earning a law degree, Carmela worked as a post-doctoral fellow at a research institute of an international biotechnology company where her research focused on cancer cell biology, genetic engineering, genetic screens and genomics. Her educational and research background provides her with a depth of knowledge and experiences to assist her clients in a wide range of cutting-edge technologies.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "michela-trozzo",
+    "name": "Michela Trozzo",
+    "image": "../../../assets/speakers/michela-trozzo.webp",
+    "bio": "Michela brings a unique and robust background to her teaching career, rooted in her foundational studies in Electrical Engineering at the University of Toronto. Prior to her career transition, she cultivated her passion for education by engaging with high school students through various STEAM outreach programs offered by the University of Toronto Engineering Outreach Office and Hi-Skule™ Project Directorship. These experiences allowed her to teach Grades 7-12 students on specialized topics; including robotics, coding, physics, and mathematics. Recognizing her dedication to teaching, Michela completed her Bachelor of Education at York University after her engineering studies. She is now a qualified high school teacher specializing in Mathematics, Physics, and Computer Science. Currently, she teaches Grade 11 and 12 University Bound and College Bound Physics. Beyond the classroom, Michela serves as a mentor for her school's robotics club, where she guides the next generation of engineers. She is notably proud of the team's recent success, which includes achieving third place in last year's school board competition.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "rachel-geddam",
+    "name": "Rachel Geddam",
+    "image": "../../../assets/speakers/rachel-geddam.webp",
+    "bio": "I hold a Bachelor of Engineering (B.Eng.) in Civil Engineering from York University. I've worked in the consulting industry for over 4 years now and I am now a Licensed Professional Engineer (P.Eng.) in Ontario with 4.5+ years of experience in environmental engineering, specializing in environmental site assessments, excess soil management - regulatory compliance under Ontario Regulations 153/04 and 406/19.\nMy work focuses on supporting large-scale infrastructure and development projects across the GTA, including municipal roadways, and rail corridors and provide expertise in Phase I & II ESAs, and Soil Management Plans. My experience spans working with municipalities, regional authorities, and private developers, often in collaboration with multidisciplinary teams.\nI also have experience in hydrogeology, including groundwater assessments, dewatering evaluations and estimates, Environmental Activity and Sector Registry (EASR) registrations, Permit to Take Water (PTTW) support, and groundwater quality assessment and interpretation.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "suzanne-appleton",
+    "name": "Suzanne Appleton",
+    "image": "../../../assets/speakers/suzanne-appleton.webp",
+    "bio": "Suzanne is a Captain in the Royal Canadian Navy in the Naval Engineer occupation, with a background in marine systems. Her love for the sea and the marine environment were fostered at a young age but really solidified during her time as a teenager with the Toronto Brigantine Tall Ship sail training program. Throughout her career, Suzanne has had the privilege of gaining extensive technical leadership experience through roles such as head of the engineering department at sea onboard HMCS Winnipeg, numerous projects and programs on topics relating to ships, technical trials, HR, Environmental, IT and innovation. This professional path contributes to ensuring that RCN sailors have the equipment and systems they need to protect and secure Canada's three coasts. Some of her career highlights include migrant vessel interdictions, Search and Rescue, multinational exercises, representing Canada at NATO fora, advancing women and BIPOC in STEM, and being part of an award-winning project team.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "natacha-altamirano",
+    "name": "Natacha Altamirano",
+    "image": "../../../assets/speakers/natacha-altamirano.webp",
+    "bio": "Prior to joining Birch Hill in 2019, Natacha received her Ph.D. in Theoretical Physics from the University of Waterloo and the Perimeter Institute for Theoretical Physics. Her research focused on black holes, quantum gravity, and cosmology, with an emphasis in data analysis of the cosmic microwave background and its interaction with galaxies."
+  },
+  {
+    "id": "rue-sriharsha",
+    "name": "Rue Sriharsha",
+    "image": "../../../assets/speakers/rue-sriharsha.webp",
+    "bio": "Rue is driven by a passion for leveraging AI and automation to create solutions that simplify and enhance everyday life. She is a Senior consultant at KPMG's Trusted AI practice, where she helps organizations navigate and implement effective AI governance to drive responsible innovation. She is a recipient of the Rising Star in AI award across North America. Prior to her current role, Rue worked at Microsoft, Amazon and Deloitte, and is a UofT alum.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "sunny-baek",
+    "name": "Sunny Baek",
+    "image": "../../../assets/speakers/sunny-baek.webp",
+    "bio": "Sunny Baek is a registered nurse and digital health consultant who has built a non-traditional career at the intersection of STEM, healthcare, and business.\nShe began her career in IT, later trained as a registered nurse, and eventually transitioned into management consulting, where she worked with hospitals, public-sector organizations, and healthcare leaders on large-scale transformation initiatives. Her consulting experience includes clinical information system implementations, enterprise risk and safety modernization, and operational and financial reviews for complex healthcare organizations.\nSunny currently serves as Director of Integrated Risk Management & Technology at SE Health, where she leads organization-wide projects that connect clinical practice, technology, and strategy. Having worked both on the frontlines of patient care and in consulting environments, she brings a practical perspective on how STEM and clinical skills can be translated into impactful business and leadership roles.\nShe is passionate about helping students explore consulting and business careers beyond traditional paths, especially for those navigating uncertainty, career pivots, or non-linear journeys. Sunny enjoys mentoring students who are curious about how to turn technical expertise into meaningful system-level impact."
+  },
+  {
+    "id": "cali-arantes",
+    "name": "Cali Arantes",
+    "image": "../../../assets/speakers/cali-arantes.webp",
+    "bio": "Cali Arantes is a business and technology professional at Intuit, working at the intersection of strategy, product, and innovation. She leverages analytical thinking to drive customer-centric outcomes and scalable growth.\nAt Intuit, Cali partners cross-functionally to translate technical concepts into clear, actionable business strategy, enabling data-driven decision-making and execution. Her career journey reflects a purposeful move into sales and business leadership, demonstrating how a strong technical foundation can unlock diverse opportunities across strategy, consulting-style roles, and commercial leadership.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "marisa-battistella",
+    "name": "Marisa Battistella",
+    "image": "../../../assets/speakers/marisa-battistella.webp",
+    "bio": "Marisa graduated from the Faculty of Pharmacy at the University of Toronto in 1998 and completed her pharmacy residency at Sunnybrook Health Sciences Centre in 1999. She has worked at the University Health Network (UHN) since 1999 in various positions, including cardiology and internal medicine. In 2002, Marisa completed her Pharm D through Idaho State University. She has worked as a clinical pharmacist specialist in the hemodialysis unit at the University Health Network since 2002. As an Associate Professor at the Leslie Dan Faculty of Pharmacy – University of Toronto and Clinician Scientist in Pharmacy at University Health Network, Marisa has focused her research in the area of pharmaco-nephrology where she has published several papers and given many presentations on optimizing medications in patients with CKD."
+  },
+  {
+    "id": "mia-biondi",
+    "name": "Mia Biondi",
+    "image": "../../../assets/speakers/mia-biondi.webp",
+    "bio": "Dr. Mia Biondi is PhD-prepared in Microbiology and Immunology, with post-doctoral fellowships at Toronto General and the National Microbiology Laboratory. As an RN and NP, Mia has practiced in diverse clinical environments including four models of primary care in Ontario; and in 2017 created focused practices in urban street outreach and rural and remote communities, in HIV prevention, hepatitis B & C across the province of Ontario. In 2022, Mia joined York University School of Nursing as a tenure-track Assistant Professor, and the coordinator of Primary Healthcare Nurse Practitioner Program.\nMia's research has always focused on virology, and broadly, her research has touched most aspects of clinical care including prevention (HBV, HCV); assay development (HIV, HBV, HCV, COVID-19); host characterization (Zika, CCHFV, Ebola virus, COVID-19); animal models (Ebola virus, COVID-19); treatments and drug resistance (HIV, HCV, Ebola virus, Zika, COVID-19); clinical models of care (HIV, HCV, Ebola virus); and cost-effectiveness (HBV, HCV). She currently has 66 publications, 2138 citations, and an h-index of 20.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "tatyana-mollayeva",
+    "name": "Tatyana Mollayeva",
+    "image": "../../../assets/speakers/tatyana-mollayeva.webp",
+    "bio": "Tatyana Mollayeva, PhD, MD is a Scientist at the KITE Research Institute, University Health Network, and a Professor and Affiliated Scientist in the Department of Epidemiology at the Dalla Lana School of Public Health, University of Toronto, with cross-appointments at the Rehabilitation Sciences Institute and the Department of Occupational Science & Occupational Therapy.\nDr. Mollayeva's career reflects a strong commitment to interdisciplinary training, global scholarship, and mentorship. She earned her MD from Sechenov University, completed residency training in Epidemiology at Turkmen State Medical University, and practiced preventive medicine before transitioning to academic research. She completed her PhD in 2015 at the University of Toronto through the Rehabilitation Sciences Institute and the Collaborative Program in Neuroscience, focusing on sleep and brain health in traumatic brain injury.\nHaving trained across countries and disciplines, Dr. Mollayeva is deeply committed to supporting trainees, particularly women and people from underrepresented communities during critical career transitions. In 2022, she was selected as an Atlantic Fellow for Equity in Brain Health at the Global Brain Health Institute following interdisciplinary residence training at Trinity College Dublin Ireland.\nDr. Mollayeva holds the Canada Research Chair (Tier 2) in Neurological Disorders and Brain Health and actively mentors the next generation of women leaders in science and engeneering.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "bonnie-yuqing-wang",
+    "name": "Bonnie Yuqing Wang",
+    "image": "../../../assets/speakers/bonnie-yuqing-wang.webp",
+    "bio": "Bonnie is a freelance medical illustrator working with science design agencies, hospitals, researchers, and physicians. Using her background in both design and science, she collaborates with health experts in different medical fields to help better visualize science. Recent projects have included creating online e-learning activities for clinicians, an interactive patient education website, and surgical illustrations for pelvic and wrist procedures. She obtained her Bachelors in Honours Physiology from the University of Alberta, holds a certificate in Biomedical Communication and Visualization from the University of British Columbia, and a Masters in Biomedical Communication from the University of Toronto. Her Master's Research Project titled NerveUs: Developing an Interactive Educational Resource for Patients with Peripheral Nerve Injury, won a research award at the annual Association of Medical Illustrators conference this year. Specializing in design strategy, interactive design, illustration, and animation, she leverages her skills to visualize biomedical concepts that educate and inform a wide variety of audiences.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "brianne-helfrich",
+    "name": "Brianne Helfrich",
+    "image": "../../../assets/speakers/brianne-helfrich.webp",
+    "bio": "Dr. Brianne Helfrich bioethicist specializing in pediatric care, decision-making, and end-of-life ethics. Her work focuses on how children and families experience moral uncertainty in clinical settings, particularly in contexts involving serious illness, palliative care, and complex treatment decisions. Additionally, she works to encourage pediatric voice in healthcare. Brianne's research has been presented at numerous international conferences such as the American Society for Bioethics and Humanities. At a young age, Brianne is pioneering the field of pediatric ethics and making a big shift for healthcare."
+  },
+  {
+    "id": "jane-heffernan",
+    "name": "Jane Heffernan",
+    "image": "../../../assets/speakers/jane-heffernan.webp",
+    "bio": "Jane Heffernan is a Professor and York Research Chair in Modelling Infection & Immunity (MI2) in the Mathematics & Statistics Department and Canadian Centre for Disease Modelling (CCDM) at YorkU. Dr. Heffernan's MI2 lab studies mathematical models of infectious diseases, vaccination, and drug therapies. The primary goal of her work is to uncover key contributors to infectious disease pathogenesis in-host (immunology) and in populations (epidemiology), which provides a critical foundation for optimized health policy.\nDr. Heffernan completed her Honours BSc at Trent University in Math and Computer Science in 2000. She then completed her BEd (concurrent) at Queen's in 2001, MSc at Western in 2002, and PhD at Western in 2005, for which she was awarded the Governor General's Gold Medal. She joined YorkU after an NSERC Postdoctoral Fellowship at the University of Warwick (UK) from 2005-2007.\nDr. Heffernan is Past-President of the Society of Mathematical Biology (SMB). She is also Co-Lead of the Modelling and Economics Research Network (ModERN) within the Canadian Immunization Research Network (CIRN), and is co-Director of the Canadian Centre for Disease Modelling (CDM). Heffernan is an SMB Fellow and is a Member of the Royal Society of Canada (RSC) College of New Scholars, Artists, and Scientists."
+  },
+  {
+    "id": "hannah-hoag",
+    "name": "Hannah Hoag",
+    "image": "../../../assets/speakers/hannah-hoag.webp",
+    "bio": "Hannah Hoag is a senior producer in the Health, Science and Climate Unit at CBC News where she leads a team of a dozen reporters and producers to create daily news and feature stories across all CBC News platforms from TikTok to live pages to radio and television. She earned an MSc in biology (human genetics) at McGill University and an MSc in science and medical journalism at Boston University. Prior to joining CBC, she was the deputy editor at The Conversation Canada and the founding managing editor at Arctic Deeply. She is also a long-time freelance journalist, whose stories have appeared in the New York Times, the Globe and Mail, The Atlantic, National Geographic, Nature, Science and many other outlets.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "sivani-baskaran",
+    "name": "Sivani Baskaran",
+    "image": "../../../assets/speakers/sivani-baskaran.webp",
+    "bio": "Sivani Baskaran is an interdisciplinary scientist with a PhD in Environmental Chemistry from the University of Toronto. Her doctoral research focused on measuring and predicting chemical properties to identify hazardous chemicals to air-breathing organisms, and her work has been used in guidance documents by the European Chemical Agency. Most recently, Sivani was an NSERC postdoctoral research fellow at the Norwegian Geotechnical Institute in Oslo, where her research used statistical methods and analysis to predict the hazard potential of chemicals on the global market.\nIn addition to her research, Sivani is passionate about science policy and evidence-informed decision-making. In 2018, she co-founded the Toronto Science Policy Network (TSPN) at U of T. She served as Vice-President and later President, where she co-led the non-partisan Vote Science national campaigns and co-wrote the report on The Early Impacts of COVID-19 on Graduate Students across Canada. She wrote a policy memo on improving the inclusivity and accessibility of federal research awards and participated in the Support Our Science Campaign.\nThrough her work, Sivani bridges scientific research and policy application, translating complex data into actionable insights that inform evidence-based decision-making.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "jennifer-quaglietta",
+    "name": "Jennifer Quaglietta",
+    "image": "../../../assets/speakers/jennifer-quaglietta.webp",
+    "bio": "Jennifer Quaglietta currently serves Professional Engineers Ontario as their CEO & Registrar, where she is leading the organization through a historic enterprise-wide transformation towards becoming a modern regulator that serves and protects the public interest. She has worked across several sectors including pharmaceutical, healthcare, banking, insurance and government.\nA transformational leader, Jennifer combines an empathic and authentic style with expertise in strategy development, governance, enterprise risk and change management to steer private and public sector organizations through complex change while enabling sustainable operations.\nJennifer's belief in the power of knowledge sharing and the importance of building future leaders has her partnering with academic institutions to advance research and support student placements. She is an Industry Affiliate with the Centre for Healthcare Engineering at the University of Toronto and a highly sought-after speaker and thought leader. Jennifer is a passionate advocate for women in STEM, gender equality, diversity, and mental health.\nHer achievements have been recognized provincially and nationally. She is a recipient of the 2023 Canada's Most Powerful Women Top 100, 2022 Robert Zed Young Health Leader Award, 2021 Not-for-Profit CIO of the Year Award among others.\nJennifer holds a Bachelor of Applied Science and Engineering, a Master of Business Administration and an Institute of Corporate Directors Designation from the University of Toronto and has a certificate in strategic partnerships in nonprofit management from Harvard Business School. She is the Vice Chair of the Holland Bloorview Rehabilitation Hospital Board of Directors, a member of the Ontario Medical Association Board of Directors, and serves on Advisory Boards including Engineers Canada Learning and Data Science Advisory Group among others. She lives in Toronto with her husband, two young boys and dog named Harry Potter."
+  },
+  {
+    "id": "rezwana-sharmin",
+    "name": "Rezwana Sharmin",
+    "image": "../../../assets/speakers/rezwana-sharmin.webp",
+    "bio": "Rezwana graduated from the University of Toronto's Engineering Science program and completed her internship at Actel (now Microsemi), where she focused on radiation characterization of FPGAs for aerospace and defense applications. Her work involved close collaboration with cross-functional teams to bring up hardware boards, design and execute radiation experiments, perform performance analysis, and characterize devices before and after testing. This role also required travelling across the country to work with multiple universities operating specialized testing.\nAfter graduation, Rezwana joined Qualcomm, where she works on end-to-end verification of Snapdragon display systems spanning multiple product lines, including handsets, laptops, automotive platforms, and smart glasses. Her focus is on ensuring system-level reliability, performance, and integration across diverse use cases.\nOutside of work, she practices archery and kendo, occasionally plays softball (often to the detriment of her team), and travels whenever possible."
+  },
+  {
+    "id": "julia-lamassa",
+    "name": "Julia Lamassa",
+    "image": "../../../assets/speakers/julia-lamassa.webp",
+    "bio": "As Head of Operating Model at Vale Base Metals, Julia oversees the architecture and continuous improvement of the company's Operating Model. It includes governance over processes, accountabilities and business planning, connecting strategy to execution through decision rights, streamlined processes, and a disciplined operating rhythm across global sites. Her background spans degrees in International Relations and Corporate Finance, and experience in management consulting and business administration. Across eight years in the mining industry, she has guided transformations that advanced operational excellence, simplified processes and improved efficiency.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "diana-anderson",
+    "name": "Diana Anderson",
+    "image": "../../../assets/speakers/diana-anderson.webp",
+    "bio": "Dr. Diana Anderson is a triple boarded professional – healthcare architect (ACHA-American College of Healthcare Architects), internist, and a geriatrician. As a \"dochitect,\" she pioneered a collaborative, evidence-based model for approaching healthcare from the medicine and architecture fields simultaneously.\nShe has worked on hospital design projects globally and is widely published in both architectural and medical journals, books and the popular press, including The New York Times, The Lancet, Metropolis, etc. She is a past fellow of the Harvard Medical School Center for Bioethics, which launched her current exploration of the ethics of built space.\nShe is currently an Assistant Professor of Neurology at Boston University and undertakes research in health design. She is a healthcare principal at Jacobs, contributing her thought leadership at the intersection of design and health, and was elevated to the Council of Fellows within the ACHA for her contributions to the profession."
+  },
+  {
+    "id": "michelle-mic-liu",
+    "name": "Michelle \"Mic\" Liu",
+    "image": "../../../assets/speakers/mic-liu.webp",
+    "bio": "Mic is a lawyer, a licensed Professional Engineer (P.Eng), speaker, inclusion consultant, community leader, interdisciplinary scholar (PhD '25) and a founding partner of Liu Chooti Law & Counselling Group. As a Queer, non-binary, racialized, and neurodivergent person, Mic's focus across their undertakings is to leverage their lived experiences and subject matter knowledge to advance social justice.\nMic's legal experience includes working at Danielson Kabesh Law in Ottawa, Ecojustice Canada, and Blake, Cassels & Graydon LLP. At Danielson Kabesh Law, Mic helped clients with their family and employment issues and represented clients in administrative tribunal proceedings, among other areas. Prior to DK Law, Mic worked in environmental and regulatory law at Ecojustice Canada, and before that, at Blake, Cassels & Graydon LLP, where Mic's civil and environmental engineering expertise enhanced their ability to conduct legal research and writing about highly technical matters in the energy and construction sectors. Mic has also served on the editorial board of the Canadian Journal of Women and the Law since 2023.\nMic earned their JD (Magna cum laude & Dean's Award) from the University of Ottawa and is completing their engineering PhD at the same institution. Mic's research, funded by the Vanier Canada Graduate Scholarship and Pierre Elliott Trudeau Foundation Scholarship, uses sociolegal approaches to understand the interaction between technology, human rights, and the public interest in Canada. While in law school, Mic served on the student union board of directors, two terms as law student society president, member of the University Senate, and member of the selection committee that installed Elder Claudette Commanda as the current Chancellor of the University.\nBefore going into law, Mic earned two engineering degrees from the University of Waterloo and worked for various national and international engineering firms. Mic has played key roles in infrastructure projects of up to $500 million dollars and supervised construction teams of over 150 persons.\nMic has published 15 peer-reviewed articles, delivered over 150 presentations, and co-authored policy and guiding documents, namely addressing workplace discrimination and systemic inequities. They co-founded Let Science Connect, a consultancy for inclusive communication.\nAn active volunteer and community leader, Mic has served as a board member for Professional Engineers Ontario, co-chaired the Equity Task Force for the Ontario Society of Professional Engineers, mentored with the Federation of Asian Canadian Lawyers, and supported over 50 initiatives for 2SLGBTQ+ inclusion in law and engineering. They co-created and co-fund the Liu-Kennington Award for the 2SLGBTQ+ Engineering Community at the University of Waterloo and the Liu-Kennington Award for the LGBTQ2S+ Law Student Community at the University of Ottawa.",
+    "pronouns": "they/them"
+  },
+  {
+    "id": "oseremen-joy-idialu",
+    "name": "Oseremen Joy Idialu",
+    "image": "../../../assets/speakers/oseremen-joy-idialu.webp",
+    "bio": "I'm an AI Software Engineer at Pivotnow Toronto, where I build intelligent systems that connect large language models with enterprise data. My recent work includes developing PivotAssist, an AI-powered audio-visual troubleshooting assistant that integrates retrieval systems and LLM workflows to help users diagnose and resolve complex system issues through natural conversation. I also designed an LLM-powered resource gathering system that autonomously collects and synthesizes data to support enterprise operations.\nI hold a Master's degree in Computer Science from the University of Waterloo, where my research focused on detecting AI-generated code and earned an ACM Distinguished Paper Award at MSR 2024. My background spans software engineering and applied machine learning. I'm passionate about mentorship and ethical AI, having guided undergraduate students through their first research projects as part of Waterloo's EREP program.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "lana-el-sanyoura",
+    "name": "Lana El Sanyoura",
+    "image": "../../../assets/speakers/lana-el-sanyoura.webp",
+    "bio": "Absorbed by the cross-disciplinary potential between cognitive science and computer science, Lana El Sanyoura has explored many facets of the machine learning domain. She is a published author (AAAI ICWSM, CogSci) and software engineer at Amazon where she works on supply chain optimization technologies. Her previous experiences include Deep Learning Inference at Intel and research in Neuro-science inspired AI at the MIT-IBM Watson AI Lab. Having been awarded the Google Deep Mind fellowship and Vector Scholarship in AI during her MSc and BSc at the University of Toronto, Lana has led several initiatives to better the experience of fellow women in computer science and taught programming workshops to students from various disciplines.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "sherry-chen",
+    "name": "Sherry Chen",
+    "image": "../../../assets/speakers/sherry-chen.webp",
+    "bio": "Sherry Chen is an Applied Scientist at Amazon Robotics, where she works on computer vision research for next-generation robotic systems in Amazon's fulfillment centers. She develops real-time perception models that help robots understand and interact with complex warehouse environments, and she is passionate about bridging cutting-edge research with large-scale, real-world application.\nBefore joining Amazon, Sherry completed her Bachelor's degree in Engineering Science at the University of Toronto with a specialization in robotics engineering, followed by a Master's degree in robotics and AI. Since joining the company, she has led the development of several production computer vision models and successfully deployed them to hundreds of robotic workstations across multiple Amazon sites.\nSherry cares deeply about building technologies that have meaningful impact, especially in robotics and automation. Beyond her technical work, she helps organize Amazon's Women in Engineering conferences and events because she is committed to creating pathways, visibility, and community for women in STEM."
+  },
+  {
+    "id": "sepideh-shaterian",
+    "name": "Sepideh Shaterian",
+    "image": "../../../assets/speakers/sepideh-shaterian.webp",
+    "bio": "Sepideh Shaterian is a Member of Technical Staff (MTS) Performance Engineer on the Pretraining team at Cohere, where she works on optimizing large-scale foundation models and LLM training. Her role focuses on improving training efficiency, scalability, and system-level performance across distributed environments, enabling faster and more reliable development of state-of-the-art language models.\nPreviously, Sepideh worked at AMD, gaining experience in performance-critical systems and AI compilers. She holds a Master's degree from the University of Waterloo, where her research focused on Image Compression for Computer Vision applications.\nSepideh's technical interests include LLM pretraining, performance optimization, efficient AI systems, and bridging research with production-scale infrastructure.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "soude-ghari",
+    "name": "Soude Ghari",
+    "image": "../../../assets/speakers/soude-ghari.webp",
+    "bio": "I hold a Ph.D. in Computer Engineering from Polytechnique Montréal and am currently a Postdoctoral Researcher at York University. My research focuses on the intersection of artificial intelligence and healthcare, exploring how AI can be developed and applied responsibly to improve health outcomes while addressing equity, ethics, and real-world impact. I specialize in AI applications for healthcare decision-making, including clinical risk prediction and diagnostic support.\nI focus on developing AI models that are accurate, fair, and interpretable, specifically designed to support cardiovascular screening, with the goal of improving outcomes for underrepresented populations, particularly Black women. My work incorporates principles of equity, diversity, and inclusion throughout the AI lifecycle, bridging the gap between cutting-edge AI research and practical, socially responsible healthcare solutions.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "kim-st-cyr",
+    "name": "Kim St-Cyr",
+    "image": "../../../assets/speakers/kim-st-cyr.webp",
+    "bio": "Kim St-Cyr is a multidisciplinary sustainability professional with a Master of Science in Sustainability Management and an Honors Bachelor of Science in Environmental Science, both from the University of Toronto. She currently serves as a Program Officer for Climate Engagement Canada (CEC) at the Shareholder Association of Research and Education (SHARE), where she coordinates and supports collaborative investor engagements that drive corporate climate action and advance Canada's net-zero transition. CEC is an investor-led engagement initiative with 61 institutional investors representing approximately ~$14.5 trillion in AUM and focuses on driving Canada's business transition to net zero.\nPrior to working at SHARE, Kim completed a graduate internship at the Canadian Medical Association (CMA) Impact, where she gained hands-on experience with the development of proxy voting guidelines, harnessing investor engagement mechanisms, and participating in investor coalitions focused on advancing ESG issues. Her expertise in shareholder engagement extends beyond professional practice. Her master's thesis examined the impact of shareholder proposals on greenhouse gas (GHG) disclosure and target-setting, and their relationship with firm-level ESG and emissions performance.\nKim continues to expand her knowledge of sustainability and seeks to build connections that foster innovative and purpose-driven approaches to addressing sustainability challenges.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "sanjida-moury",
+    "name": "Sanjida Moury",
+    "image": "../../../assets/speakers/sanjida-moury.webp",
+    "bio": "Dr. Sanjida Moury is an electrical engineer specializing in renewable energy and transportation electrification, currently serving as a Senior Engineer in the Renewable Energy Program within the Innovation and Sustainability Group at the Toronto Transit Commission (TTC), where she advances eBus infrastructure, operations, and renewable integration. Holding a Ph.D. from York University, she previously worked as an Assistant Professor at Lakehead University, following industry experience as a Board Designer at Advanced Micro Devices (AMD). Her work focuses on system design and optimization for green applications, improving efficiency, reliability, and cost-effectiveness in electrified transportation and renewable power systems, with publications in leading journals and conferences. An active contributor to IEEE technical and conference committees and a Board Director for Women in Renewable Energy (WiRE), Dr. Moury is committed to building a sustainable future and empowering women in STEM.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "alicia-battaglia",
+    "name": "Alicia Battaglia",
+    "image": "../../../assets/speakers/alicia-battaglia.webp",
+    "bio": "Alicia Battaglia is a postdoctoral fellow at the University of Toronto working with Prof. Aimy Bazylak on developing novel ionomers and catalysts for CO2 electrolysis. She completed her Ph.D. in polymer and materials chemistry at the University of Toronto in 2024 under the supervision of Prof. Dwight S. Seferos, where her research focused on the design of polymer binders for organic electrodes. Prior to this, Alicia earned her B.Sc. (Honours Specialization in Chemistry) from Western University in 2019, where she conducted undergraduate research with Profs. Joe Gilroy and John Corrigan on semiconducting materials for resistive memory applications.\nHer research interests include polymer and materials, energy storage, and sustainable electrochemical systems. Alicia has authored 14 publications, including six as first-author, and was awarded the Chair's Doctoral Medal for her Ph.D. thesis. She is passionate about equity, diversity, inclusion and sustainability, having held leadership roles on student organizations such as Working Towards Inclusivity in Chemistry Toronto (WICTO) and the Green Chemistry Initiative (GCI). She is also deeply committed to mentorship, outreach, and teaching, contributing to programs such as Girls in SySTEM and Science Rendezvous.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "eman-abdelsabour",
+    "name": "Eman Abdelsabour",
+    "image": "../../../assets/speakers/eman-abdelsabour.webp",
+    "bio": "Eman A. Sabour is an architect and sustainability strategist specializing in embodied carbon, climate-responsive design, and the integration of ESG principles into real project delivery. Her work spans architecture, urban design, and systems thinking, with a focus on creating practical tools, metrics, and workflows that help design teams deliver efficient, low-carbon, and high-performance projects. Eman has developed multi-dimensional frameworks and digital integration tools that embed carbon literacy, accessibility, wellness, and resilience directly into everyday design practice.\nThroughout her career, she has championed approaches that bring performance, health, and equity together, strengthening how buildings support both people and the planet. Her interdisciplinary mindset allows her to translate technical complexity into clear strategies that designers, clients, and city partners can use to meet climate and sustainability goals with confidence.\nBased in Toronto, Eman is committed to shaping a built environment where environmental responsibility and social impact are inseparable, practical, and achievable project by project, team by team.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "sarah-syed",
+    "name": "Sarah Syed",
+    "image": "../../../assets/speakers/sarah-syed.webp",
+    "bio": "Sarah Syed is a climate justice advocate and a member of the United Nations Habitat Youth Advisory Board. With a passion for climate education, policy advocacy, and intergenerational collaboration, Sarah has worked extensively with non-profits to develop environmental programs. Notably, she organized the Top 25 Under 25 Environmentalists in Canada program, which supports young leaders with funding and mentorship, and designed the first community engagement project at the Bay Area Climate Change Council (Burlington/Hamilton). Sarah has also organized one of the largest youth environmental hackathons globally with over 1000 participants and $42,000 in prizes awarded to youth to scale projects. An avid public speaker, Sarah has presented at numerous conferences including the United Nations, World Environmental Education Congress, AWE USA, and received several accolades, including being named the youngest Developer 30 Under 30, and receiving 2x recognition from the Lieutenant Governor for her conservation efforts and dedication to engaging youth in climate policy."
+  },
+  {
+    "id": "dr-sarah-haines",
+    "name": "Dr. Sarah Haines",
+    "image": "../../../assets/speakers/sarah-haines.webp",
+    "bio": "Sarah Haines is an Assistant Professor in the Department of Civil and Mineral Engineering at the University of Toronto and an inaugural member of the Hub for Advancing Buildings (HAB). She received her MS and PhD from The Ohio State University where her work focused on characterizing and modelling microbial growth in building materials. As the Director of the Indoor Microbiology and Environmental Exposures (IMEE) Lab her team specializes in indoor environmental quality (IEQ) and sustainable housing. Her work integrates community-based participatory research and advanced molecular techniques (e.g., high-throughput sequencing, digital PCR, metatranscriptomics) to examine microbial dynamics and contaminant exposures indoors.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "dr-morgan-hooper",
+    "name": "Dr. Morgan Hooper",
+    "image": "../../../assets/speakers/morgan-hooper.webp",
+    "bio": "Morgan Hooper is an Assistant Professor (Teaching Stream) in the Division of Engineering Science and the University of Toronto Institute for Aerospace Studies (UTIAS), as well as an alumna of EngSci's aerospace engineering major. Before returning to the University of Toronto as a faculty member, she earned an MS and PhD in Aeronautics from Caltech, where her research focused on experimental unsteady aerodynamics and fluid-structure interactions with views towards sustainable energy harvesting. Now in a teaching stream role, her research and practice both focus on building community in STEM programs, and the complex ways in which engineering identity, community, and the educational experience interact.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "patricia-watanabe",
+    "name": "Patricia Watanabe",
+    "image": "../../../assets/speakers/patricia-watanabe.webp",
+    "bio": "Patricia Watanabe is a first-year PhD student in the Department of Civil & Mineral Engineering, working under the supervision of Dr. Sarah Haines in the Indoor Microbiology and Environmental Exposure (IMEE) lab. Patricia was a double major holding a Bachelor of Science in Cell & Molecular Biology as well as Health & Disease with a minor in Statistics. Her research focuses on characterizing the microbiology of the built environment and understanding the complex interactions between microbial communities, building materials, and human occupants. Her recent work has involved the application of machine learning to estimate classroom ventilation and filtration rates, the efficacy of antimicrobial wall surface coatings for mould prevention, and the advancement of molecular techniques for indoor microbial profiling."
+  },
+  {
+    "id": "anna-larkin",
+    "name": "Anna Larkin",
+    "image": "../../../assets/speakers/anna-larkin.webp",
+    "bio": "Anna is a Senior Analyst on the Data Science & Strategy Team at Birch Hill Equity Partners. Anna received her HBA from the Richard Ivey School of Business and her Bachelor of Engineering Science in Software Engineering from Western University. Prior to joining Birch Hill in 2022, Anna was a summer analyst in Birch Hill's Data Science team, and prior to that, a technology analyst intern at Whitehorse Liquidity Partners and before that an IT systems developer intern at the Bank of Canada."
+  },
+  {
+    "id": "rachael-walker",
+    "name": "Rachael Walker",
+    "image": "../../../assets/speakers/rachael-walker.webp",
+    "bio": "Rachael is a Senior Analyst on the Data Science & Strategy Team at Birch Hill Equity Partners. Rachael graduated from the University of Toronto with a Bachelor of Applied Science in Industrial Engineering with a minor in Artificial Intelligence. Prior to joining Birch Hill in 2023, Rachael was a data analyst, strategy and analytics at Kijiji and before that, a data analyst at HomeEquity Bank for two summers."
+  },
+  {
+    "id": "olivia-tracey",
+    "name": "Olivia Tracey",
+    "image": "../../../assets/speakers/olivia-tracey.webp",
+    "bio": "Olivia is a Senior Analyst on the Data Science & Strategy Team at Birch Hill Equity Partners. Olivia received her Bachelor of Applied Science with a major in Engineering Science, and minors in Artificial Intelligence and Business from the University of Toronto. Prior to joining Birch Hill in 2023, Olivia was an analyst in Birch Hill’s Data Science group for her Professional Experience Year as part of the Co-op Program at the University of Toronto."
+  },
+  {
+    "id": "kelly-chang",
+    "name": "Kelly Chang",
+    "image": "../../../assets/speakers/kelly-chang.webp",
+    "bio": "Kelly is an Analyst on the Data Science & Strategy Team at Birch Hill Equity Partners. Kelly received her Bachelor of Applied Science from the University of Toronto, with a major in Industrial Engineering and a minor in Artificial Intelligence. Prior to joining Birch Hill in 2025, Kelly was a co-op analyst in Birch Hill’s Data Science team."
+  },
+  {
+    "id": "lilia-kautz",
+    "name": "Lilia Kautz",
+    "image": "../../../assets/speakers/lilia-kautz.webp",
+    "bio": "Lilia joined Birch Hill in May 2025 for her Professional Experience Year as part of the Co-op Program at the University of Toronto. She previously interned with the Global Supply Chain team at Grainger Canada. Lilia looks forward to graduating in 2027 from the University of Toronto with a BASc in Industrial Engineering."
+  },
+  {
+    "id": "sarvnaz-ale-mohammad",
+    "name": "Sarvnaz Ale Mohammad",
+    "image": "../../../assets/speakers/sarvnaz-ale-mohammad.webp",
+    "bio": "Sarvnaz joined Birch Hill in May 2025 for her Professional Experience Year as part of the Co-op Program at the University of Toronto. She previously interned at McKinsey & Company, and as a student researcher at Mount Sinai Hospital. Sarvnaz looks forward to graduating in 2027 from the University of Toronto with a BASc in Engineering Science, specializing in Machine Intelligence."
+  },
+  {
+    "id": "olivia-markham",
+    "name": "Olivia Markham",
+    "image": "../../../assets/speakers/olivia-markham.webp",
+    "bio": "Olivia studied Mechatronics Engineering at the University of Waterloo before moving into the AI field. She's spent the past two years on Cohere's core post-training team working on synthetic data and reasoning models."
+  },
+  {
+    "id": "serena-mandla",
+    "name": "Serena Mandla",
+    "image": "../../../assets/speakers/serena-mandla.webp",
+    "bio": "Serena Mandla, P.Eng., MASc., is the Chief Scientific Officer & Co-Founder of Noa Therapeutics, a preclinical biotech company based in JLABS pioneering the development of novel biased small molecule therapeutics to reestablish innate immune equilibrium for diseases such as atopic dermatitis and IBD/ulcerative colitis. At Noa Therapeutics, Serena leads the Research and Development team and their efforts to advance their first product into the clinic, while expanding their drug discovery efforts to identify novel small molecule compounds.\n\nPrior to Noa Therapeutics, Serena was involved in a spin-out from her MASc in Biomedical Engineering from the University of Toronto, Quthero Inc., where she has successfully raised financing and commercialized products for accelerating skin repair. She has over 15 scientific papers from her research at the University of Toronto and Harvard and is passionate about translating research into the clinic, developing new technologies and treatments.\n\nOutside of work, Serena is avidly involved as a mentor with underrepresented scientific youth through the U of T Alumni Mentorship Program and the Canadian Biomaterials Society, has delivered talks on entrepreneurship at Queen’s University, Western University, and the University of Toronto, and was recently awarded the Engineering Medal – Young Engineer by OSPE.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "feyisayo-feyi-enuiyin",
+    "name": "Feyisayo (Feyi) Enuiyin",
+    "image": "../../../assets/speakers/feyisayo-enuiyin.webp",
+    "bio": "Feyisayo (“Feyi”) Enuiyin is a Chemical Engineering graduate and product strategist with corporate experience across RBC, Bell, and Geotab. She has supported large-scale digital product initiatives, mobile platform development, and enterprise software delivery for global users, bringing a strong operator mindset to every role. Alongside her corporate experience, Feyi has built a strong presence in the Canadian tech ecosystem through her involvement with The Firehood, Toronto Tech Fest, and other community-driven innovation programs. She is a budding angel investor through The Firehood Angels, engaging with early-stage deal flow and supporting women-led and emerging-tech founders.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "dr-andrea-hemmerich",
+    "name": "Dr. Andrea Hemmerich",
+    "image": "../../../assets/speakers/andrea-hemmerich.webp",
+    "bio": "Dr. Andrea Hemmerich (PhD, Biomedical Engineering) is an Adjunct Assistant Professor at Queen's University and in the W Booth School of Engineering Practice and Technology at McMaster University, where she teaches Design Thinking. Her research extends across engineering, health and wellness, education, and international development fields, and has included maternal health studies and water, sanitation and hygiene (WaSH) system design in Africa and South Asia. She received an NSERC Postdoctoral Fellowship for pioneering research on upright maternal positioning in childbirth. Andrea is committed to advancing equity-based approaches to science, technology, engineering, and math (STEM) education. As Co-Founder of Up4 The Challenge, an award-winning non-profit promoting STEM for social impact, she co-designs and delivers inclusive, experiential learning programs for underserved youth across Canada. Andrea's priorities are to create opportunities for social change through a human-centred approach to design and innovation.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "anna-fan",
+    "name": "Anna Fan",
+    "image": "../../../assets/speakers/anna-fan.webp",
+    "bio": "Anna is a second-year Life Sciences student pursuing a double major in Human Biology and Physiology. She is passionate about neuroimaging and enjoys exploring different health-related fields through volunteer and clinical work."
+  },
+  {
+    "id": "kyoko-lin",
+    "name": "Kyoko Lin",
+    "image": "../../../assets/speakers/kyoko-lin.webp",
+    "bio": "Kyoko is a 3rd-year undergraduate neuroscience student in the Faculty of Arts & Science. She is also a research student at Sunnybrook Hospital, where she investigates the efficacy of concurrent TMS-fMRI-EEG in determining individual human motor thresholds."
+  },
+  {
+    "id": "fatima-taj",
+    "name": "Fatima Taj",
+    "image": "../../../assets/speakers/fatima-taj.webp",
+    "bio": "Fatima is a Senior Software Engineer at Yelp and a LinkedIn Learning Instructor with a passion for ensuring there is no knowledge gatekeeping in tech. An experienced international speaker, Fatima has presented at leading conferences including Harvard WeCode, Berlin Buzzwords, Developer Week, SCALE, NDC Copenhagen Developer Festival, Women of Silicon Roundabout, cdCon+GitOpsCon (as a keynote), and Momentum, as well as at more than 80 hackathons across North America.\n\nWith a master's degree in Data Science from HEC Montreal and a bachelor's degree in Mathematics from the University of Waterloo, Fatima combines technical expertise with a commitment to building an inclusive and supportive tech community. Her mission is simple: make knowledge in tech open to all.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "munaam-naveed",
+    "name": "Munaam Naveed",
+    "image": "../../../assets/speakers/munaam-naveed.webp",
+    "bio": "Munaam Naveed is the Leadership Education Specialist at Troost ILead, within the Faculty of Applied Science & Engineering at the University of Toronto. Munaam holds a Masters in Education in Student Development and Student Services in Higher Education from OISE, an Honours Bachelor of Arts in Sociology and CCIT from UofT, and a Certificate in Digital Communication from Sheridan College. As a lifelong learner, she recently completed her certificate in Leadership Essentials from UofT's School of Continuing Studies to better understand how to lead better and strategies she can share with others. Munaam has over seven years of experience working in various higher educational institutions in the GTA, where she focused on the professional and holistic development of students. Her experience spans across a number of functional areas including: career education, mentorship, residence life, orientation, leadership development, co-curricular instructional design, and CCR administration, with a keen focus on purposeful engagement of students. In all her roles, Munaam ensures to integrate equity and inclusiveness, while supporting students in better understanding and expressing the intersectional aspects of their identities.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "ashley-nicole-leal",
+    "name": "Ashley Nicole Leal",
+    "image": "",
+    "bio": "Ashley Nicole Leal is a Computer Engineering student at the University of Toronto, pursuing minors in AI and Business and specializing in software development. She is currently completing a PEY internship at Qualcomm, working on low-power AI software and machine learning.\n\nAshley has held leadership roles at the IEEE University of Toronto Student Branch for nearly three years, serving as Branch Chair and Technical Team Director, leading initiatives to engage students in technology and professional development. She also currently serves as a Student Campus Ambassador for Edge Impulse.\n\nHer experience spans diverse areas, including game development, web development, blockchain, and embedded systems, and she enjoys exploring new tech and building cool projects that mix creativity with impact."
+  },
+  {
+    "id": "hannah-nicole-chua",
+    "name": "Hannah Nicole Chua",
+    "image": "../../../assets/speakers/hannah-nicole-chua.webp",
+    "bio": "Hannah Chua is a mechanical engineering student at the University of Toronto, currently working towards a bachelor’s degree and exploring opportunities in the aerospace industry. She is currently an intern at Bombardier under Core Airworthiness, supporting aircraft safety, certification, and regulation. Outside of work and studies, she dedicates her time contributing to the Space Systems Division of the University of Toronto Aerospace Team (UTAT). As a member of the Thermal Subsystem, she is researching post-prototype planning and development procedures, such as bakeout and thermal vacuum testing, for the FINCH satellite mission. She also often represents UTAT at multiple events as Space Systems' Outreach Lead.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "riaab-zahid",
+    "name": "Riaab Zahid",
+    "image": "../../../assets/speakers/riaab-zahid.webp",
+    "bio": "Riaab Zahid is a third-year Engineering Science student at the University of Toronto, specializing in the Electrical and Computer Engineering option. Within the University of Toronto Aerospace Team (UTAT), she serves as both the Mission Operations Lead and Media Lead for the Space Systems Division. In her mission operations role, she is responsible for developing operational logic, mode architecture, and mission planning for the FINCH Earth-observation satellite, which aims to monitor crop residue for sustainable agriculture. As Media Lead, she helps communicate UTAT Space Systems' work to the broader community through outreach and public engagement.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "dr-melanie-courtot",
+    "name": "Dr. Mélanie Courtot",
+    "image": "../../../assets/speakers/melanie-courtot.webp",
+    "bio": "Dr. Mélanie Courtot is the Senior Director of Genome Informatics and a Principal Investigator at the Ontario Institute for Cancer Research in Toronto, and an Assistant Professor in the Departments of Medical Biophysics and Computer Science at University of Toronto. Dr. Courtot is passionate about translational informatics - building intelligent systems to gain new insights and impact human health. Her lab aims to build a globally shared knowledge ecosystem to advance science and improve health for all. This requires high-quality data, robust data integration processes at scale and discovery platforms providing data access across international borders. At OICR, her team of 25 develops the Overture software suite, which has helped managed ~3 million genomes (2.5 petabytes of data) accessed by over 300,000 researchers worldwide. Overture supports many active large-scale cancer genomics projects Dr. Courtot leads. These include ICGC and ICGC-ARGO (collecting molecular and clinical data for over 100k patients worldwide), VirusSeq (Canadian Covid portal with over 500k SARS-CoV-2 sequences), and the upcoming Pan-Canadian Genome Library. It also drives the African Pathogen Data Sharing and Archive Platform to upload and share pathogen sequences and associated metadata across continental Africa.\n\nDr. Courtot is a steering committee member for the Roche Wayfind-R project and the Global Alliance for Genomics and Health, an advisory board member for the eLwazi open data science platform and member of the Researcher Council for the Digital research Alliance of Canada. She holds a BSc in Biochemistry and MSc in Computer science (2002) from the Université Louis Pasteur, in Strasbourg, France, and a PhD in Bioinformatics (2014) from the University of British Columbia, Canada."
+  },
+  {
+    "id": "dr-salma-emara",
+    "name": "Dr. Salma Emara",
+    "image": "../../../assets/speakers/salma-emara.webp",
+    "bio": "Salma Emara is an Assistant Professor, Teaching Stream in the Department of Electrical and Computer Engineering at the University of Toronto. She received her B.Sc. in Electronics and Communications Engineering from the American University in Cairo in 2018 and her Ph.D. in Computer Engineering from the University of Toronto under the supervision of Professor Baochun Li in 2022. Her Ph.D. research focused on improving reinforcement learning algorithms for computer networking. Currently, her research explores pedagogical strategies for enhancing debugging skills in beginner programmers and leveraging natural language processing in engineering education. She believes engineers learn best by doing and is committed to engaging students through in-class activities and problem-solving assignments. Her dedication to teaching has been recognized with multiple student-voted teaching awards.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "dr-ania-harlick",
+    "name": "Dr. Ania Harlick",
+    "image": "../../../assets/speakers/ania-harlick.webp",
+    "bio": "Ania Harlick is currently an Associate Professor, Teaching Stream at the University of Toronto having previously been a Faculty Member at the University of Calgary. Originally from Poland, she earned her doctorate in Physics from Memorial University of Newfoundland and Labrador in 2010. Considers herself an accidental physicist with a passion for education. As her primary responsibilities are related to teaching university courses, most of her research focuses on implementing modern pedagogy into the design of course and laboratory components. As far as she is concerned, she has her dream job."
+  },
+  {
+    "id": "ivan-zhang",
+    "name": "Ivan Zhang",
+    "image": "../../../assets/speakers/ivan-zhang.webp",
+    "bio": "Ivan Zhang is a co-founder at Cohere, the security-first enterprise AI company. At Cohere, Ivan oversees key technical product development and is closely involved in the company's public sector and government customers. Prior to co-founding Cohere alongside Aidan Gomez and Nick Frosst, Ivan founded for.ai (now Cohere Labs). Ivan also worked in biotech and MLOps space as a software engineer and studied at the University of Toronto.",
+    "pronouns": "he/him"
+  },
+  {
+    "id": "eugene-cho",
+    "name": "Eugene Cho",
+    "image": "../../../assets/speakers/eugene-cho.webp",
+    "bio": "As a machine learning engineer, Eugene has worked on various aspects of training large language models at scale. He previously worked on the synthetic data team, where he was involved in developing scalable data pipelines for both LLM pre-training and post-training. His focus then shifted to the emerging reasoning language model paradigm, where he helped advance internal research on reinforcement learning training techniques, infrastructure and data. Currently, his main area of work is centered around optimizing LLMs for agentic cybersecurity usecases.",
+    "pronouns": "he/him"
+  },
+  {
+    "id": "dr-lindsey-fiddes",
+    "name": "Dr. Lindsey Fiddes",
+    "image": "../../../assets/speakers/lindsey-fiddes.webp",
+    "bio": "Dr. Lindsey Fiddes joined the Institute of Biomedical Engineering as an Assistant Professor, Teaching Stream, on January 1, 2026. Bringing over a decade of specialized experience to the faculty, Dr. Fiddes previously spent 13 years at the University of Toronto dedicated to training highly qualified personnel in the technical intricacies of microfabrication, microfluidics, and microscopy.\n\nHer current pedagogical research focuses on critical modern challenges in data integrity, specifically investigating biases in bioimaging and image processing techniques alongside her undergraduate research team. As a dedicated educator, Dr. Fiddes is spearheading the development of new curricula designed to give students hands-on mastery of rapid prototyping and nanoparticles for medicine, ensuring the next generation of engineers is equipped with cutting-edge fabrication skills. She holds a BSc in Chemistry from Western University and a PhD in Chemistry from the University of Toronto.",
+    "pronouns": "she/they"
+  },
+  {
+    "id": "lucy-ma",
+    "name": "Lucy Ma",
+    "image": "../../../assets/speakers/lucy-ma.webp",
+    "bio": "Lucy Ma is a 3rd year Biomedical Engineering PhD student at the University of Toronto whose research integrates synthetic biology and regenerative medicine. Co-supervised by Dr. Michael Garton and Dr. Penney Gilbert, she engineers human-induced pluripotent stem cells (iPSCs) and derived skeletal muscle tissues. With an interest in merging the outer space and medicine, she is also working on engineering gene therapies designed to protect astronauts from ionizing radiation–induced DNA damage.\n\nBeyond her research, Lucy is deeply committed to community building and being a connector in STEM. She founded the first graduate mentorship program within the Faculty of Biomedical Engineering at the University of Toronto. She serves as the Space Biomedical Sciences Chair at SEDS Canada. Through leading the Space Health Research Network, a non-profit founded by Dr. Giuseppe Iaria, she is dedicated to creating trainee opportunities and organizing bi-annual national symposia. Most recently, she is collaborating with Dr. Marcelo Vazquez from the Canadian Nuclear Lab to establish the first Canadian Space Radiation Research Group. Her long-term vision is to leverage business as a vehicle to build a sustainable ecosystem for space health research and innovations worldwide.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "emily-somerset",
+    "name": "Emily Somerset",
+    "image": "../../../assets/speakers/emily-somerset.webp",
+    "bio": "Emily Somerset is an assistant professor, teaching stream, in the Department of Statistical Sciences at the University of Toronto. Her research focuses on developing statistical frameworks for wastewater-based epidemiology to support public health surveillance. She has developed models for disease concentrations measured in wastewater that treat disease signals as differentiable Gaussian processes, enabling reliable identification and communication of changes in pandemic trends. She has also developed wastewater-based models for epidemic curve reconstruction and hospital admissions, which estimate the number of people infected within a community. Additionally, she is engaged in statistics education research, with particular interests in the impact of generative AI on student learning and the effects of flexible assessment structures on student writing and engagement.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "ana-maria-oproescu",
+    "name": "Ana-Maria Oproescu",
+    "image": "../../../assets/speakers/ana-maria-oproescu.webp",
+    "bio": "Ana-Maria Oproescu is a 4th year Biomedical Engineering PhD candidate and NSERC CGS-D recipient at the University of Toronto whose research focuses on the development and characterization of next-generation lipid nanoparticles for improved therapeutic nucleic acid delivery. Outside of the lab, Ana-Maria is committed to breaking barriers in the medical field. Most recently, as an Acceleration Consortium EDI grant recipient, she produced a video series to promote diverse perspectives of women working in the growing field of self-driving labs. She has also supported fundraising and educational campaigns through her Youth Ambassador role at Hydrocephalus Canada. Further, she created the nonprofit STEM PASS to support students from diverse socioeconomic backgrounds to apply to medical school through bursaries and other resources.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "cynthia-wu",
+    "name": "Cynthia Wu",
+    "image": "../../../assets/speakers/cynthia-wu.webp",
+    "bio": "Cynthia Wu is a Ph.D. student in Biochemistry in the Department of Biochemistry at the University of Toronto, where she investigates synthetic lethality between two proteins across cancer contexts, with the long-term goal of informing precision oncology strategies. She earned her B.Sc. at the University of Toronto in Pharmacology & Toxicology and Psychology in 2025 and has co-authored five peer-reviewed publications, including work in iScience and expert-review journals. Beyond the lab, she leads scientific outreach as President of Synthetic Biology Public Education Canada (SynPEC) and has contributed to award-winning iGEM projects, including a Gold Medal.\n\nCynthia also focuses on mentorship and widening access to STEM research: through the Research Application Support Initiative (RASI) and the U of T Discovery Program, she mentors high school and undergraduate trainees and supports students from under-resourced and underrepresented backgrounds in finding, applying for, and thriving in research opportunities.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "dr-tanushree-ghosh",
+    "name": "Dr. Tanushree Ghosh",
+    "image": "../../../assets/speakers/tanushree-ghosh.webp",
+    "bio": "Dr. Tanushree is a post doctoral researcher specializing in Direct Air Carbon Capture. With over 6 years of combined experience in research, she has worked with government organizations as well as leading funders as a sub team leader to deliver impactful results.\n\nDr. Ghosh holds a PhD in Physics from India Institute of Technology, Indore, India where she worked on optoelectronic devices and published over 40 papers.\n\nRecent achievements include serving as a team lead, working as a reviewer for top journals besides working on a pilot scale project. Outside of work, she enjoys dancing and adventure and is committed to her work in helping the environment deal with increasing carbon impact.",
+    "pronouns": "she/her"
+  },
+  {
+    "id": "kaiwen-liu",
+    "name": "Kaiwen Liu",
+    "image": "../../../assets/speakers/kaiwen-liu.webp",
+    "bio": "Kaiwen Liu is a PhD candidate in Biomedical Engineering at the University of Toronto, where their research focuses on the development and translation of advanced MRI technologies for cardiovascular disease. Their doctoral work centers on optimizing a novel molecular MRI contrast agent for the early detection and tracking of myocardial fibrosis, with the goal of improving diagnosis, risk stratification, and therapeutic monitoring in heart failure.\n\nKaiwen has extensive experience in biomedical imaging, image processing, and experimental design, spanning both preclinical models and translational research.\n\nBeyond their doctoral research, Kaiwen is actively involved in teaching and mentorship, supporting undergraduate and graduate students in developing technical skills, critical thinking, and an understanding of real-world healthcare challenges. They also engage in interdisciplinary collaboration and early-stage health innovation initiatives, contributing to projects that address unmet clinical needs through engineering-driven solutions.\n\nKaiwen is passionate about advancing equitable, impactful biomedical technologies and fostering inclusive scientific communities through education, mentorship, and service."
+  },
+  {
+    "id": "tina-do",
+    "name": "Tina Do",
+    "image": "../../../assets/team/2026/tina-do.JPG"
+  },
+  {
+    "id": "annie-paulette-vega-legarda",
+    "name": "Annie Paulette Vega Legarda",
+    "image": "../../../assets/team/2026/annie-vega-legarda.JPG"
+  },
+  {
+    "id": "nadira-barnes",
+    "name": "Nadira Barnes",
+    "image": "../../../assets/team/2026/nadira-barnes.jpg"
+  },
+  {
+    "id": "elena-ding",
+    "name": "Elena Ding",
+    "image": "../../../assets/team/2026/elena-ding.jpg"
+  },
+  {
+    "id": "jenny-yang",
+    "name": "Jenny Yang",
+    "image": "../../../assets/team/2026/jenny-yang.jpg"
+  },
+  {
+    "id": "melek-cobanoglu",
+    "name": "Melek Cobanoglu",
+    "image": "../../../assets/team/2026/melek-cobanoglu.jpg"
+  },
+  {
+    "id": "sunethma-munasinghe",
+    "name": "Sunethma Munasinghe",
+    "image": "../../../assets/team/2026/sunethma-munasinghe.jpg"
+  },
+  {
+    "id": "prarthona-paul",
+    "name": "Prarthona Paul",
+    "image": "../../../assets/team/2026/prarthona-paul.jpg"
+  },
+  {
+    "id": "avani-yadav",
+    "name": "Avani Yadav",
+    "image": "../../../assets/team/2026/avani-yadav.jpg"
+  },
+  {
+    "id": "jacqueline-zhu",
+    "name": "Jacqueline Zhu",
+    "image": "../../../assets/team/2026/jacqueline-zhu.JPG"
+  },
+  {
+    "id": "zia-owens",
+    "name": "Zia Owens",
+    "image": "../../../assets/team/2026/zia-owens.jpg"
+  },
+  {
+    "id": "radia-salam",
+    "name": "Radia Salam",
+    "image": "../../../assets/team/2026/radia-salam.jpg"
+  },
+  {
+    "id": "caitlin-evran",
+    "name": "Caitlin Evran",
+    "image": "../../../assets/team/2026/caitlin-evran.JPG"
+  },
+  {
+    "id": "caitlin-croskery",
+    "name": "Caitlin Croskery",
+    "image": "../../../assets/team/2026/caitlin-croskery.jpg"
+  },
+  {
+    "id": "kate-zhou",
+    "name": "Kate Zhou",
+    "image": "../../../assets/team/2026/kate-zhou.jpg"
+  },
+  {
+    "id": "percy-phan",
+    "name": "Percy Phan",
+    "image": "../../../assets/team/2026/percy-phan.JPG"
+  },
+  {
+    "id": "eloise-lukmito",
+    "name": "Eloise Lukmito",
+    "image": "../../../assets/team/2026/eloise-lukmito.JPG"
+  },
+  {
+    "id": "angela-zheng",
+    "name": "Angela Zheng",
+    "image": "../../../assets/team/2026/angela-zheng.jpg"
+  }
+]
