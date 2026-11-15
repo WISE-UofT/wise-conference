@@ -1,50 +1,139 @@
 ---
+import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
-import TeamMember from "../team/TeamMember.astro";
-import teamMembers from "../../content/team/2026.json";
+import mountains from "../../assets/hero/mountains.jpg";
+import teamJson from "../../content/team/2026.json";
 
-interface TeamMemberData {
-  name: string;
-  position: string;
-  image: string;
-}
-
-const teamImageModules = import.meta.glob("../../assets/team/2026/*", {
-  eager: true,
-}) as Record<string, { default: ImageMetadata }>;
-
-const teamImageByFileName = Object.fromEntries(
-  Object.entries(teamImageModules).map(([path, imageMod]) => [
-    path.split("/").pop() ?? "",
-    imageMod.default,
-  ]),
+const namedImages = import.meta.glob<ImageMetadata>(
+  "../../assets/team/2026/*.{jpg,jpeg,png,webp,JPG,JPEG}",
+  { eager: true, import: "default" }
 );
 
-const resolvedTeamMembers = (teamMembers as TeamMemberData[]).map((member) => ({
-  ...member,
-  image:
-    teamImageByFileName[member.image.split("/").pop() ?? ""] ?? member.image,
+const extraImages = import.meta.glob<ImageMetadata>(
+  "../../assets/team/*.{jpg,jpeg,png,webp,JPG,JPEG}",
+  { eager: true, import: "default" }
+);
+
+function fileName(path: string) {
+  return path.split(/[/\\]/).pop()!.toLowerCase();
+}
+
+function imageFor(publicPath: string) {
+  const file = fileName(publicPath);
+  const hit = Object.entries(namedImages).find(([key]) => fileName(key) === file);
+  return hit?.[1];
+}
+
+const named = teamJson.flatMap((member) => {
+  const image = imageFor(member.image);
+  return image ? [{ name: member.name, position: member.position, image }] : [];
+});
+
+const extras = Object.values(extraImages).map((image) => ({
+  name: "",
+  position: "",
+  image,
 }));
+
+const team = [...named, ...extras];
 ---
 
-<section id="team" class="w-full py-12 md:py-16">
-  <div class="mx-auto w-full max-w-7xl px-4 md:px-8">
-    <h2 class="mb-8 text-center text-3xl font-bold tracking-tight md:text-4xl">
-      Our Team
-    </h2>
+<section id="team" class="relative mt-6 overflow-hidden pt-8">
+  <p class="relative z-10 mb-4 text-center text-sm text-ink/80">
+    Made with love &lt;3
+  </p>
 
-    <div
-      class="grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
-    >
-      {
-        resolvedTeamMembers.map((member) => (
-          <TeamMember
-            imagePath={member.image}
-            name={member.name}
-            position={member.position}
+  <div
+    class="team-curve relative z-10 mx-auto h-[23rem] max-w-6xl overflow-hidden"
+    data-team-curve
+  >
+    {
+      team.map((member) => (
+        <article class="team-polaroid absolute top-3 left-0 w-[8.5rem] bg-white px-2 pt-2 pb-3 shadow-[0_10px_24px_rgba(58,49,82,0.14)]">
+          <span
+            class="absolute -top-2 left-1/2 h-3.5 w-6 -translate-x-1/2 rounded-sm bg-ink/75"
+            aria-hidden="true"
           />
-        ))
-      }
-    </div>
+          <Image
+            src={member.image}
+            alt={member.name || "Conference team member"}
+            class="aspect-[4/5] w-full object-cover object-top"
+            width={280}
+            height={350}
+          />
+          {member.name && (
+            <p class="mt-1.5 text-center text-xs font-bold leading-tight text-ink">
+              {member.name}
+            </p>
+          )}
+          {member.position && (
+            <p class="text-center text-[0.65rem] leading-tight text-ink/60">
+              {member.position}
+            </p>
+          )}
+        </article>
+      ))
+    }
+  </div>
+
+  <div class="relative -mt-10 h-64 md:-mt-16 md:h-[28rem]">
+    <Image
+      src={mountains}
+      alt=""
+      class="absolute inset-0 h-full w-full object-cover object-bottom"
+    />
   </div>
 </section>
+
+<script>
+  const root = document.querySelector<HTMLElement>("[data-team-curve]");
+  if (root) {
+    const cards = [...root.querySelectorAll<HTMLElement>(".team-polaroid")];
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let offset = 0;
+    let paused = false;
+    const speed = 0.55;
+
+    const place = () => {
+      const stageW = root.clientWidth;
+      const cardW = cards[0]?.offsetWidth ?? 136;
+      const spacing = cardW + 28;
+      const loop = Math.max(cards.length * spacing, stageW + spacing);
+
+      cards.forEach((card, index) => {
+        let x = index * spacing - offset;
+        x = ((x % loop) + loop) % loop;
+        if (x > stageW + cardW) x -= loop;
+
+        const t = (x + cardW / 2) / stageW;
+        const along = Math.min(1, Math.max(0, t));
+        const y = Math.sin(along * Math.PI) * 46;
+        const rot = (0.5 - along) * 8;
+        card.style.transform = `translate3d(${x}px, ${y}px, 0) rotate(${rot}deg)`;
+      });
+    };
+
+    const tick = () => {
+      if (!paused && !reduced && document.visibilityState !== "hidden") {
+        offset += speed;
+      }
+      place();
+      requestAnimationFrame(tick);
+    };
+
+    root.addEventListener("mouseenter", () => {
+      paused = true;
+    });
+    root.addEventListener("mouseleave", () => {
+      paused = false;
+    });
+    root.dataset.ready = "true";
+    tick();
+  }
+</script>
+
+<style>
+  .team-curve:not([data-ready]) .team-polaroid {
+    visibility: hidden;
+  }
+</style>

@@ -1,6 +1,19 @@
 ---
 import { Image } from "astro:assets";
 import NavLink from "./NavLink.astro";
+import logo from "../../assets/logo-dark-purple.webp";
+
+const links = [
+  { title: "Buy Tickets", link: "#", filled: true },
+  { title: "Discounts", link: "#discounts" },
+  { title: "Speakers", link: "#speakers" },
+  { title: "Workshops", link: "#workshops" },
+  { title: "Competitions", link: "#competitions" },
+  { title: "Schedule", link: "#schedule" },
+  { title: "Sponsors", link: "#sponsors" },
+  { title: "FAQ", link: "#faq" },
+  { title: "Recap", link: "#recap" },
+];
 ---
 
 <header
@@ -8,74 +21,60 @@ import NavLink from "./NavLink.astro";
   class="fixed top-0 left-0 z-50 w-full transition-colors duration-300"
 >
   <div
-    class="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-5 md:px-8"
+    class="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-4 md:px-8"
   >
     <a href="https://wise.skule.ca/" aria-label="WISE UofT" target="_blank">
       <Image
-        src="/logo.webp"
-        alt="WISE UofT Logo"
-        width={48}
-        height={48}
-        class="h-10 w-auto"
+        src={logo}
+        alt="WISE"
+        width={160}
+        height={70}
+        class="h-11 w-auto"
       />
     </a>
 
-    <!-- Desktop nav -->
-    <nav class="hidden md:block">
-      <ul
-        class="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white md:text-base"
-      >
-        <NavLink title="Overview" link="#overview" />
-        <NavLink title="Discounts" link="#discounts" />
-        <NavLink title="Speakers" link="#speakers" />
-        <NavLink title="Workshops" link="#workshops" />
-        <NavLink title="Competitions" link="#competitions" />
-        <NavLink title="Schedule" link="#schedule" />
-        <NavLink title="Sponsors" link="#sponsors" />
-        <NavLink title="Venue" link="#venue" />
-        <NavLink title="FAQ" link="#faq" />
-        <NavLink title="Recap" link="#recap" />
+    <nav class="hidden lg:block" aria-label="Page">
+      <ul class="flex max-w-4xl flex-wrap items-center justify-end gap-2">
+        {
+          links.map((item) => (
+            <NavLink title={item.title} link={item.link} filled={item.filled} />
+          ))
+        }
       </ul>
     </nav>
 
-    <!-- Mobile hamburger button -->
     <button
       id="mobile-menu-btn"
       aria-label="Open menu"
       aria-expanded="false"
       aria-controls="mobile-drawer"
-      class="flex flex-col items-center justify-center gap-1.5 p-2 cursor-pointer md:hidden"
+      class="flex flex-col items-center justify-center gap-1.5 p-2 cursor-pointer lg:hidden"
     >
-      <span
-        class="hamburger-line block h-0.5 w-6 bg-white transition-all duration-300"
+      <span class="hamburger-line block h-0.5 w-6 bg-ink transition-all duration-300"
       ></span>
-      <span
-        class="hamburger-line block h-0.5 w-6 bg-white transition-all duration-300"
+      <span class="hamburger-line block h-0.5 w-6 bg-ink transition-all duration-300"
       ></span>
-      <span
-        class="hamburger-line block h-0.5 w-6 bg-white transition-all duration-300"
+      <span class="hamburger-line block h-0.5 w-6 bg-ink transition-all duration-300"
       ></span>
     </button>
   </div>
 </header>
 
-<!-- Mobile drawer overlay -->
 <div
   id="mobile-overlay"
-  class="fixed inset-0 z-40 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"
+  class="fixed inset-0 z-40 bg-ink/30 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"
 >
 </div>
 
-<!-- Mobile drawer -->
 <nav
   id="mobile-drawer"
   aria-label="Mobile navigation"
-  class="fixed top-0 right-0 z-50 h-full w-72 translate-x-full bg-blue-navy-dark pt-20 shadow-2xl transition-transform duration-300 md:hidden"
+  class="fixed top-0 right-0 z-50 h-full w-72 translate-x-full bg-mist pt-20 shadow-2xl transition-transform duration-300 lg:hidden"
 >
   <button
     id="mobile-close-btn"
     aria-label="Close menu"
-    class="absolute top-5 right-5 text-white cursor-pointer"
+    class="absolute top-5 right-5 cursor-pointer text-ink"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -91,42 +90,29 @@ import NavLink from "./NavLink.astro";
         d="M6 18L18 6M6 6l12 12"></path>
     </svg>
   </button>
-  <ul class="flex flex-col gap-4 px-6 text-base font-semibold text-white">
-    <NavLink title="Overview" link="#overview" />
-    <NavLink title="Discounts" link="#discounts" />
-    <NavLink title="Speakers" link="#speakers" />
-    <NavLink title="Workshops" link="#workshops" />
-    <NavLink title="Competitions" link="#competitions" />
-    <NavLink title="Schedule" link="#schedule" />
-    <NavLink title="Sponsors" link="#sponsors" />
-    <NavLink title="Venue" link="#venue" />
-    <NavLink title="FAQ" link="#faq" />
-    <NavLink title="Recap" link="#recap" />
+  <ul class="flex flex-col items-start gap-3 px-6">
+    {
+      links.map((item) => (
+        <NavLink title={item.title} link={item.link} filled={item.filled} />
+      ))
+    }
   </ul>
 </nav>
 
 <script>
   const navbar = document.getElementById("navbar");
-  const banner = document.querySelector(
-    "header.relative",
-  ) as HTMLElement | null;
 
   function updateNavbar() {
     if (!navbar) return;
-    const bannerHeight = banner
-      ? banner.offsetHeight
-      : window.innerHeight * 0.55;
-    if (window.scrollY > bannerHeight - 64) {
-      navbar.style.backgroundColor = "var(--color-indigo)";
-    } else {
-      navbar.style.backgroundColor = "transparent";
-    }
+    const scrolled = window.scrollY > 8;
+    navbar.classList.toggle("bg-white/75", scrolled);
+    navbar.classList.toggle("shadow-sm", scrolled);
+    navbar.classList.toggle("backdrop-blur-md", scrolled);
   }
 
   window.addEventListener("scroll", updateNavbar, { passive: true });
   updateNavbar();
 
-  // Mobile drawer
   const menuBtn = document.getElementById("mobile-menu-btn");
   const closeBtn = document.getElementById("mobile-close-btn");
   const drawer = document.getElementById("mobile-drawer");
@@ -136,8 +122,6 @@ import NavLink from "./NavLink.astro";
     drawer?.classList.remove("translate-x-full");
     overlay?.classList.remove("opacity-0", "pointer-events-none");
     overlay?.classList.add("opacity-100");
-    navbar?.classList.remove("z-50");
-    navbar?.classList.add("z-30");
     menuBtn?.setAttribute("aria-expanded", "true");
     document.body.style.overflow = "hidden";
   }
@@ -146,8 +130,6 @@ import NavLink from "./NavLink.astro";
     drawer?.classList.add("translate-x-full");
     overlay?.classList.remove("opacity-100");
     overlay?.classList.add("opacity-0", "pointer-events-none");
-    navbar?.classList.remove("z-30");
-    navbar?.classList.add("z-50");
     menuBtn?.setAttribute("aria-expanded", "false");
     document.body.style.overflow = "";
   }
@@ -156,7 +138,6 @@ import NavLink from "./NavLink.astro";
   closeBtn?.addEventListener("click", closeMenu);
   overlay?.addEventListener("click", closeMenu);
 
-  // Close drawer when a nav link is clicked
   drawer?.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", closeMenu);
   });

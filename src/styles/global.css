@@ -1,13 +1,33 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: "Belwe Bd BT";
+    src: local("Belwe Bd BT"), local("Belwe Bold BT"), local("Belwe-BoldBT");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 @theme {
-    --color-purple-primary: #6A4F9E;
-    --color-purple-dark: #563D8E;
-    --color-purple-light: #ADABFF;
+    --color-purple-primary: #6a4f9e;
+    --color-purple-dark: #563d8e;
+    --color-purple-light: #adabff;
 
     --color-indigo: #352066;
-    --color-blue-navy: #101F46;
+    --color-blue-navy: #101f46;
     --color-blue-navy-dark: #070d21;
+
+    --color-ink: #3a3152;
+    --color-blush: #f6c3d6;
+    --color-blush-deep: #f0b0c8;
+    --color-lilac: #cbb6f4;
+    --color-mist: #f6f1fb;
+    --color-placeholder: #d9d9d9;
+
+    --font-sans: "Nunito Sans", ui-sans-serif, sans-serif;
+    --font-serif: "Fraunces", ui-serif, Georgia, serif;
+    --font-belwe: "Belwe Bd BT", "Belwe Bold BT", "Belwe", ui-serif, Georgia, serif;
+    --font-spartan: "League Spartan", ui-sans-serif, sans-serif;
 }
 
 @layer base {
@@ -18,7 +38,9 @@
 
     body {
         margin: 0;
-        background: #fff;
-        font-family: "Montserrat", sans-serif;
+        color: var(--color-ink);
+        background: #ffffff;
+        font-family: var(--font-sans);
+        -webkit-font-smoothing: antialiased;
     }
 }

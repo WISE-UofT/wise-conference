@@ -1,0 +1,74 @@
+.team-page {
+  min-height: 100vh;
+  overflow: hidden;
+
+  background: #faf9f5;
+
+  padding: 100px 6%;
+}
+
+.team-header {
+  max-width: 700px;
+  margin: 0 auto 100px;
+
+  text-align: center;
+}
+
+.eyebrow {
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+}
+
+.team-header h1 {
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 0.95;
+  margin: 20px 0;
+}
+
+.intro {
+  max-width: 500px;
+  margin: auto;
+  opacity: 0.65;
+}
+
+.team-wall {
+  position: relative;
+
+  max-width: 1200px;
+  margin: auto;
+
+  padding: 80px 0;
+}
+
+.cards {
+  position: relative;
+
+  display: grid;
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 50px;
+
+  align-items: start;
+
+  z-index: 2;
+}
+
+.rope {
+  position: absolute;
+
+  left: -10%;
+  width: 120%;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+.rope-one {
+  top: 100px;
+}
+
+.rope-two {
+  top: 500px;
+}

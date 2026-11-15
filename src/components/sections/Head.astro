@@ -1,19 +1,34 @@
 ---
+import { Image } from "astro:assets";
 import NavBar from "../ui/NavBar.astro";
+import mountains from "../../assets/hero/mountains.jpg";
 ---
 
 <NavBar />
-<header
-  class="relative min-h-[55vh] overflow-hidden bg-blue-navy md:min-h-[70vh]"
->
-  <img
-    src="/intro-bg.webp"
-    alt="WISE UofT National Conference 2026"
-    class="h-full w-full object-cover scale-140 md:scale-100"
-    loading="eager"
-  />
-  <div
-    class="absolute inset-0 z-10 bg-linear-to-b from-blue-navy/50 via-transparent to-blue-navy/70"
-  >
+<section class="relative bg-[#c9ccff]">
+  <div class="relative">
+    <!-- Extra sky so the title sits above the peaks, in the same lavender as the illustration. -->
+    <div class="h-36 sm:h-40 lg:h-40" aria-hidden="true"></div>
+    <Image
+      src={mountains}
+      alt="Illustrated mountains, a yellow path, and rabbits under a pastel sky"
+      class="block h-auto w-full"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-x-0 top-[4.75rem] px-4 text-center lg:top-24">
+      <h1
+        class="font-belwe whitespace-nowrap text-[clamp(2.5rem,7.2vw,100px)] font-normal leading-[0.87] tracking-normal text-ink"
+      >
+        Breaking New Ground
+      </h1>
+      <p
+        class="font-spartan mx-auto mt-3 max-w-5xl text-center text-[clamp(1.15rem,2.78vw,40px)] font-normal leading-none tracking-normal text-ink lg:mt-4"
+      >
+        Women in Science and Engineering National
+        <br class="hidden sm:block" />
+        Conference 2027
+      </p>
+    </div>
   </div>
-</header>
+</section>

@@ -18,31 +18,13 @@ const initial = name.trim().charAt(0).toUpperCase();
 const bioParagraphs = bio.split("\n").filter((p) => p.trim().length > 0);
 ---
 
-<div
+<dialog
   id={`bio-modal-${id}`}
-  class="modal-overlay hidden fixed inset-0 z-50 bg-black/50 p-4"
-  data-modal
+  class="bio-dialog max-h-[min(85vh,100%)] w-[min(100%-2rem,56rem)] overflow-y-auto rounded-2xl border-0 bg-white p-0 text-blue-navy shadow-lg backdrop:bg-black/50"
 >
-  <div
-    class="relative w-full max-w-4xl rounded-2xl bg-white shadow-lg flex flex-col"
-  >
-    <!-- Header with close button -->
-    <div
-      class="flex items-center justify-between px-4 py-2 border-b border-blue-navy/10"
-    >
-      <div></div>
-      <button
-        class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-blue-navy/10 text-blue-navy hover:bg-blue-navy/20"
-        aria-label="Close"
-        onclick="this.closest('[data-modal]').classList.add('hidden')"
-      >
-        ✕
-      </button>
-    </div>
-
     <!-- Modal content -->
     <div
-      class="flex flex-col md:flex-row gap-6 p-6 md:p-8 overflow-y-auto max-h-144 md:max-h-96 mb-8 items-center text-center md:items-start md:text-left"
+      class="flex flex-col items-center gap-6 p-6 text-center md:flex-row md:items-start md:p-8 md:text-left"
     >
       <!-- Image -->
       <div class="shrink-0 mx-auto md:mx-0">
@@ -70,9 +52,7 @@ const bioParagraphs = bio.split("\n").filter((p) => p.trim().length > 0);
       </div>
 
       <!-- Text content -->
-      <div
-        class="flex-1 overflow-y-auto max-h-[50vh] md:max-h-none scrollable-bio"
-      >
+      <div class="min-w-0 flex-1">
         <div class="mb-2">
           <h2
             class="flex items-center gap-3 justify-center md:justify-start text-2xl font-bold text-blue-navy"
@@ -95,36 +75,31 @@ const bioParagraphs = bio.split("\n").filter((p) => p.trim().length > 0);
         <div class="space-y-4 text-sm md:leading-7 text-blue-navy/85">
           {bioParagraphs.map((paragraph) => <p>{paragraph}</p>)}
         </div>
+        <button
+          type="button"
+          class="mt-6 cursor-pointer rounded-full bg-blue-navy px-5 py-2 text-sm font-semibold text-white"
+          onclick="this.closest('dialog')?.close()"
+        >
+          Close
+        </button>
       </div>
     </div>
-  </div>
-</div>
+</dialog>
 
 <style>
-  .modal-overlay:not(.hidden) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .bio-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: fit-content;
+    margin: 0;
+    transform: translate(-50%, -50%);
   }
 </style>
 
 <script>
-  // Close modal when clicking outside content
-  const modals = document.querySelectorAll("[data-modal]");
-  modals.forEach((modal) => {
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        modal.classList.add("hidden");
-      }
-    });
-  });
-
-  // Close modal with Escape key
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      modals.forEach((modal) => {
-        modal.classList.add("hidden");
-      });
-    }
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+    if (target instanceof HTMLDialogElement) target.close();
   });
 </script>

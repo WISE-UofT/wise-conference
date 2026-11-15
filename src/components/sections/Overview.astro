@@ -1,100 +1,118 @@
 ---
-import SectionLayout from "../../layouts/SectionLayout.astro";
-import ImageCarousel from "../ui/ImageCarousel.astro";
-
 import { Image } from "astro:assets";
-import type { ImageMetadata } from "astro";
-
-import team from "../../assets/recap/2026/team.webp";
-
-const recapImages = Object.entries(
-  import.meta.glob("../../assets/recap/2026/*.{png,jpg,jpeg,webp,avif}", {
-    eager: true,
-  }),
-)
-  .map(([path, module]) => ({
-    path,
-    src: (module as { default: ImageMetadata }).default,
-  }))
-  .sort((a, b) => a.path.localeCompare(b.path));
+import group from "../../assets/gallery/group.jpg";
+import posters from "../../assets/gallery/posters.jpg";
+import audience from "../../assets/gallery/audience.jpg";
+import roundtables from "../../assets/gallery/roundtables.jpg";
+import registration from "../../assets/gallery/registration.jpg";
+import laptops from "../../assets/gallery/workshop-laptops.jpg";
+import stage from "../../assets/gallery/stage.jpg";
+import stageScreens from "../../assets/gallery/stage-screens.jpg";
+import booth from "../../assets/gallery/booth.jpg";
 ---
 
-<SectionLayout title="Overview">
-  <div class="space-y-8">
-    <Image class="rounded-2xl" src={team} alt="WISE 2026 team" />
-    <p
-      class="text-base md:text-lg text-center max-w-4xl mx-auto md:leading-8 text-blue-navy/90"
-    >
-      Women in Science and Engineering proudly presented our
-      <span class="font-semibold"> 14th Annual WISE National Conference </span>
-      on January 17-18, 2026. Thank you to everyone who helped make the event a huge
-      success. Check out some snapshots from the conference and we look forward to
-      seeing you in 2027!
-    </p>
-    <ImageCarousel
-      images={recapImages.map((image) => image.src)}
-      labelPrefix="WISE Conference 2026 Recap Image"
-    />
-    <!-- <div class="flex flex-wrap gap-3 pt-2">
-				<a
-					href="https://www.zeffy.com/en-CA/ticketing/wise-national-conference--2026-2"
-					target="_blank"
-					rel="noreferrer"
-					class="rounded-full bg-blue-navy px-6 py-3 text-sm font-semibold tracking-wide text-white transition hover:bg-purple-primary"
-				>
-					Buy Tickets
-				</a>
-			</div> -->
-
-    <!-- Countdown -->
-    <!-- <aside class="rounded-2xl bg-blue-navy p-6 text-white shadow-xl">
-			<p class="text-sm font-semibold uppercase tracking-[0.2em] text-purple-light">Conference Starts In</p>
-			<div id="countdown-box" class="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
-				<div class="rounded-xl bg-white/10 p-3 text-center">
-					<p id="countdown-days" class="text-2xl font-bold">0</p>
-					<p class="text-xs uppercase tracking-wide text-purple-light">Days</p>
-				</div>
-				<div class="rounded-xl bg-white/10 p-3 text-center">
-					<p id="countdown-hours" class="text-2xl font-bold">0</p>
-					<p class="text-xs uppercase tracking-wide text-purple-light">Hours</p>
-				</div>
-				<div class="rounded-xl bg-white/10 p-3 text-center">
-					<p id="countdown-minutes" class="text-2xl font-bold">0</p>
-					<p class="text-xs uppercase tracking-wide text-purple-light">Minutes</p>
-				</div>
-				<div class="rounded-xl bg-white/10 p-3 text-center">
-					<p id="countdown-seconds" class="text-2xl font-bold">0</p>
-					<p class="text-xs uppercase tracking-wide text-purple-light">Seconds</p>
-				</div>
-			</div>
-		</aside> -->
+<section
+  id="overview"
+  class="relative -mt-px overflow-hidden bg-[linear-gradient(180deg,#fdcae9_0%,#fdcae9_55%,#fde0ee_78%,#fff4f9_90%,#ffffff_100%)] pb-16"
+>
+  <div class="pointer-events-none absolute inset-x-0 top-0" aria-hidden="true">
+    <svg class="block h-auto w-full" viewBox="0 0 1440 980" preserveAspectRatio="xMidYMin meet">
+      <defs>
+        <linearGradient
+          id="road-fade"
+          gradientUnits="userSpaceOnUse"
+          x1="720"
+          y1="0"
+          x2="1200"
+          y2="860"
+        >
+          <stop offset="0%" stop-color="#FDF39C"></stop>
+          <stop offset="42%" stop-color="#FDF39C"></stop>
+          <stop offset="68%" stop-color="#FFF6C4"></stop>
+          <stop offset="86%" stop-color="#FFF9E8" stop-opacity="0.45"></stop>
+          <stop offset="100%" stop-color="#FFF9E8" stop-opacity="0"></stop>
+        </linearGradient>
+      </defs>
+      <!--
+        Top edge is the yellow road where it leaves the mountain image:
+        28.59% to 69.12% of the width (x 412 to 995 on a 1440-wide view).
+        Both sides leave that edge vertically so the fill meets the illustration
+        without a step, then sweep to the right the way the design path does.
+      -->
+      <path
+        fill="url(#road-fade)"
+        d="M412 0
+           H995
+           C995 48 1080 100 1260 168
+           C1400 224 1440 300 1440 372
+           L1440 700
+           C1300 780 1080 720 940 590
+           C800 460 760 340 600 230
+           C480 150 430 90 412 52
+           C412 28 412 12 412 0
+           Z"
+      ></path>
+    </svg>
   </div>
 
-  <script>
-    /*
-		const targetDate = new Date("2026-01-17T08:00:00-05:00").getTime();
-		const days = document.getElementById("countdown-days");
-		const hours = document.getElementById("countdown-hours");
-		const minutes = document.getElementById("countdown-minutes");
-		const seconds = document.getElementById("countdown-seconds");
+  <div class="relative z-10 mx-auto w-full max-w-6xl px-5 pt-8 md:px-8 md:pt-12">
+    <div class="grid grid-cols-2 items-start gap-3 sm:gap-4 lg:grid-cols-12 lg:gap-x-5 lg:gap-y-4">
+      <p
+        class="col-span-2 max-w-md text-[0.98rem] leading-7 text-ink lg:col-span-5 lg:col-start-1 lg:row-start-1 lg:self-center lg:pt-2 lg:text-base lg:leading-8"
+      >
+        Women in Science and Engineering is proudly presenting our 15th Annual
+        National Conference on January 23-24, 2027. Thank you to everyone who is
+        helping make WISE National Conference 2027 a huge success. Check out the
+        media below to get a feel of the conference excitement &amp; we look
+        forward to seeing you in 2027!
+      </p>
+      <Image
+        src={group}
+        alt="WISE National Conference group photo on stage with silver balloons"
+        class="col-span-2 h-auto w-full lg:col-span-7 lg:col-start-6 lg:row-start-1"
+      />
 
-		function updateCountdown() {
-			const now = Date.now();
-			const diff = Math.max(targetDate - now, 0);
+      <Image
+        src={registration}
+        alt="Attendees with tote bags by the windows"
+        class="h-28 w-full object-cover sm:h-32 lg:col-span-3 lg:col-start-5 lg:row-start-2"
+      />
+      <Image
+        src={stage}
+        alt="A speaker at the podium on the main stage"
+        class="h-40 w-full object-cover sm:h-48 lg:col-span-2 lg:col-start-8 lg:row-start-2"
+      />
+      <Image
+        src={laptops}
+        alt="Hands-on workshop with laptops and a live coding demo"
+        class="h-40 w-full object-cover sm:h-48 lg:col-span-3 lg:col-start-10 lg:row-start-2"
+      />
+      <Image
+        src={roundtables}
+        alt="Workshop attendees working at round tables"
+        class="h-28 w-full object-cover lg:col-span-3 lg:col-start-1 lg:row-start-2 lg:mt-16 lg:h-32"
+      />
 
-			const dayValue = Math.floor(diff / (1000 * 60 * 60 * 24));
-			const hourValue = Math.floor((diff / (1000 * 60 * 60)) % 24);
-			const minuteValue = Math.floor((diff / (1000 * 60)) % 60);
-			const secondValue = Math.floor((diff / 1000) % 60);
-
-			if (days) days.textContent = String(dayValue);
-			if (hours) hours.textContent = String(hourValue);
-			if (minutes) minutes.textContent = String(minuteValue);
-			if (seconds) seconds.textContent = String(secondValue);
-		}
-
-		updateCountdown();
-		window.setInterval(updateCountdown, 1000);
-		*/
-  </script>
-</SectionLayout>
+      <Image
+        src={stageScreens}
+        alt="The ballroom from the back, with the session screens on stage"
+        class="h-32 w-full object-cover lg:col-span-4 lg:col-start-1 lg:row-start-3 lg:h-36 lg:self-end"
+      />
+      <Image
+        src={audience}
+        alt="Audience seated by the windows during a session"
+        class="h-52 w-full object-cover lg:col-span-3 lg:col-start-5 lg:row-start-3 lg:h-64 lg:self-end"
+      />
+      <Image
+        src={booth}
+        alt="Attendees at a sponsor booth by the windows"
+        class="h-28 w-full object-cover lg:col-span-2 lg:col-start-8 lg:row-start-3 lg:h-32 lg:self-end"
+      />
+      <Image
+        src={posters}
+        alt="Attendees discussing research posters"
+        class="col-span-2 h-36 w-full object-cover lg:col-span-3 lg:col-start-10 lg:row-start-3 lg:h-40 lg:self-end"
+      />
+    </div>
+  </div>
+</section>

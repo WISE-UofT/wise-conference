@@ -1,67 +1,104 @@
 ---
+import { Image } from "astro:assets";
 import discountsContent from "../../content/discounts/discounts-content.json";
 import discountsData from "../../content/discounts/discounts-data.json";
-import SectionLayout from "../../layouts/SectionLayout.astro";
 import Collapsible from "../ui/Collapsible.astro";
 import Discount from "../discounts/Discount.astro";
+import signpost from "../../assets/illustrations/signpost.png";
 
 const data = discountsData as Record<
   string,
   { used: number; limit: number; available: number }
 >;
 
-const schools = Object.entries(discountsContent).sort(([a], [b]) =>
-  a.localeCompare(b),
-);
+const schoolOrder = [
+  "Toronto Metropolitan University",
+  "University of Toronto",
+  "University of Toronto Mississauga",
+];
+
+const schools = schoolOrder
+  .filter((name) => name in discountsContent)
+  .map(
+    (name) =>
+      [name, discountsContent[name as keyof typeof discountsContent]] as const,
+  );
 ---
 
-<SectionLayout title="Discounts">
-  <p
-    class="mb-6 max-w-4xl text-base text-center font-medium mx-auto md:leading-7 text-blue-navy"
+<section id="discounts" class="scroll-mt-32 bg-white">
+  <div
+    class="mx-auto grid w-full max-w-6xl items-start gap-10 px-5 py-14 md:px-8 md:py-16 lg:grid-cols-2 lg:gap-16"
   >
-    Thank you to the following schools for supporting the WISE National
-    Conference 2026! For questions about discounts, please contact <a
-      href="mailto:conference.academics@wise.skule.ca"
-      >conference.academics@wise.skule.ca</a
-    >.
-  </p>
-  <p
-    class="mb-6 max-w-4xl text-sm italic text-center mx-auto md:leading-7 text-blue-navy/80"
-  >
-    All emails and student numbers associated with any discounted purchase will
-    be sent to the respective school and faculty to confirm enrollment. Thus,
-    for any discounted tickets, please ensure your affiliated school email is
-    being used for the purchase.
-  </p>
-  <div class="grid gap-5">
-    {
-      schools.map(([school, departments]) => (
-        <Collapsible
-          title={school}
-          class="p-0"
-          titleClass="gap-4 p-0 md:px-4 md:py-2 md:text-xl font-semibold text-purple-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-primary/50"
-          contentClass="p-0 md:px-4 pt-0 space-y-3 text-sm md:text-base md:leading-7 text-blue-navy/85 [&_h1]:mt-4 md:[&_h1]:text-lg [&_h1]:font-semibold [&_h1]:text-blue-navy [&_p]:m-0 [&_strong]:text-purple-primary"
-        >
-          {Object.entries(departments).map(
-            ([dept, { content, code, displayCode }]) => {
-              const { available, limit } = data[code ?? ""] ?? {
-                available: 0,
-                limit: 0,
-              };
-              return (
-                <Discount
-                  department={dept !== "General" ? dept : undefined}
-                  content={content}
-                  code={code}
-                  displayCode={displayCode}
-                  available={available}
-                  limit={limit}
-                />
-              );
-            },
-          )}
-        </Collapsible>
-      ))
-    }
+    <div>
+      <h2
+        class="font-serif text-[2rem] font-medium leading-tight tracking-tight text-ink md:text-[2.55rem]"
+      >
+        2027 Discount Codes
+      </h2>
+      <div class="mt-6 max-w-xl space-y-4 text-[0.95rem] leading-7 text-ink/90">
+        <p>
+          Thank you to the following schools for supporting the upcoming WISE
+          Conference! Please check back regularly for updates on discounts, as
+          we will be adding new ones on a rolling basis.
+        </p>
+        <p>
+          For questions about discounts, please contact{" "}
+          <a
+            class="underline decoration-ink/30 underline-offset-2 hover:decoration-ink"
+            href="mailto:conference.academics@wise.skule.ca"
+            >conference.academics@wise.skule.ca</a
+          >.
+        </p>
+        <p>
+          All emails and student numbers associated with any discounted purchase
+          will be sent to the respective school and faculty to confirm
+          enrollment. Thus, for any discounted tickets, please ensure your{" "}
+          <strong>affiliated school email is being used for the purchase</strong
+          >.
+        </p>
+      </div>
+    </div>
+
+    <div>
+      {
+        schools.map(([school, departments]) => (
+          <Collapsible
+            variant="plain"
+            title={school}
+            open={school === "University of Toronto"}
+            titleClass="text-lg font-semibold"
+            contentClass="space-y-4 text-sm leading-7 md:text-base [&_h1]:mt-1 [&_h1]:text-base [&_h1]:font-semibold [&_h1]:text-ink [&_p]:m-0 [&_strong]:font-semibold"
+          >
+            {Object.entries(departments).map(
+              ([dept, { content, code, displayCode }]) => {
+                const { available, limit } = data[code ?? ""] ?? {
+                  available: 0,
+                  limit: 0,
+                };
+                return (
+                  <Discount
+                    department={dept !== "General" ? dept : undefined}
+                    content={content}
+                    code={code}
+                    displayCode={displayCode}
+                    available={available}
+                    limit={limit}
+                  />
+                );
+              },
+            )}
+          </Collapsible>
+        ))
+      }
+    </div>
   </div>
-</SectionLayout>
+  <div class="mx-auto w-full max-w-6xl px-5 pb-6 md:px-8">
+    <Image
+      src={signpost}
+      alt=""
+      class="ml-6 w-52 sm:ml-16 sm:w-64"
+      width={330}
+      height={210}
+    />
+  </div>
+</section>

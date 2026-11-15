@@ -109,13 +109,14 @@ const recapYears = Object.keys(recapSpeakersByYear)
   }));
 ---
 
-<SectionLayout title="Recap">
-  <div class="space-y-4">
+<SectionLayout title="WISE National Conference Recap" id="recap">
+  <div>
     {
       recapYears.map((recap) => (
         <Collapsible
-          title={`WISE Conference ${recap.year} — ${recap.theme}`}
-          titleClass="text-base md:text-xl text-purple-dark"
+          variant="plain"
+          title={`${recap.year} WISE Conference`}
+          titleClass="text-base md:text-lg"
           contentClass="pt-5"
         >
           <div class="space-y-8">

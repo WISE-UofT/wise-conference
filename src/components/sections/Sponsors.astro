@@ -1,72 +1,133 @@
 ---
-import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
 import SectionLayout from "../../layouts/SectionLayout.astro";
-import SponsorSection from "../sponsors/SponsorSection.astro";
-import sponsorsData from "../../content/sponsors/sponsors.json";
+import birchhill from "../../assets/sponsors/corporate/birchhill.webp";
+import amd from "../../assets/sponsors/corporate/amd.webp";
+import qualcomm from "../../assets/sponsors/corporate/qualcomm.webp";
+import intact from "../../assets/sponsors/corporate/intact.webp";
+import arcadis from "../../assets/sponsors/corporate/arcadis.webp";
+import amazon from "../../assets/sponsors/corporate/amazon_robotics.webp";
+import cascades from "../../assets/sponsors/corporate/cascades.webp";
+import york from "../../assets/sponsors/academic/york-eng.webp";
+import tmu from "../../assets/sponsors/academic/tmu.webp";
+import tmuMath from "../../assets/sponsors/academic/tmu-math.webp";
 
-const sizeLarge = "max-w-80 sm:max-w-80";
-const sizeMedium = "max-w-50 sm:max-w-50";
-const sizeSmall = "max-w-40 sm:max-w-40";
-
-const sizeMap: Record<string, string> = {
-  large: sizeLarge,
-  medium: sizeMedium,
-  small: sizeSmall,
-};
-
-const toLogoList = (
-  entries: { fileName: string; size: string; breakAfter?: boolean }[],
-) =>
-  entries.map(({ fileName, size, breakAfter = false }) => ({
-    fileName,
-    sizeClass: sizeMap[size] ?? sizeMedium,
-    breakAfter,
-  }));
-
-const corporateSponsors = toLogoList(sponsorsData.corporateSponsors);
-const academicSponsors = toLogoList(sponsorsData.academicSponsors);
-const academicContributors = toLogoList(sponsorsData.academicContributors);
-
-const corporateSponsorImages = import.meta.glob<{ default: ImageMetadata }>(
-  "../../assets/sponsors/corporate/*.{webp,png,svg}",
-  { eager: true },
-);
-
-const academicSponsorImages = import.meta.glob<{ default: ImageMetadata }>(
-  "../../assets/sponsors/academic/*.{webp,png,svg}",
-  { eager: true },
-);
+const missing = [
+  "Kinross Gold Corporation",
+  "Kinaxis",
+  "Stantec",
+];
 ---
 
-<SectionLayout title="Sponsors">
-  <p class="mb-8 text-base text-center text-blue-navy/80">
-    Want to sponsor the WISE National Conference? Reach out at
+<SectionLayout title="Conference Sponsors" id="sponsors" align="center">
+  <p class="text-center text-base text-ink/80">
+    Want to become a sponsor? Get in touch with us at{" "}
     <a
-      class="font-semibold text-purple-primary"
+      class="underline decoration-ink/30 underline-offset-2 hover:decoration-ink"
       href="mailto:vp.finance@wise.skule.ca">vp.finance@wise.skule.ca</a
-    >.
+    >!
   </p>
 
-  <div class="space-y-10">
-    <SponsorSection
-      title="Corporate Partners"
-      logos={corporateSponsors}
-      basePath="../../assets/sponsors/corporate"
-      images={corporateSponsorImages}
-    />
+  <h3 class="mt-12 text-center font-serif text-2xl font-medium text-ink">
+    Corporate Sponsors
+  </h3>
 
-    <SponsorSection
-      title="Academic Sponsors"
-      logos={academicSponsors}
-      basePath="../../assets/sponsors/academic"
-      images={academicSponsorImages}
-    />
-
-    <SponsorSection
-      title="Academic Contributors"
-      logos={academicContributors}
-      basePath="../../assets/sponsors/academic"
-      images={academicSponsorImages}
+  <div class="mt-8 flex justify-center">
+    <Image
+      src={birchhill}
+      alt="Birch Hill Equity Partners"
+      class="h-16 w-auto object-contain md:h-20"
     />
   </div>
+
+  <div class="mt-10 flex flex-wrap items-center justify-center gap-x-14 gap-y-8">
+    <Image src={amd} alt="AMD" class="h-12 w-auto object-contain md:h-14" />
+    <Image
+      src={qualcomm}
+      alt="Qualcomm"
+      class="h-12 w-auto object-contain md:h-14"
+    />
+  </div>
+
+  <div class="mt-10 flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
+    <Image src={intact} alt="Intact" class="h-14 w-auto object-contain" />
+    <Image src={arcadis} alt="Arcadis" class="h-12 w-auto object-contain" />
+    <Image
+      src={amazon}
+      alt="Amazon Robotics"
+      class="h-14 w-auto object-contain"
+    />
+  </div>
+
+  <div class="mt-10 flex flex-wrap items-center justify-center gap-6">
+    <Image src={cascades} alt="Cascades" class="h-12 w-auto object-contain" />
+    {
+      missing.map((name) => (
+        <div
+          class="h-16 w-40 bg-placeholder"
+          role="img"
+          aria-label={`${name} logo coming soon`}
+        />
+      ))
+    }
+  </div>
+
+  <h3 class="mt-16 text-center font-serif text-2xl font-medium text-ink">
+    Academic Partners
+  </h3>
+
+  <div class="mx-auto mt-8 grid max-w-3xl grid-cols-2 gap-4 md:grid-cols-4">
+    {
+      Array.from({ length: 8 }).map(() => (
+        <div
+          class="h-16 bg-placeholder"
+          role="img"
+          aria-label="Academic partner logo coming soon"
+        />
+      ))
+    }
+  </div>
+
+  <div class="mt-8 flex flex-wrap items-center justify-center gap-8 md:gap-12">
+    <Image
+      src={york}
+      alt="Lassonde School of Engineering, York University"
+      class="h-14 w-auto object-contain"
+    />
+    <Image
+      src={tmu}
+      alt="Toronto Metropolitan University"
+      class="h-16 w-auto max-w-56 object-contain"
+    />
+    <Image
+      src={tmuMath}
+      alt="Department of Mathematics, Faculty of Science, Toronto Metropolitan University"
+      class="h-14 w-auto max-w-64 object-contain"
+    />
+    <div
+      class="h-16 w-40 bg-placeholder"
+      role="img"
+      aria-label="Academic partner logo coming soon"
+    >
+    </div>
+  </div>
 </SectionLayout>
+
+<section class="mx-auto w-full max-w-5xl px-5 pb-8 md:px-8">
+  <h2
+    class="text-center font-serif text-[2rem] font-medium tracking-tight text-ink md:text-[2.4rem]"
+  >
+    Academic Contributors
+  </h2>
+  <div class="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+    {
+      Array.from({ length: 16 }).map(() => (
+        <div
+          class="h-20 bg-placeholder"
+          role="img"
+          aria-label="Academic contributor logo coming soon"
+        />
+      ))
+    }
+  </div>
+</section>

@@ -4,12 +4,27 @@ import Collapsible from "../ui/Collapsible.astro";
 import faqs from "../../content/faqs/faqs-content.json";
 ---
 
-<SectionLayout title="FAQ">
-  <div class="space-y-3">
+<SectionLayout title="FAQ" id="faq">
+  <div>
     {
       faqs.map((faq) => (
-        <Collapsible title={faq.question} content={faq.answer} />
+        <Collapsible
+          variant="plain"
+          title={faq.question}
+          content={faq.answer}
+          open={faq.question.startsWith("Do I have to check in")}
+        />
       ))
     }
   </div>
+  <p class="mt-8 max-w-3xl text-sm leading-7 text-ink/80">
+    Don't see your question answered here? Please contact{" "}
+    <a
+      class="underline decoration-ink/30 underline-offset-2 hover:decoration-ink"
+      href="mailto:conference.internal@wise.skule.ca"
+      >conference.internal@wise.skule.ca</a
+    >
+    if you have any further inquiries. Please ensure your question is not
+    addressed in the FAQ first.
+  </p>
 </SectionLayout>

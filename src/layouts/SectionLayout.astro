@@ -1,15 +1,37 @@
 ---
-const { title } = Astro.props;
+interface Props {
+  title: string;
+  id?: string;
+  align?: "left" | "center";
+}
+
+const { title, id, align = "left" } = Astro.props;
+
+const sectionId =
+  id ??
+  title
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
 ---
 
 <section
-  id={title.toLowerCase()}
-  class="mx-auto w-full max-w-7xl scroll-mt-24 px-4 py-5 md:px-8 md:py-10"
+  id={sectionId}
+  class="relative isolate mx-auto w-full max-w-6xl scroll-mt-32 px-5 py-14 md:px-8 md:py-16"
 >
+  <div class="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
+    <slot name="background" />
+  </div>
   <h2
-    class="text-center mb-8 text-3xl font-bold tracking-tight text-blue-navy md:text-4xl"
+    class:list={[
+      "relative z-10 font-serif text-[2rem] font-medium leading-tight tracking-tight text-ink md:text-[2.55rem]",
+      align === "center" ? "text-center" : "text-left",
+    ]}
   >
     {title}
   </h2>
-  <slot />
+  <div class="relative z-10 mt-6">
+    <slot />
+  </div>
 </section>

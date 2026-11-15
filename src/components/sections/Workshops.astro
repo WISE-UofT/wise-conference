@@ -1,13 +1,38 @@
 ﻿---
 import SectionLayout from "../../layouts/SectionLayout.astro";
-import Workshop from "../workshops/Workshop.astro";
-import workshops from "../../content/workshops/workshops-content.json";
+
+const blurb =
+  "Explore the rapidly evolving world of neurotechnology and brain-computer interfaces with experts working across research, healthcare, and industry. Hear how they're turning brain signals into real-world applications, the paths that brought them into the field, and what breakthroughs could shape the future of how humans interact with technology.";
+
+const workshops = [
+  { photos: 4, reverse: false },
+  { photos: 2, reverse: true },
+  { photos: 2, reverse: false },
+  { photos: 2, reverse: true },
+];
 ---
 
-<SectionLayout title="Workshops">
-  <p
-    class="mb-8 max-w-4xl mx-auto text-base text-center leading-7 text-blue-navy/85"
+<SectionLayout title="Workshops" id="workshops">
+  <svg
+    slot="background"
+    class="absolute left-1/2 top-0 h-full w-screen -translate-x-1/2"
+    viewBox="0 0 1440 980"
+    preserveAspectRatio="none"
   >
+    <path
+      fill="#f4ebfb"
+      d="M0 280 L70 160 L120 210 L190 70 L250 180 L320 40 L390 150 L470 20 L540 140 L630 50 L710 170 L790 30 L870 160 L960 60 L1040 180 L1130 40 L1210 150 L1300 80 L1440 190 L1440 980 L0 980 Z"
+    ></path>
+    <path
+      fill="#eadcf8"
+      d="M0 460 L90 280 L160 360 L250 220 L340 390 L450 200 L540 370 L660 180 L760 340 L880 160 L980 330 L1100 190 L1220 360 L1340 230 L1440 320 L1440 980 L0 980 Z"
+    ></path>
+    <path
+      fill="#e3d2f6"
+      d="M0 640 L80 480 L170 580 L280 420 L390 560 L520 380 L640 540 L760 360 L880 530 L1020 400 L1160 560 L1280 430 L1440 520 L1440 980 L0 980 Z"
+    ></path>
+  </svg>
+  <p class="max-w-3xl text-[0.98rem] leading-7 text-ink/90">
     Workshops are a wonderful way for you to more actively take part in the
     Conference! Our demos, activities, and guided discussions are designed to
     allow you to get exposure to new concepts, develop useful skills, and engage
@@ -17,13 +42,33 @@ import workshops from "../../content/workshops/workshops-content.json";
     indicated otherwise, no materials are required for the workshops.
   </p>
 
-  <div class="space-y-6">
+  <div class="mt-12 space-y-16">
     {
       workshops.map((workshop) => (
-        <Workshop
-          workshop={workshop}
-          speakerDataSource={workshop.speakerDataSource}
-        />
+        <article class="grid items-start gap-8 md:grid-cols-2 md:gap-10 lg:gap-14">
+          <div class:list={[workshop.reverse && "md:order-2"]}>
+            <h3 class="font-serif text-2xl font-medium text-ink">Workshop Name</h3>
+            <p class="mt-2 text-sm text-ink/80">Host Names</p>
+            <p class="text-sm text-ink/70">Saturday, 10:30AM - 12:00PM | Pier 4</p>
+            <p class="mt-4 max-w-xl text-[0.95rem] leading-7 text-ink/90">{blurb}</p>
+          </div>
+          <div
+            class:list={[
+              "grid w-max max-w-full grid-cols-2 gap-4",
+              workshop.reverse
+                ? "md:order-1 md:justify-self-start"
+                : "md:justify-self-end",
+            ]}
+          >
+            {Array.from({ length: workshop.photos }).map(() => (
+              <div
+                class="aspect-square w-36 bg-lilac sm:w-40"
+                role="img"
+                aria-label="Workshop host photo coming soon"
+              />
+            ))}
+          </div>
+        </article>
       ))
     }
   </div>

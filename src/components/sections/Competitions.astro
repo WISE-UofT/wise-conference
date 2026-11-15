@@ -1,37 +1,65 @@
 ---
 import SectionLayout from "../../layouts/SectionLayout.astro";
-import Competition from "../competitions/Competition.astro";
-import cubeLogo from "../../assets/sponsors/corporate/cube.webp";
-import cohereLogo from "../../assets/sponsors/corporate/cohere.webp";
-import competitionData from "../../content/competitions/competitions-content.json";
 
-const logoMap: Record<string, string> = {
-  cube: cubeLogo.src,
-  cohere: cohereLogo.src,
-};
-
-const competitions = competitionData.map((c) => ({
-  ...c,
-  sponsorLogo: logoMap[c.sponsorLogo] ?? "",
-}));
+const blurb =
+  "Explore the rapidly evolving world of neurotechnology and brain-computer interfaces with experts working across research, healthcare, and industry. Hear how they're turning brain signals into real-world applications, the paths that brought them into the field, and what breakthroughs could shape the future of how humans interact with technology.";
 ---
 
-<SectionLayout title="Competitions">
-  <p
-    class="mb-8 max-w-4xl mx-auto text-base text-center leading-7 text-blue-navy/85"
-  >
-    The WISE National Conference competitions provide an opportunity for
-    participants from various fields to apply knowledge learned in class and
-    solve real-world problems. All conference attendees are eligible to
-    participate! You must purchase a ticket for WISE NC 2026 before registering
-    for our competitions. Please be advised that competitions registrations are
-    accepted on a rolling, first-come-first-served basis for limited spaces.
-  </p>
+<SectionLayout title="Competitions" id="competitions">
+  <div class="max-w-3xl space-y-4 text-[0.98rem] leading-7 text-ink/90">
+    <p>
+      The WISE National Conference (WISE NC) competitions provide an opportunity
+      for participants from various fields to apply knowledge learned in class
+      and solve real-world problems.
+    </p>
+    <p>
+      All conference attendees are eligible to participate! You must purchase a
+      ticket for WISE NC 2027 before registering for our competitions. Please
+      be advised that competitions registrations are accepted on a rolling,
+      first-come-first-served basis for limited spaces.
+    </p>
+  </div>
 
-  <div class="space-y-10">
+  <div class="mt-10 space-y-8">
     {
-      competitions.map((competition) => (
-        <Competition competition={competition} />
+      [0, 1].map(() => (
+        <article class="rounded-2xl border-2 border-[#f3c6d8] bg-white/80 p-6 md:p-8">
+          <div class="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_1px_minmax(0,1fr)]">
+            <div>
+              <h3 class="font-serif text-2xl font-medium text-ink">
+                Competition Name
+              </h3>
+              <p class="mt-2 text-sm text-ink/80">Host Names</p>
+              <p class="text-sm text-ink/70">
+                Saturday, 10:30AM - 12:00PM | Pier 4
+              </p>
+              <p class="mt-4 text-[0.95rem] leading-7 text-ink/90">{blurb}</p>
+              <a
+                href="#"
+                class="mt-6 inline-flex rounded-md bg-[#ddd0f8] px-4 py-2 text-sm font-semibold text-ink transition hover:bg-lilac"
+              >
+                Sign up here!
+              </a>
+            </div>
+            <div class="hidden bg-ink/10 lg:block" aria-hidden="true" />
+            <div class="relative">
+              <div
+                class="absolute top-0 right-0 h-12 w-14 bg-lilac"
+                role="img"
+                aria-label="Competition image coming soon"
+              />
+              <div class="flex flex-wrap justify-start gap-4 pt-16 lg:justify-end">
+                {Array.from({ length: 3 }).map(() => (
+                  <div
+                    class="aspect-square w-28 bg-lilac sm:w-32"
+                    role="img"
+                    aria-label="Competition host photo coming soon"
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </article>
       ))
     }
   </div>
