@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
-import mountains from "../../assets/hero/mountains.jpg";
+import mountains from "../../assets/hero/mountains.png";
 
 const teamImages = import.meta.glob<ImageMetadata>(
   "../../assets/team/2027/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG}",
@@ -56,13 +56,13 @@ const team = Object.entries(teamImages)
   });
 ---
 
-<section id="team" class="relative mt-6 overflow-hidden bg-[#f7f9fe] pt-8">
+<section id="team" class="relative mt-6 overflow-hidden bg-gradient-to-b from-[#fef3ec] via-[#fde8f0] to-[#f6e4f4] pt-8">
   <p class="relative z-10 mb-4 text-center text-sm text-ink/80">
     Made with love &lt;3
   </p>
 
   <div
-    class="team-curve relative z-10 mx-auto h-[23rem] max-w-6xl overflow-hidden"
+    class="team-curve relative z-10 h-[23rem] w-full overflow-hidden"
     data-team-curve
   >
     {

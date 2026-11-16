@@ -110,6 +110,13 @@ const recapYears = Object.keys(recapSpeakersByYear)
 ---
 
 <SectionLayout title="WISE National Conference Recap" id="recap">
+  <div
+    slot="background"
+    class="absolute -bottom-32 left-1/2 h-[calc(100%+8rem)] w-screen -translate-x-1/2"
+    style="background: linear-gradient(to bottom, #ffffff 0%, #f7f9fe 28%, #f8f6fe 55%, #fff7f2 78%, #fef3ec 100%)"
+    aria-hidden="true"
+  >
+  </div>
   <div>
     {
       recapYears.map((recap) => (

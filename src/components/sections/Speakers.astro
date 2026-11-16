@@ -2,7 +2,6 @@
 import SectionLayout from "../../layouts/SectionLayout.astro";
 import PersonCard from "../speakers/PersonCard.astro";
 import PanelCopy from "../speakers/PanelCopy.astro";
-import diana from "../../assets/speakers/diana-anderson.webp";
 import garene from "../../assets/panels/BCI & Neurotech _ Garene Matossian.jpg";
 import susannah from "../../assets/panels/BCI & Neurotech _ Susannah Van Damme.jpg";
 import fatima from "../../assets/panels/Sustainability _ Fatima Crerar.png";
@@ -29,18 +28,13 @@ const neuroDescription =
     announce more speaker details!
   </p>
 
-  <div class="relative left-1/2 mt-10 w-screen -translate-x-1/2 bg-[#FFFCE5] py-8">
+  <div class="relative left-1/2 mt-10 w-screen -translate-x-1/2 bg-[#FFFCE5] py-16 md:py-24">
     <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-x-10 gap-y-6 px-5 md:px-8">
       <h3 class="shrink-0 font-serif text-[1.7rem] font-medium leading-none text-ink">
         Keynotes
       </h3>
       <div class="flex gap-x-8">
-        <PersonCard
-          name="Diana Anderson"
-          title="MD, M.Arch, FACHA"
-          image={diana}
-          size="lg"
-        />
+        <PersonCard name="To be announced" announced={false} size="lg" />
         <PersonCard name="To be announced" announced={false} size="lg" />
       </div>
     </div>
