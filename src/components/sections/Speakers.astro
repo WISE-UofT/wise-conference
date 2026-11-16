@@ -12,6 +12,8 @@ import andrea from "../../assets/panels/Global _ Andrea Hemmerich.jpg";
 import rebecca from "../../assets/panels/Global _ Rebecca Alcock.jpg";
 import lucy from "../../assets/panels/Space _ Lucy Ma.jpg";
 import silvia from "../../assets/panels/Strategy _ Silvia Stanica.jpg";
+import rabbitLeap from "../../assets/illustrations/rabbit-leap-space.png";
+import rabbitSitPale from "../../assets/illustrations/rabbit-sit-light.png";
 import rabbit from "../../assets/illustrations/keynote-rabbit.png";
 import PanelScene from "../speakers/PanelScene.astro";
 import { Image } from "astro:assets";
@@ -97,7 +99,7 @@ const neuroDescription =
     </div>
   </div>
 
-  <PanelScene />
+  <PanelScene align="left" />
 
   <div class="mt-8 grid items-start gap-10 md:grid-cols-2 md:gap-10 lg:gap-16">
     <div class="md:order-2">
@@ -131,7 +133,14 @@ const neuroDescription =
     </div>
   </div>
 
-  <div class="mt-16 grid items-start gap-10 md:grid-cols-2 md:gap-10 lg:gap-16">
+  <div class="relative mt-16 grid items-start gap-10 md:grid-cols-2 md:gap-10 lg:gap-16">
+    <Image
+      src={rabbitSitPale}
+      alt=""
+      class="pointer-events-none absolute top-0 right-0 z-10 hidden w-24 translate-x-2 -translate-y-[135%] md:block"
+      width={62}
+      height={63}
+    />
     <PanelCopy
       title="Leadership Panel"
       subtitle="The Many Faces of Impact: Leadership in STEM"
@@ -139,11 +148,10 @@ const neuroDescription =
       description="Bringing together women across industry, academia, startups, non-profits, and policy, this panel will explore the different ways STEM careers can create impact. Speakers will reflect on their career journeys, what led them to where they are today, how their definitions of meaningful work and success have evolved, and how they have used leadership to create change in their fields and communities."
     />
     <div class="grid w-max max-w-full grid-cols-2 gap-x-6 gap-y-8 md:justify-self-end">
-      {
-        Array.from({ length: 4 }).map(() => (
-          <PersonCard name="To be announced" announced={false} />
-        ))
-      }
+      <PersonCard name="To be announced" announced={false} />
+      <PersonCard name="To be announced" announced={false} />
+      <PersonCard name="To be announced" announced={false} />
+      <PersonCard name="To be announced" announced={false} />
     </div>
   </div>
 
@@ -186,7 +194,14 @@ const neuroDescription =
       when="Saturday, 1:00PM - 2:30PM | Pier 2"
       description="A panel featuring people working at the frontier of space, from spacecraft and satellite systems to the robotics enabling space exploration, to discuss their work, career paths, and what it actually takes to break new ground in the field."
     />
-    <div class="grid w-max max-w-full grid-cols-2 gap-x-6 gap-y-8 md:justify-self-end">
+    <div class="relative grid w-max max-w-full grid-cols-2 gap-x-6 gap-y-8 md:justify-self-end">
+      <Image
+        src={rabbitLeap}
+        alt=""
+        class="pointer-events-none absolute top-0 left-2 z-10 hidden w-36 -translate-y-[112%] md:block"
+        width={176}
+        height={170}
+      />
       <PersonCard
         {...panelists["Lucy Ma"]}
         name="Lucy Ma"
@@ -201,7 +216,7 @@ const neuroDescription =
     </div>
   </div>
 
-  <PanelScene />
+  <PanelScene align="right" />
 
   <div class="mt-8 grid items-start gap-10 md:grid-cols-2 md:gap-10 lg:gap-16">
     <div class="md:order-2">

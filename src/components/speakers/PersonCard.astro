@@ -12,6 +12,10 @@ interface Props {
   pronouns?: string;
   preferredName?: string;
   objectPosition?: string;
+  portrait?: boolean;
+  dialogPrefix?: string;
+  badge?: ImageMetadata;
+  badgeClass?: string;
 }
 
 const {
@@ -24,11 +28,17 @@ const {
   pronouns,
   preferredName,
   objectPosition = "center 18%",
+  portrait = false,
+  dialogPrefix = "bio",
+  badge,
+  badgeClass = "w-20 -translate-y-[58%]",
 } = Astro.props;
 
-const dialogId = `bio-${name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+const dialogId = `${dialogPrefix}-${name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
 const paragraphs = bio?.split(/\n+/).map((paragraph) => paragraph.trim()).filter(Boolean) ?? [];
-const portraitClass = "aspect-square w-full object-cover object-[center_18%]";
+const shapeClass = portrait ? "aspect-[6/7]" : "aspect-square";
+const portraitClass = `${shapeClass} w-full object-cover object-[center_18%]`;
+const placeholderClass = `${shapeClass} w-full bg-[#c9ccff]`;
 ---
 
 <figure
@@ -46,17 +56,27 @@ const portraitClass = "aspect-square w-full object-cover object-[center_18%]";
         aria-controls={dialogId}
         onclick={`document.getElementById('${dialogId}')?.showModal()`}
       >
-        {image ? (
-          <Image
-            src={image}
-            alt=""
-            width={640}
-            class={portraitClass}
-            style={{ objectPosition }}
-          />
-        ) : (
-          <div class="aspect-square w-full bg-lilac" />
-        )}
+        <span class="relative block">
+          {image ? (
+            <Image
+              src={image}
+              alt=""
+              width={640}
+              class={portraitClass}
+              style={{ objectPosition }}
+            />
+          ) : (
+            <span class={portrait ? placeholderClass + " block" : "block aspect-square w-full bg-lilac"} />
+          )}
+          {badge && (
+            <Image
+              src={badge}
+              alt=""
+              width={160}
+              class:list={["pointer-events-none absolute top-0 left-1/2 z-10 -translate-x-1/2", badgeClass]}
+            />
+          )}
+        </span>
         <span class="mt-2.5 block">
           <span class="block text-sm font-bold leading-snug text-ink">{name}</span>
           {title && (
@@ -64,14 +84,26 @@ const portraitClass = "aspect-square w-full object-cover object-[center_18%]";
           )}
         </span>
       </button>
-    ) : image ? (
-      <Image src={image} alt="" width={640} class={portraitClass} />
     ) : (
-      <div
-        class="aspect-square w-full bg-lilac"
-        role="img"
-        aria-label={announced ? `${name}, photo coming soon` : "To be announced"}
-      />
+      <div class="relative">
+        {image ? (
+          <Image src={image} alt="" width={640} class={portraitClass} style={{ objectPosition }} />
+        ) : (
+          <div
+            class={portrait ? placeholderClass : "aspect-square w-full bg-lilac"}
+            role="img"
+            aria-label={announced ? `${name}, photo coming soon` : "To be announced"}
+          />
+        )}
+        {badge && (
+          <Image
+            src={badge}
+            alt=""
+            width={160}
+            class:list={["pointer-events-none absolute top-0 left-1/2 z-10 -translate-x-1/2", badgeClass]}
+          />
+        )}
+      </div>
     )
   }
   {

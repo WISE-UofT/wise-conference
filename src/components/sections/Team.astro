@@ -2,40 +2,58 @@
 import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
 import mountains from "../../assets/hero/mountains.jpg";
-import teamJson from "../../content/team/2026.json";
 
-const namedImages = import.meta.glob<ImageMetadata>(
-  "../../assets/team/2026/*.{jpg,jpeg,png,webp,JPG,JPEG}",
+const teamImages = import.meta.glob<ImageMetadata>(
+  "../../assets/team/2027/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG}",
   { eager: true, import: "default" }
 );
 
-const extraImages = import.meta.glob<ImageMetadata>(
-  "../../assets/team/*.{jpg,jpeg,png,webp,JPG,JPEG}",
-  { eager: true, import: "default" }
-);
-
-function fileName(path: string) {
-  return path.split(/[/\\]/).pop()!.toLowerCase();
+function titleCase(value: string) {
+  return value
+    .split(/(\s+|-)/)
+    .map((part) => {
+      if (part === "-" || /^\s+$/.test(part)) return part;
+      if (part.toLowerCase() === "of") return "of";
+      return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
+    })
+    .join("")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
-function imageFor(publicPath: string) {
-  const file = fileName(publicPath);
-  const hit = Object.entries(namedImages).find(([key]) => fileName(key) === file);
-  return hit?.[1];
-}
+const roleOrder = [
+  "Co-Chair",
+  "Director of Operations",
+  "Director of Panels",
+  "Director of Marketing",
+  "Director of Competitions",
+  "Director of Outreach",
+  "Conference Webmaster",
+  "Workshops",
+  "First Year Rep",
+];
 
-const named = teamJson.flatMap((member) => {
-  const image = imageFor(member.image);
-  return image ? [{ name: member.name, position: member.position, image }] : [];
-});
-
-const extras = Object.values(extraImages).map((image) => ({
-  name: "",
-  position: "",
-  image,
-}));
-
-const team = [...named, ...extras];
+const team = Object.entries(teamImages)
+  .map(([path, image]) => {
+    const file = path.split(/[/\\]/).pop()!.replace(/\.[^.]+$/, "");
+    const [rawName, rawRole = ""] = file.split(/\s+-\s+/);
+    return {
+      name: rawName
+        .replace(/_/g, " ")
+        .replace(/([a-z])([A-Z])/g, "$1 $2")
+        .replace(/\s+/g, " ")
+        .trim(),
+      position: titleCase(rawRole),
+      image,
+    };
+  })
+  .sort((a, b) => {
+    const rank = (role: string) => {
+      const index = roleOrder.indexOf(role);
+      return index < 0 ? roleOrder.length : index;
+    };
+    return rank(a.position) - rank(b.position) || a.name.localeCompare(b.name);
+  });
 ---
 
 <section id="team" class="relative mt-6 overflow-hidden bg-[#f7f9fe] pt-8">
@@ -83,7 +101,7 @@ const team = [...named, ...extras];
       aria-hidden="true"
     >
     </div>
-    <div class="relative aspect-[4096/1180] w-full overflow-hidden">
+    <div class="relative aspect-[1024/420] w-full overflow-hidden">
       <Image
         src={mountains}
         alt=""

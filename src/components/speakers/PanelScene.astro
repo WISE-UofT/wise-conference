@@ -1,33 +1,85 @@
 ---
 import { Image } from "astro:assets";
-import mountains from "../../assets/illustrations/panel-mountains.png";
+import mountains from "../../assets/illustrations/panel-mountains-full-pale.png";
+import mountainsLeft from "../../assets/illustrations/panel-mountains-left-pale.png";
+import mountainsRight from "../../assets/illustrations/panel-mountains-right-pale.png";
 import rabbitSit from "../../assets/illustrations/rabbit-sit.png";
 import rabbitLeap from "../../assets/illustrations/rabbit-leap.png";
+
+interface Props {
+  align?: "full" | "left" | "right";
+}
+
+const { align = "full" } = Astro.props;
+
+const scene = {
+  full: {
+    width: 1623,
+    height: 197,
+    imageHeight: 721,
+    left: -28,
+    image: mountains,
+    intrinsic: [1024, 455],
+    fit: "",
+    anchor: "bottom" as const,
+  },
+  left: {
+    width: 1226,
+    height: 281,
+    left: -107,
+    image: mountainsLeft,
+    intrinsic: [558, 314],
+    fit: "object-contain object-left-bottom",
+  },
+  right: {
+    width: 1152,
+    height: 256,
+    left: 360,
+    image: mountainsRight,
+    intrinsic: [526, 316],
+    fit: "object-contain object-right-bottom",
+  },
+}[align];
+
+const frame = 1512;
 ---
 
 <div
-  class="pointer-events-none relative left-1/2 mt-2 h-28 w-screen -translate-x-1/2 opacity-45 md:h-32"
+  class="pointer-events-none relative left-1/2 mt-2 w-screen -translate-x-1/2 overflow-hidden"
+  style={`height: calc(${scene.height}px * min(1, 100vw / ${frame}px))`}
   aria-hidden="true"
 >
-  <Image
-    src={mountains}
-    alt=""
-    class="absolute inset-x-0 bottom-0 w-full"
-    width={1024}
-    height={124}
-  />
-  <Image
-    src={rabbitSit}
-    alt=""
-    class="absolute right-[20%] bottom-10 w-12 md:bottom-12 md:w-14"
-    width={62}
-    height={63}
-  />
-  <Image
-    src={rabbitLeap}
-    alt=""
-    class="absolute right-[7%] bottom-3 w-[4.5rem] md:bottom-4 md:w-20"
-    width={104}
-    height={102}
-  />
+  <div
+    class="absolute top-0 left-1/2"
+    style={`width:${frame}px;height:${scene.height}px;transform:translateX(-50%) scale(min(1, 100vw / ${frame}px));transform-origin:top center`}
+  >
+    <Image
+      src={scene.image}
+      alt=""
+      class:list={["absolute top-0 max-w-none", scene.fit]}
+      style={`left:${scene.left}px;width:${scene.width}px;height:${"imageHeight" in scene ? scene.imageHeight : scene.height}px;${"anchor" in scene ? "top:auto;bottom:0;" : ""}`}
+      width={scene.intrinsic[0]}
+      height={scene.intrinsic[1]}
+    />
+    {
+      align === "full" && (
+        <>
+          <Image
+            src={rabbitSit}
+            alt=""
+            class="absolute right-[18%] bottom-16 w-14"
+            width={62}
+            height={63}
+          />
+          <Image
+            src={rabbitLeap}
+            alt=""
+            class="absolute right-[6%] bottom-6 w-24"
+            width={104}
+            height={102}
+          />
+        </>
+      )
+    }
+  </div>
 </div>
