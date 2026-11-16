@@ -39,6 +39,8 @@ const paragraphs = bio?.split(/\n+/).map((paragraph) => paragraph.trim()).filter
 const shapeClass = portrait ? "aspect-[6/7]" : "aspect-square";
 const portraitClass = `${shapeClass} w-full object-cover object-[center_18%]`;
 const placeholderClass = `${shapeClass} w-full bg-[#c9ccff]`;
+const nameClass = "block text-sm font-bold leading-snug text-ink";
+const titleClass = "mt-0.5 block text-xs leading-snug text-ink/75";
 ---
 
 <figure

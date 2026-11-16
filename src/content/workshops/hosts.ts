@@ -13,14 +13,16 @@ export interface WorkshopGroup {
   hosts: WorkshopHost[];
   subtitle: string;
   time?: string;
+  hidden?: boolean;
 }
 
 export const workshopGroups: WorkshopGroup[] = [
   {
-    title: "Food, Health, and Industry",
-    subtitle: "Néma McGlynn",
+    title: "What Should I Eat This Week? Meal Planning for Busy Students on a Budget",
+    subtitle: "Néma McGlynn - MSc, Registered Dietitian",
+    time: "Saturday, 10:30AM - 12:00PM | Pier 5",
     description:
-      "A registered dietitian whose work spans counselling, food service, product development, and digital health.",
+      "Groceries keep getting pricier, and between classes, work, and everything else, cooking can feel like one more thing on the list. In this interactive session, I’ll share simple strategies I use with clients to eat well, spend less, and plan meals in minutes. You’ll swap ideas with other students and leave with a plan you’ll actually use.",
     hosts: [
       {
         name: "Néma McGlynn",
@@ -30,6 +32,7 @@ export const workshopGroups: WorkshopGroup[] = [
     ],
   },
   {
+    hidden: true,
     title: "Workshop to be announced",
     subtitle: "Hosts to be announced",
     description: "Workshop details and hosts will be announced soon.",
@@ -50,15 +53,15 @@ export const workshopGroups: WorkshopGroup[] = [
   },
   {
     title: "From Data to Decisions: CCM Hockey’s Next Big Play",
-    subtitle: "Hosts to be announced",
+    subtitle: "Kelly Chang - Data Science and Strategy Team @ Birch Hill Equity Partners",
+    time: "Saturday, 10:30AM - 12:00PM | Pier 4",
     description:
       "Join Birch Hill Data Science & Strategy for a hands-on workshop where you’ll use data to tackle a real-world growth challenge for CCM Hockey, a former Birch Hill portfolio company. Working in teams, you’ll break down what drives the company’s revenue, choose which data to investigate, and uncover where its biggest growth opportunity lies. Learn how our team turns data into strategy using structured problem solving, market analysis, and key performance metrics. This workshop is perfect for students interested in data-driven decision making, business strategy, and real-world problem solving. No hockey knowledge required!",
     hosts: [
       {
-        name: "To be announced",
-        title: "",
-        bio: "",
-        announced: false,
+        name: "Kelly Chang",
+        title: "Data Science and Strategy Team @ Birch Hill Equity Partners",
+        bio: "Kelly is an Analyst on the Data Science & Strategy Team at Birch Hill Equity Partners. Kelly received her Bachelor of Applied Science from the University of Toronto, with a major in Industrial Engineering and a minor in Artificial Intelligence. Prior to joining Birch Hill in 2025, Kelly was a co-op analyst in Birch Hill’s Data Science team.",
       },
       {
         name: "To be announced",
@@ -69,6 +72,7 @@ export const workshopGroups: WorkshopGroup[] = [
     ],
   },
   {
+    hidden: true,
     title: "Motorsports",
     subtitle: "Hosts to be announced",
     description: "Workshop details and hosts will be announced soon.",
@@ -88,6 +92,7 @@ export const workshopGroups: WorkshopGroup[] = [
     ],
   },
   {
+    hidden: true,
     title: "Grad school",
     subtitle: "Hosts to be announced",
     description: "Workshop details and hosts will be announced soon.",
@@ -107,10 +112,13 @@ export const workshopGroups: WorkshopGroup[] = [
     ],
   },
   {
-    title: "ArtSci Salon",
-    subtitle: "Roberta Buiani",
+    title: "Interdisciplinary Co-creation: How Do We Work Together? A Creative Workshop",
+    subtitle: "Roberta Buiani - Assistant Professor, Coordinator of New One program (New College). Director @ ArtSci Salon at The Fields Institute for Research in Mathematical Science",
+    time: "Saturday, 10:30AM - 12:00PM | Pier 4",
     description:
-      "Art, science, and the ArtSci Salon at the Fields Institute for Research in Mathematical Sciences.",
+      `Whether in STEM or in the Arts and Humanities, research does not happen in a vacuum. It has potential to affect your field, your lab, the community or subjects you study. When you do research, you are never on your own: you depend on infrastructures and technologies, you draw on past work, you collaborate with others and establish new relationships all the time. Have you ever interrogated the ethics and sustainability of the research you have been conducting or that you are about to start? Have you ever asked who is going to be affected by your research? What are the long terms consequences of choosing one protocol over another?
+
+This workshop will encourage you to ask these (and more) questions using a generative card game created by an interdisciplinary team of graduate students from York U and UofT. We will use the ensuing discussion to create a series of zines which you can bring home (or you can develop later on).`,
     hosts: [
       {
         name: "Roberta Buiani",
@@ -121,7 +129,7 @@ export const workshopGroups: WorkshopGroup[] = [
     ],
   },
   {
-    title: "Women in Surgery Initiative",
+    title: "Scrub In: Where Surgery Meets STEAM",
     subtitle: "Rukevwe Inikori, Puneet Sidhu, Amel Sassi - Co-founder, Co-lead, and Director of Community Engagement @ Women in Surgery Initiative ",
     time: "Sunday, 3:00PM - 4:30PM | Pier 4",
     description:
