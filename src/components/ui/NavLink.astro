@@ -2,21 +2,15 @@
 interface Props {
   title: string;
   link: string;
-  filled?: boolean;
 }
 
-const { title, link, filled = false } = Astro.props;
+const { title, link } = Astro.props;
 ---
 
-<li>
+<li class="shrink-0">
   <a
     href={link}
-    class:list={[
-      "inline-flex items-center justify-center whitespace-nowrap rounded-full font-semibold tracking-tight text-ink transition",
-      filled
-        ? "bg-[#fec9f5] px-5 py-2 text-sm hover:bg-[#f7bddf]"
-        : "px-2.5 py-1.5 text-[13px] hover:bg-white/55",
-    ]}
+    class="inline-flex items-center font-spartan text-xl leading-7 font-normal whitespace-nowrap text-black transition-colors hover:text-purple-dark focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple-dark xl:text-base xl:leading-6"
   >
     {title}
   </a>
