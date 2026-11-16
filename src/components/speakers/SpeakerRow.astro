@@ -2,6 +2,7 @@
 import type { ImageMetadata } from "astro";
 import SpeakerCard from "./SpeakerCard.astro";
 import SpeakerBio from "./SpeakerBio.astro";
+import PersonGrid from "./PersonGrid.astro";
 
 interface Speaker {
   name: string;
@@ -114,14 +115,10 @@ const resolvedData = data.map((speaker, index) => ({
     )
   }
 
-  <div
-    class={`flex flex-wrap items-stretch gap-5 ${
-      align === "left" ? "justify-start" : "justify-center"
-    }`.trim()}
-  >
+  <PersonGrid count={resolvedData.length} maxColumns={3} width="full">
     {
       resolvedData.map((speaker) => (
-        <div class="flex max-w-sm w-[calc((100%-1.25rem)/2)] sm:w-[calc((100%-1.25rem)/3)] lg:w-[calc((100%-6.25rem)/6)] lg:max-w-none">
+        <div class="flex w-full max-w-sm">
           <SpeakerCard
             name={speaker.name}
             image={speaker.image}
@@ -133,7 +130,7 @@ const resolvedData = data.map((speaker, index) => ({
         </div>
       ))
     }
-  </div>
+  </PersonGrid>
 
   <!-- Bio Modals -->
   {

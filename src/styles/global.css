@@ -34,10 +34,12 @@
     html {
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch;
+        overflow-x: clip;
     }
 
     body {
         margin: 0;
+        overflow-x: clip;
         color: var(--color-ink);
         background: #ffffff;
         font-family: var(--font-sans);

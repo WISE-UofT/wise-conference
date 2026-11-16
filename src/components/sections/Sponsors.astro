@@ -8,9 +8,55 @@ import intact from "../../assets/sponsors/corporate/intact.webp";
 import arcadis from "../../assets/sponsors/corporate/arcadis.webp";
 import amazon from "../../assets/sponsors/corporate/amazon_robotics.webp";
 import cascades from "../../assets/sponsors/corporate/cascades.webp";
+import waterlooEngineering from "../../assets/sponsors/academic/waterloo-engineering.webp";
 import york from "../../assets/sponsors/academic/york-eng.webp";
-import tmu from "../../assets/sponsors/academic/tmu.webp";
 import tmuMath from "../../assets/sponsors/academic/tmu-math.webp";
+import mcgillScience from "../../assets/sponsors/academic/mcgill-science.png";
+import mcmasterWie from "../../assets/sponsors/academic/mcmaster-wie.webp";
+import uofgWie from "../../assets/sponsors/academic/uofg-wie.png";
+import tmuArchDesEng from "../../assets/sponsors/academic/tmu-arch-des-eng.webp";
+import utmOvpad from "../../assets/sponsors/academic/utm-ovpad.webp";
+import uoftArtSci from "../../assets/sponsors/academic/uoft-art-sci.webp";
+import uoftCompSci from "../../assets/sponsors/academic/uoft-comp-sci.webp";
+import uoftChemicalEng from "../../assets/sponsors/academic/uoft-chemical-eng.png";
+import uoftEarthSci from "../../assets/sponsors/academic/uoft-earth-sci.webp";
+import uoftPharmTox from "../../assets/sponsors/academic/uoft-pharm-tox.webp";
+import uoftPhysics from "../../assets/sponsors/academic/uoft-physics.webp";
+import uoftMath from "../../assets/sponsors/academic/uoft-math.png";
+import uoftEnvironment from "../../assets/sponsors/academic/uoft-environment.png";
+import uoftCsb from "../../assets/sponsors/academic/uoft-csb.webp";
+
+const academicContributors = [
+  { src: mcgillScience, alt: "McGill University Faculty of Science" },
+  { src: mcmasterWie, alt: "McMaster Women in Engineering" },
+  { src: uofgWie, alt: "University of Guelph Women in Engineering" },
+  {
+    src: tmuArchDesEng,
+    alt: "Toronto Metropolitan University Faculty of Engineering and Architectural Science",
+  },
+  {
+    src: utmOvpad,
+    alt: "University of Toronto Mississauga Office of the Vice-Principal Academic and Dean",
+  },
+  { src: uoftArtSci, alt: "University of Toronto Faculty of Arts and Science" },
+  { src: uoftCompSci, alt: "University of Toronto Computer Science" },
+  {
+    src: uoftChemicalEng,
+    alt: "University of Toronto Chemical Engineering and Applied Chemistry",
+  },
+  { src: uoftEarthSci, alt: "University of Toronto Earth Sciences" },
+  {
+    src: uoftPharmTox,
+    alt: "University of Toronto Pharmacology and Toxicology",
+  },
+  { src: uoftPhysics, alt: "University of Toronto Physics" },
+  { src: uoftMath, alt: "University of Toronto Mathematics" },
+  {
+    src: uoftEnvironment,
+    alt: "University of Toronto School of the Environment",
+  },
+  { src: uoftCsb, alt: "University of Toronto Cell and Systems Biology" },
+];
 ---
 
 <SectionLayout title="Conference Sponsors" id="sponsors" align="center">
@@ -72,14 +118,14 @@ import tmuMath from "../../assets/sponsors/academic/tmu-math.webp";
 
   <div class="mt-8 flex flex-wrap items-center justify-center gap-8 md:gap-12">
     <Image
+      src={waterlooEngineering}
+      alt="University of Waterloo Faculty of Engineering"
+      class="h-16 w-auto max-w-64 object-contain"
+    />
+    <Image
       src={york}
       alt="Lassonde School of Engineering, York University"
       class="h-14 w-auto object-contain"
-    />
-    <Image
-      src={tmu}
-      alt="Toronto Metropolitan University"
-      class="h-16 w-auto max-w-56 object-contain"
     />
     <Image
       src={tmuMath}
@@ -90,15 +136,24 @@ import tmuMath from "../../assets/sponsors/academic/tmu-math.webp";
   </div>
 </SectionLayout>
 
-<section class="mx-auto w-full max-w-5xl px-5 pb-8 md:px-8">
-  <h2
-    class="text-center font-serif text-[2rem] font-medium tracking-tight text-ink md:text-[2.4rem]"
-  >
+<section class="mx-auto w-full max-w-7xl px-5 pb-8 md:px-8">
+  <h3 class="mt-16 text-center font-serif text-2xl font-medium text-ink">
     Academic Contributors
-  </h2>
-  <!--
-    Academic contributor rows. Add logos inside this grid when they are ready.
-    <div class="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
-    </div>
-  -->
+  </h3>
+
+  <div
+    class="mt-8 grid grid-cols-2 items-center gap-x-5 gap-y-7 sm:grid-cols-3 lg:grid-cols-4"
+  >
+    {
+      academicContributors.map(({ src, alt }) => (
+        <div class="flex h-28 items-center justify-center sm:h-32">
+          <Image
+            src={src}
+            alt={alt}
+            class="max-h-full w-full object-contain"
+          />
+        </div>
+      ))
+    }
+  </div>
 </section>

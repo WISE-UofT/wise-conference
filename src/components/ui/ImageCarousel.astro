@@ -22,7 +22,7 @@ const {
   data-carousel
 >
   <div
-    class="overflow-hidden rounded-2xl border border-blue-navy/12 shadow-[0_10px_25px_rgb(16_31_70/0.08)]"
+    class="relative overflow-hidden rounded-2xl border border-blue-navy/12 shadow-[0_10px_25px_rgb(16_31_70/0.08)]"
   >
     <div
       class="flex transition-transform duration-420 ease-out will-change-transform"
@@ -43,18 +43,60 @@ const {
         ))
       }
     </div>
+
+    {
+      images.length > 1 && (
+        <>
+          <button
+            type="button"
+            class="absolute top-1/2 left-3 z-10 flex size-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border border-white/50 bg-blue-navy/55 text-white shadow-lg backdrop-blur-sm transition hover:scale-105 hover:bg-blue-navy/75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:left-5 sm:size-12"
+            data-carousel-prev
+            aria-label="Previous image"
+          >
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              class="size-5 sm:size-6"
+            >
+              <path
+                d="m15 18-6-6 6-6"
+                stroke="currentColor"
+                stroke-width="2.25"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+          <button
+            type="button"
+            class="absolute top-1/2 right-3 z-10 flex size-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border border-white/50 bg-blue-navy/55 text-white shadow-lg backdrop-blur-sm transition hover:scale-105 hover:bg-blue-navy/75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:right-5 sm:size-12"
+            data-carousel-next
+            aria-label="Next image"
+          >
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              class="size-5 sm:size-6"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+                stroke="currentColor"
+                stroke-width="2.25"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </>
+      )
+    }
   </div>
 
-  <div class="flex items-center justify-between gap-3 max-sm:justify-center">
-    <button
-      type="button"
-      class="rounded-full border border-blue-navy/25 bg-white px-3.5 py-1.5 text-[0.8rem] font-bold tracking-[0.02em] text-blue-navy transition hover:border-blue-navy/45 hover:bg-blue-navy/6 max-sm:hidden"
-      data-carousel-prev
-      aria-label="Previous recap image"
-    >
-      Prev
-    </button>
-
+  {
+    images.length > 1 && (
     <div class="flex flex-wrap justify-center gap-2" data-carousel-dots>
       {
         images.map((_, index) => (
@@ -68,16 +110,8 @@ const {
         ))
       }
     </div>
-
-    <button
-      type="button"
-      class="rounded-full border border-blue-navy/25 bg-white px-3.5 py-1.5 text-[0.8rem] font-bold tracking-[0.02em] text-blue-navy transition hover:border-blue-navy/45 hover:bg-blue-navy/6 max-sm:hidden"
-      data-carousel-next
-      aria-label="Next recap image"
-    >
-      Next
-    </button>
-  </div>
+    )
+  }
 </div>
 
 <script>

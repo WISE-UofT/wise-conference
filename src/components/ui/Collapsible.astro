@@ -3,6 +3,7 @@ interface Props {
   title: string;
   content?: string;
   open?: boolean;
+  id?: string;
   class?: string;
   titleClass?: string;
   contentClass?: string;
@@ -13,6 +14,7 @@ const {
   title,
   content,
   open = false,
+  id,
   class: className = "",
   titleClass = "",
   contentClass = "",
@@ -20,21 +22,30 @@ const {
 } = Astro.props;
 
 const isPlain = variant === "plain";
+const slug = title
+  .toLowerCase()
+  .replace(/[^a-z0-9]+/g, "-")
+  .replace(/(^-|-$)/g, "");
+const panelId = id ?? `collapsible-${slug || "content"}`;
 ---
 
-<details
-  open={open}
+<div
+  data-collapsible
+  data-open={open ? "true" : undefined}
   class:list={[
-    "group",
     isPlain
       ? "border-b border-ink/10 py-3.5"
       : "rounded-2xl border border-ink/10 bg-white p-5 shadow-sm",
     className,
   ]}
 >
-  <summary
+  <button
+    type="button"
+    aria-expanded={open ? "true" : "false"}
+    aria-controls={panelId}
+    data-collapsible-trigger
     class:list={[
-      "flex cursor-pointer list-none items-center justify-between gap-4 font-sans text-ink",
+      "flex w-full cursor-pointer items-center justify-between gap-4 text-left font-sans text-ink",
       isPlain ? "text-base font-medium" : "text-base font-semibold",
       titleClass,
     ]}
@@ -43,14 +54,18 @@ const isPlain = variant === "plain";
     {
       isPlain ? (
         <span
-          class="shrink-0 text-xl leading-none font-light text-ink/40"
+          class="relative size-5 shrink-0 text-xl leading-none font-light text-ink/40"
           aria-hidden="true"
         >
-          <span class="group-open:hidden">+</span>
-          <span class="hidden group-open:inline">−</span>
+          <span class="collapsible-plus absolute inset-0 transition-[opacity,transform] duration-300">
+            +
+          </span>
+          <span class="collapsible-minus absolute inset-0 opacity-0 transition-[opacity,transform] duration-300">
+            −
+          </span>
         </span>
       ) : (
-        <span class="ml-4 shrink-0 transition-transform duration-200 group-open:rotate-180">
+        <span class="collapsible-chevron ml-4 shrink-0 transition-transform duration-300">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5"
@@ -68,14 +83,119 @@ const isPlain = variant === "plain";
         </span>
       )
     }
-  </summary>
+  </button>
+
   <div
-    class:list={[
-      "font-sans text-base leading-7 text-ink/85",
-      isPlain ? "pt-3" : "pt-3",
-      contentClass,
-    ]}
+    id={panelId}
+    data-collapsible-panel
+    hidden={!open}
+    class="collapsible-panel overflow-hidden"
   >
-    <slot>{content}</slot>
+    <div
+      class:list={[
+        "pt-3 font-sans text-base leading-7 text-ink/85",
+        contentClass,
+      ]}
+    >
+      <slot>{content}</slot>
+    </div>
   </div>
-</details>
+</div>
+
+<script>
+  const initializeCollapsibles = () => {
+    document
+      .querySelectorAll<HTMLElement>("[data-collapsible]")
+      .forEach((root) => {
+        if (root.dataset.collapsibleReady === "true") return;
+
+        const trigger = root.querySelector<HTMLButtonElement>(
+          "[data-collapsible-trigger]",
+        );
+        const panel = root.querySelector<HTMLElement>(
+          "[data-collapsible-panel]",
+        );
+        if (!trigger || !panel) return;
+
+        root.dataset.collapsibleReady = "true";
+        let isOpen = trigger.getAttribute("aria-expanded") === "true";
+
+        const setOpen = (nextOpen: boolean) => {
+          if (nextOpen === isOpen) return;
+          isOpen = nextOpen;
+          trigger.setAttribute("aria-expanded", String(isOpen));
+
+          if (isOpen) {
+            root.dataset.open = "true";
+            panel.hidden = false;
+            panel.style.height = "0px";
+            panel.style.opacity = "0";
+
+            requestAnimationFrame(() => {
+              panel.style.height = `${panel.scrollHeight}px`;
+              panel.style.opacity = "1";
+            });
+          } else {
+            delete root.dataset.open;
+            panel.style.height = `${panel.scrollHeight}px`;
+            panel.style.opacity = "1";
+            void panel.offsetHeight;
+
+            requestAnimationFrame(() => {
+              panel.style.height = "0px";
+              panel.style.opacity = "0";
+            });
+          }
+        };
+
+        trigger.addEventListener("click", () => setOpen(!isOpen));
+        panel.addEventListener("transitionend", (event) => {
+          if (event.propertyName !== "height") return;
+
+          if (isOpen) {
+            panel.style.height = "auto";
+          } else {
+            panel.hidden = true;
+          }
+        });
+      });
+  };
+
+  initializeCollapsibles();
+  document.addEventListener("astro:page-load", initializeCollapsibles);
+</script>
+
+<style>
+  .collapsible-panel {
+    transition:
+      height 350ms cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 220ms ease;
+  }
+
+  [data-collapsible][data-open="true"] .collapsible-plus {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+
+  [data-collapsible][data-open="true"] .collapsible-minus {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+
+  [data-collapsible]:not([data-open="true"]) .collapsible-minus {
+    transform: rotate(-90deg);
+  }
+
+  [data-collapsible][data-open="true"] .collapsible-chevron {
+    transform: rotate(180deg);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .collapsible-panel,
+    .collapsible-plus,
+    .collapsible-minus,
+    .collapsible-chevron {
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>

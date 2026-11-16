@@ -7,14 +7,12 @@ export interface PanelistProfile {
 
 export const panelists: Record<string, PanelistProfile> = {
   "Garene Matossian": {
-    preferredName: "Garene Matossian",
     pronouns: "She/Her",
     bio: `Garene Matossian is a second-year PhD student at the University of Toronto’s Institute of Medical Science, working under the supervision of Dr. Alexandre Boutet and Dr. Andres Lozano. Her research focuses on developing a machine learning approach to optimize deep brain stimulation for people with Parkinson’s disease. By combining functional neuroimaging with machine learning, she investigates how different stimulation settings influence brain activity, with the goal of supporting more personalized treatment. Her broader research interests include neurotechnology, neuromodulation, and understanding how stimulation affects interconnected brain networks.
 
 Garene earned her Honours Bachelor of Science at the University of Toronto, specializing in Neuroscience with minors in Physiology and Psychology. She subsequently completed her Master of Science in the Department of Physiology, with a specialization in Neuroscience, where she studied auditory attention in cochlear implant users. Across her graduate training, her work has centred on how technologies that interface with the nervous system can improve function and quality of life. She is particularly interested in bringing together neuroscience, technology, and clinical research to better understand the brain and improve therapies for neurological conditions.`,
   },
   "Susannah Van Damme": {
-    preferredName: "Susannah Van Damme",
     pronouns: "She/Her",
     bio: `Susannah Van Damme is an occupational therapist with more than 20 years of pediatric experience and Team Lead of the Clinical Brain-Computer Interface (BCI) Program at Holland Bloorview Kids Rehabilitation Hospital in Toronto. Since joining the program in 2021, she has led clinical efforts to support children and youth with disabilities in engaging in play with greater autonomy, regardless of physical ability. Her work focuses on advancing the use of BCIs in occupational therapy through an equity- and inclusion-informed approach while supporting the development of best practices in this emerging area.`,
   },

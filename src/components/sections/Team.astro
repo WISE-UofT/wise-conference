@@ -57,13 +57,21 @@ const team = Object.entries(teamImages)
 ---
 
 <section id="team" class="relative mt-6 overflow-hidden bg-gradient-to-b from-[#fef3ec] via-[#fde8f0] to-[#f6e4f4] pt-8">
+  <div
+    class="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#fff7f2] to-[#fef3ec]"
+    aria-hidden="true"
+  >
+  </div>
   <p class="relative z-10 mb-4 text-center text-sm text-ink/80">
     Made with love &lt;3
   </p>
 
   <div
-    class="team-curve relative z-10 h-[23rem] w-full overflow-hidden"
+    class="team-curve relative z-10 h-[23rem] w-full cursor-grab touch-pan-y overflow-hidden select-none active:cursor-grabbing"
     data-team-curve
+    role="region"
+    aria-label="Conference team carousel. Swipe or drag horizontally to browse."
+    tabindex="0"
   >
     {
       team.map((member) => (
@@ -78,6 +86,7 @@ const team = Object.entries(teamImages)
             class="aspect-[4/5] w-full object-cover object-top"
             width={280}
             height={350}
+            draggable={false}
           />
           {member.name && (
             <p class="mt-1.5 text-center text-xs font-bold leading-tight text-ink">
@@ -97,7 +106,7 @@ const team = Object.entries(teamImages)
   <div class="relative mt-2">
     <div
       class="pointer-events-none absolute inset-x-0 bottom-full h-64 sm:h-80"
-      style="background: linear-gradient(to bottom, rgba(247,249,254,0) 0%, #f8f6fe 10%, #fff7f2 30%, #fef3ec 50%, #fdeeea 66%, #fde8f0 80%, #f6e4f4 92%, #efe6f8 100%)"
+      style="background: linear-gradient(to bottom, rgba(247,249,254,0) 0%, #f8f6fe 10%, #fff7f2 30%, #fef3ec 50%, #fdeeea 66%, #fde8f0 80%, #f6e4f4 92%, #f6e4f4 100%)"
       aria-hidden="true"
     >
     </div>
@@ -108,7 +117,7 @@ const team = Object.entries(teamImages)
         class="absolute inset-0 h-full w-full object-cover object-bottom"
       />
       <div
-        class="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#f6e4f4] via-[#efe6f8]/70 to-transparent"
+        class="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#f6e4f4] via-[#f6e4f4]/70 to-transparent"
         aria-hidden="true"
       >
       </div>
@@ -122,8 +131,16 @@ const team = Object.entries(teamImages)
     const cards = [...root.querySelectorAll<HTMLElement>(".team-polaroid")];
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let offset = 0;
-    let paused = false;
+    let hoveredCard = false;
+    let dragging = false;
+    let activePointer: number | null = null;
+    let startPointerX = 0;
+    let startPointerY = 0;
+    let lastPointerX = 0;
+    let dragAxis: "x" | "y" | null = null;
+    let resumeAt = 0;
     const speed = 0.55;
+    const resumeDelay = 900;
 
     const place = () => {
       const stageW = root.clientWidth;
@@ -144,20 +161,102 @@ const team = Object.entries(teamImages)
       });
     };
 
+    const pauseTemporarily = () => {
+      resumeAt = performance.now() + resumeDelay;
+    };
+
     const tick = () => {
-      if (!paused && !reduced && document.visibilityState !== "hidden") {
+      const canAutoplay =
+        !hoveredCard &&
+        !dragging &&
+        performance.now() >= resumeAt &&
+        !reduced &&
+        document.visibilityState !== "hidden";
+
+      if (canAutoplay) {
         offset += speed;
       }
       place();
       requestAnimationFrame(tick);
     };
 
-    root.addEventListener("mouseenter", () => {
-      paused = true;
+    cards.forEach((card) => {
+      card.addEventListener("mouseenter", () => {
+        hoveredCard = true;
+      });
+      card.addEventListener("mouseleave", () => {
+        hoveredCard = false;
+      });
     });
-    root.addEventListener("mouseleave", () => {
-      paused = false;
+
+    root.addEventListener("pointerdown", (event) => {
+      if (event.button !== 0) return;
+
+      dragging = true;
+      activePointer = event.pointerId;
+      startPointerX = event.clientX;
+      startPointerY = event.clientY;
+      lastPointerX = event.clientX;
+      dragAxis = null;
+      root.setPointerCapture(event.pointerId);
     });
+
+    root.addEventListener("pointermove", (event) => {
+      if (!dragging || event.pointerId !== activePointer) return;
+
+      const totalX = event.clientX - startPointerX;
+      const totalY = event.clientY - startPointerY;
+      if (!dragAxis && Math.max(Math.abs(totalX), Math.abs(totalY)) >= 6) {
+        dragAxis = Math.abs(totalX) > Math.abs(totalY) ? "x" : "y";
+      }
+      if (dragAxis !== "x") return;
+
+      event.preventDefault();
+      offset -= event.clientX - lastPointerX;
+      lastPointerX = event.clientX;
+      pauseTemporarily();
+      place();
+    });
+
+    const finishDrag = (event: PointerEvent) => {
+      if (event.pointerId !== activePointer) return;
+      dragging = false;
+      activePointer = null;
+      dragAxis = null;
+      pauseTemporarily();
+      if (root.hasPointerCapture(event.pointerId)) {
+        root.releasePointerCapture(event.pointerId);
+      }
+    };
+
+    root.addEventListener("pointerup", finishDrag);
+    root.addEventListener("pointercancel", finishDrag);
+    root.addEventListener("dragstart", (event) => event.preventDefault());
+
+    root.addEventListener(
+      "wheel",
+      (event) => {
+        const delta = event.shiftKey ? event.deltaY : event.deltaX;
+        if (Math.abs(delta) < 1) return;
+
+        event.preventDefault();
+        offset += delta;
+        pauseTemporarily();
+        place();
+      },
+      { passive: false },
+    );
+
+    root.addEventListener("keydown", (event) => {
+      if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+
+      event.preventDefault();
+      const cardW = cards[0]?.offsetWidth ?? 136;
+      offset += event.key === "ArrowRight" ? cardW + 28 : -(cardW + 28);
+      pauseTemporarily();
+      place();
+    });
+
     root.dataset.ready = "true";
     tick();
   }

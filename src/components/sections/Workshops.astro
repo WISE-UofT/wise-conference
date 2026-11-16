@@ -8,6 +8,7 @@ import mountain5 from "../../assets/workshops/mountain5.svg";
 import mountain6 from "../../assets/workshops/mountain6.svg";
 import mountain7 from "../../assets/workshops/mountain7.svg";
 import PersonCard from "../speakers/PersonCard.astro";
+import PersonGrid from "../speakers/PersonGrid.astro";
 import { workshopGroups } from "../../content/workshops/hosts";
 import type { ImageMetadata } from "astro";
 import rukevwe from "../../assets/workshops/IMG_6065 - Rukkie Inikori.jpeg";
@@ -90,17 +91,14 @@ const images: Record<string, ImageMetadata> = {
                 {group.description}
               </p>
             </div>
-            <div class:list={[
-              "grid min-w-0 grid-cols-2 items-start gap-x-5 gap-y-8 sm:gap-x-8",
-              group.hosts.length >= 3 && "sm:grid-cols-3",
-              group.hosts.length === 1 && "md:grid-cols-1 md:justify-items-center",
-              group.hosts.some((host) => host.name === "Roberta Buiani") && "md:self-center",
-              index === 0
-                ? "md:col-span-6 md:col-start-7 md:row-start-1 md:grid-cols-1 md:justify-items-center"
-                : index % 2 === 1
-                  ? "md:col-span-6 md:col-start-1 md:row-start-1"
-                  : "md:col-span-6 md:col-start-7 md:row-start-1 md:pt-20",
-            ]}>
+            <PersonGrid
+              count={group.hosts.length}
+              maxColumns={3}
+              width="full"
+              class={`min-w-0 md:col-span-6 md:row-start-1 ${
+                index % 2 === 1 ? "md:col-start-1" : "md:col-start-7"
+              }`}
+            >
               {group.hosts.map((host) => (
                 <PersonCard
                   name={host.name}
@@ -113,7 +111,7 @@ const images: Record<string, ImageMetadata> = {
                   size="lg"
                 />
               ))}
-            </div>
+            </PersonGrid>
           </div>
         </article>
       ))

@@ -1,10 +1,15 @@
 ---
+import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
 import SectionLayout from "../../layouts/SectionLayout.astro";
 import PersonCard from "../speakers/PersonCard.astro";
+import PersonGrid from "../speakers/PersonGrid.astro";
 import { coffeeChatMentors } from "../../content/coffee-chat/mentors";
 import ania from "../../assets/speakers/ania-harlick.webp";
 import rebecca from "../../assets/panels/Global _ Rebecca Alcock.jpg";
+import coffeeChatEllipseLeft from "../../assets/illustrations/coffee-chat-ellipse-left.svg";
+import coffeeChatEllipseTop from "../../assets/illustrations/coffee-chat-ellipse-top.svg";
+import coffeeChatPath from "../../assets/illustrations/coffee-chat-path.svg";
 
 const uploaded = import.meta.glob<ImageMetadata>(
   "../../assets/coffee chat/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG}",
@@ -34,31 +39,40 @@ function uploadedFor(name: string) {
 ---
 
 <SectionLayout title="Coffee Chat" id="coffee-chat">
-  <div slot="background" class="absolute inset-y-0 left-1/2 w-screen -translate-x-1/2 overflow-hidden">
-    <div
-      class="absolute inset-0"
-      style="background: linear-gradient(0deg, rgba(255, 206, 83, 0.2), rgba(255, 206, 83, 0.2)), linear-gradient(283.91deg, rgba(255, 255, 255, 0.32) 16.07%, rgba(255, 248, 185, 0.32) 33.41%, rgba(253, 243, 156, 0.32) 56.57%);"
-    >
-    </div>
-    <div
-      class="absolute -top-16 -right-24 h-[75%] w-[60%] rounded-full blur-3xl"
-      style="background: linear-gradient(118.92deg, rgba(253, 202, 233, 0.3) 37.58%, rgba(201, 204, 255, 0.3) 60.23%, rgba(201, 204, 255, 0) 70.93%);"
-    >
-    </div>
-    <div
-      class="absolute -bottom-16 -left-24 h-[70%] w-[50%] rounded-full blur-3xl"
-      style="background: linear-gradient(135.09deg, rgba(157, 163, 255, 0.19) 46.75%, rgba(201, 204, 255, 0.19) 74.92%, rgba(201, 204, 255, 0) 88.23%);"
-    >
-    </div>
+  <div
+    slot="background"
+    class="absolute inset-y-0 left-1/2 w-screen -translate-x-1/2 overflow-hidden bg-[#fffaf6]"
+  >
+    <Image
+      src={coffeeChatEllipseLeft}
+      alt=""
+      class="pointer-events-none absolute top-[49.6%] left-[-4%] h-[67.6%] w-[55.2%] max-w-none"
+      aria-hidden="true"
+    />
+    <Image
+      src={coffeeChatEllipseTop}
+      alt=""
+      class="pointer-events-none absolute top-[-2.2%] left-[20.2%] h-[61.9%] w-[80.6%] max-w-none rotate-180"
+      aria-hidden="true"
+    />
+    <Image
+      src={coffeeChatPath}
+      alt=""
+      class="pointer-events-none absolute top-[-4.6%] left-[-31%] h-[115.2%] w-[146.2%] max-w-none"
+      aria-hidden="true"
+    />
   </div>
 
   <p class="max-w-3xl text-[0.98rem] leading-7 text-ink/90">
     Sit down with professionals from across science and engineering for small,
-    informal conversations about their work and career paths. Click on a
-    mentor to learn more about them.
+    informal conversations about their work and career paths.
   </p>
 
-  <div class="mt-10 grid grid-cols-2 justify-items-start gap-x-6 gap-y-10 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-x-8">
+  <PersonGrid
+    count={coffeeChatMentors.length}
+    width="full"
+    class="mt-10 gap-y-10 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
+  >
     {
       coffeeChatMentors.map((mentor) => (
         <PersonCard
@@ -66,10 +80,9 @@ function uploadedFor(name: string) {
           title={mentor.title}
           bio={mentor.bio}
           image={uploadedFor(mentor.name)}
-          portrait
           dialogPrefix="coffee-chat"
         />
       ))
     }
-  </div>
+  </PersonGrid>
 </SectionLayout>

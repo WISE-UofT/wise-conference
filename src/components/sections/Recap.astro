@@ -2,7 +2,8 @@
 import SectionLayout from "../../layouts/SectionLayout.astro";
 import ImageCarousel from "../ui/ImageCarousel.astro";
 import Collapsible from "../ui/Collapsible.astro";
-import SpeakerRow from "../speakers/SpeakerRow.astro";
+import PersonCard from "../speakers/PersonCard.astro";
+import PersonGrid from "../speakers/PersonGrid.astro";
 import type { ImageMetadata } from "astro";
 import recapThemes from "../../content/recap/recap-themes.json";
 
@@ -139,15 +140,23 @@ const recapYears = Object.keys(recapSpeakersByYear)
               {recap.year} Keynote Speakers
             </div>
 
-            <SpeakerRow
-              title={`WISE Conference ${recap.year} Speakers`}
-              subtitle=""
-              description=""
-              dataSource={recap.year}
-              speakers={recap.speakers}
-              showHeader={false}
-              class="mb-0"
-            />
+            <PersonGrid
+              count={recap.speakers.length}
+              maxColumns={3}
+              width="full"
+            >
+              {recap.speakers.map((speaker) => (
+                <PersonCard
+                  name={speaker.name}
+                  title={speaker.title}
+                  image={speaker.image}
+                  bio={speaker.bio}
+                  pronouns={speaker.pronouns}
+                  dialogPrefix={`recap-${recap.year}`}
+                  size="lg"
+                />
+              ))}
+            </PersonGrid>
           </div>
         </Collapsible>
       ))
