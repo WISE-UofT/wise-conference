@@ -1,5 +1,12 @@
-﻿---
-import SectionLayout from "../../layouts/SectionLayout.astro";
+---
+import { Image } from "astro:assets";
+import mountain1 from "../../assets/workshops/mountain1.svg";
+import mountain2 from "../../assets/workshops/mountain2.svg";
+import mountain3 from "../../assets/workshops/mountain3.svg";
+import mountain4 from "../../assets/workshops/mountain4.svg";
+import mountain5 from "../../assets/workshops/mountain5.svg";
+import mountain6 from "../../assets/workshops/mountain6.svg";
+import mountain7 from "../../assets/workshops/mountain7.svg";
 import PersonCard from "../speakers/PersonCard.astro";
 import { workshopGroups } from "../../content/workshops/hosts";
 import type { ImageMetadata } from "astro";
@@ -11,6 +18,8 @@ import anjali from "../../assets/workshops/Pinpoint_AKR7578 - CLEAN CREATE.jpg";
 import shrivani from "../../assets/workshops/Shrivani Pandiya - SHRIVANI PANDIYA.JPG";
 import roberta from "../../assets/workshops/woods - Artsci Salon.JPG";
 import nema from "../../assets/workshops/Headshot - Nema McGlynn.jpg";
+
+const mountains = [mountain2, mountain3, mountain4, mountain5, mountain6, mountain7];
 
 const images: Record<string, ImageMetadata> = {
   "Rukevwe Inikori": rukevwe,
@@ -24,65 +33,75 @@ const images: Record<string, ImageMetadata> = {
 };
 ---
 
-<SectionLayout title="Workshops" id="workshops">
-  <svg
-    slot="background"
-    class="absolute left-1/2 top-0 h-full w-screen -translate-x-1/2"
-    viewBox="0 0 1440 980"
-    preserveAspectRatio="none"
-  >
-    <path
-      fill="#f4ebfb"
-      d="M0 280 L70 160 L120 210 L190 70 L250 180 L320 40 L390 150 L470 20 L540 140 L630 50 L710 170 L790 30 L870 160 L960 60 L1040 180 L1130 40 L1210 150 L1300 80 L1440 190 L1440 980 L0 980 Z"
-    ></path>
-    <path
-      fill="#eadcf8"
-      d="M0 460 L90 280 L160 360 L250 220 L340 390 L450 200 L540 370 L660 180 L760 340 L880 160 L980 330 L1100 190 L1220 360 L1340 230 L1440 320 L1440 980 L0 980 Z"
-    ></path>
-    <path
-      fill="#e3d2f6"
-      d="M0 640 L80 480 L170 580 L280 420 L390 560 L520 380 L640 540 L760 360 L880 530 L1020 400 L1160 560 L1280 430 L1440 520 L1440 980 L0 980 Z"
-    ></path>
-  </svg>
-  <p class="max-w-3xl text-[0.98rem] leading-7 text-ink/90">
-    Workshops are a wonderful way for you to more actively take part in the
-    Conference! Our demos, activities, and guided discussions are designed to
-    allow you to get exposure to new concepts, develop useful skills, and engage
-    with fellow attendees. With the focus being more on skill-building, we
-    believe that everyone will be able to find something useful and inspiring
-    from attending these workshops, no matter where their interests lie. Unless
-    indicated otherwise, no materials are required for the workshops.
-  </p>
+<section aria-labelledby="workshops" class="relative isolate overflow-hidden font-spartan">
+  <div class="relative isolate">
+    <Image src={mountain1} alt="" aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 h-full w-full origin-center scale-x-110 object-fill" />
+    <div class="mx-auto w-[85%] max-w-7xl pt-44 pb-20 md:pt-[40vw] md:pb-[10vw]">
+      <h2 id="workshops" class="scroll-mt-28 font-spartan text-[2rem] font-medium leading-tight tracking-tight text-ink md:text-[2.55rem]">Workshops</h2>
+      <p class="mt-6 text-[0.98rem] leading-7 text-ink/90">
+        Workshops are a wonderful way for you to more actively take part in the
+        Conference! Our demos, activities, and guided discussions are designed to
+        allow you to get exposure to new concepts, develop useful skills, and engage
+        with fellow attendees. With the focus being more on skill-building, we
+        believe that everyone will be able to find something useful and inspiring
+        from attending these workshops, no matter where their interests lie. Unless
+        indicated otherwise, no materials are required for the workshops.
+      </p>
 
-  <div class="mt-12 space-y-16">
+    </div>
+  </div>
+
+  <div>
     {
       workshopGroups.map((group, index) => (
-        <article class="grid items-start gap-8 md:grid-cols-2 md:gap-10 lg:gap-14">
-          <div class:list={[index % 2 === 1 && "md:order-2"]}>
-            <h3 class="font-serif text-2xl font-medium text-ink">{group.title}</h3>
-            <p class="mt-4 max-w-xl text-[0.95rem] leading-7 text-ink/90">
-              {group.description}
-            </p>
-          </div>
-          <div
-            class:list={[
-              "grid w-max max-w-full grid-cols-2 gap-x-6 gap-y-8",
-              index % 2 === 1 ? "md:order-1 md:justify-self-start" : "md:justify-self-end",
-            ]}
-          >
-            {group.hosts.map((host) => (
-              <PersonCard
-                name={host.name}
-                title={host.title}
-                image={images[host.name]}
-                bio={host.bio}
-                preferredName={host.preferredName}
-                objectPosition={host.objectPosition}
-              />
-            ))}
+        <article class="relative isolate py-12 md:py-[7vw]">
+          <Image
+            src={mountains[index % mountains.length]}
+            alt=""
+            aria-hidden="true"
+            class="pointer-events-none absolute inset-x-0 -top-16 -z-10 h-[calc(100%+4rem)] w-full origin-center scale-x-110 object-fill md:-top-[8vw] md:h-[calc(100%+8vw)]"
+          />
+          <div class="mx-auto grid w-[85%] max-w-7xl items-start gap-y-8 md:grid-cols-12 md:gap-x-8 lg:gap-x-12">
+            <div class:list={[
+              "flex min-w-0 flex-col items-start gap-4 md:col-span-6",
+              index % 2 === 1 ? "md:col-start-7 md:row-start-1" : "md:col-start-1",
+            ]}>
+              <h3 class="text-2xl leading-tight font-bold text-ink">{group.title}</h3>
+              <div class="space-y-1 text-lg leading-snug font-semibold text-ink">
+                <p>
+                  {group.subtitle}
+                </p>
+                <p>{group.time || "Time to be announced"}</p>
+              </div>
+              <p class="text-[0.95rem] leading-7 text-ink/90">
+                {group.description}
+              </p>
+            </div>
+            <div class:list={[
+              "grid min-w-0 grid-cols-2 items-start gap-x-5 gap-y-8 sm:gap-x-8",
+              group.hosts.length >= 3 && "sm:grid-cols-3",
+              index === 0
+                ? "md:col-span-9 md:col-start-4 md:row-start-2 md:grid-cols-3"
+                : index % 2 === 1
+                  ? "md:col-span-6 md:col-start-1 md:row-start-1"
+                  : "md:col-span-6 md:col-start-7 md:row-start-1 md:pt-20",
+            ]}>
+              {group.hosts.map((host) => (
+                <PersonCard
+                  name={host.name}
+                  announced={host.announced}
+                  title={host.title}
+                  image={images[host.name]}
+                  bio={host.bio}
+                  preferredName={host.preferredName}
+                  objectPosition={host.objectPosition}
+                  size="lg"
+                />
+              ))}
+            </div>
           </div>
         </article>
       ))
     }
   </div>
-</SectionLayout>
+</section>

@@ -43,7 +43,7 @@ const placeholderClass = `${shapeClass} w-full bg-[#c9ccff]`;
 
 <figure
   class:list={[
-    "shrink-0 text-center",
+    "max-w-full shrink-0 text-center",
     size === "lg" ? "w-48 sm:w-56" : "w-[9.25rem]",
   ]}
 >
@@ -78,9 +78,9 @@ const placeholderClass = `${shapeClass} w-full bg-[#c9ccff]`;
           )}
         </span>
         <span class="mt-2.5 block">
-          <span class="block text-sm font-bold leading-snug text-ink">{name}</span>
+          <span class={nameClass}>{name}</span>
           {title && (
-            <span class="mt-0.5 block text-xs leading-snug text-ink/75">{title}</span>
+            <span class={titleClass}>{title}</span>
           )}
         </span>
       </button>
@@ -109,11 +109,11 @@ const placeholderClass = `${shapeClass} w-full bg-[#c9ccff]`;
   {
     !bio && (
       <figcaption class="mt-2.5">
-        <p class="text-sm font-bold leading-snug text-ink">
+        <p class={nameClass}>
           {announced ? name : "To be announced!"}
         </p>
         {announced && title && (
-          <p class="mt-0.5 text-xs leading-snug text-ink/75">{title}</p>
+          <p class={titleClass}>{title}</p>
         )}
       </figcaption>
     )
