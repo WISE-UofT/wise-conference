@@ -1,0 +1,56 @@
+---
+import SpeakerRow from "../speakers/SpeakerRow.astro";
+
+interface WorkshopData {
+  title: string;
+  description: string;
+  location: string;
+  time: string;
+}
+
+interface Props {
+  workshop: WorkshopData;
+  speakerDataSource?: string;
+}
+
+const { workshop, speakerDataSource } = Astro.props as Props;
+---
+
+<article
+  class="rounded-xl border-blue-navy/70 bg-white px-5 pt-5 pb-1 shadow-sm"
+>
+  <div class="space-y-4">
+    <h3 class="text-xl font-semibold leading-tight text-blue-navy">
+      {workshop.title}
+    </h3>
+    <p class="whitespace-pre-line text-base leading-6 text-blue-navy/80">
+      {workshop.description}
+    </p>
+    <p class="pt-1 text-sm text-blue-navy/85">
+      <span class="font-semibold text-blue-navy">Location: </span>
+      {workshop.location}
+    </p>
+    <p class="text-sm text-blue-navy/85">
+      <span class="font-semibold text-blue-navy">Time: </span>
+      {workshop.time}
+    </p>
+
+    {
+      speakerDataSource && (
+        <div class="space-y-4 pt-3">
+          <h4 class="text-base font-semibold text-blue-navy">Hosts</h4>
+          <SpeakerRow
+            title="Hosts"
+            subtitle=""
+            description=""
+            dataSource={speakerDataSource}
+            dataFolder="workshops"
+            align="left"
+            showHeader={false}
+            class="mb-0"
+          />
+        </div>
+      )
+    }
+  </div>
+</article>

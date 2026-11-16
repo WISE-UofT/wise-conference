@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Hannah Nicole Chua",
+    "image": "/assets/speakers/hannah-nicole-chua.webp",
+    "title": "Outreach Lead @ University of Toronto Aerospace Team (UTAT) Space Systems Division",
+    "pronouns": "she/her",
+    "bio": "Hannah Chua is a mechanical engineering student at the University of Toronto, currently working towards a bachelor’s degree and exploring opportunities in the aerospace industry. She is currently an intern at Bombardier under Core Airworthiness, supporting aircraft safety, certification, and regulation. Outside of work and studies, she dedicates her time contributing to the Space Systems Division of the University of Toronto Aerospace Team (UTAT). As a member of the Thermal Subsystem, she is researching post-prototype planning and development procedures, such as bakeout and thermal vacuum testing, for the FINCH satellite mission. She also often represents UTAT at multiple events as Space Systems' Outreach Lead."
+  },
+  {
+    "name": "Riaab Zahid",
+    "image": "/assets/speakers/riaab-zahid.webp",
+    "title": "Mission Operations Lead & Media Lead @ University of Toronto Aerospace Team (UTAT) Space Systems Division",
+    "pronouns": "she/her",
+    "bio": "Riaab Zahid is a third-year Engineering Science student at the University of Toronto, specializing in the Electrical and Computer Engineering option. Within the University of Toronto Aerospace Team (UTAT), she serves as both the Mission Operations Lead and Media Lead for the Space Systems Division. In her mission operations role, she is responsible for developing operational logic, mode architecture, and mission planning for the FINCH Earth-observation satellite, which aims to monitor crop residue for sustainable agriculture. As Media Lead, she helps communicate UTAT Space Systems' work to the broader community through outreach and public engagement."
+  }
+]

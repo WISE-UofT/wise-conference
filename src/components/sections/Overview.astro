@@ -1,0 +1,82 @@
+---
+import { Image } from "astro:assets";
+import path from "../../assets/hero/path.svg";
+import group from "../../assets/gallery/group.jpg";
+import posters from "../../assets/gallery/posters.jpg";
+import audience from "../../assets/gallery/audience.jpg";
+import roundtables from "../../assets/gallery/roundtables.jpg";
+import registration from "../../assets/gallery/registration.jpg";
+import laptops from "../../assets/gallery/workshop-laptops.jpg";
+import stage from "../../assets/gallery/stage.jpg";
+import stageScreens from "../../assets/gallery/stage-screens.jpg";
+import booth from "../../assets/gallery/booth.jpg";
+---
+
+<section
+  id="overview"
+  aria-label="About the conference"
+  class="relative -mt-px overflow-hidden bg-[linear-gradient(180deg,#fdcae9_0%,#fde4f2_45%,#ffffff_100%)] font-spartan"
+>
+  <Image
+    src={path}
+    alt=""
+    aria-hidden="true"
+    class="pointer-events-none absolute top-0 left-[19.5%] h-auto w-[80.5%]"
+  />
+
+  <div class="relative mx-auto grid w-full max-w-[1800px] grid-cols-2 items-start gap-4 px-5 pt-10 pb-12 sm:gap-6 sm:px-8 lg:block lg:aspect-[1512/1203] lg:p-0">
+    <p class="col-span-2 max-w-xl text-lg leading-snug text-ink sm:text-xl lg:absolute lg:top-[25%] lg:left-[9%] lg:w-[31%] lg:max-w-none lg:text-[clamp(1.125rem,1.85vw,2rem)] lg:leading-[1.14]">
+      Women in Science and Engineering is proudly presenting our 15th Annual
+      National Conference on January 23-24, 2027. Thank you to everyone who is
+      helping make WISE National Conference 2027 a huge success. Check out the
+      media below to get a feel of the conference excitement &amp; we look
+      forward to seeing you in 2027!
+    </p>
+
+    <Image
+      src={group}
+      alt="WISE National Conference group photo on stage with silver balloons"
+      class="col-span-2 aspect-[721/398] w-full object-cover lg:absolute lg:top-[18.55%] lg:left-[48.6%] lg:h-[33.1%] lg:w-[47.7%]"
+    />
+    <Image
+      src={registration}
+      alt="Attendees with tote bags by the windows"
+      class="aspect-[283/167] w-full object-cover lg:absolute lg:top-[55.38%] lg:left-[40.74%] lg:h-[13.88%] lg:w-[18.72%]"
+    />
+    <Image
+      src={stage}
+      alt="A speaker at the podium on the main stage"
+      class="row-span-2 aspect-[208/270] w-full object-cover lg:absolute lg:top-[55.38%] lg:left-[63.43%] lg:h-[22.44%] lg:w-[13.76%]"
+    />
+    <Image
+      src={laptops}
+      alt="Hands-on workshop with laptops and a live coding demo"
+      class="aspect-[248/270] w-full object-cover lg:absolute lg:top-[55.38%] lg:left-[79.89%] lg:h-[22.44%] lg:w-[16.4%]"
+    />
+    <Image
+      src={roundtables}
+      alt="Workshop attendees working at round tables"
+      class="aspect-[283/168] w-full object-cover lg:absolute lg:top-[68.43%] lg:left-[17.66%] lg:h-[13.97%] lg:w-[18.72%]"
+    />
+    <Image
+      src={stageScreens}
+      alt="The ballroom from the back, with the session screens on stage"
+      class="aspect-[373/167] w-full object-cover lg:absolute lg:top-[86.05%] lg:left-[11.71%] lg:h-[13.88%] lg:w-[24.67%]"
+    />
+    <Image
+      src={audience}
+      alt="Audience seated by the windows during a session"
+      class="aspect-[283/332] w-full object-cover lg:absolute lg:top-[72.25%] lg:left-[40.01%] lg:h-[27.6%] lg:w-[18.72%]"
+    />
+    <Image
+      src={booth}
+      alt="Attendees at a sponsor booth by the windows"
+      class="aspect-[169/219] w-full object-cover lg:absolute lg:top-[81.64%] lg:left-[61.9%] lg:h-[18.2%] lg:w-[11.18%]"
+    />
+    <Image
+      src={posters}
+      alt="Attendees discussing research posters"
+      class="col-span-2 aspect-[317/187] w-full object-cover lg:absolute lg:top-[84.39%] lg:left-[75.33%] lg:h-[15.54%] lg:w-[20.97%]"
+    />
+  </div>
+</section>

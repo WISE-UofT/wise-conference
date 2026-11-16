@@ -1,0 +1,169 @@
+---
+import { Image } from "astro:assets";
+import mountain1 from "../../assets/workshops/mountain1.svg";
+import mountain2 from "../../assets/workshops/mountain2.svg";
+import mountain3 from "../../assets/workshops/mountain3.svg";
+import mountain4 from "../../assets/workshops/mountain4.svg";
+import mountain5 from "../../assets/workshops/mountain5.svg";
+import mountain6 from "../../assets/workshops/mountain6.svg";
+import mountain7 from "../../assets/workshops/mountain7.svg";
+import PersonCard from "../speakers/PersonCard.astro";
+import { workshopGroups } from "../../content/workshops/hosts";
+import type { ImageMetadata } from "astro";
+import rukevwe from "../../assets/workshops/IMG_6065 - Rukkie Inikori.jpeg";
+import puneet from "../../assets/workshops/Puneet Sidhu_Headshot - Puneet Sidhu.png";
+import amel from "../../assets/workshops/Amel Sassi_Headshot pic - Amel Sassi.png";
+import sampada from "../../assets/workshops/Sampada Bodkhe - Sampada Bodkhe.jpg";
+import anjali from "../../assets/workshops/Pinpoint_AKR7578 - CLEAN CREATE.jpg";
+import shrivani from "../../assets/workshops/Shrivani Pandiya - SHRIVANI PANDIYA.JPG";
+import roberta from "../../assets/workshops/woods - Artsci Salon.JPG";
+import nema from "../../assets/workshops/Headshot - Nema McGlynn.jpg";
+import kelly from "../../assets/workshops/Kelly Chang.png";
+
+const mountains = [mountain2, mountain3, mountain4, mountain5, mountain6, mountain7];
+
+const images: Record<string, ImageMetadata> = {
+  "Rukevwe Inikori": rukevwe,
+  "Puneet Sidhu": puneet,
+  "Amel Sassi": amel,
+  "Sampada Bodkhe": sampada,
+  "Anjali Sankar": anjali,
+  "Shrivani Pandiya": shrivani,
+  "Roberta Buiani": roberta,
+  "Néma McGlynn": nema,
+  "Kelly Chang": kelly,
+};
+---
+
+<section aria-labelledby="workshops" class="relative isolate overflow-hidden font-spartan">
+  <div class="relative">
+    <Image src={mountain1} alt="" aria-hidden="true" class="workshop-mountain pointer-events-none absolute inset-0 -z-20 h-full w-full origin-center scale-x-110 object-fill" />
+    <div class="relative z-10 mx-auto w-[85%] max-w-7xl pt-44 pb-20 md:pt-[40vw] md:pb-[10vw]">
+      <h2 id="workshops" class="scroll-mt-28 font-spartan text-[2rem] font-medium leading-tight tracking-tight text-ink md:text-[2.55rem]">Workshops</h2>
+      <p class="mt-6 text-[0.98rem] leading-7 text-ink/90">
+        Workshops are a wonderful way for you to more actively take part in the
+        Conference! Our demos, activities, and guided discussions are designed to
+        allow you to get exposure to new concepts, develop useful skills, and engage
+        with fellow attendees. With the focus being more on skill-building, we
+        believe that everyone will be able to find something useful and inspiring
+        from attending these workshops, no matter where their interests lie. Unless
+        indicated otherwise, no materials are required for the workshops.
+      </p>
+
+    </div>
+  </div>
+
+  <div>
+    {
+      workshopGroups
+        .map((group, index) => ({ group, index }))
+        .filter(({ group }) => !group.hidden)
+        .map(({ group, index }) => (
+        <article class="relative py-12 md:py-[7vw]">
+          <Image
+            src={mountains[index % mountains.length]}
+            alt=""
+            aria-hidden="true"
+            class:list={[
+              "workshop-mountain pointer-events-none absolute inset-x-0 -z-10 w-full origin-center object-fill",
+              index === 0
+                ? "-top-32 h-[calc(100%+8rem)] md:-top-[16vw] md:h-[calc(100%+16vw)]"
+                : "-top-16 h-[calc(100%+4rem)] md:-top-[8vw] md:h-[calc(100%+8vw)]",
+              [0, 1, 2, 4].includes(index % mountains.length) ? "scale-x-125" : "scale-x-110",
+              index % mountains.length === 0 && "-translate-x-[8%]",
+              index % mountains.length === 3 && "translate-x-[8%]",
+            ]}
+          />
+          <div class="relative z-10 mx-auto grid w-[85%] max-w-7xl items-start gap-y-8 md:grid-cols-12 md:gap-x-8 lg:gap-x-12">
+            <div class:list={[
+              "flex min-w-0 flex-col items-start gap-4 md:col-span-6",
+              index % 2 === 1 ? "md:col-start-7 md:row-start-1" : "md:col-start-1",
+            ]}>
+              <h3 class="text-2xl leading-tight font-bold text-ink">{group.title}</h3>
+              <div class="space-y-1 text-lg leading-snug font-semibold text-ink">
+                <p>
+                  {group.subtitle}
+                </p>
+                <p>{group.time || "Time to be announced"}</p>
+              </div>
+              <p class="whitespace-pre-line text-[0.95rem] leading-7 text-ink/90">
+                {group.description}
+              </p>
+            </div>
+            <div class:list={[
+              "grid min-w-0 grid-cols-2 items-start gap-x-5 gap-y-8 sm:gap-x-8",
+              group.hosts.length >= 3 && "sm:grid-cols-3",
+              group.hosts.length === 1 && "md:grid-cols-1 md:justify-items-center",
+              group.hosts.some((host) => host.name === "Roberta Buiani") && "md:self-center",
+              index === 0
+                ? "md:col-span-6 md:col-start-7 md:row-start-1 md:grid-cols-1 md:justify-items-center"
+                : index % 2 === 1
+                  ? "md:col-span-6 md:col-start-1 md:row-start-1"
+                  : "md:col-span-6 md:col-start-7 md:row-start-1 md:pt-20",
+            ]}>
+              {group.hosts.map((host) => (
+                <PersonCard
+                  name={host.name}
+                  announced={host.announced}
+                  title={host.title}
+                  image={images[host.name]}
+                  bio={host.bio}
+                  preferredName={host.preferredName}
+                  objectPosition={host.objectPosition}
+                  size="lg"
+                />
+              ))}
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .workshop-mountain {
+    transform: translate3d(0, var(--mountain-parallax, 0px), 0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .workshop-mountain {
+      transform: none;
+    }
+  }
+</style>
+
+<script>
+  const mountains = Array.from(
+    document.querySelectorAll<HTMLElement>(".workshop-mountain"),
+  );
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let frame = 0;
+
+  function updateParallax() {
+    frame = 0;
+    const viewportHeight = window.innerHeight;
+    const maxOffset = window.innerWidth < 768 ? 12 : 24;
+    // Measure the stationary containers so movement cannot feed back into itself.
+    const offsets = mountains.map((mountain) => {
+      if (reducedMotion.matches) return 0;
+      const bounds = mountain.parentElement?.getBoundingClientRect();
+      if (!bounds) return 0;
+      const distance = viewportHeight / 2 - (bounds.top + bounds.height / 2);
+      return Math.max(-maxOffset, Math.min(maxOffset, distance * 0.06));
+    });
+
+    mountains.forEach((mountain, index) => {
+      mountain.style.setProperty("--mountain-parallax", `${offsets[index]}px`);
+    });
+  }
+
+  function scheduleParallax() {
+    if (!frame) frame = window.requestAnimationFrame(updateParallax);
+  }
+
+  window.addEventListener("scroll", scheduleParallax, { passive: true });
+  window.addEventListener("resize", scheduleParallax);
+  reducedMotion.addEventListener("change", scheduleParallax);
+  scheduleParallax();
+</script>

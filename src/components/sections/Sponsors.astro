@@ -1,0 +1,104 @@
+---
+import { Image } from "astro:assets";
+import SectionLayout from "../../layouts/SectionLayout.astro";
+import birchhill from "../../assets/sponsors/corporate/birchhill.webp";
+import amd from "../../assets/sponsors/corporate/amd.webp";
+import qualcomm from "../../assets/sponsors/corporate/qualcomm.webp";
+import intact from "../../assets/sponsors/corporate/intact.webp";
+import arcadis from "../../assets/sponsors/corporate/arcadis.webp";
+import amazon from "../../assets/sponsors/corporate/amazon_robotics.webp";
+import cascades from "../../assets/sponsors/corporate/cascades.webp";
+import york from "../../assets/sponsors/academic/york-eng.webp";
+import tmu from "../../assets/sponsors/academic/tmu.webp";
+import tmuMath from "../../assets/sponsors/academic/tmu-math.webp";
+---
+
+<SectionLayout title="Conference Sponsors" id="sponsors" align="center">
+  <p class="text-center text-base text-ink/80">
+    Want to become a sponsor? Get in touch with us at{" "}
+    <a
+      class="underline decoration-ink/30 underline-offset-2 hover:decoration-ink"
+      href="mailto:vp.finance@wise.skule.ca">vp.finance@wise.skule.ca</a
+    >!
+  </p>
+
+  <h3 class="mt-12 text-center font-serif text-2xl font-medium text-ink">
+    Corporate Sponsors
+  </h3>
+
+  <div class="mt-8 flex justify-center">
+    <Image
+      src={birchhill}
+      alt="Birch Hill Equity Partners"
+      class="h-16 w-auto object-contain md:h-20"
+    />
+  </div>
+
+  <div class="mt-10 flex flex-wrap items-center justify-center gap-x-14 gap-y-8">
+    <Image src={amd} alt="AMD" class="h-12 w-auto object-contain md:h-14" />
+    <Image
+      src={qualcomm}
+      alt="Qualcomm"
+      class="h-12 w-auto object-contain md:h-14"
+    />
+  </div>
+
+  <div class="mt-10 flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
+    <Image src={intact} alt="Intact" class="h-14 w-auto object-contain" />
+    <Image src={arcadis} alt="Arcadis" class="h-12 w-auto object-contain" />
+    <Image
+      src={amazon}
+      alt="Amazon Robotics"
+      class="h-14 w-auto object-contain"
+    />
+  </div>
+
+  <div class="mt-10 flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
+    <Image src={cascades} alt="Cascades" class="h-12 w-auto object-contain" />
+    <!-- Kinross Gold Corporation -->
+    <!-- Kinaxis -->
+    <!-- Stantec -->
+  </div>
+
+  <h3 class="mt-16 text-center font-serif text-2xl font-medium text-ink">
+    Academic Partners
+  </h3>
+
+  <!--
+    Academic partner row. Drop logos in here; this row stays separate from the one below.
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-8 md:gap-12">
+    </div>
+  -->
+
+  <div class="mt-8 flex flex-wrap items-center justify-center gap-8 md:gap-12">
+    <Image
+      src={york}
+      alt="Lassonde School of Engineering, York University"
+      class="h-14 w-auto object-contain"
+    />
+    <Image
+      src={tmu}
+      alt="Toronto Metropolitan University"
+      class="h-16 w-auto max-w-56 object-contain"
+    />
+    <Image
+      src={tmuMath}
+      alt="Department of Mathematics, Faculty of Science, Toronto Metropolitan University"
+      class="h-14 w-auto max-w-64 object-contain"
+    />
+    <!-- Academic partner logo -->
+  </div>
+</SectionLayout>
+
+<section class="mx-auto w-full max-w-5xl px-5 pb-8 md:px-8">
+  <h2
+    class="text-center font-serif text-[2rem] font-medium tracking-tight text-ink md:text-[2.4rem]"
+  >
+    Academic Contributors
+  </h2>
+  <!--
+    Academic contributor rows. Add logos inside this grid when they are ready.
+    <div class="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+    </div>
+  -->
+</section>

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Dr. Sarah Haines",
+    "image": "/assets/speakers/sarah-haines.webp",
+    "title": "Assistant Professor @ University of Toronto",
+    "pronouns": "she/her",
+    "bio": "Sarah Haines is an Assistant Professor in the Department of Civil and Mineral Engineering at the University of Toronto and an inaugural member of the Hub for Advancing Buildings (HAB). She received her MS and PhD from The Ohio State University where her work focused on characterizing and modelling microbial growth in building materials. As the Director of the Indoor Microbiology and Environmental Exposures (IMEE) Lab her team specializes in indoor environmental quality (IEQ) and sustainable housing. Her work integrates community-based participatory research and advanced molecular techniques (e.g., high-throughput sequencing, digital PCR, metatranscriptomics) to examine microbial dynamics and contaminant exposures indoors."
+  },
+  {
+    "name": "Dr. Morgan Hooper",
+    "image": "/assets/speakers/morgan-hooper.webp",
+    "title": "Assistant Professor @ University of Toronto",
+    "pronouns": "she/her",
+    "bio": "Morgan Hooper is an Assistant Professor (Teaching Stream) in the Division of Engineering Science and the University of Toronto Institute for Aerospace Studies (UTIAS), as well as an alumna of EngSci's aerospace engineering major. Before returning to the University of Toronto as a faculty member, she earned an MS and PhD in Aeronautics from Caltech, where her research focused on experimental unsteady aerodynamics and fluid-structure interactions with views towards sustainable energy harvesting. Now in a teaching stream role, her research and practice both focus on building community in STEM programs, and the complex ways in which engineering identity, community, and the educational experience interact."
+  },
+  {
+    "name": "Patricia Watanabe",
+    "image": "/assets/speakers/patricia-watanabe.webp",
+    "title": "PhD Student @ University of Toronto",
+    "bio": "Patricia Watanabe is a first-year PhD student in the Department of Civil & Mineral Engineering, working under the supervision of Dr. Sarah Haines in the Indoor Microbiology and Environmental Exposure (IMEE) lab. Patricia was a double major holding a Bachelor of Science in Cell & Molecular Biology as well as Health & Disease with a minor in Statistics. Her research focuses on characterizing the microbiology of the built environment and understanding the complex interactions between microbial communities, building materials, and human occupants. Her recent work has involved the application of machine learning to estimate classroom ventilation and filtration rates, the efficacy of antimicrobial wall surface coatings for mould prevention, and the advancement of molecular techniques for indoor microbial profiling."
+  }
+]

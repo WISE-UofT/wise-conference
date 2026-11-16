@@ -1,0 +1,34 @@
+---
+interface Props {
+  name: string;
+  role: string;
+  image: string;
+  rotation?: number;
+}
+
+const {
+  name,
+  role,
+  image,
+  rotation = 0
+} = Astro.props;
+---
+
+<div
+  class="team-card"
+  style={`--rotation: ${rotation}deg`}
+>
+  <div class="clip">
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="photo">
+    <img src={image} alt={name} />
+  </div>
+
+  <div class="info">
+    <h3>{name}</h3>
+    <p>{role}</p>
+  </div>
+</div>

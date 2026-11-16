@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Dr. Lindsey Fiddes",
+    "image": "/assets/speakers/lindsey-fiddes.webp",
+    "title": "Assistant Professor, Teaching Stream @ University of Toronto Institute of Biomedical Engineering",
+    "pronouns": "she/they",
+    "bio": "Dr. Lindsey Fiddes joined the Institute of Biomedical Engineering as an Assistant Professor, Teaching Stream, on January 1, 2026. Bringing over a decade of specialized experience to the faculty, Dr. Fiddes previously spent 13 years at the University of Toronto dedicated to training highly qualified personnel in the technical intricacies of microfabrication, microfluidics, and microscopy.\n\nHer current pedagogical research focuses on critical modern challenges in data integrity, specifically investigating biases in bioimaging and image processing techniques alongside her undergraduate research team. As a dedicated educator, Dr. Fiddes is spearheading the development of new curricula designed to give students hands-on mastery of rapid prototyping and nanoparticles for medicine, ensuring the next generation of engineers is equipped with cutting-edge fabrication skills. She holds a BSc in Chemistry from Western University and a PhD in Chemistry from the University of Toronto."
+  },
+  {
+    "name": "Lucy Ma",
+    "image": "/assets/speakers/lucy-ma.webp",
+    "title": "3rd Year PhD Student @ University of Toronto",
+    "pronouns": "she/her",
+    "bio": "Lucy Ma is a 3rd year Biomedical Engineering PhD student at the University of Toronto whose research integrates synthetic biology and regenerative medicine. Co-supervised by Dr. Michael Garton and Dr. Penney Gilbert, she engineers human-induced pluripotent stem cells (iPSCs) and derived skeletal muscle tissues. With an interest in merging the outer space and medicine, she is also working on engineering gene therapies designed to protect astronauts from ionizing radiation–induced DNA damage.\n\nBeyond her research, Lucy is deeply committed to community building and being a connector in STEM. She founded the first graduate mentorship program within the Faculty of Biomedical Engineering at the University of Toronto. She serves as the Space Biomedical Sciences Chair at SEDS Canada. Through leading the Space Health Research Network, a non-profit founded by Dr. Giuseppe Iaria, she is dedicated to creating trainee opportunities and organizing bi-annual national symposia. Most recently, she is collaborating with Dr. Marcelo Vazquez from the Canadian Nuclear Lab to establish the first Canadian Space Radiation Research Group. Her long-term vision is to leverage business as a vehicle to build a sustainable ecosystem for space health research and innovations worldwide."
+  },
+  {
+    "name": "Emily Somerset",
+    "image": "/assets/speakers/emily-somerset.webp",
+    "title": "Assistant Professor, Teaching Stream @ University of Toronto, Department of Statistical Sciences",
+    "pronouns": "she/her",
+    "bio": "Emily Somerset is an assistant professor, teaching stream, in the Department of Statistical Sciences at the University of Toronto. Her research focuses on developing statistical frameworks for wastewater-based epidemiology to support public health surveillance. She has developed models for disease concentrations measured in wastewater that treat disease signals as differentiable Gaussian processes, enabling reliable identification and communication of changes in pandemic trends. She has also developed wastewater-based models for epidemic curve reconstruction and hospital admissions, which estimate the number of people infected within a community. Additionally, she is engaged in statistics education research, with particular interests in the impact of generative AI on student learning and the effects of flexible assessment structures on student writing and engagement."
+  },
+  {
+    "name": "Ana-Maria Oproescu",
+    "image": "/assets/speakers/ana-maria-oproescu.webp",
+    "title": "PhD Candidate @ University of Toronto",
+    "pronouns": "she/her",
+    "bio": "Ana-Maria Oproescu is a 4th year Biomedical Engineering PhD candidate and NSERC CGS-D recipient at the University of Toronto whose research focuses on the development and characterization of next-generation lipid nanoparticles for improved therapeutic nucleic acid delivery. Outside of the lab, Ana-Maria is committed to breaking barriers in the medical field. Most recently, as an Acceleration Consortium EDI grant recipient, she produced a video series to promote diverse perspectives of women working in the growing field of self-driving labs. She has also supported fundraising and educational campaigns through her Youth Ambassador role at Hydrocephalus Canada. Further, she created the nonprofit STEM PASS to support students from diverse socioeconomic backgrounds to apply to medical school through bursaries and other resources."
+  }
+]

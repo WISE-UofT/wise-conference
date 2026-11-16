@@ -1,0 +1,57 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+type SponsorLogo = {
+  fileName: string;
+  sizeClass?: string;
+  breakAfter?: boolean;
+};
+
+interface Props {
+  title: string;
+  logos: SponsorLogo[];
+  basePath: string;
+  images: Record<string, { default: ImageMetadata }>;
+}
+
+const { title, logos, basePath, images } = Astro.props;
+
+function sponsorNameFromFile(fileName: string) {
+  return fileName
+    .replace(/\.(webp|png|svg)$/i, "")
+    .replace(/[_-]/g, " ")
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+}
+---
+
+<div>
+  <h3 class="mt-12 mb-8 text-2xl text-center font-semibold text-blue-navy">
+    {title}
+  </h3>
+  <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-8">
+    {
+      logos.map((logo) => {
+        const src = images[`${basePath}/${logo.fileName}`]?.default;
+
+        if (!src) return null;
+
+        return (
+          <>
+            <article class="flex items-center justify-center">
+              <Image
+                src={src}
+                alt={sponsorNameFromFile(logo.fileName)}
+                loading="lazy"
+                class={`h-auto w-auto object-contain ${logo.sizeClass ?? "max-w-44"}`}
+              />
+            </article>
+            {logo.breakAfter ? (
+              <div class="basis-full" aria-hidden="true" />
+            ) : null}
+          </>
+        );
+      })
+    }
+  </div>
+</div>

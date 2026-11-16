@@ -1,0 +1,153 @@
+---
+import { Image } from "astro:assets";
+import NavLink from "./NavLink.astro";
+import logo from "../../assets/logo-dark-purple.webp";
+
+const ticketLink = { title: "Buy Tickets", link: "#", filled: true };
+
+const links = [
+  { title: "Discounts", link: "#discounts" },
+  { title: "Speakers", link: "#speakers" },
+  { title: "Workshops", link: "#workshops" },
+  { title: "Competitions", link: "#competitions" },
+  { title: "Schedule", link: "#schedule" },
+  { title: "Sponsors", link: "#sponsors" },
+  { title: "FAQ", link: "#faq" },
+  { title: "Recap", link: "#recap" },
+  { title: "2026 Archive", link: "/2026/" },
+];
+---
+
+<header
+  id="navbar"
+  class="fixed top-0 left-0 z-50 w-full xl:top-8"
+>
+  <div class="mx-auto flex w-full max-w-[1800px] items-center justify-between gap-4 px-4 py-4 md:px-6 xl:py-0">
+    <a href="https://wise.skule.ca/" aria-label="WISE UofT" target="_blank" class="shrink-0">
+      <Image
+        id="nav-logo"
+        src={logo}
+        alt="WISE"
+        width={160}
+        height={70}
+        class="h-9 w-auto sm:h-11 xl:h-10 2xl:h-14"
+      />
+    </a>
+
+    <a
+      href={ticketLink.link}
+      class="ml-auto inline-flex shrink-0 items-center justify-center rounded-full border border-[#E9EAFF] bg-[#fec9f5]/80 px-5 py-3 font-spartan text-xl leading-7 font-normal whitespace-nowrap text-ink backdrop-blur-md transition-colors hover:bg-[#f7bddf]/90 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple-dark xl:h-14 xl:px-5 xl:py-2 xl:text-base xl:leading-6"
+    >
+      {ticketLink.title}
+    </a>
+
+    <nav class="hidden min-w-0 xl:block" aria-label="Page">
+      <ul class="flex h-14 items-center justify-center gap-4 rounded-full border border-[#E9EAFF] bg-[#DEE0FF]/80 px-5 backdrop-blur-md 2xl:gap-6">
+        {
+          links.map((item) => (
+            <NavLink title={item.title} link={item.link} />
+          ))
+        }
+      </ul>
+    </nav>
+
+    <button
+      id="mobile-menu-btn"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mobile-drawer"
+      class="flex flex-col items-center justify-center gap-1.5 p-2 cursor-pointer xl:hidden"
+    >
+      <span class="hamburger-line block h-0.5 w-6 bg-ink transition-all duration-300"></span>
+      <span class="hamburger-line block h-0.5 w-6 bg-ink transition-all duration-300"></span>
+      <span class="hamburger-line block h-0.5 w-6 bg-ink transition-all duration-300"></span>
+    </button>
+  </div>
+</header>
+
+<div
+  id="mobile-overlay"
+  class="fixed inset-0 z-40 bg-ink/30 opacity-0 pointer-events-none transition-opacity duration-300 xl:hidden"
+>
+</div>
+
+<nav
+  id="mobile-drawer"
+  aria-label="Mobile navigation"
+  class="fixed top-0 right-0 z-50 h-full w-72 translate-x-full bg-mist pt-20 shadow-2xl transition-transform duration-300 xl:hidden"
+>
+  <button
+    id="mobile-close-btn"
+    aria-label="Close menu"
+    class="absolute top-5 right-5 cursor-pointer text-ink"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-6 w-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      stroke-width="2"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M6 18L18 6M6 6l12 12"></path>
+    </svg>
+  </button>
+  <ul class="flex flex-col items-start gap-3 px-6">
+    {
+      links.map((item) => (
+        <NavLink title={item.title} link={item.link} />
+      ))
+    }
+  </ul>
+</nav>
+
+<style>
+  #navbar:not(.is-scrolled) #nav-logo {
+    filter: brightness(0) invert(1);
+  }
+</style>
+
+<script>
+  const navbar = document.getElementById("navbar");
+
+  function updateNavbar() {
+    if (!navbar) return;
+    const scrolled = window.scrollY > 8;
+    navbar.classList.toggle("is-scrolled", scrolled);
+  }
+
+  window.addEventListener("scroll", updateNavbar, { passive: true });
+  updateNavbar();
+
+  const menuBtn = document.getElementById("mobile-menu-btn");
+  const closeBtn = document.getElementById("mobile-close-btn");
+  const drawer = document.getElementById("mobile-drawer");
+  const overlay = document.getElementById("mobile-overlay");
+
+  function openMenu() {
+    drawer?.classList.remove("translate-x-full");
+    overlay?.classList.remove("opacity-0", "pointer-events-none");
+    overlay?.classList.add("opacity-100");
+    menuBtn?.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeMenu() {
+    drawer?.classList.add("translate-x-full");
+    overlay?.classList.remove("opacity-100");
+    overlay?.classList.add("opacity-0", "pointer-events-none");
+    menuBtn?.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+  }
+
+  menuBtn?.addEventListener("click", openMenu);
+  closeBtn?.addEventListener("click", closeMenu);
+  overlay?.addEventListener("click", closeMenu);
+
+  drawer?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+</script>

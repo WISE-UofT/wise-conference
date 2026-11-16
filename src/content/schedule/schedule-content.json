@@ -1,0 +1,131 @@
+[
+  {
+    "day": "Day 1",
+    "date": "Saturday, January 17",
+    "blocks": [
+      {
+        "time": "8:00 – 9:30 AM",
+        "events": [
+          { "title": "Registration & Breakfast", "location": "Harbour Foyer", "type": "general" }
+        ]
+      },
+      {
+        "time": "9:00 – 9:30 AM",
+        "events": [
+          { "title": "Opening Ceremony", "location": "Harbour Ballroom", "type": "general" }
+        ]
+      },
+      {
+        "time": "9:30 – 10:30 AM",
+        "events": [
+          { "title": "Diana Anderson", "location": "Harbour Ballroom", "type": "keynote" }
+        ]
+      },
+      {
+        "time": "10:30 AM – 12:00 PM",
+        "events": [
+          { "title": "Exploring the Unseen Currents: Pathways in Academia", "location": "Pier 2 & 3", "type": "panel" },
+          { "title": "Inclusive Innovation: Integrating Equity-Based Design Thinking in Science and Engineering", "location": "Pier 4", "type": "workshop" },
+          { "title": "Birch Hill: From Data to Decisions: A Hands-On Case Study", "location": "Pier 5", "type": "workshop" },
+          { "title": "CUBE Case Competition", "location": "Pier 9", "type": "competition" }
+        ]
+      },
+      {
+        "time": "12:00 – 1:00 PM",
+        "events": [
+          { "title": "Lunch", "location": "Harbour Foyer", "type": "general" }
+        ]
+      },
+      {
+        "time": "1:00 – 2:30 PM",
+        "events": [
+          { "title": "Shifting Gears: Building Business Careers from STEM Foundations", "location": "Harbour Ballroom", "type": "panel" },
+          { "title": "Cohere – Model Context Protocol: Building AI Agents That Interact with The Real World", "location": "Pier 4", "type": "workshop" },
+          { "title": "Discovering Your Leadership Depths: Turning Values into Action", "location": "Pier 5", "type": "workshop" },
+          { "title": "5 Minute Thesis (until 3:00 PM)", "location": "Pier 9", "type": "competition" }
+        ]
+      },
+      {
+        "time": "2:30 – 4:30 PM",
+        "events": [
+          { "title": "Career & Grad Fair", "location": "Harbour Foyer, Pier 2 & 3", "type": "special" }
+        ]
+      },
+      {
+        "time": "4:30 – 5:00 PM",
+        "events": [
+          { "title": "Closing Remarks", "location": "Harbour Ballroom", "type": "general" }
+        ]
+      }
+    ]
+  },
+  {
+    "day": "Day 2",
+    "date": "Sunday, January 18",
+    "blocks": [
+      {
+        "time": "8:00 – 9:00 AM",
+        "events": [
+          { "title": "Registration & Breakfast", "location": "Harbour Foyer", "type": "general" }
+        ]
+      },
+      {
+        "time": "9:00 – 10:00 AM",
+        "events": [
+          { "title": "Mic Liu", "location": "Harbour Ballroom", "type": "keynote" }
+        ]
+      },
+      {
+        "time": "10:00 – 11:30 AM",
+        "events": [
+          { "title": "Qualcomm – Intro to Edge AI", "location": "Harbour Ballroom", "type": "workshop" },
+          { "title": "Mission Earth: Roles in STEM That Shape a Sustainable World", "location": "Pier 2 & 3", "type": "panel" },
+          { "title": "From Lab to Launch: A Practical Guide on Entrepreneurship and How to Turn Ideas into Impact", "location": "Pier 4", "type": "workshop" },
+          { "title": "UTAT – Designing Your Own Satellite: An Interactive Workshop in Satellite Operations", "location": "Pier 5", "type": "workshop" },
+          { "title": "Cohere Hackathon Judging (until 12:00 PM)", "location": "Pier 9", "type": "competition" }
+        ]
+      },
+      {
+        "time": "11:30 AM – 1:00 PM",
+        "events": [
+          { "title": "Diving Deep: Influencing Society Through STEM", "location": "Pier 2 & 3", "type": "panel" },
+          { "title": "How fMRI Sees the Active Brain: An Introduction to fMRI", "location": "Pier 4", "type": "workshop" },
+          { "title": "Winning in a Tough Tech Market", "location": "Pier 5", "type": "workshop" }
+        ]
+      },
+      {
+        "time": "1:00 – 2:00 PM",
+        "events": [
+          { "title": "Lunch", "location": "Harbour Foyer", "type": "general" }
+        ]
+      },
+      {
+        "time": "2:00 – 3:30 PM",
+        "events": [
+          { "title": "From Data to Discovery: The Evolution of Machine Intelligence", "location": "Pier 2 & 3", "type": "panel" },
+          { "title": "Mapping Your Academic Journey", "location": "Pier 4", "type": "workshop" },
+          { "title": "From Change to Chance: Exploring Hidden Depths", "location": "Pier 5", "type": "panel" }
+        ]
+      },
+      {
+        "time": "3:00 – 4:00 PM",
+        "events": [
+          { "title": "Poster Fair", "location": "Harbour Foyer", "type": "competition" }
+        ]
+      },
+      {
+        "time": "3:30 – 5:00 PM",
+        "events": [
+          { "title": "Coffee Chats", "location": "Harbour Foyer", "type": "special" },
+          { "title": "Beneath the White Coat: The Many Faces of Healthcare", "location": "Pier 2 & 3", "type": "panel" }
+        ]
+      },
+      {
+        "time": "5:00 – 5:30 PM",
+        "events": [
+          { "title": "Closing Ceremony", "location": "Harbour Ballroom", "type": "general" }
+        ]
+      }
+    ]
+  }
+]

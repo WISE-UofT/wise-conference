@@ -1,0 +1,238 @@
+﻿---
+import SectionLayout from "../../layouts/SectionLayout.astro";
+import PersonCard from "../speakers/PersonCard.astro";
+import PanelCopy from "../speakers/PanelCopy.astro";
+import garene from "../../assets/panels/BCI & Neurotech _ Garene Matossian.jpg";
+import susannah from "../../assets/panels/BCI & Neurotech _ Susannah Van Damme.jpg";
+import fatima from "../../assets/panels/Sustainability _ Fatima Crerar.png";
+import marianne from "../../assets/panels/Sustainability _ Marianne Hatzopoulou.jpg";
+import nicole from "../../assets/panels/Sustainability _ Nicole Kohoko.jpeg";
+import andrea from "../../assets/panels/Global _ Andrea Hemmerich.jpg";
+import rebecca from "../../assets/panels/Global _ Rebecca Alcock.jpg";
+import lucy from "../../assets/panels/Space _ Lucy Ma.jpg";
+import silvia from "../../assets/panels/Strategy _ Silvia Stanica.jpg";
+import rabbitLeap from "../../assets/illustrations/rabbit-leap-space.png";
+import rabbitSitPale from "../../assets/illustrations/rabbit-sit-light.png";
+import rabbit from "../../assets/illustrations/keynote-rabbit.png";
+import PanelScene from "../speakers/PanelScene.astro";
+import { Image } from "astro:assets";
+import { panelists } from "../../content/speakers/panelists";
+
+const neuroDescription =
+  "Explore the rapidly evolving world of neurotechnology and brain-computer interfaces with experts working across research, healthcare, and industry. Hear how they're turning brain signals into real-world applications, the paths that brought them into the field, and what breakthroughs could shape the future of how humans interact with technology.";
+---
+
+<SectionLayout title="Speakers" id="speakers">
+  <p class="max-w-3xl text-base leading-7 text-ink/90">
+    There will be 2 keynotes and 4-5 speakers at each panel. Stay tuned as we
+    announce more speaker details!
+  </p>
+
+  <div class="relative left-1/2 mt-10 w-screen -translate-x-1/2 bg-[#FFFCE5] py-16 md:py-24">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-x-10 gap-y-6 px-5 md:px-8">
+      <h3 class="shrink-0 font-serif text-[1.7rem] font-medium leading-none text-ink">
+        Keynotes
+      </h3>
+      <div class="flex gap-x-8">
+        <PersonCard name="To be announced" announced={false} size="lg" />
+        <PersonCard name="To be announced" announced={false} size="lg" />
+      </div>
+    </div>
+    <Image
+      src={rabbit}
+      alt=""
+      class="pointer-events-none absolute bottom-0 left-0 w-44 translate-y-[30%] sm:left-3 sm:w-56"
+      width={275}
+      height={280}
+    />
+  </div>
+
+  <div class="mt-20 grid items-start gap-10 md:grid-cols-2 md:gap-10 lg:gap-16">
+    <div class="md:order-2">
+      <PanelCopy
+        title="Neurotechnology Panel"
+        subtitle="Brain Meets Machine: The Future of Neurotechnology & BCI"
+        when="Saturday, 10:30AM - 12:00PM | Pier 4"
+        description={neuroDescription}
+      />
+    </div>
+    <div class="grid w-max max-w-full grid-cols-2 gap-x-6 gap-y-8 md:order-1 md:justify-self-start">
+      <PersonCard
+        {...panelists["Garene Matossian"]}
+        name="Garene Matossian"
+        title="2nd-year PhD Student @ University of Toronto"
+        image={garene}
+      />
+      <PersonCard
+        {...panelists["Susannah Van Damme"]}
+        name="Susannah Van Damme"
+        title="Occupational Therapist, Team Lead @ Holland Bloorview Kids Rehabilitation Hospital"
+        image={susannah}
+      />
+      {
+        Array.from({ length: 2 }).map(() => (
+          <PersonCard name="To be announced" announced={false} />
+        ))
+      }
+    </div>
+  </div>
+
+  <div class="mt-16 grid items-start gap-10 md:grid-cols-2 md:gap-10 lg:gap-16">
+    <PanelCopy
+      title="AI and Technology Panel"
+      subtitle="Beyond the Algorithm: The Future of AI"
+      when="Sunday, 3:00PM - 4:30PM | Harbour Ballroom"
+      description="As AI rapidly advances, what should we be building, who should shape its future, and what responsibilities come with it? Bringing together perspectives from research, industry, ethics, and policy, this panel will explore the opportunities, risks, and open questions shaping the next era of AI."
+    />
+    <div class="grid w-max max-w-full grid-cols-2 gap-x-6 gap-y-8 md:justify-self-end">
+      {
+        Array.from({ length: 4 }).map(() => (
+          <PersonCard name="To be announced" announced={false} />
+        ))
+      }
+    </div>
+  </div>
+
+  <PanelScene align="left" />
+
+  <div class="mt-8 grid items-start gap-10 md:grid-cols-2 md:gap-10 lg:gap-16">
+    <div class="md:order-2">
+      <PanelCopy
+        title="Sustainability Panel"
+        subtitle="Building a Greener Tomorrow: Sustainability, Conservation & Renewable Energy"
+        when="Sunday, 1:30PM - 3:00PM | Pier 2"
+        description="As the need for sustainability grows, how should we be building toward a greener planet, who's leading that work, and what will it take to get there in time? Gathering perspectives from conservation, ecology, and the clean energy transition, this panel will explore the innovations, career paths, and technical and policy challenges shaping a more sustainable future for our planet."
+      />
+    </div>
+    <div class="grid w-max max-w-full grid-cols-2 gap-x-6 gap-y-8 md:order-1 md:justify-self-start">
+      <PersonCard
+        {...panelists["Fatima Crerar"]}
+        name="Fatima Crerar"
+        title="VP Strategy & Partnerships @ The Atmospheric Fund"
+        image={fatima}
+      />
+      <PersonCard
+        {...panelists["Marianne Hatzopoulou"]}
+        name="Marianne Hatzopoulou"
+        title="Professor and Chair, Civil & Mineral Engineering @ University of Toronto"
+        image={marianne}
+      />
+      <PersonCard
+        {...panelists["Nicole Kohoko"]}
+        name="Nicole Kohoko"
+        title="Vice President of Corporate Affairs @ Six Nations Group"
+        image={nicole}
+      />
+      <PersonCard name="To be announced" announced={false} />
+    </div>
+  </div>
+
+  <div class="relative mt-16 grid items-start gap-10 md:grid-cols-2 md:gap-10 lg:gap-16">
+    <Image
+      src={rabbitSitPale}
+      alt=""
+      class="pointer-events-none absolute top-0 right-0 z-10 hidden w-24 translate-x-2 -translate-y-[135%] md:block"
+      width={62}
+      height={63}
+    />
+    <PanelCopy
+      title="Leadership Panel"
+      subtitle="The Many Faces of Impact: Leadership in STEM"
+      when="Saturday, 10:30AM - 12:00PM | Pier 2"
+      description="Bringing together women across industry, academia, startups, non-profits, and policy, this panel will explore the different ways STEM careers can create impact. Speakers will reflect on their career journeys, what led them to where they are today, how their definitions of meaningful work and success have evolved, and how they have used leadership to create change in their fields and communities."
+    />
+    <div class="grid w-max max-w-full grid-cols-2 gap-x-6 gap-y-8 md:justify-self-end">
+      <PersonCard name="To be announced" announced={false} />
+      <PersonCard name="To be announced" announced={false} />
+      <PersonCard name="To be announced" announced={false} />
+      <PersonCard name="To be announced" announced={false} />
+    </div>
+  </div>
+
+  <PanelScene />
+
+  <div class="mt-8 grid items-start gap-10 md:grid-cols-2 md:gap-10 lg:gap-16">
+    <div class="md:order-2">
+      <PanelCopy
+        title="STEM without Borders Panel"
+        subtitle="STEM Without Borders: Local Roots, Global Reach"
+        when="Saturday, 1:00PM - 2:30PM | Pier 4"
+        description="What does STEM look like when it crosses borders, and how do culture, resources, and local needs reshape the way we solve problems? Focusing on people whose STEM work has taken them across the globe, from NGO partnerships to developing technologies for communities worldwide, this panel will explore their experiences and the lessons learned working at the intersection of science, culture, and place."
+      />
+    </div>
+    <div class="grid w-max max-w-full grid-cols-2 gap-x-6 gap-y-8 md:order-1 md:justify-self-start">
+      <PersonCard
+        {...panelists["Andrea Hemmerich"]}
+        name="Andrea Hemmerich"
+        title="Co-founder @ Uplift The Challenge; Adjunct Assistant Professor @ McMaster University"
+        image={andrea}
+      />
+      <PersonCard
+        {...panelists["Rebecca Alcock"]}
+        name="Rebecca Alcock"
+        title="Postdoctoral Fellow @ Centre for Global Engineering"
+        image={rebecca}
+      />
+      {
+        Array.from({ length: 2 }).map(() => (
+          <PersonCard name="To be announced" announced={false} />
+        ))
+      }
+    </div>
+  </div>
+
+  <div class="mt-16 grid items-start gap-10 md:grid-cols-2 md:gap-10 lg:gap-16">
+    <PanelCopy
+      title="Space Panel"
+      subtitle="Breaking Orbit: New Frontiers in Space"
+      when="Saturday, 1:00PM - 2:30PM | Pier 2"
+      description="A panel featuring people working at the frontier of space, from spacecraft and satellite systems to the robotics enabling space exploration, to discuss their work, career paths, and what it actually takes to break new ground in the field."
+    />
+    <div class="relative grid w-max max-w-full grid-cols-2 gap-x-6 gap-y-8 md:justify-self-end">
+      <Image
+        src={rabbitLeap}
+        alt=""
+        class="pointer-events-none absolute top-0 left-2 z-10 hidden w-36 -translate-y-[112%] md:block"
+        width={176}
+        height={170}
+      />
+      <PersonCard
+        {...panelists["Lucy Ma"]}
+        name="Lucy Ma"
+        title="4th year PhD, Associate Director @ Canadian Space Health Research Network"
+        image={lucy}
+      />
+      {
+        Array.from({ length: 3 }).map(() => (
+          <PersonCard name="To be announced" announced={false} />
+        ))
+      }
+    </div>
+  </div>
+
+  <PanelScene align="right" />
+
+  <div class="mt-8 grid items-start gap-10 md:grid-cols-2 md:gap-10 lg:gap-16">
+    <div class="md:order-2">
+      <PanelCopy
+        title="Stem to Strategy"
+        subtitle="STEM to Strategy: Breaking into Business"
+        when="Sunday, 11:00AM - 12:30PM | Pier 2"
+        description="A STEM degree can take you far beyond the lab, code, or calculations. Hear from professionals who have built careers across consulting, finance, investing, fintech, and other business-focused fields, and learn how technical thinking can become a powerful advantage in the world of business."
+      />
+    </div>
+    <div class="grid w-max max-w-full grid-cols-2 gap-x-6 gap-y-8 md:order-1 md:justify-self-start">
+      <PersonCard
+        {...panelists["Silvia Stanica"]}
+        name="Silvia Stanica"
+        title="Senior Manager, Scientific Communications @ External Scientific Affairs @ DECIEM"
+        image={silvia}
+      />
+      {
+        Array.from({ length: 3 }).map(() => (
+          <PersonCard name="To be announced" announced={false} />
+        ))
+      }
+    </div>
+  </div>
+</SectionLayout>

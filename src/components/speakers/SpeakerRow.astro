@@ -1,0 +1,154 @@
+---
+import type { ImageMetadata } from "astro";
+import SpeakerCard from "./SpeakerCard.astro";
+import SpeakerBio from "./SpeakerBio.astro";
+
+interface Speaker {
+  name: string;
+  image: ImageMetadata | string;
+  title: string;
+  bio?: string;
+  pronouns?: string;
+}
+
+interface Props {
+  title: string;
+  subtitle: string;
+  description: string;
+  dataSource: string; // "academia-panel" or "academia-panel.json"
+  dataFolder?: "speakers" | "workshops" | "competitions";
+  speakers?: Speaker[];
+  align?: "center" | "left";
+  showHeader?: boolean;
+  class?: string;
+}
+
+const {
+  title,
+  subtitle,
+  description,
+  dataSource,
+  dataFolder = "speakers",
+  speakers,
+  align = "center",
+  showHeader = true,
+  class: className = "",
+} = Astro.props as Props;
+
+const files = import.meta.glob(
+  "../../content/{speakers,workshops,competitions}/*.json",
+  {
+    eager: true,
+  },
+);
+
+const dataSourceFile = dataSource.split("/").pop() ?? dataSource;
+const normalized = dataSourceFile.endsWith(".json")
+  ? dataSourceFile
+  : `${dataSourceFile}.json`;
+
+const targetPath = `../../content/${dataFolder}/${normalized}`;
+
+const mod = files[targetPath] as { default: Speaker[] } | undefined;
+const data: Speaker[] = speakers ?? mod?.default ?? [];
+
+const speakerImages = import.meta.glob("../../assets/speakers/*", {
+  eager: true,
+}) as Record<string, { default: ImageMetadata }>;
+
+const speakerImageByFileName = Object.fromEntries(
+  Object.entries(speakerImages).map(([path, imageMod]) => [
+    path.split("/").pop() ?? "",
+    imageMod.default,
+  ]),
+);
+
+const getSpeakerImageKey = (image: ImageMetadata | string) => {
+  if (typeof image === "string") {
+    return image.split("/").pop() ?? image;
+  }
+
+  return image.src.split("/").pop() ?? image.src;
+};
+
+const resolvedData = data.map((speaker, index) => ({
+  ...speaker,
+  id: `${dataFolder}-${dataSource}-${index}`,
+  image:
+    speakerImageByFileName[getSpeakerImageKey(speaker.image)] ?? speaker.image,
+}));
+---
+
+<div class={`mb-12 ${className}`.trim()}>
+  {
+    showHeader && (
+      <>
+        <h2
+          class={`mb-3 text-2xl font-bold text-blue-navy ${
+            align === "left" ? "text-left" : "text-center"
+          }`.trim()}
+        >
+          {title}
+        </h2>
+        {subtitle && (
+          <div
+            class={`mb-6 text-xl italic leading-7 text-blue-navy/85 ${
+              align === "left" ? "text-left" : "text-center"
+            }`.trim()}
+          >
+            {subtitle}
+          </div>
+        )}
+        {description && (
+          <div
+            class={`mb-8 text-base leading-7 text-blue-navy/85 ${
+              align === "left"
+                ? "max-w-none text-left"
+                : "mx-auto max-w-4xl text-center"
+            }`.trim()}
+          >
+            {description}
+          </div>
+        )}
+      </>
+    )
+  }
+
+  <div
+    class={`flex flex-wrap items-stretch gap-5 ${
+      align === "left" ? "justify-start" : "justify-center"
+    }`.trim()}
+  >
+    {
+      resolvedData.map((speaker) => (
+        <div class="flex max-w-sm w-[calc((100%-1.25rem)/2)] sm:w-[calc((100%-1.25rem)/3)] lg:w-[calc((100%-6.25rem)/6)] lg:max-w-none">
+          <SpeakerCard
+            name={speaker.name}
+            image={speaker.image}
+            title={speaker.title}
+            bio={speaker.bio}
+            id={speaker.id}
+            pronouns={speaker.pronouns}
+          />
+        </div>
+      ))
+    }
+  </div>
+
+  <!-- Bio Modals -->
+  {
+    resolvedData.map(
+      (speaker) =>
+        speaker.bio && (
+          <SpeakerBio
+            id={speaker.id}
+            name={speaker.name}
+            image={speaker.image}
+            title={speaker.title}
+            bio={speaker.bio}
+            pronouns={speaker.pronouns}
+          />
+        ),
+    )
+  }
+</div>

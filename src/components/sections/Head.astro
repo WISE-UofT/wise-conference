@@ -1,0 +1,39 @@
+---
+import { Image } from "astro:assets";
+import NavBar from "../ui/NavBar.astro";
+import mountains from "../../assets/hero/mountains.png";
+---
+
+<NavBar />
+<section class="relative bg-[#c9ccff]">
+  <div class="relative overflow-hidden">
+    <Image
+      src={mountains}
+      alt="Illustrated mountains, a yellow path, and rabbits under a pastel sky"
+      class="-mt-[22.2177vw] block h-auto w-full"
+      quality={100}
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-x-0 top-[4vw] flex h-[36%] flex-col items-center justify-end px-4 pb-3 text-center sm:pb-5">
+      <p
+        class="mx-auto mb-5 w-fit rounded-full px-5 py-1 text-[13px] font-semibold tracking-wide whitespace-nowrap text-white sm:mb-6"
+        style="background: linear-gradient(90deg, #e0d2ff 0%, #b7b2ff 24%, #9095f1 50%, #aeb4ff 74%, #d4d8ff 100%)"
+      >
+        Tickets now available!
+      </p>
+      <h1
+        class="font-belwe whitespace-nowrap text-[clamp(2.5rem,7.2vw,100px)] font-normal leading-[0.87] tracking-normal text-ink"
+      >
+        Breaking New Ground
+      </h1>
+      <p
+        class="font-spartan mx-auto mt-3 max-w-5xl text-center text-[clamp(1.15rem,2.78vw,40px)] font-normal leading-none tracking-normal text-ink lg:mt-4"
+      >
+        Women in Science and Engineering National
+        <br class="hidden sm:block" />
+        Conference 2027
+      </p>
+    </div>
+  </div>
+</section>

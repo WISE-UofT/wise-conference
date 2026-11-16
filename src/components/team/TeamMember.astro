@@ -1,0 +1,40 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  imagePath: ImageMetadata | string;
+  name: string;
+  position: string;
+  alt?: string;
+}
+
+const { imagePath, name, position, alt } = Astro.props;
+---
+
+<figure class="m-0">
+  <div class="w-full aspect-square overflow-hidden rounded-xl">
+    {
+      typeof imagePath === "string" ? (
+        <img
+          src={imagePath}
+          alt={alt ?? `${name} - ${position}`}
+          class="block h-full w-full object-cover"
+          loading="lazy"
+          decoding="async"
+        />
+      ) : (
+        <Image
+          src={imagePath}
+          alt={alt ?? `${name} - ${position}`}
+          class="block h-full w-full object-cover"
+          loading="lazy"
+        />
+      )
+    }
+  </div>
+  <figcaption class="mt-3">
+    <p class="m-0 text-center font-bold">{name}</p>
+    <p class="m-0 text-center">{position}</p>
+  </figcaption>
+</figure>

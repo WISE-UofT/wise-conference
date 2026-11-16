@@ -1,0 +1,75 @@
+---
+import type { ImageMetadata } from "astro";
+import SectionLayout from "../../layouts/SectionLayout.astro";
+import PersonCard from "../speakers/PersonCard.astro";
+import { coffeeChatMentors } from "../../content/coffee-chat/mentors";
+import ania from "../../assets/speakers/ania-harlick.webp";
+import rebecca from "../../assets/panels/Global _ Rebecca Alcock.jpg";
+
+const uploaded = import.meta.glob<ImageMetadata>(
+  "../../assets/coffee chat/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG}",
+  { eager: true, import: "default" }
+);
+
+const fallbacks: Record<string, ImageMetadata> = {
+  "Ania Harlick": ania,
+  "Rebecca Alcock": rebecca,
+};
+
+function uploadedFor(name: string) {
+  const lower = name.toLowerCase();
+  const first = lower.split(" ")[0];
+  const last = lower.split(" ").at(-1)!;
+  const hit = Object.entries(uploaded).find(([path]) => {
+    const file = path.split(/[/\\]/).pop()!.toLowerCase();
+    return (
+      file.includes(lower) ||
+      file.includes(last) ||
+      file.includes(`- ${first}.`) ||
+      file.includes(` ${first}.`)
+    );
+  });
+  return hit?.[1] ?? fallbacks[name];
+}
+---
+
+<SectionLayout title="Coffee Chat" id="coffee-chat">
+  <div slot="background" class="absolute inset-y-0 left-1/2 w-screen -translate-x-1/2 overflow-hidden">
+    <div
+      class="absolute inset-0"
+      style="background: linear-gradient(0deg, rgba(255, 206, 83, 0.2), rgba(255, 206, 83, 0.2)), linear-gradient(283.91deg, rgba(255, 255, 255, 0.32) 16.07%, rgba(255, 248, 185, 0.32) 33.41%, rgba(253, 243, 156, 0.32) 56.57%);"
+    >
+    </div>
+    <div
+      class="absolute -top-16 -right-24 h-[75%] w-[60%] rounded-full blur-3xl"
+      style="background: linear-gradient(118.92deg, rgba(253, 202, 233, 0.3) 37.58%, rgba(201, 204, 255, 0.3) 60.23%, rgba(201, 204, 255, 0) 70.93%);"
+    >
+    </div>
+    <div
+      class="absolute -bottom-16 -left-24 h-[70%] w-[50%] rounded-full blur-3xl"
+      style="background: linear-gradient(135.09deg, rgba(157, 163, 255, 0.19) 46.75%, rgba(201, 204, 255, 0.19) 74.92%, rgba(201, 204, 255, 0) 88.23%);"
+    >
+    </div>
+  </div>
+
+  <p class="max-w-3xl text-[0.98rem] leading-7 text-ink/90">
+    Sit down with professionals from across science and engineering for small,
+    informal conversations about their work and career paths. Click on a
+    mentor to learn more about them.
+  </p>
+
+  <div class="mt-10 grid grid-cols-2 justify-items-start gap-x-6 gap-y-10 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-x-8">
+    {
+      coffeeChatMentors.map((mentor) => (
+        <PersonCard
+          name={mentor.name}
+          title={mentor.title}
+          bio={mentor.bio}
+          image={uploadedFor(mentor.name)}
+          portrait
+          dialogPrefix="coffee-chat"
+        />
+      ))
+    }
+  </div>
+</SectionLayout>

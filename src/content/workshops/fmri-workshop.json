@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Anna Fan",
+    "image": "/assets/speakers/anna-fan.webp",
+    "title": "Life Sciences Student @ University of Toronto",
+    "bio": "Anna is a second-year Life Sciences student pursuing a double major in Human Biology and Physiology. She is passionate about neuroimaging and enjoys exploring different health-related fields through volunteer and clinical work."
+  },
+  {
+    "name": "Kyoko Lin",
+    "image": "/assets/speakers/kyoko-lin.webp",
+    "title": "Life Sciences Student @ University of Toronto",
+    "bio": "Kyoko is a 3rd-year undergraduate neuroscience student in the Faculty of Arts & Science. She is also a research student at Sunnybrook Hospital, where she investigates the efficacy of concurrent TMS-fMRI-EEG in determining individual human motor thresholds."
+  }
+]
