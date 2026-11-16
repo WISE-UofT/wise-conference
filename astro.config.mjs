@@ -21,6 +21,7 @@ const legacyArchiveRoutes = () => ({
 });
 
 export default defineConfig({
+  site: "https://conference.wise.skule.ca",
   vite: {
     plugins: [legacyArchiveRoutes(), tailwindcss()],
   },
