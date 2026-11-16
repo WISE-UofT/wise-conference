@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import path from "../../assets/hero/path.svg";
 import group from "../../assets/gallery/group.jpg";
 import posters from "../../assets/gallery/posters.jpg";
 import audience from "../../assets/gallery/audience.jpg";
@@ -13,106 +14,69 @@ import booth from "../../assets/gallery/booth.jpg";
 
 <section
   id="overview"
-  class="relative -mt-px overflow-hidden bg-[linear-gradient(180deg,#fdcae9_0%,#fdcae9_55%,#fde0ee_78%,#fff4f9_90%,#ffffff_100%)] pb-16"
+  aria-label="About the conference"
+  class="relative -mt-px overflow-hidden bg-[linear-gradient(180deg,#fdcae9_0%,#fde4f2_45%,#ffffff_100%)] font-spartan"
 >
-  <div class="pointer-events-none absolute inset-x-0 top-0" aria-hidden="true">
-    <svg class="block h-auto w-full" viewBox="0 0 1440 980" preserveAspectRatio="xMidYMin meet">
-      <defs>
-        <linearGradient
-          id="road-fade"
-          gradientUnits="userSpaceOnUse"
-          x1="720"
-          y1="0"
-          x2="1200"
-          y2="860"
-        >
-          <stop offset="0%" stop-color="#FDF39C"></stop>
-          <stop offset="42%" stop-color="#FDF39C"></stop>
-          <stop offset="68%" stop-color="#FFF6C4"></stop>
-          <stop offset="86%" stop-color="#FFF9E8" stop-opacity="0.45"></stop>
-          <stop offset="100%" stop-color="#FFF9E8" stop-opacity="0"></stop>
-        </linearGradient>
-      </defs>
-      <!--
-        Top edge is the yellow road where it leaves the mountain image:
-        28.61% to 68.95% of the width (x 412 to 993 on a 1440-wide view).
-        Both sides leave that edge vertically so the fill meets the illustration
-        without a step, then sweep to the right the way the design path does.
-      -->
-      <path
-        fill="url(#road-fade)"
-        d="M412 0
-           H993
-           C993 48 1080 100 1260 168
-           C1400 224 1440 300 1440 372
-           L1440 700
-           C1300 780 1080 720 940 590
-           C800 460 760 340 600 230
-           C480 150 430 90 412 52
-           C412 28 412 12 412 0
-           Z"
-      ></path>
-    </svg>
-  </div>
+  <Image
+    src={path}
+    alt=""
+    aria-hidden="true"
+    class="pointer-events-none absolute top-0 left-[19.5%] h-auto w-[80.5%]"
+  />
 
-  <div class="relative z-10 mx-auto w-full max-w-6xl px-5 pt-8 md:px-8 md:pt-12">
-    <div class="grid grid-cols-2 items-start gap-3 sm:gap-4 lg:grid-cols-12 lg:gap-x-5 lg:gap-y-4">
-      <p
-        class="col-span-2 max-w-md text-[0.98rem] leading-7 text-ink lg:col-span-5 lg:col-start-1 lg:row-start-1 lg:self-center lg:pt-2 lg:text-base lg:leading-8"
-      >
-        Women in Science and Engineering is proudly presenting our 15th Annual
-        National Conference on January 23-24, 2027. Thank you to everyone who is
-        helping make WISE National Conference 2027 a huge success. Check out the
-        media below to get a feel of the conference excitement &amp; we look
-        forward to seeing you in 2027!
-      </p>
-      <Image
-        src={group}
-        alt="WISE National Conference group photo on stage with silver balloons"
-        class="col-span-2 h-auto w-full lg:col-span-7 lg:col-start-6 lg:row-start-1"
-      />
+  <div class="relative mx-auto grid w-full max-w-[1800px] grid-cols-2 items-start gap-4 px-5 pt-10 pb-12 sm:gap-6 sm:px-8 lg:block lg:aspect-[1512/1203] lg:p-0">
+    <p class="col-span-2 max-w-xl text-lg leading-snug text-ink sm:text-xl lg:absolute lg:top-[25%] lg:left-[9%] lg:w-[31%] lg:max-w-none lg:text-[clamp(1.125rem,1.85vw,2rem)] lg:leading-[1.14]">
+      Women in Science and Engineering is proudly presenting our 15th Annual
+      National Conference on January 23-24, 2027. Thank you to everyone who is
+      helping make WISE National Conference 2027 a huge success. Check out the
+      media below to get a feel of the conference excitement &amp; we look
+      forward to seeing you in 2027!
+    </p>
 
-      <Image
-        src={registration}
-        alt="Attendees with tote bags by the windows"
-        class="h-28 w-full object-cover sm:h-32 lg:col-span-3 lg:col-start-5 lg:row-start-2"
-      />
-      <Image
-        src={stage}
-        alt="A speaker at the podium on the main stage"
-        class="h-40 w-full object-cover sm:h-48 lg:col-span-2 lg:col-start-8 lg:row-start-2"
-      />
-      <Image
-        src={laptops}
-        alt="Hands-on workshop with laptops and a live coding demo"
-        class="h-40 w-full object-cover sm:h-48 lg:col-span-3 lg:col-start-10 lg:row-start-2"
-      />
-      <Image
-        src={roundtables}
-        alt="Workshop attendees working at round tables"
-        class="h-28 w-full object-cover lg:col-span-3 lg:col-start-2 lg:row-start-2 lg:h-32 lg:translate-y-28 lg:self-end"
-      />
-
-      <Image
-        src={stageScreens}
-        alt="The ballroom from the back, with the session screens on stage"
-        class="h-32 w-full object-cover lg:col-span-4 lg:col-start-1 lg:row-start-3 lg:h-36 lg:self-end"
-      />
-      <Image
-        src={audience}
-        alt="Audience seated by the windows during a session"
-        class="h-52 w-full object-cover lg:col-span-3 lg:col-start-5 lg:row-start-3 lg:h-64 lg:self-end"
-      />
-      <Image
-        src={booth}
-        alt="Attendees at a sponsor booth by the windows"
-        class="h-28 w-full object-cover lg:col-span-2 lg:col-start-8 lg:row-start-3 lg:h-64 lg:self-end"
-      />
-      <Image
-        src={posters}
-        alt="Attendees discussing research posters"
-        class="col-span-2 h-36 w-full object-cover lg:col-span-3 lg:col-start-10 lg:row-start-3 lg:h-40 lg:self-end"
-      />
-    </div>
+    <Image
+      src={group}
+      alt="WISE National Conference group photo on stage with silver balloons"
+      class="col-span-2 aspect-[721/398] w-full object-cover lg:absolute lg:top-[18.55%] lg:left-[48.6%] lg:h-[33.1%] lg:w-[47.7%]"
+    />
+    <Image
+      src={registration}
+      alt="Attendees with tote bags by the windows"
+      class="aspect-[283/167] w-full object-cover lg:absolute lg:top-[55.38%] lg:left-[40.74%] lg:h-[13.88%] lg:w-[18.72%]"
+    />
+    <Image
+      src={stage}
+      alt="A speaker at the podium on the main stage"
+      class="row-span-2 aspect-[208/270] w-full object-cover lg:absolute lg:top-[55.38%] lg:left-[63.43%] lg:h-[22.44%] lg:w-[13.76%]"
+    />
+    <Image
+      src={laptops}
+      alt="Hands-on workshop with laptops and a live coding demo"
+      class="aspect-[248/270] w-full object-cover lg:absolute lg:top-[55.38%] lg:left-[79.89%] lg:h-[22.44%] lg:w-[16.4%]"
+    />
+    <Image
+      src={roundtables}
+      alt="Workshop attendees working at round tables"
+      class="aspect-[283/168] w-full object-cover lg:absolute lg:top-[68.43%] lg:left-[17.66%] lg:h-[13.97%] lg:w-[18.72%]"
+    />
+    <Image
+      src={stageScreens}
+      alt="The ballroom from the back, with the session screens on stage"
+      class="aspect-[373/167] w-full object-cover lg:absolute lg:top-[86.05%] lg:left-[11.71%] lg:h-[13.88%] lg:w-[24.67%]"
+    />
+    <Image
+      src={audience}
+      alt="Audience seated by the windows during a session"
+      class="aspect-[283/332] w-full object-cover lg:absolute lg:top-[72.25%] lg:left-[40.01%] lg:h-[27.6%] lg:w-[18.72%]"
+    />
+    <Image
+      src={booth}
+      alt="Attendees at a sponsor booth by the windows"
+      class="aspect-[169/219] w-full object-cover lg:absolute lg:top-[81.64%] lg:left-[61.9%] lg:h-[18.2%] lg:w-[11.18%]"
+    />
+    <Image
+      src={posters}
+      alt="Attendees discussing research posters"
+      class="col-span-2 aspect-[317/187] w-full object-cover lg:absolute lg:top-[84.39%] lg:left-[75.33%] lg:h-[15.54%] lg:w-[20.97%]"
+    />
   </div>
 </section>
