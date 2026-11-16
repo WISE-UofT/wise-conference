@@ -3,8 +3,9 @@ import { Image } from "astro:assets";
 import NavLink from "./NavLink.astro";
 import logo from "../../assets/logo-dark-purple.webp";
 
+const ticketLink = { title: "Buy Tickets", link: "#", filled: true };
+
 const links = [
-  { title: "Buy Tickets", link: "#", filled: true },
   { title: "Discounts", link: "#discounts" },
   { title: "Speakers", link: "#speakers" },
   { title: "Workshops", link: "#workshops" },
@@ -12,20 +13,19 @@ const links = [
   { title: "Schedule", link: "#schedule" },
   { title: "Sponsors", link: "#sponsors" },
   { title: "FAQ", link: "#faq" },
-  { title: "Recap", link: "#recap" },
-  { title: "2026 Archive", link: "/2026/" },
+  { title: "2026", link: "/2026/" },
 ];
 ---
 
 <header
   id="navbar"
-  class="fixed top-0 left-0 z-50 w-full transition-colors duration-300"
+  class="fixed top-0 left-0 z-50 w-full bg-transparent transition-colors duration-300"
 >
-  <div
-    class="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-4 md:px-8"
-  >
+  <div class="mx-auto w-full max-w-7xl px-4 py-3 md:px-8">
+    <div class="flex items-center justify-between gap-4">
     <a href="https://wise.skule.ca/" aria-label="WISE UofT" target="_blank">
       <Image
+        id="nav-logo"
         src={logo}
         alt="WISE"
         width={160}
@@ -35,13 +35,21 @@ const links = [
     </a>
 
     <nav class="hidden lg:block" aria-label="Page">
-      <ul class="flex max-w-4xl flex-wrap items-center justify-end gap-2">
-        {
-          links.map((item) => (
-            <NavLink title={item.title} link={item.link} filled={item.filled} />
-          ))
-        }
-      </ul>
+      <div class="flex items-center gap-3">
+        <a
+          href={ticketLink.link}
+          class="inline-flex items-center justify-center rounded-full bg-[#fec9f5] px-5 py-2 text-sm font-semibold tracking-tight whitespace-nowrap text-ink transition hover:bg-[#f7bddf]"
+        >
+          {ticketLink.title}
+        </a>
+        <ul class="flex items-center rounded-full bg-[#dde0ff] px-2 py-1">
+          {
+            links.map((item) => (
+              <NavLink title={item.title} link={item.link} />
+            ))
+          }
+        </ul>
+      </div>
     </nav>
 
     <button
@@ -58,6 +66,7 @@ const links = [
       <span class="hamburger-line block h-0.5 w-6 bg-ink transition-all duration-300"
       ></span>
     </button>
+    </div>
   </div>
 </header>
 
@@ -92,13 +101,20 @@ const links = [
     </svg>
   </button>
   <ul class="flex flex-col items-start gap-3 px-6">
+    <NavLink title={ticketLink.title} link={ticketLink.link} filled />
     {
       links.map((item) => (
-        <NavLink title={item.title} link={item.link} filled={item.filled} />
+        <NavLink title={item.title} link={item.link} />
       ))
     }
   </ul>
 </nav>
+
+<style>
+  #navbar:not(.is-scrolled) #nav-logo {
+    filter: brightness(0) invert(1);
+  }
+</style>
 
 <script>
   const navbar = document.getElementById("navbar");
@@ -106,7 +122,8 @@ const links = [
   function updateNavbar() {
     if (!navbar) return;
     const scrolled = window.scrollY > 8;
-    navbar.classList.toggle("bg-white/75", scrolled);
+    navbar.classList.toggle("is-scrolled", scrolled);
+    navbar.classList.toggle("bg-white/90", scrolled);
     navbar.classList.toggle("shadow-sm", scrolled);
     navbar.classList.toggle("backdrop-blur-md", scrolled);
   }

@@ -12,10 +12,10 @@ const { title, link, filled = false } = Astro.props;
   <a
     href={link}
     class:list={[
-      "inline-flex items-center justify-center rounded-full border px-3.5 py-1.5 text-[13px] font-semibold tracking-tight whitespace-nowrap transition",
+      "inline-flex items-center justify-center whitespace-nowrap rounded-full font-semibold tracking-tight text-ink transition",
       filled
-        ? "border-blush bg-blush text-ink hover:bg-blush-deep"
-        : "border-blush bg-white/55 text-ink hover:bg-white",
+        ? "bg-[#fec9f5] px-5 py-2 text-sm hover:bg-[#f7bddf]"
+        : "px-2.5 py-1.5 text-[13px] hover:bg-white/55",
     ]}
   >
     {title}

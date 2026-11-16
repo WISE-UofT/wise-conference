@@ -8,7 +8,7 @@ import mountains from "../../assets/hero/mountains.jpg";
 <section class="relative bg-[#c9ccff]">
   <div class="relative">
     <!-- Extra sky so the title sits above the peaks, in the same lavender as the illustration. -->
-    <div class="h-36 sm:h-40 lg:h-40" aria-hidden="true"></div>
+    <div class="h-52 sm:h-56 lg:h-60" aria-hidden="true"></div>
     <Image
       src={mountains}
       alt="Illustrated mountains, a yellow path, and rabbits under a pastel sky"
@@ -16,7 +16,13 @@ import mountains from "../../assets/hero/mountains.jpg";
       loading="eager"
       fetchpriority="high"
     />
-    <div class="absolute inset-x-0 top-[4.75rem] px-4 text-center lg:top-24">
+    <div class="absolute inset-x-0 top-24 px-4 text-center sm:top-28">
+      <p
+        class="mx-auto mb-5 w-fit rounded-full px-5 py-1 text-[13px] font-semibold tracking-wide whitespace-nowrap text-white sm:mb-6"
+        style="background: linear-gradient(90deg, #e0d2ff 0%, #b7b2ff 24%, #9095f1 50%, #aeb4ff 74%, #d4d8ff 100%)"
+      >
+        Tickets now available!
+      </p>
       <h1
         class="font-belwe whitespace-nowrap text-[clamp(2.5rem,7.2vw,100px)] font-normal leading-[0.87] tracking-normal text-ink"
       >

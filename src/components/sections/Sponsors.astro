@@ -11,12 +11,6 @@ import cascades from "../../assets/sponsors/corporate/cascades.webp";
 import york from "../../assets/sponsors/academic/york-eng.webp";
 import tmu from "../../assets/sponsors/academic/tmu.webp";
 import tmuMath from "../../assets/sponsors/academic/tmu-math.webp";
-
-const missing = [
-  "Kinross Gold Corporation",
-  "Kinaxis",
-  "Stantec",
-];
 ---
 
 <SectionLayout title="Conference Sponsors" id="sponsors" align="center">
@@ -59,34 +53,22 @@ const missing = [
     />
   </div>
 
-  <div class="mt-10 flex flex-wrap items-center justify-center gap-6">
+  <div class="mt-10 flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
     <Image src={cascades} alt="Cascades" class="h-12 w-auto object-contain" />
-    {
-      missing.map((name) => (
-        <div
-          class="h-16 w-40 bg-placeholder"
-          role="img"
-          aria-label={`${name} logo coming soon`}
-        />
-      ))
-    }
+    <!-- Kinross Gold Corporation -->
+    <!-- Kinaxis -->
+    <!-- Stantec -->
   </div>
 
   <h3 class="mt-16 text-center font-serif text-2xl font-medium text-ink">
     Academic Partners
   </h3>
 
-  <div class="mx-auto mt-8 grid max-w-3xl grid-cols-2 gap-4 md:grid-cols-4">
-    {
-      Array.from({ length: 8 }).map(() => (
-        <div
-          class="h-16 bg-placeholder"
-          role="img"
-          aria-label="Academic partner logo coming soon"
-        />
-      ))
-    }
-  </div>
+  <!--
+    Academic partner row. Drop logos in here; this row stays separate from the one below.
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-8 md:gap-12">
+    </div>
+  -->
 
   <div class="mt-8 flex flex-wrap items-center justify-center gap-8 md:gap-12">
     <Image
@@ -104,12 +86,7 @@ const missing = [
       alt="Department of Mathematics, Faculty of Science, Toronto Metropolitan University"
       class="h-14 w-auto max-w-64 object-contain"
     />
-    <div
-      class="h-16 w-40 bg-placeholder"
-      role="img"
-      aria-label="Academic partner logo coming soon"
-    >
-    </div>
+    <!-- Academic partner logo -->
   </div>
 </SectionLayout>
 
@@ -119,15 +96,9 @@ const missing = [
   >
     Academic Contributors
   </h2>
-  <div class="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
-    {
-      Array.from({ length: 16 }).map(() => (
-        <div
-          class="h-20 bg-placeholder"
-          role="img"
-          aria-label="Academic contributor logo coming soon"
-        />
-      ))
-    }
-  </div>
+  <!--
+    Academic contributor rows. Add logos inside this grid when they are ready.
+    <div class="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+    </div>
+  -->
 </section>

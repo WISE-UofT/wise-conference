@@ -11,6 +11,7 @@ interface Props {
   bio?: string;
   pronouns?: string;
   preferredName?: string;
+  objectPosition?: string;
 }
 
 const {
@@ -22,6 +23,7 @@ const {
   bio,
   pronouns,
   preferredName,
+  objectPosition = "center 18%",
 } = Astro.props;
 
 const dialogId = `bio-${name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
@@ -50,6 +52,7 @@ const portraitClass = "aspect-square w-full object-cover object-[center_18%]";
             alt=""
             width={640}
             class={portraitClass}
+            style={{ objectPosition }}
           />
         ) : (
           <div class="aspect-square w-full bg-lilac" />
@@ -98,6 +101,7 @@ const portraitClass = "aspect-square w-full object-cover object-[center_18%]";
             alt=""
             width={640}
             class="mx-auto h-52 w-52 shrink-0 object-cover object-[center_18%] md:mx-0"
+            style={{ objectPosition }}
           />
         ) : (
           <div class="mx-auto h-52 w-52 shrink-0 bg-lilac md:mx-0" />
