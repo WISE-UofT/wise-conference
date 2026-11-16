@@ -4,6 +4,7 @@ export interface CoffeeChatMentor {
   name: string;
   title?: string;
   bio?: string;
+  announced?: boolean;
 }
 
 export const coffeeChatMentors: CoffeeChatMentor[] = [
@@ -47,5 +48,5 @@ I can give advice to anyone who is interested in the mining industry in general,
     title: "Postdoctoral Fellow @ Centre for Global Engineering",
     bio: panelists["Rebecca Alcock"].bio,
   },
-  { name: "Danielle Goldfarb" },
+  { name: "To be announced", announced: false },
 ];

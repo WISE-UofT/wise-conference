@@ -70,13 +70,15 @@ function uploadedFor(name: string) {
 
   <PersonGrid
     count={coffeeChatMentors.length}
+    maxColumns={5}
     width="full"
-    class="mt-10 gap-y-10 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
+    class="mt-10 gap-y-10"
   >
     {
       coffeeChatMentors.map((mentor) => (
         <PersonCard
           name={mentor.name}
+          announced={mentor.announced}
           title={mentor.title}
           bio={mentor.bio}
           image={uploadedFor(mentor.name)}

@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import NavBar from "../ui/NavBar.astro";
 import mountains from "../../assets/hero/mountains.png";
+import breakingNewGround from "../../assets/hero/breaking-new-ground.svg";
 ---
 
 <NavBar />
@@ -12,7 +13,10 @@ import mountains from "../../assets/hero/mountains.png";
     class="pointer-events-none fixed inset-x-0 top-0 z-30 h-40 bg-gradient-to-b from-white via-white/70 to-transparent opacity-0 transition-opacity duration-300 sm:h-48 xl:h-56"
   ></div>
   <div class="relative overflow-hidden">
-    <div class="h-[10rem] sm:hidden" aria-hidden="true"></div>
+    <div
+      class="h-[13rem] sm:hidden"
+      aria-hidden="true"
+    ></div>
     <Image
       src={mountains}
       alt="Illustrated mountains, a yellow path, and rabbits under a pastel sky"
@@ -21,18 +25,20 @@ import mountains from "../../assets/hero/mountains.png";
       loading="eager"
       fetchpriority="high"
     />
-    <div class="absolute inset-x-0 top-24 z-20 flex h-auto flex-col items-center justify-start px-4 pb-3 text-center sm:top-[4vw] sm:h-[36%] sm:justify-end sm:pb-5">
+    <div class="absolute inset-x-0 top-36 z-20 flex h-auto flex-col items-center justify-start px-4 pb-3 text-center sm:top-[4.5rem] sm:h-[36%] sm:justify-end sm:pb-5 md:top-20 lg:top-16 xl:top-[4vw]">
       <p
-        class="mx-auto mb-5 w-fit rounded-full px-5 py-1 text-[13px] font-semibold tracking-wide whitespace-nowrap text-white sm:mb-6"
-        style="background: linear-gradient(90deg, #e0d2ff 0%, #b7b2ff 24%, #9095f1 50%, #aeb4ff 74%, #d4d8ff 100%)"
+        class="font-spartan mx-auto mb-5 flex min-h-[clamp(1.875rem,8vw,2.625rem)] w-[clamp(15rem,72vw,21.375rem)] items-center justify-center overflow-hidden rounded-[clamp(0.375rem,2vw,0.5rem)] px-[clamp(1rem,4.5vw,1.5rem)] py-[clamp(0.3rem,1.2vw,0.4375rem)] text-[clamp(0.8125rem,4vw,1.25rem)] leading-[1.2] font-normal whitespace-nowrap text-white sm:mb-6"
+        style="background-image: linear-gradient(90deg, #dfc9ff 0%, #9da3ff 32.212%, #9095f4 48.558%, #9da3ff 69.712%, #cdd0ff 100%)"
       >
         Tickets now available!
       </p>
-      <h1
-        class="font-belwe whitespace-nowrap text-[clamp(2.5rem,7.2vw,100px)] font-normal leading-[0.87] tracking-normal text-ink"
-      >
-        Breaking New Ground
-      </h1>
+      <h1 class="sr-only">Breaking New Ground</h1>
+      <img
+        src={breakingNewGround.src}
+        alt=""
+        aria-hidden="true"
+        class="block h-auto w-full max-w-[1064px] sm:w-[70.37vw]"
+      />
       <p
         class="font-spartan mx-auto mt-3 max-w-5xl text-center text-[clamp(1.15rem,2.78vw,40px)] font-normal leading-none tracking-normal text-ink lg:mt-4"
       >
