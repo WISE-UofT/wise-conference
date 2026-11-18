@@ -128,6 +128,14 @@ const recapYears = Object.keys(recapSpeakersByYear)
           contentClass="pt-5"
         >
           <div class="space-y-8">
+            {recap.year === "2026" && (
+              <a
+                href="/2026/"
+                class="mx-auto flex w-fit items-center justify-center rounded-full border border-[#E9EAFF] bg-[#DEE0FF]/80 px-5 py-3 font-spartan text-base font-semibold text-ink backdrop-blur-md transition-colors hover:bg-[#DEE0FF] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple-dark"
+              >
+                2026 Conference Website
+              </a>
+            )}
             {recap.images.length > 0 && (
               <ImageCarousel
                 images={recap.images}

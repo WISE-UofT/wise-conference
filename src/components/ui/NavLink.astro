@@ -2,14 +2,17 @@
 interface Props {
   title: string;
   link: string;
+  external?: boolean;
 }
 
-const { title, link } = Astro.props;
+const { title, link, external = false } = Astro.props;
 ---
 
 <li class="shrink-0">
   <a
     href={link}
+    target={external ? "_blank" : undefined}
+    rel={external ? "noreferrer" : undefined}
     class="inline-flex items-center font-spartan text-xl leading-7 font-normal whitespace-nowrap text-black transition-colors hover:text-purple-dark focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple-dark xl:text-base xl:leading-6"
   >
     {title}
