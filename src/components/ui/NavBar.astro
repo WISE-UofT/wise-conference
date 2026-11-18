@@ -5,7 +5,7 @@ import logo from "../../assets/logo-dark-purple.webp";
 
 const ticketLink = { title: "Buy Tickets", link: "https://www.zeffy.com/en-CA/ticketing/wise-national-conference--2027", filled: true };
 
-const links = [
+const links: { title: string; link: string; external?: boolean }[] = [
   // { title: "Discounts", link: "#discounts" },
   { title: "Speakers", link: "#speakers" },
   { title: "Workshops", link: "#workshops" },
@@ -13,9 +13,11 @@ const links = [
   { title: "Coffee Chat", link: "#coffee-chat" },
   // { title: "Schedule", link: "#schedule" },
   { title: "Sponsors", link: "#sponsors" },
+  { title: "Venue", link: "#venue" },
   { title: "FAQ", link: "#faq" },
   { title: "Recap", link: "#recap" },
   { title: "2026 Archive", link: "/2026/" },
+  { title: "WISE UofT", link: "https://wise.skule.ca/", external: true },
 ];
 ---
 
@@ -24,11 +26,11 @@ const links = [
   class="fixed top-0 left-0 z-50 w-full xl:top-8"
 >
   <div class="mx-auto flex w-full max-w-[1800px] items-center justify-between gap-4 px-4 py-4 md:px-6 xl:py-0">
-    <a href="https://wise.skule.ca/" aria-label="WISE UofT" target="_blank" class="shrink-0">
+    <a href="#top" aria-label="Back to top" class="shrink-0">
       <Image
         id="nav-logo"
         src={logo}
-        alt="WISE"
+        alt="WISE Conference"
         width={160}
         height={70}
         class="h-9 w-auto sm:h-11 xl:h-10 2xl:h-14"
@@ -48,7 +50,7 @@ const links = [
       <ul class="flex h-14 items-center justify-center gap-4 rounded-full border border-[#E9EAFF] bg-[#DEE0FF]/80 px-5 backdrop-blur-md 2xl:gap-6">
         {
           links.map((item) => (
-            <NavLink title={item.title} link={item.link} />
+            <NavLink title={item.title} link={item.link} external={item.external} />
           ))
         }
       </ul>
@@ -77,7 +79,7 @@ const links = [
 <nav
   id="mobile-drawer"
   aria-label="Mobile navigation"
-  class="fixed top-0 right-0 z-50 h-full w-72 translate-x-full bg-mist pt-20 shadow-2xl transition-transform duration-300 xl:hidden"
+  class="fixed top-0 right-0 z-50 h-full w-72 translate-x-full overflow-y-auto bg-mist pt-20 pb-8 shadow-2xl transition-transform duration-300 xl:hidden"
 >
   <button
     id="mobile-close-btn"
@@ -111,7 +113,7 @@ const links = [
     </li>
     {
       links.map((item) => (
-        <NavLink title={item.title} link={item.link} />
+        <NavLink title={item.title} link={item.link} external={item.external} />
       ))
     }
   </ul>

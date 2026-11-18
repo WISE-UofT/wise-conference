@@ -53,7 +53,8 @@ export const workshopGroups: WorkshopGroup[] = [
   },
   {
     title: "From Data to Decisions: CCM Hockey’s Next Big Play",
-    subtitle: "Kelly Chang - Data Science and Strategy Team @ Birch Hill Equity Partners",
+    subtitle:
+      "Kelly Chang, Nick Vukelic, Margaux Roncière, Karen Zhan, and Grace Lin - Data Science and Strategy Team @ Birch Hill Equity Partners",
     time: "Saturday, 10:30AM - 12:00PM | Pier 4",
     description:
       "Join Birch Hill Data Science & Strategy for a hands-on workshop where you’ll use data to tackle a real-world growth challenge for CCM Hockey, a former Birch Hill portfolio company. Working in teams, you’ll break down what drives the company’s revenue, choose which data to investigate, and uncover where its biggest growth opportunity lies. Learn how our team turns data into strategy using structured problem solving, market analysis, and key performance metrics. This workshop is perfect for students interested in data-driven decision making, business strategy, and real-world problem solving. No hockey knowledge required!",
@@ -64,10 +65,24 @@ export const workshopGroups: WorkshopGroup[] = [
         bio: "Kelly is an Analyst on the Data Science & Strategy Team at Birch Hill Equity Partners. Kelly received her Bachelor of Applied Science from the University of Toronto, with a major in Industrial Engineering and a minor in Artificial Intelligence. Prior to joining Birch Hill in 2025, Kelly was a co-op analyst in Birch Hill’s Data Science team.",
       },
       {
-        name: "To be announced",
-        title: "",
-        bio: "",
-        announced: false,
+        name: "Nick Vukelic",
+        title: "Data Science and Strategy Team @ Birch Hill Equity Partners",
+        bio: "Prior to joining Birch Hill in 2020, Nick was a Consultant at Deloitte, where he worked on engagements in the financial services and airline industries. Nick spent 3 years at Yorkville University where he led the Analytics team and served as Chief of Staff to the CEO before returning in October 2026. Nick received his HBA (Ivey Scholar) from the Richard Ivey School of Business and his Bachelor of Engineering Science, Software Engineering (with distinction) from Western University.",
+      },
+      {
+        name: "Margaux Roncière",
+        title: "Data Science and Strategy Team @ Birch Hill Equity Partners",
+        bio: "Prior to joining Birch Hill in 2025, Margaux was a co-op analyst with the firm’s Data Science Team. Margaux received her Bachelor of Applied Science in Industrial Engineering from the University of Toronto as a Loran Scholar.",
+      },
+      {
+        name: "Karen Zhan",
+        title: "Data Science and Strategy Team @ Birch Hill Equity Partners",
+        bio: "Prior to joining Birch Hill in 2025, Karen was a Summer Analyst with the firm’s Data Science team and also worked as a Summer Analyst in the Strategy group at Scotiabank. Karen received her HBA from the Richard Ivey School of Business and a Bachelor of Science in Computer Science from Western University.",
+      },
+      {
+        name: "Grace Lin",
+        title: "PEY Co-op @ Birch Hill Equity Partners",
+        bio: "Grace joined Birch Hill in May 2026 for her Professional Experience Year as part of the Co-op Program at the University of Toronto where she previously worked as a research intern in healthcare analytics. Grace looks forward to graduating in 2028 from the University of Toronto with a BASc in Industrial Engineering.",
       },
     ],
   },
