@@ -10,7 +10,8 @@ import amazon from "../../assets/sponsors/corporate/amazon_robotics.webp";
 import cascades from "../../assets/sponsors/corporate/cascades.webp";
 import waterlooEngineering from "../../assets/sponsors/academic/waterloo-engineering.webp";
 import york from "../../assets/sponsors/academic/york-eng.webp";
-import tmuMath from "../../assets/sponsors/academic/tmu-math.webp";
+import tmuGraduate from "../../assets/sponsors/academic/tmu-ysgps-math.png";
+import oztrekk from "../../assets/sponsors/academic/oztrekk.webp";
 import mcgillScience from "../../assets/sponsors/academic/mcgill-science.png";
 import mcmasterWie from "../../assets/sponsors/academic/mcmaster-wie.webp";
 import uofgWie from "../../assets/sponsors/academic/uofg-wie.png";
@@ -33,6 +34,10 @@ const academicContributors = [
   {
     src: tmuArchDesEng,
     alt: "Toronto Metropolitan University Faculty of Engineering and Architectural Science",
+  },
+  {
+    src: tmuGraduate,
+    alt: "Toronto Metropolitan University Mathematics, Graduate and Postdoctoral Studies",
   },
   {
     src: utmOvpad,
@@ -128,11 +133,15 @@ const academicContributors = [
       class="h-14 w-auto object-contain"
     />
     <Image
-      src={tmuMath}
-      alt="Department of Mathematics, Faculty of Science, Toronto Metropolitan University"
-      class="h-14 w-auto max-w-64 object-contain"
+      src={tmuGraduate}
+      alt="Toronto Metropolitan University Mathematics, Graduate and Postdoctoral Studies"
+      class="h-14 w-auto max-w-72 object-contain"
     />
-    <!-- Academic partner logo -->
+    <Image
+      src={oztrekk}
+      alt="OzTrekk"
+      class="h-12 w-auto max-w-56 object-contain"
+    />
   </div>
 </SectionLayout>
 
