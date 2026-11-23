@@ -98,6 +98,14 @@ const images: Record<string, ImageMetadata> = {
               <p class="whitespace-pre-line text-[0.95rem] leading-7 text-ink/90">
                 {group.description}
               </p>
+              {
+                group.requirements && (
+                  <div class="text-[0.95rem] leading-7 text-ink/90">
+                    <p class="font-semibold text-ink">Requirements/Additional info</p>
+                    <p class="mt-1 [&_a]:underline [&_a]:decoration-ink/30 [&_a]:underline-offset-2 hover:[&_a]:decoration-ink" set:html={group.requirements} />
+                  </div>
+                )
+              }
             </div>
             <PersonGrid
               count={group.hosts.length}

@@ -10,6 +10,8 @@ import marianne from "../../assets/panels/Sustainability _ Marianne Hatzopoulou.
 import nicole from "../../assets/panels/Sustainability _ Nicole Kohoko.jpeg";
 import andrea from "../../assets/panels/Global _ Andrea Hemmerich.jpg";
 import rebecca from "../../assets/panels/Global _ Rebecca Alcock.jpg";
+import adriana from "../../assets/panels/Global _ Adriana Diaz Lozano Patino.jpg";
+import erica from "../../assets/panels/Global _ Erica Di Ruggiero.jpg";
 import lucy from "../../assets/panels/Space _ Lucy Ma.jpg";
 import silvia from "../../assets/panels/Strategy _ Silvia Stanica.jpg";
 import rabbitLeap from "../../assets/illustrations/rabbit-leap-space.png";
@@ -174,11 +176,20 @@ const neuroDescription =
         title="Postdoctoral Fellow @ Centre for Global Engineering"
         image={rebecca}
       />
-      {
-        Array.from({ length: 2 }).map(() => (
-          <PersonCard name="To be announced" announced={false} />
-        ))
-      }
+      <PersonCard
+        {...panelists["Adriana Diaz Lozano Patino"]}
+        name="Adriana Diaz Lozano Patino"
+        title="PhD Candidate @ Department of Mechanical and Industrial Engineering"
+        image={adriana}
+        objectPosition="center 42%"
+      />
+      <PersonCard
+        {...panelists["Erica Di Ruggiero"]}
+        name="Erica Di Ruggiero"
+        title="Professor and Director, Centre for Global Health @ Dalla Lana School of Public Health"
+        image={erica}
+        objectPosition="center 35%"
+      />
     </PersonGrid>
   </div>
 
