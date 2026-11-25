@@ -12,10 +12,16 @@ const data = discountsData as Record<
 >;
 
 const schoolOrder = [
+  "University of Guelph",
+  "McGill University",
+  "McMaster University",
+  "Sheridan College",
   "Toronto Metropolitan University",
   "University of Toronto",
   "University of Toronto Mississauga",
 ];
+
+const earlyBird = data.EARLYBIRD;
 
 const schools = schoolOrder
   .filter((name) => name in discountsContent)
@@ -60,6 +66,20 @@ const schools = schoolOrder
     </div>
 
     <div>
+      {
+        earlyBird && (
+          <div class="mb-6 text-sm leading-7 md:text-base">
+            <h3 class="text-base font-semibold text-ink">Early bird</h3>
+            <p class="m-0">
+              Early bird tickets are available with promo code{" "}
+              <strong>"EARLYBIRD"</strong>.
+            </p>
+            <p class="m-0 italic">
+              {earlyBird.available}/{earlyBird.limit} spots left
+            </p>
+          </div>
+        )
+      }
       {
         schools.map(([school, departments]) => (
           <Collapsible
