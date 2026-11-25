@@ -1,25 +1,4 @@
 {
-  "University of Guelph": {
-    "Women in Engineering": {
-      "content": "University of Guelph Women in Engineering has a discount code for 21 interested students.",
-      "code": "GUELPH_WIE27",
-      "displayCode": true
-    }
-  },
-  "McGill University": {
-    "Faculty of Science, graduate students": {
-      "content": "McGill University Faculty of Science has a discount code for 10 interested graduate students.",
-      "code": "MCGILL_SCIGRAD27",
-      "displayCode": true
-    }
-  },
-  "McMaster University": {
-    "Women in Engineering": {
-      "content": "McMaster University Women in Engineering has a discount code for 20 interested engineering students.",
-      "code": "MAC_WIE27",
-      "displayCode": true
-    }
-  },
   "Sheridan College": {
     "Science": {
       "content": "Sheridan College has a discount code for 7 interested science students.",
@@ -37,11 +16,6 @@
       "content": "The Toronto Metropolitan University Graduate Faculty of Engineering and Architectural Science has generously offered to provide 70% off tickets for 10 interested graduate engineering and architecture students.",
       "code": "TMU_GRAD_ARCH_DESENG27",
       "displayCode": true
-    },
-    "Department of Mathematics": {
-      "content": "The Toronto Metropolitan University Department of Mathematics has a discount code for 4 interested mathematics students.",
-      "code": "TMU_MATH27",
-      "displayCode": true
     }
   },
   "University of Toronto": {
@@ -53,11 +27,6 @@
     "Department of Chemistry": {
       "content": "University of Toronto Department of Chemistry has generously offered to provide free tickets to 10 interested chemistry students.",
       "code": "UOFT_CHEM27",
-      "displayCode": true
-    },
-    "Department of Chemical Engineering and Applied Chemistry": {
-      "content": "University of Toronto Department of Chemical Engineering and Applied Chemistry has a discount code for 10 interested students.",
-      "code": "UOFT_CHEM_ENG27",
       "displayCode": true
     },
     "Faculty of Arts and Science": {
