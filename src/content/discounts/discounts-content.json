@@ -16,11 +16,6 @@
       "content": "The Toronto Metropolitan University Graduate Faculty of Engineering and Architectural Science has generously offered to provide 70% off tickets for 10 interested graduate engineering and architecture students.",
       "code": "TMU_GRAD_ARCH_DESENG27",
       "displayCode": true
-    },
-    "Department of Mathematics": {
-      "content": "The Toronto Metropolitan University Department of Mathematics has a discount code for 4 interested mathematics students.",
-      "code": "TMU_MATH27",
-      "displayCode": true
     }
   },
   "University of Toronto": {
@@ -32,11 +27,6 @@
     "Department of Chemistry": {
       "content": "University of Toronto Department of Chemistry has generously offered to provide free tickets to 10 interested chemistry students.",
       "code": "UOFT_CHEM27",
-      "displayCode": true
-    },
-    "Department of Chemical Engineering and Applied Chemistry": {
-      "content": "University of Toronto Department of Chemical Engineering and Applied Chemistry has a discount code for 10 interested students.",
-      "code": "UOFT_CHEM_ENG27",
       "displayCode": true
     },
     "Faculty of Arts and Science": {

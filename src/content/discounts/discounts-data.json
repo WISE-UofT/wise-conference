@@ -19,11 +19,6 @@
     "limit": 10,
     "available": 9
   },
-  "TMU_MATH27": {
-    "used": 0,
-    "limit": 4,
-    "available": 4
-  },
   "UOFT_ARTSCI27": {
     "used": 9,
     "limit": 10,
@@ -38,11 +33,6 @@
     "used": 5,
     "limit": 10,
     "available": 5
-  },
-  "UOFT_CHEM_ENG27": {
-    "used": 0,
-    "limit": 10,
-    "available": 10
   },
   "UOFT_COMPSCI27": {
     "used": 12,
