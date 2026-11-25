@@ -108,22 +108,23 @@ export const workshopGroups: WorkshopGroup[] = [
     ],
   },
   {
-    hidden: true,
-    title: "Grad school",
-    subtitle: "Hosts to be announced",
-    description: "Workshop details and hosts will be announced soon.",
+    title: "Is Grad School Right for Me?",
+    subtitle:
+      "Sarah Haines and Amy (Tianyuan) Li - Assistant Professors",
+    description:
+      "There are many options to think about when you're considering your career post undergraduate. A very promising option is grad school, but how do you know this is right for you? In this workshop, we will share our own experiences with research and graduate studies, and talk through the concerns that often come up when students consider this path. Through a few guided activities, you will reflect on your values and interests and think about what day-to-day research life looks like. We will also discuss practical things to consider, such as finding a supervisor, scholarships and share some ways to gain early research experiences. We may not give you a clear answer by the end, but we hope to help you think it through.",
     hosts: [
       {
-        name: "To be announced",
-        title: "",
-        bio: "",
-        announced: false,
+        name: "Sarah Haines",
+        title:
+          "Assistant Professor @ Department of Civil and Mineral Engineering, University of Toronto",
+        bio: "Dr. Sarah R. Haines is an Assistant Professor in the Department of Civil and Mineral Engineering at the University of Toronto, the Principal Investigator of the Indoor Microbiology and Environmental Exposures (IMEE) Lab and member of the Hub for Advancing Buildings. She holds a BS in Environmental Engineering and an MS and PhD in Environmental Science from The Ohio State University. She is an interdisciplinary researcher and educator working at the intersection of building science, environmental engineering, and microbiology to investigate how indoor environments shape human health. Her research focuses on maintaining healthy and sustainable indoor environments through both community-based participatory research as well as detection and characterization of indoor biological exposures (bacteria, fungi, viruses, byproducts). Dr. Haines is a member of the American Association for Aerosol Research (AAAR), the International Society of Indoor Air Quality and Climate (ISIAQ) and the Canadian Association of Aerosol Researchers (CAAR-ACRA). She was the 2024 recipient of the University of Toronto Faculty of Applied Science & Engineering Early Career Teaching Award, recognized for excellence in teaching and mentorship.",
       },
       {
-        name: "To be announced",
-        title: "",
-        bio: "",
-        announced: false,
+        name: "Amy (Tianyuan) Li",
+        title:
+          "Assistant Professor @ Department of Civil and Environmental Engineering, University of Waterloo",
+        bio: "Dr. Amy (Tianyuan) Li is an Assistant Professor in the Department of Civil and Environmental Engineering at the University of Waterloo. Her research focuses on improving indoor air quality through better design and operation of building systems. Dr. Li studies how ventilation, filtration, building operation and occupant behaviour affect indoor air pollution and the exposure of the people inside. Her work covers pollutants from indoor and outdoor sources, including cooking emissions, wildfire smoke, radon and airborne infectious particles. She has evaluated both central heating, ventilation and air-conditioning (HVAC) systems and portable air cleaners, with attention to how well they reduce exposure and how much energy they use. A key area of her research is responsive building systems that use low-cost sensors, Internet of Things (IoT) technologies and automation. These systems adjust ventilation and filtration as indoor and outdoor air quality changes in real time, so buildings can stay healthy without using unnecessary energy. Her work also includes radon monitoring and evaluating consumer-grade air quality monitors. Dr. Li works with experts in engineering, epidemiology, medicine and public health to improve air quality in homes, community spaces, group living settings and older buildings with limited ventilation. She is committed to making research findings accessible to practitioners, policymakers, building operators and the public. She is a member of ASHRAE, the American Association for Aerosol Research (AAAR), the International Society of Indoor Air Quality and Climate (ISIAQ) and the National Lung Health Alliance. She also serves on the Indoor Air Quality Advisory Group of the Ontario Society of Professional Engineers.",
       },
     ],
   },
