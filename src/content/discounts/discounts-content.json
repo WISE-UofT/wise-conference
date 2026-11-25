@@ -1,25 +1,4 @@
 {
-  "University of Guelph": {
-    "Women in Engineering": {
-      "content": "University of Guelph Women in Engineering has a discount code for 21 interested students.",
-      "code": "GUELPH_WIE27",
-      "displayCode": true
-    }
-  },
-  "McGill University": {
-    "Faculty of Science, graduate students": {
-      "content": "McGill University Faculty of Science has a discount code for 10 interested graduate students.",
-      "code": "MCGILL_SCIGRAD27",
-      "displayCode": true
-    }
-  },
-  "McMaster University": {
-    "Women in Engineering": {
-      "content": "McMaster University Women in Engineering has a discount code for 20 interested engineering students.",
-      "code": "MAC_WIE27",
-      "displayCode": true
-    }
-  },
   "Sheridan College": {
     "Science": {
       "content": "Sheridan College has a discount code for 7 interested science students.",

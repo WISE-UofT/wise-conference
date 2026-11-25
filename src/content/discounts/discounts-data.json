@@ -4,21 +4,6 @@
     "limit": 50,
     "available": 48
   },
-  "GUELPH_WIE27": {
-    "used": 0,
-    "limit": 21,
-    "available": 21
-  },
-  "MAC_WIE27": {
-    "used": 0,
-    "limit": 20,
-    "available": 20
-  },
-  "MCGILL_SCIGRAD27": {
-    "used": 0,
-    "limit": 10,
-    "available": 10
-  },
   "SHERIDAN_SCI27": {
     "used": 0,
     "limit": 7,
