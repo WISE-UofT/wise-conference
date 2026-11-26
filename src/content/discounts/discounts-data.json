@@ -1,81 +1,65 @@
 {
   "EARLYBIRD": {
-    "used": 2,
     "limit": 50,
     "available": 48
   },
   "SHERIDAN_SCI27": {
-    "used": 0,
     "limit": 7,
     "available": 7
   },
   "TMU_ARCH_DESENG27": {
-    "used": 7,
     "limit": 25,
-    "available": 18
+    "available": 11
   },
   "TMU_GRAD_ARCH_DESENG27": {
-    "used": 1,
     "limit": 10,
     "available": 9
   },
   "UOFT_ARTSCI27": {
-    "used": 9,
     "limit": 10,
-    "available": 1
+    "available": 0
   },
   "UOFT_BIO27": {
-    "used": 1,
     "limit": 6,
-    "available": 5
+    "available": 0
   },
   "UOFT_CHEM27": {
-    "used": 5,
     "limit": 10,
     "available": 5
   },
   "UOFT_COMPSCI27": {
-    "used": 12,
     "limit": 12,
-    "available": 0
+    "available": 1
   },
   "UOFT_EARTHSCI27": {
-    "used": 5,
     "limit": 6,
     "available": 1
   },
   "UOFT_ENG27": {
-    "used": 14,
     "limit": 170,
-    "available": 156
+    "available": 148
   },
   "UOFT_ENV27": {
-    "used": 2,
     "limit": 2,
     "available": 0
   },
   "UOFT_MATH27": {
-    "used": 1,
     "limit": 5,
     "available": 4
   },
   "UOFT_PHARM27": {
-    "used": 5,
     "limit": 5,
     "available": 0
   },
   "UOFT_PHYSICS27": {
-    "used": 9,
     "limit": 20,
-    "available": 11
+    "available": 10
   },
   "UOFT_STATS27": {
-    "used": 4,
     "limit": 20,
-    "available": 16
+    "available": 15
   },
   "UOFT_UTM27": {
-    "used": 1,
     "limit": 25,
     "available": 24
   }
