@@ -31,11 +31,13 @@
     },
     "Department of Cell and Systems Biology": {
       "content": "The University of Toronto Department of Cell & System Biology has generously offered to provide 50% off tickets for 6 interested cell & system biology students.",
+      "note": "This discount code is exclusively available to registered students in Specialist or Major programs run by the Department of Cell and Systems Biology, and is not applicable to students in the first-year Life Sciences admission category.",
       "code": "UOFT_BIO27",
       "displayCode": true
     },
     "Department of Chemistry": {
       "content": "The University of Toronto Department of Chemistry has generously offered to provide free tickets to 10 interested chemistry students.",
+      "note": "This discount code is exclusively available to registered students in Specialist or Major programs run by the Department of Chemistry, and is not applicable to students in the first-year Life Sciences admission category.",
       "code": "UOFT_CHEM27",
       "displayCode": true
     },
@@ -57,15 +59,18 @@
     "Department of Pharmacology and Toxicology": {
       "content": "The University of Toronto Department of Pharmacology & Toxicology has generously offered to provide free tickets to 5 interested pharmacology & toxicology students.",
       "code": "UOFT_PHARM27",
+      "note": "This discount code is exclusively available to registered students in Specialist or Major programs run by the Department of Pharmacology and Toxicology, and is not applicable to students in the first-year Life Sciences admission category.",
       "displayCode": true
     },
     "Department of Physics": {
       "content": "The University of Toronto Department of Physics has generously offered to provide 83% off tickets for 20 interested physics students.",
       "code": "UOFT_PHYSICS27",
+      "note": "This discount code is exclusively available to registered students in Specialist, Major, or Minor programs run by the Department of Physics, and is not applicable to students in the first-year Mathematical & Physical Sciences admission category.",
       "displayCode": true
     },
     "Department of Statistical and Actuarial Sciences": {
       "content": "The University of Toronto Department of Statistical and Actuarial Sciences has generously offered to provide free tickets to 20 interested statistical and actuarial students.",
+      "note": "This discount code is exclusively available to registered students in Specialist or Major programs run by the Department of Statistical and Actuarial Sciences, and is not applicable to students in the first-year Mathematical & Physical Sciences admission category.",
       "code": "UOFT_STATS27",
       "displayCode": true
     },

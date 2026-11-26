@@ -8,7 +8,19 @@ import signpost from "../../assets/illustrations/signpost.png";
 
 const data = discountsData as Record<
   string,
-  { used: number; limit: number; available: number }
+  { limit: number; available: number }
+>;
+
+interface DiscountContent {
+  content: string;
+  code?: string;
+  displayCode?: boolean;
+  note?: string;
+}
+
+const content = discountsContent as Record<
+  string,
+  Record<string, DiscountContent>
 >;
 
 const schoolOrder = [
@@ -21,11 +33,8 @@ const schoolOrder = [
 const earlyBird = data.EARLYBIRD;
 
 const schools = schoolOrder
-  .filter((name) => name in discountsContent)
-  .map(
-    (name) =>
-      [name, discountsContent[name as keyof typeof discountsContent]] as const,
-  );
+  .filter((name) => name in content)
+  .map((name) => [name, content[name]] as const);
 ---
 
 <section id="discounts" class="scroll-mt-40 bg-white">
@@ -79,11 +88,11 @@ const schools = schoolOrder
         <Collapsible
           variant="plain"
           title={school}
-          titleClass="text-lg font-semibold"
-          contentClass="space-y-4 text-sm leading-7 md:text-base [&_h1]:mt-5 [&_h1]:mb-1 [&_h1]:text-base [&_h1]:font-semibold [&_h1]:text-ink [&_p]:m-0 [&_strong]:font-semibold"
+          titleClass="text-xl font-semibold"
+          contentClass="space-y-4 text-sm leading-7 md:text-base [&_h1]:mt-5 [&_h1]:mb-1 [&_h1]:text-lg [&_h1]:font-semibold [&_h1]:text-ink [&_p]:m-0 [&_strong]:font-semibold"
         >
           {Object.entries(departments).map(
-            ([dept, { content, code, displayCode }]) => {
+            ([dept, { content, code, displayCode, note }]) => {
               const { available, limit } = data[code ?? ""] ?? {
                 available: 0,
                 limit: 0,
@@ -94,6 +103,7 @@ const schools = schoolOrder
                   content={content}
                   code={code}
                   displayCode={displayCode}
+                  note={note}
                   available={available}
                   limit={limit}
                 />
