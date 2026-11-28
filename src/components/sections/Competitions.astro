@@ -1,5 +1,9 @@
 ---
 import SectionLayout from "../../layouts/SectionLayout.astro";
+import PersonCard from "../speakers/PersonCard.astro";
+import PersonGrid from "../speakers/PersonGrid.astro";
+import erin from "../../assets/competitions/Erin Ricaloglu.jpg";
+import dream from "../../assets/competitions/Dream Tuitt-Barnes.jpg";
 
 const blurb =
   "Explore the rapidly evolving world of neurotechnology and brain-computer interfaces with experts working across research, healthcare, and industry. Hear how they're turning brain signals into real-world applications, the paths that brought them into the field, and what breakthroughs could shape the future of how humans interact with technology.";
@@ -23,6 +27,31 @@ const blurb =
   <p class="mt-6 text-center text-[0.98rem] leading-7 text-ink/90">
     Stay tuned for more details!
   </p>
+
+  <h3 class="mt-12 text-center font-serif text-2xl font-medium text-ink">
+    Competition Judges
+  </h3>
+  <PersonGrid count={3} maxColumns={3} class="mt-8">
+    <PersonCard
+      name="Erin Ricaloglu"
+      title="PhD Student, Behavioural Neuroscience @ University of Toronto"
+      image={erin}
+      objectPosition="center 46%"
+      bio="Erin Ricaloglu is a PhD student in Behavioural Neuroscience at the University of Toronto, where she studies the role of epigenetics in memory and Alzheimer’s disease. Her research explores how changes in gene regulation contribute to brain function and neurodegeneration. Outside of the lab, she is passionate about making science more accessible and supporting young women pursuing careers in STEM. Erin looks forward to connecting with students and hearing about their research and ideas at WISENC 2027."
+    />
+    <PersonCard
+      name="Dream Tuitt-Barnes"
+      title="Medical Student @ Queen's University"
+      image={dream}
+      objectPosition="center 28%"
+      bio="Dream Tuitt-Barnes is a third-year medical student at Queen’s University, where she entered medicine through the Queen’s Accelerated Route to Medical School (QuARMS). An aspiring plastic and reconstructive surgeon, her research interests span surgical outcomes, health equity, medical education, and artificial intelligence in healthcare. She is passionate about advancing representation in medicine, promoting equitable access to healthcare, and empowering underrepresented youth through mentorship and advocacy. Recognized as one of Canada’s Top 100 Black Women to Watch in 2026, Dream is committed to leveraging research, leadership, and community engagement to drive meaningful change and inspire the next generation of women in STEM."
+    />
+    <PersonCard
+      name="Clara Phillips"
+      title="Postdoctoral Fellow @ University of Toronto"
+      bio="Clara Phillips is a Postdoctoral Fellow at the University of Toronto, supported by NSERC and the UHN Canada Leads program. She completed her PhD in Mechanical and Industrial Engineering at the University of Toronto in 2026. Her research combines structural testing and design of lower-limb prosthetic sockets to (1) increase the successful uptake of 3D printing in clinical workflows, and (2) design more comfortable, better-fitting devices for people with limb loss. She works closely with clinicians and industry partners to move these advances from the lab into practice."
+    />
+  </PersonGrid>
 
   <!--
     Competition postcards are commented out until that content is ready.

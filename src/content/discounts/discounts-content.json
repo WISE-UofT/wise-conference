@@ -1,11 +1,4 @@
 {
-  "Sheridan College": {
-    "Science": {
-      "content": "Sheridan College has generously offered to provide free tickets for 7 interested science students, which will be reimbursed after students pay the full price for the ticket.",
-      "code": "SHERIDAN_SCI27",
-      "displayCode": true
-    }
-  },
   "Toronto Metropolitan University": {
     "Faculty of Engineering and Architectural Science": {
       "content": "The Toronto Metropolitan University Faculty of Engineering and Architectural Science has generously offered to provide 70% off tickets for 25 interested engineering and architecture students.",
